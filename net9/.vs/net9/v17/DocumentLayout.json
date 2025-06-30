@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\net9\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{01339710-7175-4207-AC42-FF16BB582ABE}|net9\\net9.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\net9\\net9\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01339710-7175-4207-AC42-FF16BB582ABE}|net9\\net9.csproj|solutionrelative:net9\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01339710-7175-4207-AC42-FF16BB582ABE}|net9\\net9.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\net9\\net9\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{01339710-7175-4207-AC42-FF16BB582ABE}|net9\\net9.csproj|solutionrelative:net9\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01339710-7175-4207-AC42-FF16BB582ABE}|net9\\net9.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\net9\\net9\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{01339710-7175-4207-AC42-FF16BB582ABE}|net9\\net9.csproj|solutionrelative:net9\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01339710-7175-4207-AC42-FF16BB582ABE}|net9\\net9.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\net9\\net9\\net9.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{01339710-7175-4207-AC42-FF16BB582ABE}|net9\\net9.csproj|solutionrelative:net9\\net9.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01339710-7175-4207-AC42-FF16BB582ABE}|net9\\net9.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\net9\\net9\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01339710-7175-4207-AC42-FF16BB582ABE}|net9\\net9.csproj|solutionrelative:net9\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\net9\\net9\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "net9\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\net9\\net9\\WeatherForecast.cs",
+              "RelativeToolTip": "net9\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T13:06:04.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\net9\\net9\\appsettings.json",
+              "RelativeDocumentMoniker": "net9\\appsettings.json",
+              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\net9\\net9\\appsettings.json",
+              "RelativeToolTip": "net9\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-30T12:58:17.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\net9\\net9\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "net9\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\net9\\net9\\Properties\\launchSettings.json",
+              "RelativeToolTip": "net9\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-30T12:55:41.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\net9\\net9\\Program.cs",
+              "RelativeDocumentMoniker": "net9\\Program.cs",
+              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\net9\\net9\\Program.cs",
+              "RelativeToolTip": "net9\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T12:54:19.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "net9",
+              "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\net9\\net9\\net9.csproj",
+              "RelativeDocumentMoniker": "net9\\net9.csproj",
+              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\net9\\net9\\net9.csproj",
+              "RelativeToolTip": "net9\\net9.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-30T12:54:09.827Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

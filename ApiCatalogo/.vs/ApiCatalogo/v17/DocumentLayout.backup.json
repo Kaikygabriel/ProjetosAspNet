@@ -1,0 +1,72 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCatalogo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FF5F2B2A-34B7-48D7-BA80-E92ACBC55D9D}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\apicatalogo\\apicatalogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF5F2B2A-34B7-48D7-BA80-E92ACBC55D9D}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF5F2B2A-34B7-48D7-BA80-E92ACBC55D9D}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\apicatalogo\\apicatalogo\\apicatalogo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FF5F2B2A-34B7-48D7-BA80-E92ACBC55D9D}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\apicatalogo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF5F2B2A-34B7-48D7-BA80-E92ACBC55D9D}|ApiCatalogo\\ApiCatalogo.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\apicatalogo\\apicatalogo\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FF5F2B2A-34B7-48D7-BA80-E92ACBC55D9D}|ApiCatalogo\\ApiCatalogo.csproj|solutionrelative:apicatalogo\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCatalogo\\ApiCatalogo\\Program.cs",
+              "RelativeDocumentMoniker": "ApiCatalogo\\Program.cs",
+              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCatalogo\\ApiCatalogo\\Program.cs*",
+              "RelativeToolTip": "ApiCatalogo\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T13:16:50.206Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApiCatalogo",
+              "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCatalogo\\ApiCatalogo\\ApiCatalogo.csproj",
+              "RelativeDocumentMoniker": "ApiCatalogo\\ApiCatalogo.csproj",
+              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCatalogo\\ApiCatalogo\\ApiCatalogo.csproj",
+              "RelativeToolTip": "ApiCatalogo\\ApiCatalogo.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-30T13:21:37.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCatalogo\\ApiCatalogo\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ApiCatalogo\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCatalogo\\ApiCatalogo\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ApiCatalogo\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-30T13:18:25.513Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
