@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\MInimalApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF6712D4-3710-4F52-9117-5EEC2F8D6AE1}|MInimalApi\\MInimalApi.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\minimalapi\\minimalapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF6712D4-3710-4F52-9117-5EEC2F8D6AE1}|MInimalApi\\MInimalApi.csproj|solutionrelative:minimalapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\MInimalApi\\MInimalApi\\Program.cs",
+              "RelativeDocumentMoniker": "MInimalApi\\Program.cs",
+              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\MInimalApi\\MInimalApi\\Program.cs*",
+              "RelativeToolTip": "MInimalApi\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T13:39:05.343Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
