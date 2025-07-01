@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\catalogoapi\\catalogoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|solutionrelative:catalogoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\catalogoapi\\catalogoapi\\data\\catalogocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|solutionrelative:catalogoapi\\data\\catalogocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\catalogoapi\\catalogoapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|solutionrelative:catalogoapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\catalogoapi\\catalogoapi\\services\\seedingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|solutionrelative:catalogoapi\\services\\seedingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\catalogoapi\\catalogoapi\\model\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,12 +15,16 @@
       "RelativeMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|solutionrelative:catalogoapi\\model\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\catalogoapi\\catalogoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|solutionrelative:catalogoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\catalogoapi\\catalogoapi\\catalogoapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|solutionrelative:catalogoapi\\catalogoapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\catalogoapi\\catalogoapi\\catalogoapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|solutionrelative:catalogoapi\\catalogoapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|c:\\users\\kaiky\\downloads\\kaka\\projetosaspnet\\catalogoapi\\catalogoapi\\data\\catalogocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BED39A6-BF14-43CD-982A-5B7463A4268D}|CatalogoApi\\CatalogoApi.csproj|solutionrelative:catalogoapi\\data\\catalogocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,97 +34,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\appsettings.json",
-              "RelativeDocumentMoniker": "CatalogoApi\\appsettings.json",
-              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\appsettings.json",
-              "RelativeToolTip": "CatalogoApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-30T13:48:16.15Z",
+              "DocumentIndex": 0,
+              "Title": "SeedingService.cs",
+              "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Services\\SeedingService.cs",
+              "RelativeDocumentMoniker": "CatalogoApi\\Services\\SeedingService.cs",
+              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Services\\SeedingService.cs",
+              "RelativeToolTip": "CatalogoApi\\Services\\SeedingService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T14:02:50.06Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CatalogoContext.cs",
+              "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Data\\CatalogoContext.cs",
+              "RelativeDocumentMoniker": "CatalogoApi\\Data\\CatalogoContext.cs",
+              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Data\\CatalogoContext.cs",
+              "RelativeToolTip": "CatalogoApi\\Data\\CatalogoContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T13:47:26.343Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CatalogoContext.cs",
-              "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Data\\CatalogoContext.cs",
-              "RelativeDocumentMoniker": "CatalogoApi\\Data\\CatalogoContext.cs",
-              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Data\\CatalogoContext.cs*",
-              "RelativeToolTip": "CatalogoApi\\Data\\CatalogoContext.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T13:47:26.343Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Produto.cs",
               "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Model\\Produto.cs",
               "RelativeDocumentMoniker": "CatalogoApi\\Model\\Produto.cs",
               "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Model\\Produto.cs",
               "RelativeToolTip": "CatalogoApi\\Model\\Produto.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowBQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCIAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-30T13:32:03.816Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Categoria.cs",
               "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Model\\Categoria.cs",
               "RelativeDocumentMoniker": "CatalogoApi\\Model\\Categoria.cs",
               "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Model\\Categoria.cs",
               "RelativeToolTip": "CatalogoApi\\Model\\Categoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-30T13:28:09.376Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CatalogoApi",
+              "DocumentIndex": 4,
+              "Title": "CatalogoApi.csproj",
               "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\CatalogoApi.csproj",
               "RelativeDocumentMoniker": "CatalogoApi\\CatalogoApi.csproj",
               "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\CatalogoApi.csproj",
               "RelativeToolTip": "CatalogoApi\\CatalogoApi.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-30T13:26:16.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T13:26:16.156Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Program.cs",
               "RelativeDocumentMoniker": "CatalogoApi\\Program.cs",
-              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Program.cs*",
-              "RelativeToolTip": "CatalogoApi\\Program.cs*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Program.cs",
+              "RelativeToolTip": "CatalogoApi\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-30T13:26:02.2Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CatalogoApi.http",
-              "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\CatalogoApi.http",
-              "RelativeDocumentMoniker": "CatalogoApi\\CatalogoApi.http",
-              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\CatalogoApi.http",
-              "RelativeToolTip": "CatalogoApi\\CatalogoApi.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-06-30T13:26:01.579Z",
               "EditorCaption": ""
             }
           ]

@@ -1,4 +1,5 @@
 using CatalogoApi.Data;
+using CatalogoApi.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -10,6 +11,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<SeedingService>();
 builder.Services.AddDbContext<CatalogoContext>(Options =>
     Options.UseMySql(
         builder.Configuration.GetConnectionString("Catalogo"),
@@ -24,6 +26,12 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+using (var scoped = app.Services.CreateScope())
+{
+    var service = scoped.ServiceProvider;
+    var seeding = service.GetRequiredService<SeedingService>();
+    seeding.Seed();
 }
 
 app.UseHttpsRedirection();

@@ -31,10 +31,14 @@ namespace CatalogoApi.Migrations
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ImageUrl")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("varchar(300)");
 
                     b.Property<string>("Nome")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(70)
+                        .HasColumnType("varchar(70)");
 
                     b.HasKey("Id");
 
@@ -49,27 +53,54 @@ namespace CatalogoApi.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CategoriaId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Descricao")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("varchar(300)");
 
                     b.Property<int>("Estoque")
                         .HasColumnType("int");
 
                     b.Property<string>("ImagemUrl")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("varchar(300)");
 
                     b.Property<string>("Nome")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(70)
+                        .HasColumnType("varchar(70)");
 
                     b.Property<decimal>("Preco")
-                        .HasColumnType("decimal(65,30)");
+                        .HasColumnType("decimal(10,2)");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoriaId");
+
                     b.ToTable("Produtos");
+                });
+
+            modelBuilder.Entity("CatalogoApi.Model.Produto", b =>
+                {
+                    b.HasOne("CatalogoApi.Model.Categoria", "Categoria")
+                        .WithMany("Produtos")
+                        .HasForeignKey("CategoriaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Categoria");
+                });
+
+            modelBuilder.Entity("CatalogoApi.Model.Categoria", b =>
+                {
+                    b.Navigation("Produtos");
                 });
 #pragma warning restore 612, 618
         }
