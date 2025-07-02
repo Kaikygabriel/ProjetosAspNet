@@ -32,6 +32,7 @@ public class Produto
     [StringLength(300, MinimumLength = 3, ErrorMessage = "Descrição é maior que 150 ou menor que 3 caracters")]
     public string? Descricao { get; set; }
     [Required]
+    
     [Column(TypeName = "decimal(10,2)")]
     public Decimal Preco { get; set; }
     [Required]
