@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "CatalogoApi\\Program.cs",
               "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Program.cs",
               "RelativeToolTip": "CatalogoApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-30T13:26:02.2Z",
               "IsPinned": true,
@@ -44,9 +44,9 @@
               "Title": "ProdutosController.cs",
               "DocumentMoniker": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Controllers\\ProdutosController.cs",
               "RelativeDocumentMoniker": "CatalogoApi\\Controllers\\ProdutosController.cs",
-              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Controllers\\ProdutosController.cs*",
-              "RelativeToolTip": "CatalogoApi\\Controllers\\ProdutosController.cs*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Controllers\\ProdutosController.cs",
+              "RelativeToolTip": "CatalogoApi\\Controllers\\ProdutosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-02T13:11:19.493Z",
               "EditorCaption": ""
@@ -61,8 +61,7 @@
               "RelativeToolTip": "CatalogoApi\\CatalogoApi.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-30T13:26:16.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T13:26:16.156Z"
             }
           ]
         }
