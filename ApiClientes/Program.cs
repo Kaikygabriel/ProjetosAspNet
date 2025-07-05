@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using ApiClientes.Data;
 using ApiClientes.Services;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 
+builder.Services.AddControllers().AddJsonOptions(options =>
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles
+    );
 builder.Services.AddScoped<SeedingCliente>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

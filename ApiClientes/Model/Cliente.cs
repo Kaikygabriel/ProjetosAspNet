@@ -1,7 +1,9 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ApiClientes.Model;
 
+[Table("Clientes")]
 public class Cliente
 {
     public Cliente()
