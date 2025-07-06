@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-var conection = builder.Configuration.GetConnectionString("Conection");
+var conection = builder.Configuration.GetConnectionString("CursosConection");
 builder.Services.AddDbContext<ApiCursosContext>(options =>
     options.UseMySql(
         conection,

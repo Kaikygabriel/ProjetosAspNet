@@ -24,7 +24,7 @@ namespace CatalogoApi.Controllers
                 return NotFound("Produtos não encontrado");
             return produtos;
         }
-
+         
         [HttpGet("{id:int}",Name = "ObterProduto")]
         public ActionResult<Produto> Get(int id)
         {

@@ -1,6 +1,8 @@
+using System.Runtime.CompilerServices;
 using ApiCursos.Data;
 using ApiCursos.Model;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ApiCursos.Controllers;
 
@@ -18,13 +20,21 @@ public class CursosController :  ControllerBase
     [HttpGet]
     public ActionResult Get()
     {
-        IEnumerable<Curso> cursos = context.Cursos.ToList();
-        if (cursos is null)
-            return NotFound("Lista de cursos esta vazia");
-        return Ok(cursos);
+        try
+        {
+            IEnumerable<Curso> cursos = context.Cursos.Take(10).AsNoTracking().ToList();
+            if (cursos is null)
+                return NotFound("Lista de cursos esta vazia");
+            return Ok(cursos);
+        }
+        catch (Exception)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, "Erro, ao tentar processar a requisição");
+        }
     }
 
     [HttpGet("{id:int}")]
+    [HttpGet("/{id:int}")]
     public ActionResult Get(int id)
     {
         var curso = context.Cursos.FirstOrDefault(x => x.Id == id);
@@ -41,7 +51,7 @@ public class CursosController :  ControllerBase
             return NotFound("Curso é nulo");
         context.Cursos.Add(curso);
         context.SaveChanges();
-        return CreatedAtAction("ObterCurso", new { curso.Id }, curso);
+        return Ok(curso);
     }
 
     [HttpPut("{id:int}")]
