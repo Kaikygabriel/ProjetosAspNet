@@ -1,4 +1,5 @@
-﻿using CatalogoApi.Data;
+﻿using System.Threading.Tasks;
+using CatalogoApi.Data;
 using CatalogoApi.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,11 +18,11 @@ namespace CatalogoApi.Controllers
         private readonly CatalogoContext _context;
 
         [HttpGet]
-        public ActionResult<IEnumerable<Categoria>> Get()
+        public async Task<ActionResult<IEnumerable<Categoria>>> GetAsync()
         {
             try 
             {
-                IEnumerable<Categoria> categorias = _context.Categorias.AsNoTracking().ToList();
+                IEnumerable<Categoria> categorias = await _context.Categorias.AsNoTracking().ToListAsync();
                 if (categorias is null)
                     return NotFound("A lista de categorias esta vazia");
 
@@ -35,11 +36,11 @@ namespace CatalogoApi.Controllers
         }
 
         [HttpGet("{id:int}",Name ="obter")]
-        public ActionResult<Categoria> Get(int id)
+        public async Task<ActionResult<Categoria>> GetAsync(int id)
         {
             try
             {
-                var categoria = _context.Categorias.FirstOrDefault(c => c.Id == id);
+                var categoria = await _context.Categorias.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
                 if (categoria is null)
                     return NotFound("Essa categoria não foi encontrada");
                 return Ok(categoria);
@@ -52,11 +53,11 @@ namespace CatalogoApi.Controllers
         }
 
         [HttpGet("produtos")]
-        public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos()
+        public async Task<ActionResult<IEnumerable<Categoria>>> GetCategoriasProdutosAsync()
         {
             try
             {
-                return _context.Categorias.Include(x => x.Produtos).Where(x => x.Id <= 5).AsNoTracking().ToList();
+                return await _context.Categorias.Include(x => x.Produtos).Where(x => x.Id <= 5).AsNoTracking().ToListAsync();
             }
             catch (Exception)
             {

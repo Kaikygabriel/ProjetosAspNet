@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace CatalogoApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ProdutosController : ControllerBase
     {
         public ProdutosController(CatalogoContext context)
@@ -17,18 +17,18 @@ namespace CatalogoApi.Controllers
         private readonly CatalogoContext _context;
 
         [HttpGet]
-        public ActionResult<IEnumerable<Produto>> Get() 
+        public async Task<ActionResult<IEnumerable<Produto>>> GetAsync() 
         {
-            var produtos = _context.Produtos.Take(10).AsNoTracking().ToList();
+            var produtos = await _context.Produtos.Take(10).AsNoTracking().ToListAsync();
             if (produtos is null)
                 return NotFound("Produtos não encontrado");
             return produtos;
         }
          
-        [HttpGet("{id:int}",Name = "ObterProduto")]
-        public ActionResult<Produto> Get(int id)
+        [HttpGet("{id:int:min(1)}",Name = "ObterProduto")]
+        public async Task<ActionResult<Produto>> GetAsync(int id)
         {
-            var produto = _context.Produtos.SingleOrDefault(x => x.Id == id);
+            var produto =  await _context.Produtos.AsNoTracking().SingleOrDefaultAsync(x => x.Id == id);
             if (produto is null)
                 return NotFound("Produto não existe");
             return produto;
