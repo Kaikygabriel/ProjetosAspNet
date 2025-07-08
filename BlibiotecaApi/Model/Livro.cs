@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace BlibiotecaApi.Model;
 
@@ -14,4 +15,9 @@ public class Livro
     [Required]
     [StringLength(300,MinimumLength = 5)]
     public string Titulo { get; set; }
+    
+    [Required]
+    public int BlibiotecaId { get; set; }
+    [JsonIgnore]
+    public Blibioteca Blibioteca { get; set; }
 }

@@ -11,4 +11,5 @@ public class BlibiotecaContext : DbContext
     }
 
     public DbSet<Livro>Livros { get; set; }
+    public DbSet<Blibioteca>Blibiotecas { get; set; }
 }
