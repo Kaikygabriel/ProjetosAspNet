@@ -21,18 +21,19 @@ namespace CatalogoApi.Controllers
         {
             var produtos = await _context.Produtos.Take(10).AsNoTracking().ToListAsync();
             if (produtos is null)
-                return NotFound("Produtos não encontrado");
+                return NotFound("Produtos não encontrado...");
             return produtos;
         }
          
-        [HttpGet("{id:int:min(1)}",Name = "ObterProduto")]
+         [HttpGet("{id:int:min(1)}",Name = "ObterProduto")]
         public async Task<ActionResult<Produto>> GetAsync(int id)
         {
             var produto =  await _context.Produtos.AsNoTracking().SingleOrDefaultAsync(x => x.Id == id);
             if (produto is null)
-                return NotFound("Produto não existe");
+                return NotFound("Produto não Encontrado...");
             return produto;
         }
+
         [HttpPost]
         public ActionResult Post(Produto produto)
         {

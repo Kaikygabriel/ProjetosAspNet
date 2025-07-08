@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/Categorias": {
+    "/api    /Categorias": {
       "get": {
         "tags": [
           "Categorias"
@@ -89,7 +89,7 @@
         }
       }
     },
-    "/Categorias/{id}": {
+    "/api    /Categorias/{id}": {
       "get": {
         "tags": [
           "Categorias"
@@ -225,7 +225,7 @@
         }
       }
     },
-    "/Categorias/produtos": {
+    "/api    /Categorias/produtos": {
       "get": {
         "tags": [
           "Categorias"
@@ -263,7 +263,7 @@
         }
       }
     },
-    "/Produtos": {
+    "/api/Produtos": {
       "get": {
         "tags": [
           "Produtos"
@@ -330,7 +330,7 @@
         }
       }
     },
-    "/Produtos/{id}": {
+    "/api/Produtos/{id}": {
       "get": {
         "tags": [
           "Produtos"
@@ -342,6 +342,7 @@
             "in": "path",
             "required": true,
             "schema": {
+              "minimum": 1,
               "type": "integer",
               "format": "int32"
             }

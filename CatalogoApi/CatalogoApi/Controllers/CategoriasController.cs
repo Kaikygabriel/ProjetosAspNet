@@ -3,11 +3,12 @@ using CatalogoApi.Data;
 using CatalogoApi.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 
 namespace CatalogoApi.Controllers
 {
-    [Route("[controller]")]
+    [Route("api    /[controller]")]
     [ApiController]
     public class CategoriasController : ControllerBase
     {
