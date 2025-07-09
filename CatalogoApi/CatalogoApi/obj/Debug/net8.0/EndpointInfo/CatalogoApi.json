@@ -493,15 +493,19 @@
             "type": "string"
           },
           "preco": {
+            "maximum": 10000,
+            "minimum": 1,
             "type": "number",
             "format": "double"
           },
           "imagemUrl": {
             "maxLength": 300,
-            "minLength": 0,
+            "minLength": 4,
             "type": "string"
           },
           "estoque": {
+            "maximum": 10000,
+            "minimum": 0,
             "type": "integer",
             "format": "int32"
           },

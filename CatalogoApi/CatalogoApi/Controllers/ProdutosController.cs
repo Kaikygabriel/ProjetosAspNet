@@ -25,7 +25,7 @@ namespace CatalogoApi.Controllers
             return produtos;
         }
          
-         [HttpGet("{id:int:min(1)}",Name = "ObterProduto")]
+        [HttpGet("{id:int:min(1)}",Name = "ObterProduto")]
         public async Task<ActionResult<Produto>> GetAsync(int id)
         {
             var produto =  await _context.Produtos.AsNoTracking().SingleOrDefaultAsync(x => x.Id == id);
