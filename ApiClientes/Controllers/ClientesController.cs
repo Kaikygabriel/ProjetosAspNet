@@ -17,11 +17,11 @@ public class ClientesController : ControllerBase
     private readonly ClienteContext _context;
     
     [HttpGet]
-    public ActionResult Get()
+    public async Task<ActionResult> GetAsync()
     {
         try
         {
-            IEnumerable<Cliente> clientes = _context.Clientes.Take(10).AsNoTracking().ToList();
+            IEnumerable<Cliente> clientes = await _context.Clientes.Take(10).AsNoTracking().ToListAsync();
             if (clientes is null)
                 return NotFound();
             return Ok(clientes);
@@ -32,12 +32,12 @@ public class ClientesController : ControllerBase
         }
     }
 
-     [HttpGet("{id:int}",Name = "obter")]
-    public ActionResult<Cliente> Get(int id)
+     [HttpGet("{id:int:min(1)}")]
+    public async Task<ActionResult<Cliente>> GetAsync(int id)
     {
         try
         {
-            var cliente = _context.Clientes.SingleOrDefault(x => x.Id == id);
+            var cliente = await _context.Clientes.SingleOrDefaultAsync(x => x.Id == id);
             if (cliente is null)
                 return NotFound("Cliente não encontrado");
             return Ok(cliente);
@@ -49,15 +49,13 @@ public class ClientesController : ControllerBase
     }
 
     [HttpPost]
-    public ActionResult Post(Cliente cliente)
+    public ActionResult Post([FromBody]Cliente cliente)
     {
         try
         {
-            if (cliente is null)
-                return BadRequest("Cliente nulo");
             _context.Clientes.Add(cliente);
             _context.SaveChanges();
-            return RedirectToRoute("obter", new { cliente.Id });
+            return Created();
         }
         catch (Exception)
         {

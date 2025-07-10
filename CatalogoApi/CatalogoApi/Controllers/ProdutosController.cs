@@ -11,6 +11,8 @@ namespace CatalogoApi.Controllers
     public class ProdutosController : ControllerBase
     {
         public ProdutosController(CatalogoContext context)
+
+
         {
             _context = context;
         }

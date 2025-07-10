@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api    /Categorias": {
+    "/api/Categorias": {
       "get": {
         "tags": [
           "Categorias"
@@ -89,7 +89,7 @@
         }
       }
     },
-    "/api    /Categorias/{id}": {
+    "/api/Categorias/{id}": {
       "get": {
         "tags": [
           "Categorias"
@@ -101,6 +101,7 @@
             "in": "path",
             "required": true,
             "schema": {
+              "minimum": 1,
               "type": "integer",
               "format": "int32"
             }
@@ -225,7 +226,7 @@
         }
       }
     },
-    "/api    /Categorias/produtos": {
+    "/api/Categorias/produtos": {
       "get": {
         "tags": [
           "Categorias"

@@ -34,7 +34,6 @@ public class CursosController :  ControllerBase
     }
 
     [HttpGet("{id:int}")]
-    [HttpGet("/{id:int}")]
     public ActionResult Get(int id)
     {
         var curso = context.Cursos.FirstOrDefault(x => x.Id == id);

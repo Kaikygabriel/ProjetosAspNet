@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CatalogoApi.Controllers
 {
-    [Route("api    /[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class CategoriasController : ControllerBase
     {
@@ -36,12 +36,12 @@ namespace CatalogoApi.Controllers
             }
         }
 
-        [HttpGet("{id:int}",Name ="obter")]
+        [HttpGet("{id:int:min(1)}",Name ="obter")]
         public async Task<ActionResult<Categoria>> GetAsync(int id)
         {
             try
             {
-                var categoria = await _context.Categorias.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
+                var categoria = await _context.Categorias.AsNoTracking().SingleOrDefaultAsync(c => c.Id == id);
                 if (categoria is null)
                     return NotFound("Essa categoria não foi encontrada");
                 return Ok(categoria);
