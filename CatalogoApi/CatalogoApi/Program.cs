@@ -1,5 +1,6 @@
 using System.Text.Json.Serialization;
 using CatalogoApi.Data;
+using CatalogoApi.Extesions;
 using CatalogoApi.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -26,6 +27,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.ConfigureExceptionHanler(); 
 }
 using (var scoped = app.Services.CreateScope())
 {
@@ -35,6 +37,10 @@ using (var scoped = app.Services.CreateScope())
 }
 
 app.UseHttpsRedirection();
+
+app.UseRouting();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
