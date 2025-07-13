@@ -1,12 +1,14 @@
 using System.Text.Json.Serialization;
 using CatalogoApi.Data;
 using CatalogoApi.Extesions;
+using CatalogoApi.Filters;
 using CatalogoApi.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<ApiLoggingFilter>();
 builder.Services.AddControllers();
 builder.Services.AddControllers().AddJsonOptions(options => { 
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
@@ -37,10 +39,6 @@ using (var scoped = app.Services.CreateScope())
 }
 
 app.UseHttpsRedirection();
-
-app.UseRouting();
-
-app.UseAuthentication();
 
 app.UseAuthorization();
 

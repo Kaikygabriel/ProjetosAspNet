@@ -12,7 +12,7 @@ namespace CatalogoApi.Extesions
             {
                 appError.Run(async context =>
                 {
-                    context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                    context.Response.StatusCode = 500;
                     context.Response.ContentType = "application/json";
 
                     var contextFaeture = context.Features.Get<IExceptionHandlerFeature>();

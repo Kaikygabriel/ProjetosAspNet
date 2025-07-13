@@ -1,8 +1,10 @@
 ﻿using System.Threading.Tasks;
 using CatalogoApi.Data;
+using CatalogoApi.Filters;
 using CatalogoApi.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +21,7 @@ namespace CatalogoApi.Controllers
         private readonly CatalogoContext _context;
 
         [HttpGet]
+        [ServiceFilter(typeof(ApiLoggingFilter))]
         public async Task<ActionResult<IEnumerable<Categoria>>> GetAsync()
         {
             try 
