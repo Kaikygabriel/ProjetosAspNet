@@ -1,4 +1,6 @@
+using BlibiotecaApi.Data;
 using BlibiotecaApi.Extesion;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+var conection = builder.Configuration.GetConnectionString("ConectionApi");
+builder.Services.AddDbContext<BlibiotecaContextApi>(options =>
+    options.UseMySql(
+        conection,
+        ServerVersion.AutoDetect(conection)));
 
 var app = builder.Build();
 
