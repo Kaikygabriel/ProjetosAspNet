@@ -3,6 +3,7 @@ using BlibiotecaApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlibiotecaApi.Migrations
 {
     [DbContext(typeof(BlibiotecaContextApi))]
-    partial class BlibiotecaContextApiModelSnapshot : ModelSnapshot
+    [Migration("20250714132223_AddModelsBliboiteca")]
+    partial class AddModelsBliboiteca
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,7 +55,7 @@ namespace BlibiotecaApi.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
 
-                    b.Property<int>("BlibiotecaID")
+                    b.Property<int>("IDBlibioteca")
                         .HasColumnType("int");
 
                     b.Property<string>("Titulo")
@@ -62,7 +65,7 @@ namespace BlibiotecaApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BlibiotecaID");
+                    b.HasIndex("IDBlibioteca");
 
                     b.ToTable("Livros");
                 });
@@ -71,7 +74,7 @@ namespace BlibiotecaApi.Migrations
                 {
                     b.HasOne("BlibiotecaApi.Model.Blibioteca", "Blibioteca")
                         .WithMany("Livros")
-                        .HasForeignKey("BlibiotecaID")
+                        .HasForeignKey("IDBlibioteca")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

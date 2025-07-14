@@ -13,4 +13,8 @@ public class Livro
     [Required]
     [StringLength(100,MinimumLength = 3)]
     public string Autor { get; set; }
+    [Required]
+    public int BlibiotecaID{ get; set; }
+
+    public Blibioteca Blibioteca { get; set; }
 }

@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using BlibiotecaApi.Model;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,4 +12,6 @@ public class BlibiotecaContextApi : DbContext
     }
 
     public DbSet<Livro>Livros { get; set; }
+    [JsonIgnore]
+    public DbSet<Blibioteca>Blbiotecas{ get; set; }
 }
