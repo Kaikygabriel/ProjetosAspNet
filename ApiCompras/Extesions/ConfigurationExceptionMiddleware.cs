@@ -20,7 +20,7 @@ public static class ConfigurationExceptionMiddleware
                     {
                         Menssage = contextFeature.Error.Message,
                         Trace = contextFeature.Error.StackTrace,
-                        StatusCodoe = context.Response.StatusCode
+                        StatusCode = context.Response.StatusCode
                     }));
                 }
             });
