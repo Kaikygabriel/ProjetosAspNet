@@ -20,7 +20,7 @@ builder.Services.AddDbContext<CatalogoContext>(Options =>
     Options.UseMySql(
         builder.Configuration.GetConnectionString("Catalogo"),
         ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("Catalogo")
-))) ;
+)));
 
 
 var app = builder.Build();
