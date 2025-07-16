@@ -1,3 +1,4 @@
+using ApiCompras.Filters;
 using ApiCompras.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -16,9 +17,9 @@ public class VendasController : ControllerBase
     private readonly VendaContext _context;
 
     [HttpGet]
+    //[ServiceFilter(typeof(ServiceFiltersCustom))]
     public async Task<ActionResult> GetAsync()
     {
-      
         IEnumerable<Venda> vendas = await _context.Vendas.AsNoTracking().Take(10).ToListAsync();
         return Ok(vendas);
     }

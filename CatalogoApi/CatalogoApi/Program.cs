@@ -2,11 +2,17 @@ using System.Text.Json.Serialization;
 using CatalogoApi.Data;
 using CatalogoApi.Extesions;
 using CatalogoApi.Filters;
+using CatalogoApi.Logging;
 using CatalogoApi.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderConfiguration
+{
+    LogLevel= LogLevel.Information
+}));
 
 builder.Services.AddScoped<ApiLoggingFilter>();
 builder.Services.AddControllers();
