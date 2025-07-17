@@ -14,6 +14,10 @@ builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderCon
     LogLevel= LogLevel.Information
 }));
 
+
+builder.Services.AddControllers(options =>
+options.Filters.Add(typeof(ApiExceptionFilter))
+);
 builder.Services.AddScoped<ApiLoggingFilter>();
 builder.Services.AddControllers();
 builder.Services.AddControllers().AddJsonOptions(options => { 

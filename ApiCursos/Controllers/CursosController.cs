@@ -20,20 +20,13 @@ public class CursosController :  ControllerBase
     [HttpGet]
     public ActionResult Get()
     {
-        try
-        {
-            IEnumerable<Curso> cursos = context.Cursos.Take(10).AsNoTracking().ToList();
-            if (cursos is null)
-                return NotFound("Lista de cursos esta vazia");
-            return Ok(cursos);
-        }
-        catch (Exception)
-        {
-            return StatusCode(StatusCodes.Status500InternalServerError, "Erro, ao tentar processar a requisição");
-        }
+        IEnumerable<Curso> cursos = context.Cursos.Take(10).AsNoTracking().ToList();
+        if (cursos is null)
+            return NotFound("Lista de cursos esta vazia");
+        return Ok(cursos);
     }
 
-    [HttpGet("{id:int}")]
+    [HttpGet("{id:int:min(1)}")]
     public ActionResult Get(int id)
     {
         var curso = context.Cursos.FirstOrDefault(x => x.Id == id);
@@ -53,7 +46,7 @@ public class CursosController :  ControllerBase
         return Ok(curso);
     }
 
-    [HttpPut("{id:int}")]
+    [HttpPut("{id:int:min(1)}")]
     public ActionResult Put(int id, Curso curso)
     {
         if (curso.Id != id)
@@ -65,7 +58,7 @@ public class CursosController :  ControllerBase
         return Ok(curso);
     }
 
-    [HttpDelete("{id:int}")]
+    [HttpDelete("{id:int:min(1)}")]
     public ActionResult Delete(int id)
     {
         var curso = context.Cursos.FirstOrDefault(x => x.Id == id);
