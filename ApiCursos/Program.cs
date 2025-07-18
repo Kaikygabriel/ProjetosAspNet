@@ -2,6 +2,7 @@ using System.Text.Json.Serialization;
 using ApiCursos.Data;
 using ApiCursos.ExtesionMethods;
 using ApiCursos.Filters;
+using ApiCursos.Repository;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -11,6 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddScoped<ExceptionFilter>();
+builder.Services.AddScoped<ICursoRepository,CursoRepository>();
 builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles
 );

@@ -1,6 +1,7 @@
 using System.Runtime.CompilerServices;
 using ApiCursos.Data;
 using ApiCursos.Model;
+using ApiCursos.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,17 +11,17 @@ namespace ApiCursos.Controllers;
 [Route("[controller]")]
 public class CursosController :  ControllerBase
 {
-    public CursosController(ApiCursosContext context)
+    private readonly ICursoRepository _repository;
+    public CursosController(ICursoRepository repository)
     {
-        this.context = context;
+        _repository = repository;
     }
 
-    private readonly ApiCursosContext context;
 
     [HttpGet]
     public ActionResult Get()
     {
-        IEnumerable<Curso> cursos = context.Cursos.Take(10).AsNoTracking().ToList();
+        IEnumerable<Curso> cursos = _repository.GetCursos();
         if (cursos is null)
             return NotFound("Lista de cursos esta vazia");
         return Ok(cursos);
@@ -29,7 +30,7 @@ public class CursosController :  ControllerBase
     [HttpGet("{id:int:min(1)}")]
     public ActionResult Get(int id)
     {
-        var curso = context.Cursos.FirstOrDefault(x => x.Id == id);
+        var curso = _repository.GetCurso(id);
         if (curso is null)
             return NotFound("curso não encontrado");
         
@@ -41,8 +42,7 @@ public class CursosController :  ControllerBase
     {
         if (curso is null)
             return NotFound("Curso é nulo");
-        context.Cursos.Add(curso);
-        context.SaveChanges();
+        _repository.Create(curso);
         return Ok(curso);
     }
 
@@ -53,19 +53,17 @@ public class CursosController :  ControllerBase
             return BadRequest("Id é diferente de id do curso");
         if (curso is null)
             return NotFound();
-        context.Update(curso);
-        context.SaveChanges();
+        _repository.Update(curso);
         return Ok(curso);
     }
 
     [HttpDelete("{id:int:min(1)}")]
     public ActionResult Delete(int id)
     {
-        var curso = context.Cursos.FirstOrDefault(x => x.Id == id);
+        var curso = _repository.GetCurso(id);
         if (curso is null)
             return NotFound("curso não encontrado");
-        context.Remove(curso);
-        context.SaveChanges();
+        _repository.Delete(id);
         return Ok(curso);
     }
 }

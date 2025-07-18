@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ANZM0igRqMc=",
+  "dgSpecHash": "IKCjl8/5MY0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kaiky\\downloads\\kaka\\ProjetosAspNet\\ApiCursos\\ApiCursos.csproj",
+  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCursos\\ApiCursos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kaiky\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.5\\microsoft.aspnetcore.openapi.9.0.5.nupkg.sha512",
