@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "CatalogoApi.Controllers.CategoriasController",
-    "Method": "GetAsync",
+    "Method": "Get",
     "RelativePath": "api/Categorias",
     "HttpMethod": "GET",
     "IsController": true,
@@ -47,7 +47,7 @@
   },
   {
     "ContainingType": "CatalogoApi.Controllers.CategoriasController",
-    "Method": "GetAsync",
+    "Method": "Get",
     "RelativePath": "api/Categorias/{id}",
     "HttpMethod": "GET",
     "IsController": true,
