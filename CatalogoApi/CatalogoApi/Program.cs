@@ -15,6 +15,8 @@ builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderCon
     LogLevel= LogLevel.Information
 }));
 
+builder.Services.AddScoped<IRepositoryProduto, RepositoryProduto>();
+
 builder.Services.AddScoped<IRepositoryCategoria, RepositoryCategoria>();
 builder.Services.AddControllers(options =>
 options.Filters.Add(typeof(ApiExceptionFilter))

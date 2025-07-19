@@ -1,5 +1,7 @@
 using System.Text.Json.Serialization;
 using ApiClientes.Data;
+using ApiClientes.Extesion;
+using ApiClientes.Repository;
 using ApiClientes.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,11 +10,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+
 
 builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles
     );
+
+builder.Services.AddScoped<IClientesRepository, ClienteRepository>();
 builder.Services.AddScoped<SeedingCliente>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -29,6 +33,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseExceptionGlobalHandler();
 }
 
 using (var scoped = app.Services.CreateScope())

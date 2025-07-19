@@ -131,7 +131,7 @@
   },
   {
     "ContainingType": "CatalogoApi.Controllers.CategoriasController",
-    "Method": "GetCategoriasProdutosAsync",
+    "Method": "GetCategoriasProdutos",
     "RelativePath": "api/Categorias/produtos",
     "HttpMethod": "GET",
     "IsController": true,
@@ -151,7 +151,7 @@
   },
   {
     "ContainingType": "CatalogoApi.Controllers.ProdutosController",
-    "Method": "GetAsync",
+    "Method": "Get",
     "RelativePath": "api/Produtos",
     "HttpMethod": "GET",
     "IsController": true,
@@ -187,7 +187,7 @@
   },
   {
     "ContainingType": "CatalogoApi.Controllers.ProdutosController",
-    "Method": "GetAsync",
+    "Method": "Get",
     "RelativePath": "api/Produtos/{id}",
     "HttpMethod": "GET",
     "IsController": true,
