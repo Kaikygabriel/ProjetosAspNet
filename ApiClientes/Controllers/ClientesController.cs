@@ -1,5 +1,6 @@
 using ApiClientes.Data;
 using ApiClientes.Model;
+using ApiClientes.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,91 +11,54 @@ namespace ApiClientes.Controllers;
 public class ClientesController : ControllerBase
 {
 
-    public ClientesController(ClienteContext context)
+    public ClientesController(IClientesRepository context)
     {
         _context = context;
     }
-    private readonly ClienteContext _context;
+    private readonly IClientesRepository _context;
     
     [HttpGet]
-    public async Task<ActionResult> GetAsync()
+    public ActionResult Get()
     {
-        try
-        {
-            IEnumerable<Cliente> clientes = await _context.Clientes.Take(10).AsNoTracking().ToListAsync();
+            IEnumerable<Cliente> clientes = _context.GetClientes();
             if (clientes is null)
                 return NotFound();
             return Ok(clientes);
-        }
-        catch (Exception)
-        {
-            return StatusCode(StatusCodes.Status500InternalServerError, "Error no servidor durando uma requisição");
-        }
     }
 
      [HttpGet("{id:int:min(1)}")]
-    public async Task<ActionResult<Cliente>> GetAsync(int id)
+    public ActionResult<Cliente> Get(int id)
     {
-        try
-        {
-            var cliente = await _context.Clientes.SingleOrDefaultAsync(x => x.Id == id);
+            var cliente =  _context.GetCliente(id);
             if (cliente is null)
                 return NotFound("Cliente não encontrado");
             return Ok(cliente);
-        }
-        catch (Exception)
-        {
-            return StatusCode(StatusCodes.Status500InternalServerError, "Error no servidor durando uma requisição");
-        }
     }
 
     [HttpPost]
     public ActionResult Post([FromBody]Cliente cliente)
     {
-        try
-        {
-            _context.Clientes.Add(cliente);
-            _context.SaveChanges();
+            _context.Create(cliente);
             return Created();
-        }
-        catch (Exception)
-        {
-            return StatusCode(StatusCodes.Status500InternalServerError, "Error no servidor durando uma requisição");
-        }
     }
 
-    [HttpPut("{id:int}")]
+    [HttpPut("{id:int:min(1)}")]
     public ActionResult Put(int id, Cliente cliente)
     {
-        try
-        {
+  
             if (id != cliente.Id)
                 return BadRequest("Id informado é diferente do id do cliente");
             _context.Update(cliente);
-            _context.SaveChanges();
             return Ok(cliente);
-        }
-        catch (Exception)
-        {
-            return StatusCode(StatusCodes.Status500InternalServerError, "Error no servidor durando uma requisição");
-        }
     }
 
-    [HttpDelete("{id:int}")]
+    [HttpDelete("{id:int:min(1)}")]
     public ActionResult Delete(int id)
     {
-        try
-        {
-            var cliente = _context.Clientes.SingleOrDefault(x => x.Id == id);
+        var cliente = _context.GetCliente(id);
             if (cliente is null)
                 return BadRequest("Cliente não existe");
-            _context.Clientes.Remove(cliente);
-            _context.SaveChanges();
+        _context.Delete(id);
             return Ok(cliente);
-        }
-        catch (Exception)
-        {
-            return StatusCode(StatusCodes.Status500InternalServerError, "Error no servidor durando uma requisição");
-        }
     }
 }
