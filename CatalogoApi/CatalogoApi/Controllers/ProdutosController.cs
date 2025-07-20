@@ -1,6 +1,6 @@
 ﻿using CatalogoApi.Data;
 using CatalogoApi.Model;
-using CatalogoApi.Repository;
+using CatalogoApi.Repository.Interface;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +21,7 @@ namespace CatalogoApi.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Produto>> Get() 
         {
-            var produtos = _context.GetProdutos();
+            var produtos = _context.GetAll();
             if (produtos is null)
                 return NotFound("Produtos não encontrado...");
             return Ok(produtos);
@@ -30,7 +30,7 @@ namespace CatalogoApi.Controllers
         [HttpGet("{id:int:min(1)}",Name = "ObterProduto")]
         public ActionResult<Produto> Get(int id)
         {
-            var produto = _context.GetProduto(id);
+            var produto = _context.GetById(p=>p.Id==id);
             if (produto is null)
                 return NotFound("Produto não Encontrado...");
             return produto;
@@ -57,10 +57,10 @@ namespace CatalogoApi.Controllers
         [HttpDelete("{id:int}")]
         public ActionResult Delete(int id)
         {
-            var produto = _context.GetProduto(id);
+            var produto = _context.GetById(p=>p.Id==id);
             if (produto is null)
                 return NotFound("Produto não Encontrado...");
-            var produtoExcluido= _context.Delete(id);
+            var produtoExcluido= _context.Delete(produto);
             return Ok(produtoExcluido);
         }
     }

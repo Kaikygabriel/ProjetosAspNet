@@ -2,7 +2,7 @@
 using CatalogoApi.Data;
 using CatalogoApi.Filters;
 using CatalogoApi.Model;
-using CatalogoApi.Repository;
+using CatalogoApi.Repository.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -25,7 +25,7 @@ namespace CatalogoApi.Controllers
         //[ServiceFilter(typeof(ApiLoggingFilter))]
         public ActionResult<IEnumerable<Categoria>> Get()
         {
-            IEnumerable<Categoria> categorias = _context.GetCategorias();
+            IEnumerable<Categoria> categorias = _context.GetAll();
             if (categorias is null)
                 return NotFound("A lista de categorias esta vazia");
 
@@ -35,7 +35,7 @@ namespace CatalogoApi.Controllers
         [HttpGet("{id:int:min(1)}", Name = "obter")]
         public ActionResult<Categoria> Get(int id)
         {
-            var categoria = _context.GetCategoria(id);
+            var categoria = _context.GetById(c=>c.Id==id);
             if (categoria is null)
                 return NotFound("Essa categoria não foi encontrada");
             return Ok(categoria);
@@ -71,10 +71,10 @@ namespace CatalogoApi.Controllers
         [HttpDelete("{id:int:min(1)}")]
         public ActionResult<Categoria> Delete(int id)
         {
-            var categoria = _context.GetCategoria(id);
+            var categoria = _context.GetById(c=>c.Id==id);
             if (categoria is null)
                 return NotFound("Categoria não encontrada!");
-            _context.Delete(id);
+            _context.Delete(categoria);
             return Ok(categoria);
         }
     }

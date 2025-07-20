@@ -4,6 +4,7 @@ using CatalogoApi.Extesions;
 using CatalogoApi.Filters;
 using CatalogoApi.Logging;
 using CatalogoApi.Repository;
+using CatalogoApi.Repository.Interface;
 using CatalogoApi.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -16,7 +17,7 @@ builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderCon
 }));
 
 builder.Services.AddScoped<IRepositoryProduto, RepositoryProduto>();
-
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IRepositoryCategoria, RepositoryCategoria>();
 builder.Services.AddControllers(options =>
 options.Filters.Add(typeof(ApiExceptionFilter))
