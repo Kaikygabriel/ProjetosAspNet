@@ -1,6 +1,7 @@
 using ApiClientes.Data;
 using ApiClientes.Model;
 using ApiClientes.Repository;
+using ApiClientes.Repository.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,45 +21,44 @@ public class ClientesController : ControllerBase
     [HttpGet]
     public ActionResult Get()
     {
-            IEnumerable<Cliente> clientes = _context.GetClientes();
-            if (clientes is null)
-                return NotFound();
-            return Ok(clientes);
+        IEnumerable<Cliente> clientes = _context.GetAll();
+        if (clientes is null)
+            return NotFound();
+        return Ok(clientes);
     }
 
      [HttpGet("{id:int:min(1)}")]
     public ActionResult<Cliente> Get(int id)
     {
-            var cliente =  _context.GetCliente(id);
-            if (cliente is null)
-                return NotFound("Cliente não encontrado");
-            return Ok(cliente);
+        var cliente =  _context.GetById(c=>c.Id==id);
+        if (cliente is null)
+            return NotFound("Cliente não encontrado");
+        return Ok(cliente);
     }
 
     [HttpPost]
     public ActionResult Post([FromBody]Cliente cliente)
     {
-            _context.Create(cliente);
-            return Created();
+        _context.Create(cliente);
+        return Created();
     }
 
     [HttpPut("{id:int:min(1)}")]
     public ActionResult Put(int id, Cliente cliente)
     {
-  
-            if (id != cliente.Id)
-                return BadRequest("Id informado é diferente do id do cliente");
-            _context.Update(cliente);
-            return Ok(cliente);
+        if (id != cliente.Id)
+            return BadRequest("Id informado é diferente do id do cliente");
+        _context.Update(cliente);
+        return Ok(cliente);
     }
 
     [HttpDelete("{id:int:min(1)}")]
     public ActionResult Delete(int id)
     {
-        var cliente = _context.GetCliente(id);
+        var cliente = _context.GetById(c=>c.Id==id);
             if (cliente is null)
                 return BadRequest("Cliente não existe");
-        _context.Delete(id);
+        _context.Delete(cliente);
             return Ok(cliente);
     }
 }

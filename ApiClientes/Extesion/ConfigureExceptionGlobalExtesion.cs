@@ -7,22 +7,22 @@ public static class ConfigureExceptionGlobalExtesion
 {
     public static void UseExceptionGlobalHandler(this IApplicationBuilder app)
     {
-        app.UseExceptionHandler(appError =>
+        app.UseExceptionHandler(appError=>
             appError.Run(async context =>
             {
                 context.Response.StatusCode = 500;
-                context.Response.ContentType = "Applicaton/json";
-                var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
-                if (contextFeature != null)
+                context.Response.ContentType = "Application/json";
+                var error = context.Features.Get<IExceptionHandlerFeature>();
+                if (error != null)
                 {
-                    await context.Response.WriteAsync(JsonSerializer.Serialize(new
+                    await context.Response.WriteAsync(JsonSerializer.Serialize((new
                     {
-                        Menssage = contextFeature.Error.Message,
-                        StatusCode = context.Response.StatusCode,
-                        Trace = contextFeature.Error.StackTrace
-                    }));
+                        StatusCode= context.Response.StatusCode,
+                        Trace=error.Error.StackTrace,
+                        Menssage=error.Error.Message
+                    })));
                 }
             })
-        );
+            );
     }
 }
