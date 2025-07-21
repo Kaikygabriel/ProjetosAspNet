@@ -30,7 +30,6 @@ public class Repository<T> : IRepository<T> where T : class
         if (entity == null)
             throw new Exception(entity+" é null");
         _context.Set<T>().Add(entity);
-        _context.SaveChanges();
         return entity;
     }
 
@@ -39,7 +38,6 @@ public class Repository<T> : IRepository<T> where T : class
         if (entity == null)
             throw new Exception(entity + " é null");
         _context.Set<T>().Update(entity);
-        _context.SaveChanges();
         return entity;
     }
 
@@ -48,7 +46,6 @@ public class Repository<T> : IRepository<T> where T : class
         if (entity == null)
             throw new Exception(entity + " é null");
         _context.Set<T>().Remove(entity);
-        _context.SaveChanges();
         return entity;
     }
 }

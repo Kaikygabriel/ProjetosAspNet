@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SpjEE9mM9o4=",
+  "dgSpecHash": "6jm971hVaes=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kaiky\\downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\CatalogoApi.csproj",
+  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\CatalogoApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kaiky\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
