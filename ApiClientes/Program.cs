@@ -16,7 +16,7 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles
     );
 builder.Services.AddScoped<ExceptionFilterGlobal>();
-
+builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
 builder.Services.AddControllers(options =>
     options.Filters.Add(typeof(ExceptionFilterGlobal))
 );

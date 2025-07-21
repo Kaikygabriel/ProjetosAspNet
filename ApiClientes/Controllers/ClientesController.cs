@@ -11,26 +11,25 @@ namespace ApiClientes.Controllers;
 [Route("[controller]")]
 public class ClientesController : ControllerBase
 {
-
-    public ClientesController(IClientesRepository context)
+    public ClientesController(IUnitOfWork unitOfWork)
     {
-        _context = context;
+        _unitOfWork = unitOfWork;
     }
-    private readonly IClientesRepository _context;
-    
+
+    private readonly IUnitOfWork _unitOfWork;
     [HttpGet]
     public ActionResult Get()
     {
-        IEnumerable<Cliente> clientes = _context.GetAll();
+        IEnumerable<Cliente> clientes = _unitOfWork.RepositoryCliente.GetAll();
         if (clientes is null)
             return NotFound();
         return Ok(clientes);
     }
 
-     [HttpGet("{id:int:min(1)}")]
+     [HttpGet("{id:int:min(1)}",Name = "obter")]
     public ActionResult<Cliente> Get(int id)
     {
-        var cliente =  _context.GetById(c=>c.Id==id);
+        var cliente =  _unitOfWork.RepositoryCliente.GetById(c=>c.Id==id);
         if (cliente is null)
             return NotFound("Cliente não encontrado");
         return Ok(cliente);
@@ -39,26 +38,33 @@ public class ClientesController : ControllerBase
     [HttpPost]
     public ActionResult Post([FromBody]Cliente cliente)
     {
-        _context.Create(cliente);
-        return Created();
+        if (cliente is null)
+            return NotFound("Cliente is null");
+        _unitOfWork.RepositoryCliente.Create(cliente);
+        _unitOfWork.Commit();
+        return CreatedAtAction("obter",new {cliente.Id},cliente);
     }
 
     [HttpPut("{id:int:min(1)}")]
     public ActionResult Put(int id, Cliente cliente)
     {
-        if (id != cliente.Id)
+        if (cliente is null)
+            return NotFound("Cliente is null");
+        if (id != cliente.Id) 
             return BadRequest("Id informado é diferente do id do cliente");
-        _context.Update(cliente);
+        _unitOfWork.RepositoryCliente.Update(cliente);
+        _unitOfWork.Commit();
         return Ok(cliente);
     }
 
     [HttpDelete("{id:int:min(1)}")]
     public ActionResult Delete(int id)
     {
-        var cliente = _context.GetById(c=>c.Id==id);
-            if (cliente is null)
-                return BadRequest("Cliente não existe");
-        _context.Delete(cliente);
-            return Ok(cliente);
+        var cliente = _unitOfWork.RepositoryCliente.GetById(c=>c.Id==id);
+        if (cliente is null)
+            return BadRequest("Cliente não existe");
+        _unitOfWork.RepositoryCliente.Delete(cliente);
+        _unitOfWork.Commit();
+        return Ok(cliente);
     }
 }
