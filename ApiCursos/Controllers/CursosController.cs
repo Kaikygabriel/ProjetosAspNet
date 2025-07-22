@@ -40,6 +40,7 @@ public class CursosController : ControllerBase
         if (curso is null)
             return BadRequest("Curso recebido é nulo");
         _unitOfWork.RepositoryCurso.Create(curso);
+        _unitOfWork.Commit();
         return CreatedAtRoute("GetByID", new { curso.Id }, curso);
     }
 
@@ -51,14 +52,17 @@ public class CursosController : ControllerBase
         if (curso.Id != id)
             return NotFound("Id do curso é diferente de id informado");
         _unitOfWork.RepositoryCurso.Update(curso);
+        _unitOfWork.Commit();
         return Ok(curso);
     }
-    [HttpDelete]
-    public ActionResult<Curso> Delete(Curso curso)
+    [HttpDelete("{id:int:min(1)}")]
+    public ActionResult<Curso> Delete(int id)
     {
+        var curso = _unitOfWork.RepositoryCurso.GetByID(x => x.Id == id);
         if (curso is null)
             return BadRequest("Curso recebido é nulo");
         _unitOfWork.RepositoryCurso.Delete(curso);
+        _unitOfWork.Commit();
         return Ok(curso);
     }
 
