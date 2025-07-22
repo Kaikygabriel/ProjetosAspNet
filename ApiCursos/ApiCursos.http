@@ -1,6 +1,6 @@
-@ApiCursos_HostAddress = http://localhost:5051
+@APiCursos_HostAddress = http://localhost:5176
 
-GET {{ApiCursos_HostAddress}}/weatherforecast/
+GET {{APiCursos_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###

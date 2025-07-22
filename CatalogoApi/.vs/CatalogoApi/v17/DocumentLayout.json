@@ -46,8 +46,7 @@
               "RelativeToolTip": "CatalogoApi\\Controllers\\ProdutosController.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAUwEEAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T13:11:21.718Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T13:11:21.718Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "CatalogoApi\\Repository\\UnitOfWork.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T13:09:07.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T13:09:07.667Z"
             },
             {
               "$type": "Document",
@@ -72,8 +70,7 @@
               "RelativeToolTip": "CatalogoApi\\Controllers\\CategoriasController.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAgwEkAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T13:04:38.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T13:04:38.886Z"
             },
             {
               "$type": "Document",
@@ -83,7 +80,7 @@
               "RelativeDocumentMoniker": "CatalogoApi\\Program.cs",
               "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Program.cs",
               "RelativeToolTip": "CatalogoApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAswA8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-21T13:04:12.819Z",
               "EditorCaption": ""
@@ -98,8 +95,7 @@
               "RelativeToolTip": "CatalogoApi\\Repository\\Repository.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwDAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T12:59:42.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T12:59:42.473Z"
             },
             {
               "$type": "Document",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "CatalogoApi\\Repository\\RepositoryCategoria.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T12:59:40.336Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T12:59:40.336Z"
             }
           ]
         }

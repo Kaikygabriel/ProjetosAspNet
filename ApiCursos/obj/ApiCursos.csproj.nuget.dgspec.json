@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCursos\\ApiCursos.csproj": {}
+    "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCursos\\APiCursos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCursos\\ApiCursos.csproj": {
+    "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCursos\\APiCursos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCursos\\ApiCursos.csproj",
-        "projectName": "ApiCursos",
-        "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCursos\\ApiCursos.csproj",
+        "projectUniqueName": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCursos\\APiCursos.csproj",
+        "projectName": "APiCursos",
+        "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCursos\\APiCursos.csproj",
         "packagesPath": "C:\\Users\\kaiky\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCursos\\obj\\",
         "projectStyle": "PackageReference",
@@ -52,7 +52,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[9.0.5, )"
+              "version": "[9.0.7, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -73,18 +73,6 @@
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[9.0.0-preview.3.efcore.9.0.0, )"
-            },
-            "Swashbuckle.AspNetCore.Swagger": {
-              "target": "Package",
-              "version": "[9.0.1, )"
-            },
-            "Swashbuckle.AspNetCore.SwaggerGen": {
-              "target": "Package",
-              "version": "[9.0.1, )"
-            },
-            "Swashbuckle.AspNetCore.SwaggerUI": {
-              "target": "Package",
-              "version": "[9.0.1, )"
             }
           },
           "imports": [

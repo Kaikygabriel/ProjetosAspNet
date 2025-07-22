@@ -1,8 +1,7 @@
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ApiCursos.Model;
-[Table("Cursos")]
+namespace APiCursos.Model;
+
 public class Curso
 {
     [Key]
@@ -10,10 +9,9 @@ public class Curso
     public int Id { get; set; }
     
     [Required]
-    [StringLength(200,MinimumLength = 10)] 
-    public string Titulo{ get; set; }
-    
+    [StringLength(150,MinimumLength = 5)]
+    public string Titulo { get; set; }
     [Required]
-    [Column(TypeName = "decimal(10,2)")] 
-    public decimal Price{ get; set; }
+    [StringLength(150,MinimumLength = 5)]
+    public string Autor { get; set; }
 }

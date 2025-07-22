@@ -1,40 +1,27 @@
-using System.Text.Json.Serialization;
-using ApiCursos.Data;
+using APiCursos.Data;
 using ApiCursos.ExtesionMethods;
-using ApiCursos.Filters;
 using ApiCursos.Repository;
+using ApiCursos.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddScoped<ExceptionFilter>();
-builder.Services.AddScoped<ICursoRepository,CursoRepository>();
-builder.Services.AddControllers().AddJsonOptions(options =>
-    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles
-);
-builder.Services.AddControllers(options
-=> options.Filters.Add(typeof(ExceptionFilter)));
-
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-var conection = builder.Configuration.GetConnectionString("CursosConection");
-builder.Services.AddDbContext<ApiCursosContext>(options =>
+builder.Services.AddOpenApi();
+var conection = builder.Configuration.GetConnectionString("Conection");
+builder.Services.AddDbContext<ApiCursoContext>(options =>
     options.UseMySql(
         conection,
         ServerVersion.AutoDetect(conection)));
-
+builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
+builder.Services.AddScoped<IRepositoryCurso, RepositoryCurso>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-    app.UseExceptionGlobalHandler();  
+    app.MapOpenApi();
+    app.UseExceptionGlobalHandler();
 }
 
 app.UseHttpsRedirection();
