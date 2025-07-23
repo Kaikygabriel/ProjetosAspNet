@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APiCursos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c240b3f4eef42474f1b9b4457db95cbb7969c01e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a9d1d289a4b1ed6b4827c06b4f2a8deb32c37f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("APiCursos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APiCursos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

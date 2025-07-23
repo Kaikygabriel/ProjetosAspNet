@@ -1,3 +1,4 @@
+using APiCursos.Filter;
 using APiCursos.Model;
 using ApiCursos.Repository.Interfaces;
 using Microsoft.AspNetCore.Mvc;

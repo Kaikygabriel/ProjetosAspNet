@@ -2897,11 +2897,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCursos\\ApiCursos.csproj",
-      "projectName": "ApiCursos",
-      "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCursos\\ApiCursos.csproj",
+      "projectUniqueName": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\APiCursos\\APiCursos.csproj",
+      "projectName": "APiCursos",
+      "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\APiCursos\\APiCursos.csproj",
       "packagesPath": "C:\\Users\\kaiky\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiCursos\\obj\\",
+      "outputPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\APiCursos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
