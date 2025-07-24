@@ -1,3 +1,4 @@
+using APiCursos.AutoMapper;
 using APiCursos.Data;
 using ApiCursos.ExtesionMethods;
 using APiCursos.Filter;
@@ -19,6 +20,7 @@ builder.Services.AddDbContext<ApiCursoContext>(options =>
 builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
 builder.Services.AddScoped<IRepositoryCurso, RepositoryCurso>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
