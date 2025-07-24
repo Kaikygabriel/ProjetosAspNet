@@ -159,7 +159,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[CatalogoApi.Model.Produto, CatalogoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CatalogoApi.Model.Dto.ProdutoDTO, CatalogoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -178,8 +178,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "produto",
-        "Type": "CatalogoApi.Model.Produto",
+        "Name": "produtoDto",
+        "Type": "CatalogoApi.Model.Dto.ProdutoDTO",
         "IsRequired": true
       }
     ],
@@ -201,7 +201,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "CatalogoApi.Model.Produto",
+        "Type": "CatalogoApi.Model.Dto.ProdutoDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -226,8 +226,8 @@
         "IsRequired": true
       },
       {
-        "Name": "produto",
-        "Type": "CatalogoApi.Model.Produto",
+        "Name": "produtoDto",
+        "Type": "CatalogoApi.Model.Dto.ProdutoDTO",
         "IsRequired": true
       }
     ],

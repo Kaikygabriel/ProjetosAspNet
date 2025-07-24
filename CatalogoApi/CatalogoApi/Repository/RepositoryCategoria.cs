@@ -13,7 +13,7 @@ namespace CatalogoApi.Repository
         
         public IEnumerable<Categoria> GetCategoriasProdutos()
         {
-           return _context.Categorias.Take(10).Include(x => x.Produtos).AsNoTracking().ToList();
+           return _context.Categorias.Include(x => x.Produtos).AsNoTracking().ToList();
         }
     }
 }

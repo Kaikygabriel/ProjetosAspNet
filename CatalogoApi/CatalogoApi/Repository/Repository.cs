@@ -17,7 +17,7 @@ public class Repository<T> : IRepository<T> where T : class
 
     public IEnumerable<T> GetAll()
     {
-        return _context.Set<T>().AsNoTracking().Take(10).ToList();
+        return _context.Set<T>().AsNoTracking().ToList();
     }
 
     public T? GetById(Expression<Func<T,bool>>predicate)

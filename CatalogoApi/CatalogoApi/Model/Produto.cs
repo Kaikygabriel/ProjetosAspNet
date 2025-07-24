@@ -42,10 +42,10 @@ public class Produto
     [StringLength(300,MinimumLength = 4)]
     [Display(Name = "Imagem url")]
     public string? ImagemUrl { get; set; }
-    [Required]
+ 
     [Range(0, 10000)]
     public int Estoque { get; set; }
-    [Required]
+
     [Display(Name = "Data Cadastro")]
     [DataType(DataType.DateTime)]
     public DateTime DataCadastro { get; set; }
