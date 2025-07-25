@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using CatalogoApi.AutoMapper;
 using CatalogoApi.Data;
 using CatalogoApi.Extesions;
 using CatalogoApi.Filters;
@@ -19,14 +20,14 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IRepositoryProduto, RepositoryProduto>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IRepositoryCategoria, RepositoryCategoria>();
-builder.Services.AddControllers(options =>
-options.Filters.Add(typeof(ApiExceptionFilter))
-);
+//builder.Services.AddControllers(options =>
+//options.Filters.Add(typeof(ApiExceptionFilter))
+//);
 builder.Services.AddScoped<ApiLoggingFilter>();
 builder.Services.AddControllers();
 builder.Services.AddControllers().AddJsonOptions(options => { 
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-});
+}).AddNewtonsoftJson();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<SeedingService>();
@@ -36,7 +37,7 @@ builder.Services.AddDbContext<CatalogoContext>(Options =>
         ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("Catalogo")
 )));
 
-
+builder.Services.AddAutoMapper(typeof(DomationToProfileMapper));
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
