@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using APiCursos.AutoMapper;
 using APiCursos.Data;
 using ApiCursos.ExtesionMethods;
@@ -9,6 +10,8 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options=>
+    options.JsonSerializerOptions.ReferenceHandler=ReferenceHandler.IgnoreCycles).AddNewtonsoftJson();
 builder.Services.AddControllers(options =>
     options.Filters.Add(typeof(ExceptionGlobalFilter)));
 builder.Services.AddOpenApi();

@@ -4,6 +4,7 @@ using APiCursos.Model;
 using APiCursos.Model.DTO;
 using ApiCursos.Repository.Interfaces;
 using AutoMapper;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiCursos.Controllers;
@@ -54,6 +55,19 @@ public class CursosController : ControllerBase
         return CreatedAtRoute("GetByID", new { cursoDTO.Id }, cursoDTO);
     }
 
+    [HttpPatch("{id:int:min(1)}")]
+    public ActionResult<Curso> Patch(int id, JsonPatchDocument<Curso> curso)
+    {
+        if (curso is null)
+            return NotFound();
+        var cursoID = _unitOfWork.RepositoryCurso.GetByID(x => x.Id == id);
+        curso.ApplyTo(cursoID,ModelState);
+        if (!ModelState.IsValid || !TryValidateModel(cursoID))
+            return NotFound();
+        _unitOfWork.RepositoryCurso.Update(cursoID);
+        _unitOfWork.Commit();
+        return Ok(curso);
+    }
     [HttpPut("{id:int:min(1)}")]
     public ActionResult<CursoDTO> Put(int id, CursoDTO cursoDTo)
     {
