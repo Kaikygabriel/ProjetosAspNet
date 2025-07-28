@@ -25,12 +25,12 @@ namespace CatalogoApi.Controllers
         private readonly IUnitOfWork _unitOfWork;
         [HttpGet]
         //[ServiceFilter(typeof(ApiLoggingFilter))]
-        public ActionResult<IEnumerable<CategoriaDTO>> Get()
+        public ActionResult<IEnumerable<CategoriaDTO>> Get([FromQuery] int skip=0, [FromQuery] int take = 10)
         {
-            IEnumerable<Categoria> categorias = _unitOfWork.CategoriaRepository.GetAll();
+            IEnumerable<Categoria>? categorias = _unitOfWork.CategoriaRepository.GetAll(skip,take);
             if (categorias is null)
                 return NotFound("A lista de categorias esta vazia");
-            IEnumerable<CategoriaDTO> categoriasDto = categorias.ToCategoriaDTOList();
+            IEnumerable<CategoriaDTO>? categoriasDto = categorias.ToCategoriaDTOList();
             return Ok(categoriasDto);
         }
 
@@ -45,9 +45,9 @@ namespace CatalogoApi.Controllers
         }
 
         [HttpGet("produtos")]
-        public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos()
+        public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos([FromQuery] int skip = 0, [FromQuery] int take = 10)
         {
-            return Ok(_unitOfWork.CategoriaRepository.GetCategoriasProdutos());
+            return Ok(_unitOfWork.CategoriaRepository.GetCategoriasProdutos(skip,take));
         }
 
         [HttpPost]
@@ -92,3 +92,4 @@ namespace CatalogoApi.Controllers
         }
     }
 }
+

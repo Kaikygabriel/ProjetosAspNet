@@ -11,9 +11,11 @@ namespace CatalogoApi.Repository
         {
         }
         
-        public IEnumerable<Categoria> GetCategoriasProdutos()
+        public IEnumerable<Categoria> GetCategoriasProdutos(int skip=0,int take=10)
         {
-           return _context.Categorias.Include(x => x.Produtos).AsNoTracking().ToList();
+            if (take > 50)
+                take = 50;
+            return _context.Categorias.Include(x => x.Produtos).AsNoTracking().Skip(skip).Take(take).ToList();
         }
     }
 }

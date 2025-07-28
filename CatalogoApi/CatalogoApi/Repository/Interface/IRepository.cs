@@ -4,7 +4,7 @@ namespace CatalogoApi.Repository.Interface
 {
     public interface IRepository<T> where T:class 
     {
-        IEnumerable<T> GetAll();
+        IEnumerable<T> GetAll(int skip, int take);
         T GetById(Expression<Func<T,bool>>predicate);
         T Create(T entity);
         T Update(T entity);

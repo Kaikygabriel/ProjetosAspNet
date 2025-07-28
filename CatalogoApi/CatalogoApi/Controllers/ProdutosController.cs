@@ -26,9 +26,9 @@ namespace CatalogoApi.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<ProdutoDTO>> Get() 
+        public ActionResult<IEnumerable<ProdutoDTO>> Get([FromQuery]int skip=0, [FromQuery]int take = 10) 
         {
-            var produtos = _unitOfWork.ProdutoRepository.GetAll();
+            var produtos = _unitOfWork.ProdutoRepository.GetAll(skip,take);
             if (produtos is null)
                 return NotFound("Produtos não encontrado...");
             return Ok(produtos.ToProdutosDTOList());

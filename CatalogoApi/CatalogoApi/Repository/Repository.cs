@@ -15,9 +15,11 @@ public class Repository<T> : IRepository<T> where T : class
         _context = context;
     }
 
-    public IEnumerable<T> GetAll()
+    public IEnumerable<T> GetAll(int skip=0,int take=10)
     {
-        return _context.Set<T>().AsNoTracking().ToList();
+        if (take > 50)
+            take = 50;
+        return _context.Set<T>().AsNoTracking().Skip(skip).Take(take).ToList();
     }
 
     public T? GetById(Expression<Func<T,bool>>predicate)

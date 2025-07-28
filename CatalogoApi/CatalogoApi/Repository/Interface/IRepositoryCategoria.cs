@@ -4,6 +4,6 @@ namespace CatalogoApi.Repository.Interface
 {
     public interface IRepositoryCategoria  : IRepository<Categoria> 
     {
-        IEnumerable<Categoria> GetCategoriasProdutos();
+        IEnumerable<Categoria> GetCategoriasProdutos(int skip,int take);
     }
 }
