@@ -25,9 +25,9 @@ namespace CatalogoApi.Controllers
         private readonly IUnitOfWork _unitOfWork;
         [HttpGet]
         //[ServiceFilter(typeof(ApiLoggingFilter))]
-        public ActionResult<IEnumerable<CategoriaDTO>> Get([FromQuery] int skip=0, [FromQuery] int take = 10)
+        public ActionResult<IEnumerable<CategoriaDTO>> Get()
         {
-            IEnumerable<Categoria>? categorias = _unitOfWork.CategoriaRepository.GetAll(skip,take);
+            IEnumerable<Categoria>? categorias = _unitOfWork.CategoriaRepository.GetAll();
             if (categorias is null)
                 return NotFound("A lista de categorias esta vazia");
             IEnumerable<CategoriaDTO>? categoriasDto = categorias.ToCategoriaDTOList();
@@ -92,4 +92,4 @@ namespace CatalogoApi.Controllers
         }
     }
 }
-
+    

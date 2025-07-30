@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[12.0.0, )"
             },
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
             "Microsoft.AspNetCore.JsonPatch": {
               "target": "Package",
               "version": "[9.0.7, )"

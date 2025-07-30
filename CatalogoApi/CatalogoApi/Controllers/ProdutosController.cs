@@ -4,7 +4,9 @@ using CatalogoApi.Extesions;
 using CatalogoApi.Model;
 using CatalogoApi.Model.Dto;
 using CatalogoApi.Model.DTO;
+using CatalogoApi.Pagination;
 using CatalogoApi.Repository.Interface;
+using Mapster;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -26,9 +28,9 @@ namespace CatalogoApi.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<ProdutoDTO>> Get([FromQuery]int skip=0, [FromQuery]int take = 10) 
+        public ActionResult<IEnumerable<ProdutoDTO>> Get() 
         {
-            var produtos = _unitOfWork.ProdutoRepository.GetAll(skip,take);
+            var produtos = _unitOfWork.ProdutoRepository.GetAll();
             if (produtos is null)
                 return NotFound("Produtos não encontrado...");
             return Ok(produtos.ToProdutosDTOList());
@@ -43,7 +45,13 @@ namespace CatalogoApi.Controllers
             var produtoDTO = produto.ToProdutoDTO();
             return Ok(produtoDTO);
         }
-
+        [HttpGet("pagination")]
+        public ActionResult<IEnumerable<ProdutoDTO>> Get([FromQuery]ProdutosPagination pagination)
+        {
+            var produtos = _unitOfWork.ProdutoRepository.GetAllProduct(pagination);
+            var produtosDto = produtos.Adapt<IEnumerable<ProdutoDTO>>();
+            return Ok(produtosDto);
+        }
         [HttpPost]
         public ActionResult Post(ProdutoDTO produtoDto)
         {
