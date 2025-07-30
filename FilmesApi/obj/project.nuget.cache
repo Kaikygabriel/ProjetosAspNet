@@ -1,15 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "z8P92iu5EI4=",
+  "dgSpecHash": "OL4Xi3CObMU=",
   "success": true,
   "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\FilmesApi\\FilmesApi.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\kaiky\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\kaiky\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512",
-    "C:\\Users\\kaiky\\.nuget\\packages\\mapster.dependencyinjection\\1.0.1\\mapster.dependencyinjection.1.0.1.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\9.0.7\\microsoft.aspnetcore.jsonpatch.9.0.7.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\9.0.7\\microsoft.aspnetcore.mvc.newtonsoftjson.9.0.7.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.7\\microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",

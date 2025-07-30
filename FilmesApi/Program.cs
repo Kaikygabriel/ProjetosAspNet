@@ -1,4 +1,3 @@
-using FilmesApi.AutoMapper;
 using FilmesApi.Data;
 using FilmesApi.Extesion;
 using FilmesApi.Repository;
@@ -18,8 +17,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IFilmeRepository, FilmeRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
-builder.Services.AddAutoMapper(typeof(DomainToProfile));
-//pipeline
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

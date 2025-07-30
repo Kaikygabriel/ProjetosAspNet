@@ -1,6 +1,7 @@
-using AutoMapper;
+
 using FilmesApi.Models;
 using FilmesApi.Models.DTO;
+using FilmesApi.Pagination;
 using FilmesApi.Repository;
 using FilmesApi.Repository.Interfaces;
 using Mapster;
@@ -14,33 +15,39 @@ namespace FilmesApi.Controllers;
 [Route("[controller]")]
 public class FilmesController : ControllerBase
 {
-    public FilmesController(IUnitOfWork unitOf,IMapper mapper)
+    public FilmesController(IUnitOfWork unitOf)
     {
-        _mapper = mapper;
         _unitOf = unitOf;
     }
-    
+
     private readonly IUnitOfWork _unitOf;
-    private readonly IMapper _mapper;
-    
+
     [HttpGet]
     public ActionResult<IEnumerable<FilmesDTO>> Get()
     {
-       // var filmesdto = _mapper.Map<IEnumerable<FilmesDTO>>(_unitOf.FilmeRepository.GetAll());
-       var filmes=_unitOf.FilmeRepository.GetAll();
-       var filmesdto = filmes.Adapt<IEnumerable<FilmesDTO>>();
-       if (filmesdto is null) 
-           return NotFound("Filmes não encontrados"); 
-       return Ok(filmesdto);
+        var filmes = _unitOf.FilmeRepository.GetAll();
+        var filmesdto = filmes.Adapt<IEnumerable<FilmesDTO>>();
+        if (filmesdto is null)
+            return NotFound("Filmes não encontrados");
+        return Ok(filmesdto);
     }
 
+    [HttpGet("pagination")]
+    public ActionResult<IEnumerable<FilmesDTO>> Get([FromQuery] FilmePagination pagination)
+    {
+        var filmes = _unitOf.FilmeRepository.GetAllFilme(pagination);
+        if (filmes is null)
+            return NotFound();
+        var filmesDto = filmes.Adapt<IEnumerable<FilmesDTO>>();
+        return Ok(filmesDto);
+    }
     [HttpGet("{id:int:min(1)}",Name = "GetByID")]
     public ActionResult<FilmesDTO> Get(int id)
     {
         var filme = _unitOf.FilmeRepository.GetById(x => x.Id == id);
         if (filme is null)
          return NotFound("Filme não encontrado...");
-        var filmeDTO = _mapper.Map<FilmesDTO>(filme);
+        var filmeDTO = filme.Adapt<FilmesDTO>();
         return Ok(filme);
     }
 
@@ -49,7 +56,7 @@ public class FilmesController : ControllerBase
     {
         if (filmedto is null)
             return BadRequest();
-        var filme = _mapper.Map<Filme>(filmedto);
+        var filme = filmedto.Adapt<Filme>();
         _unitOf.FilmeRepository.Created(filme);
         _unitOf.Commit();
         return  CreatedAtRoute("GetByID", new { filmedto.Id }, filmedto);
@@ -78,7 +85,7 @@ public class FilmesController : ControllerBase
             return BadRequest();
         if (filmesDto is null)
             return BadRequest();
-        var filme = _mapper.Map<Filme>(filmesDto);
+        var filme = filmesDto.Adapt<Filme>();
         var filmeAtualizado=_unitOf.FilmeRepository.Update(filme);
         _unitOf.Commit();
         return Ok(filmeAtualizado);
@@ -92,7 +99,7 @@ public class FilmesController : ControllerBase
             return BadRequest();
         _unitOf.FilmeRepository.Delete(filmeById);
         _unitOf.Commit();
-        var filmeDto = _mapper.Map<FilmesDTO>(filmeById);
+        var filmeDto = filmeById.Adapt<FilmesDTO>();
         return Ok(filmeDto);
     }
 }

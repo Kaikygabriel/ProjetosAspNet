@@ -8,10 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "FilmesApi/1.0.0": {
         "dependencies": {
-          "AutoMapper": "12.0.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Mapster": "7.4.0",
-          "Mapster.DependencyInjection": "1.0.1",
           "Microsoft.AspNetCore.JsonPatch": "9.0.7",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "9.0.7",
           "Microsoft.AspNetCore.OpenApi": "9.0.7",
@@ -22,29 +19,6 @@
         },
         "runtime": {
           "FilmesApi.dll": {}
-        }
-      },
-      "AutoMapper/12.0.1": {
-        "dependencies": {
-          "Microsoft.CSharp": "4.7.0"
-        },
-        "runtime": {
-          "lib/netstandard2.1/AutoMapper.dll": {
-            "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.1.0"
-          }
-        }
-      },
-      "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
-        "dependencies": {
-          "AutoMapper": "12.0.1",
-          "Microsoft.Extensions.Options": "9.0.0"
-        },
-        "runtime": {
-          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
-            "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.1.0"
-          }
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -71,18 +45,6 @@
           "lib/net7.0/Mapster.Core.dll": {
             "assemblyVersion": "1.2.1.0",
             "fileVersion": "1.2.1.0"
-          }
-        }
-      },
-      "Mapster.DependencyInjection/1.0.1": {
-        "dependencies": {
-          "Mapster": "7.4.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0"
-        },
-        "runtime": {
-          "lib/net7.0/Mapster.DependencyInjection.dll": {
-            "assemblyVersion": "1.0.1.0",
-            "fileVersion": "1.0.1.0"
           }
         }
       },
@@ -684,20 +646,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AutoMapper/12.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-hvV62vl6Hp/WfQ24yzo3Co9+OPl8wH8hApwVtgWpiAynVJkUcs7xvehnSftawL8Pe8FrPffBRM3hwzLQqWDNjA==",
-      "path": "automapper/12.0.1",
-      "hashPath": "automapper.12.0.1.nupkg.sha512"
-    },
-    "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-+g/K+Vpe3gGMKGzjslMOdqNlkikScDjWfVvmWTayrDHaG/n2pPmFBMa+jKX1r/h6BDGFdkyRjAuhFE3ykW+r1g==",
-      "path": "automapper.extensions.microsoft.dependencyinjection/12.0.1",
-      "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512"
-    },
     "Humanizer.Core/2.14.1": {
       "type": "package",
       "serviceable": true,
@@ -718,13 +666,6 @@
       "sha512": "sha512-11lokmfliBEMMmjeqxFGNpqGXq6tN96zFqpBmfYeahr4Ybk63oDmeJmOflsATjobYkX248g5Y62oQ2NNnZaeww==",
       "path": "mapster.core/1.2.1",
       "hashPath": "mapster.core.1.2.1.nupkg.sha512"
-    },
-    "Mapster.DependencyInjection/1.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-LfjnRIwx6WAo3ssq8PFeaHFaUz00BfSG9BhWgXsiDa3H5lDhG0lpMGDF6w2ZnooS4eHYmAv4f77VxmzpvgorNg==",
-      "path": "mapster.dependencyinjection/1.0.1",
-      "hashPath": "mapster.dependencyinjection.1.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.JsonPatch/9.0.7": {
       "type": "package",
