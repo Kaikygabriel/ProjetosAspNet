@@ -6,6 +6,6 @@ namespace CatalogoApi.Repository.Interface
 {
     public interface IRepositoryProduto : IRepository<Produto>
     {
-        IEnumerable<Produto> GetAllProduct(ProdutosPagination pagination);
+        PagedList<Produto> GetAllProduct(ProdutosPagination pagination);
     }
 }

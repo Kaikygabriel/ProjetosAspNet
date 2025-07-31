@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Text.Json;
+using AutoMapper;
 using CatalogoApi.Data;
 using CatalogoApi.Extesions;
 using CatalogoApi.Model;
@@ -49,6 +50,16 @@ namespace CatalogoApi.Controllers
         public ActionResult<IEnumerable<ProdutoDTO>> Get([FromQuery]ProdutosPagination pagination)
         {
             var produtos = _unitOfWork.ProdutoRepository.GetAllProduct(pagination);
+            var metadata = new
+            {
+                produtos.Count,
+                produtos.PageSize,
+                produtos.TotalPages,
+                produtos.CurrentPage,
+                produtos.HasNext,
+                produtos.HasPrevius
+            };
+            Response.Headers.Append("x-pagination", JsonSerializer.Serialize(metadata));
             var produtosDto = produtos.Adapt<IEnumerable<ProdutoDTO>>();
             return Ok(produtosDto);
         }
