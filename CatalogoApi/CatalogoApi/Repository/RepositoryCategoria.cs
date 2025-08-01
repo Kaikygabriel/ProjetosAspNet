@@ -1,5 +1,6 @@
 ﻿using CatalogoApi.Data;
 using CatalogoApi.Model;
+using CatalogoApi.Pagination;
 using CatalogoApi.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,11 +12,18 @@ namespace CatalogoApi.Repository
         {
         }
         
-        public IEnumerable<Categoria> GetCategoriasProdutos(int skip=0,int take=10)
+        public IEnumerable<Categoria> GetCategoriasProdutos()
         {
-            if (take > 50)
-                take = 50;
-            return _context.Categorias.Include(x => x.Produtos).AsNoTracking().Skip(skip).Take(take).ToList();
+            return _context.Categorias.Include(x => x.Produtos).AsNoTracking().ToList();
+        }
+
+        public PagedList<Categoria> GetAllCategoria(CategoriaPagination pagination)
+        {
+            var listcategoria = _context.Categorias.AsNoTracking();
+            var listOrdenadaCategoria = PagedList<Categoria>.ToPagedList(listcategoria
+                , pagination.PageNumber
+                , pagination.PageSize);
+            return listOrdenadaCategoria;
         }
     }
 }

@@ -1,10 +1,13 @@
-﻿using System.Threading.Tasks;
+﻿using System.Text.Json;
+using System.Threading.Tasks;
 using CatalogoApi.Data;
 using CatalogoApi.Extesions;
 using CatalogoApi.Filters;
 using CatalogoApi.Model;
 using CatalogoApi.Model.Dto;
+using CatalogoApi.Pagination;
 using CatalogoApi.Repository.Interface;
+using Mapster;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -33,7 +36,23 @@ namespace CatalogoApi.Controllers
             IEnumerable<CategoriaDTO>? categoriasDto = categorias.ToCategoriaDTOList();
             return Ok(categoriasDto);
         }
-
+        [HttpGet("pagination")]
+        public ActionResult<IEnumerable<CategoriaDTO>> Get([FromQuery]CategoriaPagination pagination)
+        {
+            var listCategoriaP = _unitOfWork.CategoriaRepository.GetAllCategoria(pagination);
+            var metadata = new
+            {
+                listCategoriaP.Count,
+                listCategoriaP.PageSize,
+                listCategoriaP.TotalPages,
+                listCategoriaP.CurrentPage,
+                listCategoriaP.HasNext,
+                listCategoriaP.HasPrevius
+            };
+            Response.Headers.Append("x-pagination", JsonSerializer.Serialize(metadata));
+            var categoriasDTO = listCategoriaP.Adapt<IEnumerable<Categoria>>();
+            return Ok(categoriasDTO);
+        }
         [HttpGet("{id:int:min(1)}", Name = "obter")]
         public ActionResult<CategoriaDTO> Get(int id)
         {
@@ -45,9 +64,9 @@ namespace CatalogoApi.Controllers
         }
 
         [HttpGet("produtos")]
-        public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos([FromQuery] int skip = 0, [FromQuery] int take = 10)
+        public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos()
         {
-            return Ok(_unitOfWork.CategoriaRepository.GetCategoriasProdutos(skip,take));
+            return Ok(_unitOfWork.CategoriaRepository.GetCategoriasProdutos());
         }
 
         [HttpPost]
