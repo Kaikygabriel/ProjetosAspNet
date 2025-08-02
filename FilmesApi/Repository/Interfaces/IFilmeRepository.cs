@@ -5,5 +5,5 @@ namespace FilmesApi.Repository.Interfaces;
 
 public interface IFilmeRepository : IRepository<Filme>
 {
-    IEnumerable<Filme> GetAllFilme(FilmePagination pagination);
+    PagedList<Filme> GetAllFilme(FilmePagination pagination);
 }

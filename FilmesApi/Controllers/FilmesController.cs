@@ -8,6 +8,8 @@ using Mapster;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Newtonsoft.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace FilmesApi.Controllers;
 
@@ -38,7 +40,13 @@ public class FilmesController : ControllerBase
         var filmes = _unitOf.FilmeRepository.GetAllFilme(pagination);
         if (filmes is null)
             return NotFound();
-        var filmesDto = filmes.Adapt<IEnumerable<FilmesDTO>>();
+        var dadosHeader = new
+        {
+            filmes.PageNumber, filmes.PageSize,
+            filmes.TotalPage, filmes.HasNext, filmes.HasPrevius, filmes.TotalCount
+        };
+        Response.Headers.Append("pagination", JsonSerializer.Serialize(dadosHeader));
+        var filmesDto = filmes.Adapt<IEnumerable<FilmesDTO>>(); 
         return Ok(filmesDto);
     }
     [HttpGet("{id:int:min(1)}",Name = "GetByID")]

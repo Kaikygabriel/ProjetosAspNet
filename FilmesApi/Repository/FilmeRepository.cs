@@ -12,14 +12,11 @@ public class FilmeRepository : Repository<Filme>,IFilmeRepository
     {
     }
 
-    public IEnumerable<Filme> GetAllFilme(FilmePagination pagination)
+    public PagedList<Filme> GetAllFilme(FilmePagination pagination)
     {
         if (pagination.PageNumber == 0)
             pagination.PageNumber = 1;
-        return context.Filmes.AsNoTracking()
-            .OrderBy(x => x.Id)
-            .Skip((pagination.PageNumber - 1) * pagination.PageSize)
-            .Take(pagination.PageSize)
-            .ToList();
+        var filmes = context.Filmes.AsNoTracking().OrderBy(x => x.Id).ToList();
+        return PagedList<Filme>.ToPagedList(filmes,pagination.PageSize,pagination.PageNumber);
     }
 }
