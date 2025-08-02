@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using CatalogoApi.Model;
+using CatalogoApi.Model.ViewModel;
 using Microsoft.AspNetCore.Diagnostics;
 
 namespace CatalogoApi.Extesions

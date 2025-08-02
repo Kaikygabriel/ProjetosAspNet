@@ -1,3 +1,11 @@
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.csproj.AssemblyReference.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.AssemblyInfoInputs.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.AssemblyInfo.cs
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.csproj.CoreCompileInputs.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.sourcelink.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\bin\Debug\net8.0\appsettings.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\bin\Debug\net8.0\CatalogoApi.staticwebassets.endpoints.json
@@ -96,14 +104,6 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\bin\Debug\n
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.csproj.AssemblyReference.cache
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.AssemblyInfoInputs.cache
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.AssemblyInfo.cs
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.csproj.CoreCompileInputs.cache
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.sourcelink.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\scopedcss\bundle\CatalogoApi.styles.css
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\staticwebassets.build.json.cache

@@ -7,5 +7,7 @@ namespace CatalogoApi.Repository.Interface
     public interface IRepositoryProduto : IRepository<Produto>
     {
         PagedList<Produto> GetAllProduct(ProdutosPagination pagination);
+        PagedList<Produto> GetProdutosFiltroPreco(ProdutosFiltroPreco produtosFiltro);
+
     }
 }

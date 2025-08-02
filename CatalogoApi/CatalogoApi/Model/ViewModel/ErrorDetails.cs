@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace CatalogoApi.Model
+namespace CatalogoApi.Model.ViewModel
 {
     public class ErrorDetails
     {

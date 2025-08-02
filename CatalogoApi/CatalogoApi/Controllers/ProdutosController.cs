@@ -27,6 +27,21 @@ namespace CatalogoApi.Controllers
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
+        private ActionResult<IEnumerable<ProdutoDTO>> ObterProduto(PagedList<Produto> produtos)
+        {
+            var metadata = new
+            {
+                produtos.Count,
+                produtos.PageSize,
+                produtos.TotalPages,
+                produtos.CurrentPage,
+                produtos.HasNext,
+                produtos.HasPrevius
+            };
+            Response.Headers.Append("x-pagination", JsonSerializer.Serialize(metadata));
+            var produtosDto = produtos.Adapt<IEnumerable<ProdutoDTO>>();
+            return Ok(produtosDto);
+        }
 
         [HttpGet]
         public ActionResult<IEnumerable<ProdutoDTO>> Get() 
@@ -50,18 +65,13 @@ namespace CatalogoApi.Controllers
         public ActionResult<IEnumerable<ProdutoDTO>> Get([FromQuery]ProdutosPagination pagination)
         {
             var produtos = _unitOfWork.ProdutoRepository.GetAllProduct(pagination);
-            var metadata = new
-            {
-                produtos.Count,
-                produtos.PageSize,
-                produtos.TotalPages,
-                produtos.CurrentPage,
-                produtos.HasNext,
-                produtos.HasPrevius
-            };
-            Response.Headers.Append("x-pagination", JsonSerializer.Serialize(metadata));
-            var produtosDto = produtos.Adapt<IEnumerable<ProdutoDTO>>();
-            return Ok(produtosDto);
+            return ObterProduto(produtos);
+        }
+        [HttpGet("filters")]
+        public ActionResult<IEnumerable<ProdutoDTO>> Get([FromQuery] ProdutosFiltroPreco pagination)
+        {
+            var produtos = _unitOfWork.ProdutoRepository.GetProdutosFiltroPreco(pagination);
+            return ObterProduto(produtos);
         }
         [HttpPost]
         public ActionResult Post(ProdutoDTO produtoDto)
