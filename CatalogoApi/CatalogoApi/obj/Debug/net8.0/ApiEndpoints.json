@@ -132,6 +132,42 @@
   {
     "ContainingType": "CatalogoApi.Controllers.CategoriasController",
     "Method": "Get",
+    "RelativePath": "api/Categorias/filters",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CatalogoApi.Model.Dto.CategoriaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CatalogoApi.Controllers.CategoriasController",
+    "Method": "Get",
     "RelativePath": "api/Categorias/pagination",
     "HttpMethod": "GET",
     "IsController": true,

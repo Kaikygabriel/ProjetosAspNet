@@ -22,8 +22,7 @@
         {
             if (pageNumber == 0)
                 pageNumber = 1;
-            if (pageSize > 100)
-                pageSize = 100;
+            
             var count = source.Count();
             var items = source.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
             return new PagedList<T>(items, count, pageNumber, pageSize);

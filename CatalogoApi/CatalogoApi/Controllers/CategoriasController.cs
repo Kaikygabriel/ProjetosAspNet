@@ -26,20 +26,9 @@ namespace CatalogoApi.Controllers
             _unitOfWork = unitOfWork;
         }
         private readonly IUnitOfWork _unitOfWork;
-        [HttpGet]
-        //[ServiceFilter(typeof(ApiLoggingFilter))]
-        public ActionResult<IEnumerable<CategoriaDTO>> Get()
+       
+        private ActionResult ObterCategoria(PagedList<Categoria> listCategoriaP)
         {
-            IEnumerable<Categoria>? categorias = _unitOfWork.CategoriaRepository.GetAll();
-            if (categorias is null)
-                return NotFound("A lista de categorias esta vazia");
-            IEnumerable<CategoriaDTO>? categoriasDto = categorias.ToCategoriaDTOList();
-            return Ok(categoriasDto);
-        }
-        [HttpGet("pagination")]
-        public ActionResult<IEnumerable<CategoriaDTO>> Get([FromQuery]CategoriaPagination pagination)
-        {
-            var listCategoriaP = _unitOfWork.CategoriaRepository.GetAllCategoria(pagination);
             var metadata = new
             {
                 listCategoriaP.Count,
@@ -53,6 +42,35 @@ namespace CatalogoApi.Controllers
             var categoriasDTO = listCategoriaP.Adapt<IEnumerable<Categoria>>();
             return Ok(categoriasDTO);
         }
+
+        [HttpGet]
+        //[ServiceFilter(typeof(ApiLoggingFilter))]
+        public ActionResult<IEnumerable<CategoriaDTO>> Get()
+        {
+            IEnumerable<Categoria>? categorias = _unitOfWork.CategoriaRepository.GetAll();
+            if (categorias is null)
+                return NotFound("A lista de categorias esta vazia");
+            IEnumerable<CategoriaDTO>? categoriasDto = categorias.ToCategoriaDTOList();
+            return Ok(categoriasDto);
+        }
+
+
+        [HttpGet("pagination")]
+        public ActionResult<IEnumerable<CategoriaDTO>> Get([FromQuery]CategoriaPagination pagination)
+        {
+            var listCategoriaP = _unitOfWork.CategoriaRepository.GetAllCategoria(pagination);
+            return ObterCategoria(listCategoriaP);
+        }
+
+
+        [HttpGet("filters")]
+        public ActionResult<CategoriaDTO> Get([FromQuery] CategoriaFiltroName pagination)
+        {
+            var categoria = _unitOfWork.CategoriaRepository.GetCategoriaFiltroName(pagination);
+            return ObterCategoria(categoria);
+        }
+
+
         [HttpGet("{id:int:min(1)}", Name = "obter")]
         public ActionResult<CategoriaDTO> Get(int id)
         {

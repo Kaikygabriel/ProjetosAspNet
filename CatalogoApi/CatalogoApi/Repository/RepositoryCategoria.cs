@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CatalogoApi.Repository
 {
-    public class RepositoryCategoria :Repository<Categoria>, IRepositoryCategoria
+    public class RepositoryCategoria : Repository<Categoria>, IRepositoryCategoria
     {
         public RepositoryCategoria(CatalogoContext context) : base(context)
         {
@@ -24,6 +24,14 @@ namespace CatalogoApi.Repository
                 , pagination.PageNumber
                 , pagination.PageSize);
             return listOrdenadaCategoria;
+        }
+
+        public PagedList<Categoria> GetCategoriaFiltroName(CategoriaFiltroName pagination)
+        {
+            var list = GetAll();
+            if (!string.IsNullOrEmpty(pagination.Name))
+                list = list.Where(x => x.Nome.Contains(pagination.Name,StringComparison.InvariantCultureIgnoreCase));
+            return PagedList<Categoria>.ToPagedList(list, pagination.PageNumber, pagination.PageSize);
         }
     }
 }

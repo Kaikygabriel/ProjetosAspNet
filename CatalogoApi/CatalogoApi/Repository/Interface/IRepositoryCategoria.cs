@@ -7,6 +7,7 @@ namespace CatalogoApi.Repository.Interface
     {
         IEnumerable<Categoria> GetCategoriasProdutos();
         PagedList<Categoria> GetAllCategoria(CategoriaPagination pagination);
+        PagedList<Categoria> GetCategoriaFiltroName(CategoriaFiltroName pagination);
 
     }
 }
