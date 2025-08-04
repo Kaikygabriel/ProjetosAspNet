@@ -9,93 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b34531a5-abc4-455e-873f-b827a1a0299b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Data/ApiCursoContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExtesionMethods/ConfigurationExceptionExtesion.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Repository/Interfaces/IRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Repository/Interfaces/IRepositoryCurso.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Repository/Interfaces/IUnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Repository/Repository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Repository/RepositoryCurso.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Repository/UnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ApiCursos.dir/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ApiCursos/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ApiCursos/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ApiCursos/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiCursos.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ApiCursos.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiCursos.http" beforeDir="false" afterPath="$PROJECT_DIR$/ApiCursos.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiCursos.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/CursosController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/CursosController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ApiCursosContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtesionMethods/ConfigureExceptionGlobalMethod.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Filters/ExceptionFilter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20250706170325_initial.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20250706170325_initial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/ApiCursosContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Curso.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Curso.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/CursoRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/ICursoRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ApiCursos.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/ApiCursos.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ApiCursos.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/ApiCursos.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ApiCursos.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/ApiCursos.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ApiCursos.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/ApiCursos.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.OpenApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.OpenApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/ApiCursos.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/ApiCursos.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ApiCursos.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ApiCursos.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.genruntimeconfig.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ref/ApiCursos.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ref/ApiCursos.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/refint/ApiCursos.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/refint/ApiCursos.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/rpswa.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/rpswa.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/staticwebassets.build.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/staticwebassets.build.json.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/staticwebassets.build.json.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/.vs/CatalogoApi/CopilotIndices/17.14.734.62261/CodeChunks.db" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/.vs/CatalogoApi/CopilotIndices/17.14.734.62261/CodeChunks.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/.vs/CatalogoApi/CopilotIndices/17.14.734.62261/SemanticSymbols.db" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/.vs/CatalogoApi/CopilotIndices/17.14.734.62261/SemanticSymbols.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/.vs/CatalogoApi/FileContentIndex/e67bde74-6799-43cc-b0dd-100aa81c83a1.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/.vs/CatalogoApi/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/.vs/CatalogoApi/v17/.futdcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/.vs/CatalogoApi/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/.vs/CatalogoApi/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/.vs/CatalogoApi/v17/DocumentLayout.backup.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/.vs/CatalogoApi/v17/DocumentLayout.backup.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/.vs/CatalogoApi/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/.vs/CatalogoApi/v17/DocumentLayout.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/bin/Debug/net8.0/CatalogoApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/bin/Debug/net8.0/CatalogoApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/bin/Debug/net8.0/CatalogoApi.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/bin/Debug/net8.0/CatalogoApi.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/bin/Debug/net8.0/CatalogoApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/bin/Debug/net8.0/CatalogoApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/CatalogoApi.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/CatalogoApi.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/CatalogoApi.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/CatalogoApi.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/CatalogoApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/CatalogoApi.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/CatalogoApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/CatalogoApi.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/CatalogoApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/CatalogoApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/CatalogoApi.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/CatalogoApi.genruntimeconfig.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/CatalogoApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/CatalogoApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/CatalogoApi.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/CatalogoApi.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/ref/CatalogoApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/ref/CatalogoApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/refint/CatalogoApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/refint/CatalogoApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CatalogoApi/CatalogoApi/obj/Debug/net8.0/rjsmrazor.dswa.cache.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,10 +22,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="30EIOZpmqvzsi9gTPwGR0i7Wvy5" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -118,21 +34,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.ApiCursos: http">
     <configuration name="ApiCursos: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/ApiCursos.csproj" />
@@ -173,6 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1753186288724</updated>
       <workItem from="1753186288724" duration="3950000" />
+      <workItem from="1754237369010" duration="289000" />
     </task>
     <servers />
   </component>
