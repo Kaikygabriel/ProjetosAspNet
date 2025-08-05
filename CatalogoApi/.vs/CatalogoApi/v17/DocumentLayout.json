@@ -46,8 +46,7 @@
               "RelativeToolTip": "CatalogoApi\\Pagination\\PagedList.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-03T13:15:54.278Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-03T13:15:54.278Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "CatalogoApi\\Repository\\RepositoryCategoria.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAwwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-03T12:56:11.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-03T12:56:11.196Z"
             },
             {
               "$type": "Document",
@@ -72,8 +70,7 @@
               "RelativeToolTip": "CatalogoApi\\Repository\\Interface\\IRepositoryCategoria.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-03T12:56:01.588Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-03T12:56:01.588Z"
             },
             {
               "$type": "Document",
@@ -85,8 +82,7 @@
               "RelativeToolTip": "CatalogoApi\\Pagination\\CategoriaFiltroName.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-03T12:50:44.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-03T12:50:44.811Z"
             },
             {
               "$type": "Document",
@@ -98,8 +94,7 @@
               "RelativeToolTip": "CatalogoApi\\Controllers\\ProdutosController.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-03T12:46:21.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-03T12:46:21.347Z"
             },
             {
               "$type": "Document",
@@ -109,7 +104,7 @@
               "RelativeDocumentMoniker": "CatalogoApi\\Controllers\\CategoriasController.cs",
               "ToolTip": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\Controllers\\CategoriasController.cs",
               "RelativeToolTip": "CatalogoApi\\Controllers\\CategoriasController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAmwDEAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAmwDkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-03T12:41:39.292Z",
               "EditorCaption": ""
