@@ -1,5 +1,4 @@
 using System.Text.Json.Serialization;
-using APiCursos.AutoMapper;
 using APiCursos.Data;
 using ApiCursos.ExtesionMethods;
 using APiCursos.Filter;
@@ -8,10 +7,10 @@ using ApiCursos.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
 builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson();
 builder.Services.AddControllers().AddJsonOptions(options=>
-    options.JsonSerializerOptions.ReferenceHandler=ReferenceHandler.IgnoreCycles).AddNewtonsoftJson();
+    options.JsonSerializerOptions.ReferenceHandler=ReferenceHandler.IgnoreCycles);
 builder.Services.AddControllers(options =>
     options.Filters.Add(typeof(ExceptionGlobalFilter)));
 builder.Services.AddOpenApi();
@@ -23,7 +22,6 @@ builder.Services.AddDbContext<ApiCursoContext>(options =>
 builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
 builder.Services.AddScoped<IRepositoryCurso, RepositoryCurso>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {

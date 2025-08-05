@@ -13,21 +13,21 @@ public class Repository<T> : IRepository<T> where T:class
     {
         _context = context;
     }
-    public IEnumerable<T> GetAll()
+    public async Task<IEnumerable<T>> GetAllAsync()
     {
-        return _context.Set<T>().AsNoTracking().Take(10).ToList();
+        return await _context.Set<T>().AsNoTracking().ToListAsync();
     }
 
-    public T? GetByID(Expression<Func<T, bool>> predicate)
+    public async Task<T?> GetByIDAsync(Expression<Func<T, bool>> predicate)
     {
-        return _context.Set<T>().AsNoTracking().SingleOrDefault(predicate);
+        return await _context.Set<T>().AsNoTracking().SingleOrDefaultAsync(predicate);
     }
 
-    public T Create(T entity)
+    public async Task<T> CreateAsync(T entity)
     {
         if (entity is null)
             throw new Exception(entity + " is null");
-        _context.Set<T>().Add(entity);
+        await _context.Set<T>().AddAsync(entity);
         return entity;
     }
 
