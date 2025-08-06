@@ -6,8 +6,8 @@ namespace CatalogoApi.Repository.Interface
 {
     public interface IRepositoryProduto : IRepository<Produto>
     {
-        PagedList<Produto> GetAllProduct(ProdutosPagination pagination);
-        PagedList<Produto> GetProdutosFiltroPreco(ProdutosFiltroPreco produtosFiltro);
+        Task<PagedList<Produto>> GetAllProductAsync(ProdutosPagination pagination);
+        Task<PagedList<Produto>>  GetProdutosFiltroPrecoAsync(ProdutosFiltroPreco produtosFiltro);
 
     }
 }

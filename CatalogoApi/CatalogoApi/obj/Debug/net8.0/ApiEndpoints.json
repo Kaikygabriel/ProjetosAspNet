@@ -131,7 +131,7 @@
   },
   {
     "ContainingType": "CatalogoApi.Controllers.CategoriasController",
-    "Method": "Get",
+    "Method": "GetAsync",
     "RelativePath": "api/Categorias/filters",
     "HttpMethod": "GET",
     "IsController": true,
@@ -167,7 +167,7 @@
   },
   {
     "ContainingType": "CatalogoApi.Controllers.CategoriasController",
-    "Method": "Get",
+    "Method": "GetAsync",
     "RelativePath": "api/Categorias/pagination",
     "HttpMethod": "GET",
     "IsController": true,
@@ -218,7 +218,7 @@
   },
   {
     "ContainingType": "CatalogoApi.Controllers.ProdutosController",
-    "Method": "Get",
+    "Method": "GetAsync",
     "RelativePath": "api/Produtos",
     "HttpMethod": "GET",
     "IsController": true,
@@ -254,7 +254,7 @@
   },
   {
     "ContainingType": "CatalogoApi.Controllers.ProdutosController",
-    "Method": "Get",
+    "Method": "GetAsync",
     "RelativePath": "api/Produtos/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -281,7 +281,7 @@
   },
   {
     "ContainingType": "CatalogoApi.Controllers.ProdutosController",
-    "Method": "Put",
+    "Method": "PutAsync",
     "RelativePath": "api/Produtos/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -302,7 +302,7 @@
   },
   {
     "ContainingType": "CatalogoApi.Controllers.ProdutosController",
-    "Method": "Delete",
+    "Method": "DeleteAsync",
     "RelativePath": "api/Produtos/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -318,7 +318,7 @@
   },
   {
     "ContainingType": "CatalogoApi.Controllers.ProdutosController",
-    "Method": "Patch",
+    "Method": "PatchAsync",
     "RelativePath": "api/Produtos/{id}/updatePartial",
     "HttpMethod": "PATCH",
     "IsController": true,
@@ -349,7 +349,7 @@
   },
   {
     "ContainingType": "CatalogoApi.Controllers.ProdutosController",
-    "Method": "Get",
+    "Method": "GetAsync",
     "RelativePath": "api/Produtos/filters",
     "HttpMethod": "GET",
     "IsController": true,
@@ -390,7 +390,7 @@
   },
   {
     "ContainingType": "CatalogoApi.Controllers.ProdutosController",
-    "Method": "Get",
+    "Method": "GetAsync",
     "RelativePath": "api/Produtos/pagination",
     "HttpMethod": "GET",
     "IsController": true,

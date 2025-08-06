@@ -14,16 +14,16 @@ namespace CatalogoApi.Repository
         {
         }
 
-        public PagedList<Produto> GetAllProduct(ProdutosPagination pagination)
+        public async Task<PagedList<Produto>> GetAllProductAsync(ProdutosPagination pagination)
         {
-            IEnumerable<Produto> produtos = _context.Produtos.OrderBy(x=>x.Nome).AsNoTracking();
+            var produtos = await GetAllAsync();
             var produtosOrdenados= PagedList<Produto>.ToPagedList(produtos,pagination.PageNumber,pagination.PageSize);
             return produtosOrdenados;
         }
 
-        public PagedList<Produto> GetProdutosFiltroPreco(ProdutosFiltroPreco produtosFiltro)
+        public async Task<PagedList<Produto>> GetProdutosFiltroPrecoAsync(ProdutosFiltroPreco produtosFiltro)
         {
-            var produtos = GetAll();
+            var produtos = await GetAllAsync();
             if(produtosFiltro.Preco.HasValue && !string.IsNullOrEmpty(produtosFiltro.PrecoCriterio))
             {
                 if (produtosFiltro.PrecoCriterio.Equals("maior", StringComparison.OrdinalIgnoreCase))

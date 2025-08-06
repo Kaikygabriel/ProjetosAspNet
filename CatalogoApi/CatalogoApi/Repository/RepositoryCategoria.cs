@@ -12,23 +12,23 @@ namespace CatalogoApi.Repository
         {
         }
         
-        public IEnumerable<Categoria> GetCategoriasProdutos()
+        public async Task<IEnumerable<Categoria>> GetCategoriasProdutosAsync()
         {
-            return _context.Categorias.Include(x => x.Produtos).AsNoTracking().ToList();
+            return await _context.Categorias.Include(x => x.Produtos).AsNoTracking().ToListAsync();
         }
 
-        public PagedList<Categoria> GetAllCategoria(CategoriaPagination pagination)
+        public async Task<PagedList<Categoria>> GetAllCategoria(CategoriaPagination pagination)
         {
-            var listcategoria = _context.Categorias.AsNoTracking();
-            var listOrdenadaCategoria = PagedList<Categoria>.ToPagedList(listcategoria
+            var list = await GetAllAsync();
+            var listOrdenadaCategoria = PagedList<Categoria>.ToPagedList(list
                 , pagination.PageNumber
                 , pagination.PageSize);
             return listOrdenadaCategoria;
         }
 
-        public PagedList<Categoria> GetCategoriaFiltroName(CategoriaFiltroName pagination)
+        public async Task<PagedList<Categoria>> GetCategoriaFiltroName(CategoriaFiltroName pagination)
         {
-            var list = GetAll();
+            var list = await GetAllAsync();
             if (!string.IsNullOrEmpty(pagination.Name))
                 list = list.Where(x => x.Nome.Contains(pagination.Name,StringComparison.InvariantCultureIgnoreCase));
             return PagedList<Categoria>.ToPagedList(list, pagination.PageNumber, pagination.PageSize);

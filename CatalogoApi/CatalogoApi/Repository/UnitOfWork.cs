@@ -28,9 +28,9 @@ namespace CatalogoApi.Repository
                 return _produtoRepository = _produtoRepository ?? new RepositoryProduto(_context);
             }
         }
-        public void Commit()
+        public async Task CommitAsync()
         {
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
         public void Dispose()
         {
