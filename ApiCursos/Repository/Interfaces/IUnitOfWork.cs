@@ -6,6 +6,6 @@ public interface IUnitOfWork
 {
     ApiCursoContext Context { get; }
     IRepositoryCurso RepositoryCurso { get; }
-    void Commit();
+    Task CommitAsync();
     void Dispose();
 }

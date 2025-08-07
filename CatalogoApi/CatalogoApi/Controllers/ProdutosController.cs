@@ -1,4 +1,4 @@
-﻿using System.Text.Json;
+﻿ using System.Text.Json;
 using AutoMapper;
 using CatalogoApi.Data;
 using CatalogoApi.Extesions;
@@ -27,7 +27,7 @@ namespace CatalogoApi.Controllers
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
-        private ActionResult<IEnumerable<ProdutoDTO>> ObterProduto(PagedList<Produto> produtos)
+        private ActionResult ObterProduto(PagedList<Produto> produtos)
         {
             var metadata = new
             {

@@ -20,9 +20,9 @@ public class UnitOfWork : IUnitOfWork
             return _repositoryCurso = _repositoryCurso ?? new RepositoryCurso(Context);
         }
     }
-    public void Commit()
+    public async Task CommitAsync()
     {
-        Context.SaveChanges();
+        await Context.SaveChangesAsync();
     }
 
     public void Dispose()

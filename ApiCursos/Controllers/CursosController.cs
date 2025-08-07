@@ -65,7 +65,7 @@ public class CursosController : ControllerBase
         if (curso is null)
             return BadRequest("Curso recebido é nulo");
         await _unitOfWork.RepositoryCurso.CreateAsync(curso);
-        _unitOfWork.Commit();
+        await _unitOfWork.CommitAsync();
         return CreatedAtRoute("GetByID", new { cursoDTO.Id }, cursoDTO);
     }
     
@@ -79,11 +79,11 @@ public class CursosController : ControllerBase
         if (!ModelState.IsValid || !TryValidateModel(cursoID))
             return NotFound();
         _unitOfWork.RepositoryCurso.Update(cursoID);
-        _unitOfWork.Commit();
+        await _unitOfWork.CommitAsync();
         return Ok(curso.Adapt<CursoDTO>());
     }
     [HttpPut("{id:int:min(1)}")]
-    public ActionResult<CursoDTO> Put(int id, CursoDTO cursoDTo)
+    public async Task<ActionResult<CursoDTO>> PutAsync(int id, CursoDTO cursoDTo)
     {
         var curso = cursoDTo.Adapt<Curso>();
         if (curso is null)
@@ -91,17 +91,17 @@ public class CursosController : ControllerBase
         if (curso.Id != id)
             return NotFound("Id do curso é diferente de id informado");
         _unitOfWork.RepositoryCurso.Update(curso);
-        _unitOfWork.Commit();
+        await _unitOfWork.CommitAsync();
         return Ok(cursoDTo);
     }
     [HttpDelete("{id:int:min(1)}")]
-    public async Task<ActionResult<CursoDTO>> Delete(int id)
+    public async Task<ActionResult<CursoDTO>> DeleteAsync(int id)
     {
         var curso =await _unitOfWork.RepositoryCurso.GetByIDAsync(x => x.Id == id);
         if (curso is null)
             return BadRequest("Curso recebido é nulo");
         _unitOfWork.RepositoryCurso.Delete(curso);
-        _unitOfWork.Commit();
+        await _unitOfWork.CommitAsync();
         var cursoDto = curso.Adapt<CursoDTO>();
         return Ok(cursoDto);
     }
