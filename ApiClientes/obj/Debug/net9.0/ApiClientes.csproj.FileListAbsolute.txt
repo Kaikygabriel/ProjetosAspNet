@@ -118,3 +118,11 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ApiClientes\obj\Debug\net9.0\refint
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ApiClientes\obj\Debug\net9.0\ApiClientes.pdb
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ApiClientes\obj\Debug\net9.0\ApiClientes.genruntimeconfig.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ApiClientes\obj\Debug\net9.0\ref\ApiClientes.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ApiClientes\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ApiClientes\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ApiClientes\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ApiClientes\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ApiClientes\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ApiClientes\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ApiClientes\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ApiClientes\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll

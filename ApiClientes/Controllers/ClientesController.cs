@@ -2,6 +2,7 @@ using ApiClientes.Data;
 using ApiClientes.Model;
 using ApiClientes.Repository;
 using ApiClientes.Repository.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,7 @@ public class ClientesController : ControllerBase
 
     private readonly IUnitOfWork _unitOfWork;
     [HttpGet]
+    [Authorize]
     public ActionResult Get()
     {
         IEnumerable<Cliente> clientes = _unitOfWork.RepositoryCliente.GetAll();

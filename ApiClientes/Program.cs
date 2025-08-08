@@ -30,7 +30,8 @@ builder.Services.AddDbContext<ClienteContext>(optons =>
     optons.UseMySql(
         conectionString,
         ServerVersion.AutoDetect(conectionString)));
-
+builder.Services.AddAuthorization();
+builder.Services.AddAuthentication("Bearer").AddJwtBearer();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -47,8 +48,6 @@ using (var scoped = app.Services.CreateScope())
     seding.Seed();
 }
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.MapControllers();
 

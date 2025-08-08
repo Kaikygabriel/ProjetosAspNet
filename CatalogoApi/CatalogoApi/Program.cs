@@ -36,7 +36,8 @@ builder.Services.AddDbContext<CatalogoContext>(Options =>
         builder.Configuration.GetConnectionString("Catalogo"),
         ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("Catalogo")
 )));
-
+builder.Services.AddAuthorization();
+builder.Services.AddAuthentication("Bearer").AddJwtBearer();
 builder.Services.AddAutoMapper(typeof(DomationToProfileMapper));
 var app = builder.Build();
 
@@ -54,8 +55,6 @@ using (var scoped = app.Services.CreateScope())
 }
 
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.MapControllers();
 
