@@ -46,9 +46,6 @@ namespace CatalogoApi.Controllers
         }
 
         [HttpGet]
-        //[ServiceFilter(typeof(ApiLoggingFilter))]
-        
-
         public async Task<ActionResult<IEnumerable<CategoriaDTO>>> Get()
         {
             IEnumerable<Categoria>? categorias = await _unitOfWork.CategoriaRepository.GetAllAsync();

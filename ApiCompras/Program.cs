@@ -4,6 +4,8 @@ using ApiCompras.Extesions;
 using ApiCompras.Filters;
 using ApiCompras.Logger;
 using ApiCompras.Model;
+using ApiCompras.Repository;
+using ApiCompras.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +21,12 @@ builder.Services.AddDbContext<VendaContext>(options =>
         conectionString,
         ServerVersion.AutoDetect(conectionString)));
 builder.Services.AddScoped<ServiceFiltersCustom>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IVendaRepository, VendaRepository>();
+builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
+builder.Services.AddAuthorization();
+builder.Services.AddAuthentication("Bearer").AddBearerToken();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -27,10 +35,6 @@ if (app.Environment.IsDevelopment())
     app.UseExceptionGlobalHandler();
 }
 app.UseHttpsRedirection();
-
-app.UseRouting();
-
-app.UseAuthorization();
 
 app.MapControllers();
 

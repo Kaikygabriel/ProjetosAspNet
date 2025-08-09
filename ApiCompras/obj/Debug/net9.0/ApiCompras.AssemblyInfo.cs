@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("ab8ed105-4538-4ce2-af44-9d63b7ad545e")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiCompras")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+069a04fc9a29692e5c5eb1d30053d1dd68224820")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49402fb1b5249cb76448e482dd6491b54ea0a8a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiCompras")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiCompras")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

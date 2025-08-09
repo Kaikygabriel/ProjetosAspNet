@@ -123,4 +123,4 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\bin\Debug\n
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

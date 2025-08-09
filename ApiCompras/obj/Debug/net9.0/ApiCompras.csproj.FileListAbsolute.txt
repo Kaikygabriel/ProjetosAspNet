@@ -115,3 +115,13 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ApiCompras\obj\Debug\net9.0\refint\
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ApiCompras\obj\Debug\net9.0\ApiCompras.pdb
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ApiCompras\obj\Debug\net9.0\ApiCompras.genruntimeconfig.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ApiCompras\obj\Debug\net9.0\ref\ApiCompras.dll
+C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiCompras\bin\Debug\net9.0\Mapster.dll
+C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiCompras\bin\Debug\net9.0\Mapster.Core.dll
+C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiCompras\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiCompras\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiCompras\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiCompras\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiCompras\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiCompras\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiCompras\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiCompras\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
