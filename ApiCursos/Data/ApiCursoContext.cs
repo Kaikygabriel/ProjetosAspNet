@@ -1,9 +1,11 @@
 using APiCursos.Model;
+using APiCursos.Model.DTO;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace APiCursos.Data;
 
-public class ApiCursoContext : DbContext
+public class ApiCursoContext : IdentityDbContext<LoginTokenJWt>
 {
     public ApiCursoContext(DbContextOptions<ApiCursoContext>options):base(options)
     {

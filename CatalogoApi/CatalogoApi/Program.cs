@@ -1,18 +1,22 @@
+using System.Text;
 using System.Text.Json.Serialization;
 using CatalogoApi.AutoMapper;
 using CatalogoApi.Data;
 using CatalogoApi.Extesions;
 using CatalogoApi.Filters;
 using CatalogoApi.Logging;
+using CatalogoApi.Model;
 using CatalogoApi.Repository;
 using CatalogoApi.Repository.Interface;
 using CatalogoApi.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<CatalogoContext>()
     .AddDefaultTokenProviders();
 
@@ -45,9 +49,28 @@ builder.Services.AddDbContext<CatalogoContext>(Options =>
         builder.Configuration.GetConnectionString("Catalogo"),
         ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("Catalogo")
 )));
-
+var secretKey = builder.Configuration["JWT:SecretKey"]?? throw new Exception("chave null");
+builder.Services.AddAuthentication (options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+} ).AddJwtBearer(options =>
+{
+    options.SaveToken = true;
+    options.RequireHttpsMetadata = false;
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ClockSkew = TimeSpan.Zero,
+        ValidAudience = builder.Configuration["JWT : ValidAudience"],
+        ValidIssuer = builder.Configuration["JWT : ValidIssuer"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
+    };
+});
 builder.Services.AddAuthorization();
-builder.Services.AddAuthentication("Bearer").AddJwtBearer();
 builder.Services.AddAutoMapper(typeof(DomationToProfileMapper));
 var app = builder.Build();
 
