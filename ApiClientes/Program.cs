@@ -1,3 +1,4 @@
+using System.Text;
 using System.Text.Json.Serialization;
 using ApiClientes.Data;
 using ApiClientes.Extesion;
@@ -5,13 +6,17 @@ using ApiClientes.Filters;
 using ApiClientes.Repository;
 using ApiClientes.Repository.Interfaces;
 using ApiClientes.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<ClienteContext>();
 builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles
     );
@@ -30,8 +35,22 @@ builder.Services.AddDbContext<ClienteContext>(optons =>
     optons.UseMySql(
         conectionString,
         ServerVersion.AutoDetect(conectionString)));
+var key = builder.Configuration["JWT:SecretKey"];
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options=>
+{
+    options.SaveToken = true;
+    options.RequireHttpsMetadata = false;
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateAudience = true,
+        ValidateIssuer = true,
+        ClockSkew = TimeSpan.Zero,
+        ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
+        ValidAudience = builder.Configuration["JWT:ValidAudience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
+    };
+});
 builder.Services.AddAuthorization();
-builder.Services.AddAuthentication("Bearer").AddJwtBearer();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
