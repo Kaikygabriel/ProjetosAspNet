@@ -1,6 +1,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using CatalogoApi.Services.Interface;
 using Microsoft.IdentityModel.Tokens;
@@ -29,9 +30,13 @@ public class TokenService : ITokenService
     }
 
      public string GereateRefrashToken()
-    {
-        throw new NotImplementedException();
-    }
+     {
+         var secureRandomBytes = new byte[128];
+         using var randomNumberGerenate = RandomNumberGenerator.Create();
+         randomNumberGerenate.GetBytes(secureRandomBytes);
+         var refreshToken = Convert.ToBase64String(secureRandomBytes);
+         return refreshToken;
+     }
 
     public ClaimsPrincipal GetPrincipalFromExpiredToken(string token, IConfiguration _configuration)
     {
