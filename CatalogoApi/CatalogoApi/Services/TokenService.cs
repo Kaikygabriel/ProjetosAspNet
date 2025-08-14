@@ -40,6 +40,22 @@ public class TokenService : ITokenService
 
     public ClaimsPrincipal GetPrincipalFromExpiredToken(string token, IConfiguration _configuration)
     {
-        throw new NotImplementedException();
+        var key = _configuration["JWT:SecretKey"];
+        var tokenValidationParameters = new TokenValidationParameters()
+        {
+            ValidateAudience = false,
+            ValidateIssuer = false,
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key)),
+            ValidateLifetime = false
+        };
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var principal = tokenHandler.ValidateToken(token, tokenValidationParameters, out SecurityToken securityToken);
+        if (securityToken is not JwtSecurityToken jwtSecurityTokena ||
+            !jwtSecurityTokena.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.CurrentCultureIgnoreCase))
+        {
+            throw new Exception("Token is not validity");
+        }            throw new Exception("Token is not validity");
+        return principal;
     }
-}
+} 
