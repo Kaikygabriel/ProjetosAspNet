@@ -14,6 +14,8 @@ using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<VendaContext>();
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddControllers().AddJsonOptions(options =>
@@ -45,8 +47,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                     };
                 });
 builder.Services.AddAuthorization();
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-                .AddEntityFrameworkStores<VendaContext>();
 
 
 var app = builder.Build();
@@ -59,5 +59,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapControllers();
+app.UseAuthorization();
 
 app.Run();
