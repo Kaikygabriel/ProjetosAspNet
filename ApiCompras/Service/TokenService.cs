@@ -7,13 +7,13 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace ApiCompras.Service;
 
-public class TokenService  : ITokenService
+public class TokenService : ITokenService
 {
     public SecurityToken GerenateAcessTokenJWt(IEnumerable<Claim> claims, IConfiguration configuration)
     {
         var key = configuration.GetSection("JWT").GetValue<string>("SecretKey");
         var bytesKey = Encoding.UTF8.GetBytes(key);
-        var signingKeyBytes =new SigningCredentials(new SymmetricSecurityKey(bytesKey),SecurityAlgorithms.HmacSha256);
+        var signingKeyBytes = new SigningCredentials(new SymmetricSecurityKey(bytesKey), SecurityAlgorithms.HmacSha256);
         var tokenDescriptor = new SecurityTokenDescriptor()
         {
             Audience = configuration["JWT:ValidAudience"],
@@ -33,4 +33,15 @@ public class TokenService  : ITokenService
         numberRandom.GetBytes(bytes);
         return Convert.ToBase64String(bytes);
     }
+
+//codigo para terminar
+    // public ClaimsPrincipal GetCliamByTokenExpired(string token, IConfiguration configuration)
+    // {
+    //     var key = configuration["Jwt:SecretKey"];
+    //     var tokenValid = new SecurityTokenDescriptor()
+    //     {
+    //         ValidateIssuer = false,
+    //         ValidateAudience= false,
+    //     }
+    // }
 }

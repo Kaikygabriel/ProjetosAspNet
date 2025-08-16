@@ -9,6 +9,7 @@ using CatalogoApi.Model;
 using CatalogoApi.Repository;
 using CatalogoApi.Repository.Interface;
 using CatalogoApi.Services;
+using CatalogoApi.Services.Interface;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -43,7 +44,7 @@ builder.Services.AddControllers().AddJsonOptions(options => {
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<SeedingService>();
-
+builder.Services.AddScoped<ITokenService,TokenService>();
 builder.Services.AddDbContext<CatalogoContext>(Options =>
     Options.UseMySql(
         builder.Configuration.GetConnectionString("Catalogo"),

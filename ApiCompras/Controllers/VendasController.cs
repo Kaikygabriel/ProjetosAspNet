@@ -36,8 +36,8 @@ public class VendasController : ControllerBase
         if (pagination is null)
             return BadRequest();
         var ListVendas = await unitOfWork.VendaRepository.GetAllPaginationAsync(pagination);
-        if (ListVendas is null)
-            return NotFound();
+        // if (ListVendas is null)
+        //     return NotFound();
         var metadata = new
         {
             ListVendas.HasNext,

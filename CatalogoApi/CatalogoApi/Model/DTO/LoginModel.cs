@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CatalogoApi.Model.DTO;
 
-public class LoginModel
+public class  LoginModel
 {
  [Required]
  public string? UserName { get; set; }
