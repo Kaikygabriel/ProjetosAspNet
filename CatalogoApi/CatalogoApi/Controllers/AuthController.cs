@@ -6,6 +6,7 @@ using CatalogoApi.Model.DTO;
 using CatalogoApi.Services.Interface;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
 using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames;
 
 namespace CatalogoApi.Controllers;
@@ -61,5 +62,18 @@ public class AuthController : ControllerBase
         }
         return Unauthorized();
     }
-
+    [HttpPost("register")]
+    public async Task<ActionResult> Register([FromBody] RegisterModel model)
+    {
+        var userExist = await _userManager.FindByNameAsync(model.UserName!);
+        if (userExist is not null)
+            return StatusCode(StatusCodes.Status500InternalServerError,"user already exists!");
+        ApplicationUser user = new ApplicationUser() 
+            { Email = model.Email, UserName = model.UserName,
+                SecurityStamp= Guid.NewGuid().ToString() };
+        var result =await _userManager.CreateAsync(user,model.Password!);
+        if(!result.Succeeded)
+            return StatusCode(StatusCodes.Status500InternalServerError,"User creation failed");
+        return Ok(new Response { Status = "Sucess", Message = "User created sucess!" });
+    }
 }
