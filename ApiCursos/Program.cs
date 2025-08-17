@@ -10,14 +10,13 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using ApiCursos.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddControllers().AddNewtonsoftJson();
 builder.Services.AddControllers().AddJsonOptions(options=>
     options.JsonSerializerOptions.ReferenceHandler=ReferenceHandler.IgnoreCycles);
-builder.Services.AddControllers(options =>
-    options.Filters.Add(typeof(ExceptionGlobalFilter)));
 builder.Services.AddOpenApi();
 var conection = builder.Configuration.GetConnectionString("Conection");
 builder.Services.AddDbContext<ApiCursoContext>(options =>
@@ -27,11 +26,17 @@ builder.Services.AddDbContext<ApiCursoContext>(options =>
 builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
 builder.Services.AddScoped<IRepositoryCurso, RepositoryCurso>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
-builder.Services.AddIdentity<LoginTokenJWt, IdentityRole>()
-    .AddEntityFrameworkStores<ApiCursoContext>();
+builder.Services.AddScoped<RepositoryUsers>();
+builder.Services.AddScoped<TokenService>();
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApiCursoContext>()
+    .AddDefaultTokenProviders();
 var key = builder.Configuration["JWT:SecretKey"];
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+builder.Services.AddAuthentication(x =>
+{
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme= JwtBearerDefaults.AuthenticationScheme;
+})
     .AddJwtBearer(options =>
     {
         options.RequireHttpsMetadata = false;

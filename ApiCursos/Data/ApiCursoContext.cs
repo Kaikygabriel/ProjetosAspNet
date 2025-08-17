@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace APiCursos.Data;
 
-public class ApiCursoContext : IdentityDbContext<LoginTokenJWt>
+public class ApiCursoContext : IdentityDbContext
 {
     public ApiCursoContext(DbContextOptions<ApiCursoContext>options):base(options)
     {

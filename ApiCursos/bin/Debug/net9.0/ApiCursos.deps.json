@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "ApiCursos/1.0.0": {
+      "APiCursos/1.0.0": {
         "dependencies": {
           "Mapster": "7.4.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.8",
@@ -20,7 +20,7 @@
           "Pomelo.EntityFrameworkCore.MySql": "9.0.0-preview.3.efcore.9.0.0"
         },
         "runtime": {
-          "ApiCursos.dll": {}
+          "APiCursos.dll": {}
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -843,7 +843,7 @@
     }
   },
   "libraries": {
-    "ApiCursos/1.0.0": {
+    "APiCursos/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

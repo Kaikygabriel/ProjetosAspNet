@@ -10,12 +10,13 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("ApiCursos")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("15db99c4-b3ee-4eb8-949f-92a40084789d")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("APiCursos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c76ace6a14de4cc9e24a3c62b43e07fc190975f6")]
-[assembly: System.Reflection.AssemblyProductAttribute("ApiCursos")]
-[assembly: System.Reflection.AssemblyTitleAttribute("ApiCursos")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0f51e4c36555ff7afef19e2eb3d639090b84116")]
+[assembly: System.Reflection.AssemblyProductAttribute("APiCursos")]
+[assembly: System.Reflection.AssemblyTitleAttribute("APiCursos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.

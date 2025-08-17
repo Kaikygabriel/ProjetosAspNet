@@ -9,6 +9,7 @@ using ApiCursos.Repository.Interfaces;
 using Mapster;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ApiCursos.Controllers;
 
@@ -25,9 +26,10 @@ public class CursosController : ControllerBase
     private readonly IUnitOfWork _unitOfWork;
 
     [HttpGet]
+    [Authorize]
     public async Task<ActionResult<IEnumerable<CursoDTO>>> GetAsync()
     {
-        
+
         IEnumerable<Curso> cursos = await _unitOfWork.RepositoryCurso.GetAllAsync();
         if (cursos is null)
             return NotFound("List esta vazia");
