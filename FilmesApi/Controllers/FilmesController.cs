@@ -5,6 +5,7 @@ using FilmesApi.Pagination;
 using FilmesApi.Repository;
 using FilmesApi.Repository.Interfaces;
 using Mapster;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -25,6 +26,7 @@ public class FilmesController : ControllerBase
     private readonly IUnitOfWork _unitOf;
 
     [HttpGet]
+    [Authorize]
     public ActionResult<IEnumerable<FilmesDTO>> Get()
     {
         var filmes = _unitOf.FilmeRepository.GetAll();
