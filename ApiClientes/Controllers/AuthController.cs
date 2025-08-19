@@ -16,7 +16,15 @@ public class AuthController : ControllerBase
     private readonly ITokenService _tokenService;
     private readonly IConfiguration _configuration;
     private readonly UserManager<IdentityUser> _userManager;
-    private readonly RoleManager<IdentityUser> _userRole;
+    private readonly RoleManager<IdentityRole> _userRole;
+
+    public AuthController(ITokenService tokenService, IConfiguration configuration, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> userRole)
+    {
+        _tokenService = tokenService;
+        _configuration = configuration;
+        _userManager = userManager;
+        _userRole = userRole;
+    }
 
     [HttpPost("Login")]
     public async Task<ActionResult> Login([FromBody] LoginModel model)
@@ -27,8 +35,7 @@ public class AuthController : ControllerBase
             var userRoles = await _userManager.GetRolesAsync(user);
             var claim = new List<Claim>()
             {
-                new Claim(ClaimTypes.Name, user.UserName),
-                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Name, user.UserName!),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString("N"))
             };
             foreach (var userRole in userRoles)
@@ -46,4 +53,19 @@ public class AuthController : ControllerBase
 
         return Unauthorized();
     }
+    [HttpPost("register")]
+    public async Task<ActionResult> Register([FromBody] LoginModel model)
+    {
+        var userExist = await _userManager.FindByNameAsync(model.UserName!);
+        if (userExist is not null)
+            return BadRequest("User exist");
+        IdentityUser user = new()
+        {
+            UserName = model.UserName
+        };
+        var resultCreated = await _userManager.CreateAsync(user,model.UserPassword!);
+        if (!resultCreated.Succeeded)
+            return NotFound("Falid in Created");
+        return Ok();
+    } 
 }

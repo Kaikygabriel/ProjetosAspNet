@@ -17,6 +17,7 @@ public class TokenService : ITokenService
             new SigningCredentials(new SymmetricSecurityKey(BytesKey), SecurityAlgorithms.HmacSha256);
         var tokenDescriptor = new SecurityTokenDescriptor()
         {
+            Subject = new ClaimsIdentity(claims),
             Audience = configure.GetSection("JWT").GetValue<String>("ValidAudience"),
             Issuer = configure.GetSection("JWT").GetValue<String>("ValidIssuer"),
             Expires = DateTime.UtcNow.AddMinutes(

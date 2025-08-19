@@ -140,3 +140,6 @@ C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiClientes\bin\Debug\net9.0\Micros
 C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiClientes\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiClientes\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
 C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiClientes\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiClientes\bin\Debug\net9.0\Mapster.dll
+C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiClientes\bin\Debug\net9.0\Mapster.Core.dll
+C:\Users\kaiky\downloads\kaka\ProjetosAspNet\ApiClientes\bin\Debug\net9.0\System.Text.Json.dll

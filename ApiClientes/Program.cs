@@ -6,6 +6,7 @@ using ApiClientes.Filters;
 using ApiClientes.Repository;
 using ApiClientes.Repository.Interfaces;
 using ApiClientes.Services;
+using ApiClientes.Services.Interface;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -23,9 +24,7 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     );
 builder.Services.AddScoped<ExceptionFilterGlobal>();
 builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
-builder.Services.AddControllers(options =>
-    options.Filters.Add(typeof(ExceptionFilterGlobal))
-);
+
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IClientesRepository, ClienteRepository>();
 builder.Services.AddScoped<SeedingCliente>();
@@ -52,6 +51,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
 });
 builder.Services.AddAuthorization();
+builder.Services.AddScoped<ITokenService,TokenService>();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

@@ -33,4 +33,13 @@ public class AuthController : ControllerBase
         }
         return Unauthorized();
     }
+    [HttpPost("register")]
+    public ActionResult Register([FromBody] LoginModel model)
+    {
+        var user = repositoryUsers.Get(model.Name!);
+        if (user is not null)
+            return BadRequest("user exist");
+        repositoryUsers.Created(model);
+        return Ok();
+    }
 }

@@ -12,6 +12,10 @@ public class RepositoryUsers
     };
     public LoginModel? Get(string name)
     {
-        return users.FirstOrDefault(x => x.Name == name); 
+        return users.FirstOrDefault(x => x.Name == name);
+    }
+    public void Created(LoginModel model)
+    {
+        users.Add(model);
     }
 }

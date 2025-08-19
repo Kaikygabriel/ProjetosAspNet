@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0vWDXgYEiG0=",
-  "success": false,
-  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiClientes\\ApiClientes.csproj",
+  "dgSpecHash": "mjfT5IEKP2Y=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kaiky\\downloads\\kaka\\ProjetosAspNet\\ApiClientes\\ApiClientes.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kaiky\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
@@ -24,7 +24,7 @@
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.8\\microsoft.entityframeworkcore.9.0.8.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.8\\microsoft.entityframeworkcore.abstractions.9.0.8.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.8\\microsoft.entityframeworkcore.analyzers.9.0.8.nupkg.sha512",
-    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.entityframeworkcore.design\\9.0.0\\microsoft.entityframeworkcore.design.9.0.0.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.entityframeworkcore.design\\9.0.8\\microsoft.entityframeworkcore.design.9.0.8.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.8\\microsoft.entityframeworkcore.relational.9.0.8.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\9.0.8\\microsoft.entityframeworkcore.tools.9.0.8.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.extensions.apidescription.server\\8.0.0\\microsoft.extensions.apidescription.server.8.0.0.nupkg.sha512",
@@ -33,7 +33,7 @@
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.8\\microsoft.extensions.configuration.abstractions.9.0.8.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.8\\microsoft.extensions.dependencyinjection.9.0.8.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.8\\microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512",
-    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.extensions.dependencymodel\\9.0.0\\microsoft.extensions.dependencymodel.9.0.0.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.extensions.dependencymodel\\9.0.8\\microsoft.extensions.dependencymodel.9.0.8.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.extensions.identity.core\\9.0.8\\microsoft.extensions.identity.core.9.0.8.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.extensions.identity.stores\\9.0.8\\microsoft.extensions.identity.stores.9.0.8.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.extensions.logging\\9.0.8\\microsoft.extensions.logging.9.0.8.nupkg.sha512",
@@ -66,20 +66,8 @@
     "C:\\Users\\kaiky\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\system.reflection.metadata\\7.0.0\\system.reflection.metadata.7.0.0.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\kaiky\\.nuget\\packages\\system.text.json\\9.0.0\\system.text.json.9.0.0.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\system.text.json\\9.0.8\\system.text.json.9.0.8.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Warning As Error: Detected package downgrade: Microsoft.EntityFrameworkCore.Design from 9.0.8 to 9.0.0. Reference the package directly from the project to select a different version. \r\n ApiClientes -> Microsoft.EntityFrameworkCore.Tools 9.0.8 -> Microsoft.EntityFrameworkCore.Design (>= 9.0.8) \r\n ApiClientes -> Microsoft.EntityFrameworkCore.Design (>= 9.0.0)",
-      "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiClientes\\ApiClientes.csproj",
-      "filePath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\ApiClientes\\ApiClientes.csproj",
-      "libraryId": "Microsoft.EntityFrameworkCore.Design",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  "logs": []
 }

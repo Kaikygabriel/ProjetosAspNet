@@ -9,9 +9,6 @@ namespace ApiCursos.Service;
 
 public class TokenService
 {
-    
-    
-
     public string GerenateToken(LoginModel model, IConfiguration configuration)
     {
 
