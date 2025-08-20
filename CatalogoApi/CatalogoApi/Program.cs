@@ -58,7 +58,7 @@ builder.Services.AddAuthentication (options =>
 } ).AddJwtBearer(options =>
 {
     options.SaveToken = true;
-    options.RequireHttpsMetadata = false;
+    options.RequireHttpsMetadata = true;
     options.TokenValidationParameters = new TokenValidationParameters()
     {
         ValidateIssuer = true,
@@ -88,7 +88,7 @@ using (var scoped = app.Services.CreateScope())
     seeding.Seed();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.MapControllers();
 

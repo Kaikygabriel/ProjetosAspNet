@@ -48,7 +48,7 @@ public class AuthController : ControllerBase
 
             var token = _tokenService.GerenateAcessToken(authClaims, _configuration);
             var refreshToken = _tokenService.GereateRefrashToken();
-            _=int.TryParse(_configuration["JWT:RefreshTokenValidityInMinutes"], 
+            int.TryParse(_configuration["JWT:RefreshTokenValidityInMinutes"], 
                 out int refreshTokenValidityInMinutes);
             user.RefreshToeken = refreshToken;
             user.RefreshTokenExpiryTime = DateTime.Now.AddMinutes(refreshTokenValidityInMinutes);
@@ -75,5 +75,32 @@ public class AuthController : ControllerBase
         if(!result.Succeeded)
             return StatusCode(StatusCodes.Status500InternalServerError,"User creation failed");
         return Ok(new Response { Status = "Sucess", Message = "User created sucess!" });
+    }
+
+    [HttpPost("refresh-token")]
+    public async Task<ActionResult> RefreshToken([FromBody] TokenModel? model) 
+    {
+        if(model is null)
+            return BadRequest("model is null");
+        var acessToken = model.AccessToken ?? throw new Exception();
+        var refreshToken = model.RefreshToken ?? throw new Exception();
+        var principal = _tokenService.GetPrincipalFromExpiredToken(acessToken, _configuration);
+        if (principal is null)
+            return BadRequest("claims is null");
+        var userName = principal.Identity.Name;
+        var user = await _userManager.FindByNameAsync(userName!);
+        if (user is null || user.RefreshToeken != refreshToken || user.RefreshTokenExpiryTime <= DateTime.Now)
+            return BadRequest("Invalid acess token refresh");
+        var newAcessToken = _tokenService.GerenateAcessToken(principal.Claims.ToList(), _configuration);
+        var newRefreshToken = _tokenService.GereateRefrashToken();
+
+        user.RefreshToeken = newRefreshToken;
+        await _userManager.UpdateAsync(user);
+
+        return Ok(new
+        {
+            AcessToken = new JwtSecurityTokenHandler().WriteToken(newAcessToken),
+            RefreshToken = newRefreshToken
+        });
     }
 }

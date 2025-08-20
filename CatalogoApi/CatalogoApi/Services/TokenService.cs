@@ -55,7 +55,7 @@ public class TokenService : ITokenService
             !jwtSecurityTokena.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.CurrentCultureIgnoreCase))
         {
             throw new Exception("Token is not validity");
-        }            throw new Exception("Token is not validity");
+        }            
         return principal;
     }
 } 
