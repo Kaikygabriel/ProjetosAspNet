@@ -1,10 +1,11 @@
 using System.Text.Json.Serialization;
 using BlibiotecaApi.Model;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlibiotecaApi.Data;
 
-public class BlibiotecaContextApi : DbContext
+public class BlibiotecaContextApi : IdentityDbContext
 {
     public BlibiotecaContextApi(DbContextOptions<BlibiotecaContextApi>options) : base(options)
     {

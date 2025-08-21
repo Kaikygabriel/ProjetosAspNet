@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ApiClientes.Data;
 
-public class ClienteContext : IdentityDbContext
+public class ClienteContext : IdentityDbContext<ApplicationUser>
 {
     public ClienteContext(DbContextOptions<ClienteContext>options):base(options)
     {

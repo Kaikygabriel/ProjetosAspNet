@@ -6,7 +6,7 @@ public class Blibioteca
 {
     [Key]
     [Required]
-    public int Id { get; set; }
+    public int IdBlibioteca { get; set; }
 
     [Required]
     [StringLength(150,MinimumLength = 10)]

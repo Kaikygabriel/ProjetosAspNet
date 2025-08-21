@@ -1,6 +1,6 @@
 namespace ApiCompras.Pagination;
 
-public class PagedList<T> : List<T>
+public class PagedList<T> : List<T> where T : class
 {
     public int PageSize { get; set; }
     public int PageNumber { get; set; }

@@ -14,7 +14,7 @@ public static class ConfigurationExceptionMiddleware
                 context.Response.StatusCode = 500;
                 context.Response.ContentType = "Application/json";
                 var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
-                if (contextFeature != null)
+                if (contextFeature is not null)
                 {
                     await context.Response.WriteAsync(JsonSerializer.Serialize(new
                     {
@@ -25,5 +25,5 @@ public static class ConfigurationExceptionMiddleware
                 }
             });
         });
-    } 
+    }
 }

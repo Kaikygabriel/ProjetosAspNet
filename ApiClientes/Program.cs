@@ -3,6 +3,7 @@ using System.Text.Json.Serialization;
 using ApiClientes.Data;
 using ApiClientes.Extesion;
 using ApiClientes.Filters;
+using ApiClientes.Model;
 using ApiClientes.Repository;
 using ApiClientes.Repository.Interfaces;
 using ApiClientes.Services;
@@ -16,7 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ClienteContext>()
     .AddDefaultTokenProviders();
 builder.Services.AddControllers().AddJsonOptions(options =>
