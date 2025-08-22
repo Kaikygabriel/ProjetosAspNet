@@ -86,8 +86,10 @@ public class AuthController : ControllerBase
         
         var user = await _userManager.FindByNameAsync(principal.Identity!.Name!);
         var newRefreshtoken = _tokenService.GerenateRefreshToken();
-        if (model.RefreshToken != RefreshToken || user.RefreshTokenExpired <= DateTime.Now)
+        
+        if (newRefreshtoken is null ||model.RefreshToken != RefreshToken || user.RefreshTokenExpired <= DateTime.Now)
             return BadRequest();
+        
         user.RefreshToken = newRefreshtoken;
         user.RefreshTokenExpired = DateTime.Now.AddHours(20);
         

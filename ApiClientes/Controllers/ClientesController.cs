@@ -23,8 +23,6 @@ public class ClientesController : ControllerBase
     public ActionResult Get()
     {
         IEnumerable<Cliente> clientes = _unitOfWork.RepositoryCliente.GetAll();
-        if (clientes is null)
-            return NotFound();
         return Ok(clientes);
     }
 
