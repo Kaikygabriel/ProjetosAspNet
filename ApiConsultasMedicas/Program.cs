@@ -4,6 +4,7 @@ using ApiConsultasMedicas.Extesion;
 using ApiConsultasMedicas.Models;
 using ApiConsultasMedicas.Repository;
 using ApiConsultasMedicas.Repository.Interface;
+using ApiConsultasMedicas.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -14,14 +15,15 @@ var builder = WebApplication.CreateBuilder(args);
 var Conection = builder.Configuration.GetConnectionString("ContextConection");
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
- 
+builder.Services.AddScoped<TokenService>(); 
 builder.Services.AddDbContext<ApiConsultaContext>(options =>
     options.UseMySql(
         Conection,
         ServerVersion.AutoDetect(Conection)));
 
 builder.Services.AddIdentity<User, IdentityRole>()
-.AddEntityFrameworkStores<ApiConsultaContext>();
+.AddEntityFrameworkStores<ApiConsultaContext>()
+.AddDefaultTokenProviders();
 
 var key = builder.Configuration["Jwt:SecretKey"] ?? throw new Exception();
 builder.Services.AddAuthentication(x =>
@@ -43,9 +45,7 @@ builder.Services.AddAuthentication(x =>
     };
 });
 builder.Services.AddAuthorization();
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();,,
-
-
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 

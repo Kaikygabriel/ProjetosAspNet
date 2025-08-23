@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiConsultasMedicas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+385beb6fe1df0afce8490fb06bad76b8beae6a22")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b292e67613976952985147d0535a396481aa20d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiConsultasMedicas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiConsultasMedicas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
