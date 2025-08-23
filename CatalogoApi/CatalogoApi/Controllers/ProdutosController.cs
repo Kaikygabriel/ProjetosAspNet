@@ -120,7 +120,7 @@ namespace CatalogoApi.Controllers
             await _unitOfWork.CommitAsync();
             return Ok(produtoDto);
         }
-        [HttpDelete("{id:int:min(1)}")]
+        [HttpDelete("{id:int:min(1)}")] 
         public async Task<ActionResult> DeleteAsync(int id)
         {
             var produto = await _unitOfWork.ProdutoRepository.GetByIdAsync(p=>p.Id==id);

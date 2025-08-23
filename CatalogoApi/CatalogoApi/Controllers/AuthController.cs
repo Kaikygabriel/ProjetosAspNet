@@ -4,6 +4,7 @@ using System.Security.Claims;
 using CatalogoApi.Model;
 using CatalogoApi.Model.DTO;
 using CatalogoApi.Services.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
@@ -34,18 +35,16 @@ public class AuthController : ControllerBase
         var user = await _userManager.FindByNameAsync(model.UserName!);
         if (user is not null && await _userManager.CheckPasswordAsync(user,model.Password!))
         {
-            var userRoles = await _userManager.GetRolesAsync(user);
             var authClaims = new List<Claim>()
             {
                 new Claim(ClaimTypes.Name, user.UserName!),
                 new Claim(ClaimTypes.Email, user.Email!),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString("N"))
             };
-            foreach (var UserRole in userRoles)
+            foreach (var UserRole in await _userManager.GetRolesAsync(user))
             {
                 authClaims.Add(new Claim(ClaimTypes.Role,UserRole));
             }
-
             var token = _tokenService.GerenateAcessToken(authClaims, _configuration);
             var refreshToken = _tokenService.GereateRefrashToken();
             int.TryParse(_configuration["JWT:RefreshTokenValidityInMinutes"], 
@@ -102,5 +101,16 @@ public class AuthController : ControllerBase
             AcessToken = new JwtSecurityTokenHandler().WriteToken(newAcessToken),
             RefreshToken = newRefreshToken
         });
+    }
+    [Authorize]
+    [HttpPost("Revoke/{userName:alpha}")]
+    public async Task<ActionResult> Revoke(string userName)
+    {
+        var user = await _userManager.FindByNameAsync(userName);
+        if (user is null)
+            return NotFound();
+        user.RefreshToeken = null;
+        await _userManager.UpdateAsync(user);
+        return NoContent();
     }
 }
