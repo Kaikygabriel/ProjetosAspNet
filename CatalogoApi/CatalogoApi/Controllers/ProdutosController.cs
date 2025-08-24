@@ -8,6 +8,7 @@ using CatalogoApi.Model.DTO;
 using CatalogoApi.Pagination;
 using CatalogoApi.Repository.Interface;
 using Mapster;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -44,6 +45,7 @@ namespace CatalogoApi.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<ProdutoDTO>>> GetAsync() 
         {
             var produtos = await _unitOfWork.ProdutoRepository.GetAllAsync();

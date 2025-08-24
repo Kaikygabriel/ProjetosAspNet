@@ -46,6 +46,7 @@ namespace CatalogoApi.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<CategoriaDTO>>> Get()
         {
             IEnumerable<Categoria>? categorias = await _unitOfWork.CategoriaRepository.GetAllAsync();

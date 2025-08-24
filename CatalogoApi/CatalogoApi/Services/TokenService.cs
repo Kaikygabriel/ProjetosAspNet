@@ -19,10 +19,9 @@ public class TokenService : ITokenService
         var tokenDescriptor = new SecurityTokenDescriptor()
         {
             Subject = new ClaimsIdentity(claims),
-            Expires = DateTime.UtcNow.AddMinutes(_configuration.GetSection("JWT")
-                .GetValue<double>("TokenValidityInMinutes")),
-            Audience = _configuration.GetSection("JWT").GetValue<string>("ValidAudience"),
-            Issuer = _configuration.GetSection("JWT").GetValue<string>("ValidIssuer"),
+            Expires = DateTime.UtcNow.AddMinutes(30),
+            Audience = _configuration["Jwt:ValidAudience"],
+            Issuer = _configuration["Jwt:ValidIssuer"],
             SigningCredentials = signingCredentials
         };
         var tokenHandler = new JwtSecurityTokenHandler();
