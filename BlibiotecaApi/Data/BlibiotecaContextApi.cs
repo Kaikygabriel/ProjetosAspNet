@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlibiotecaApi.Data;
 
-public class BlibiotecaContextApi : IdentityDbContext
+public class BlibiotecaContextApi : IdentityDbContext<User>
 {
     public BlibiotecaContextApi(DbContextOptions<BlibiotecaContextApi>options) : base(options)
     {

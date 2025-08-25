@@ -11,7 +11,7 @@ public static class TokenService
     public static string GerenateAcessToken(IConfiguration configuration, IEnumerable<Claim> claims)
     {
         var key = configuration["Jwt:SecretKey"];
-        var byteKey = Encoding.UTF8.GetBytes(key);
+        var byteKey = Encoding.UTF8.GetBytes(key!);
         var tokenDescriptor = new SecurityTokenDescriptor
         {
             Expires = DateTime.UtcNow.AddHours(8),

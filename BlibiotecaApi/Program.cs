@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 using BlibiotecaApi.Data;
 using BlibiotecaApi.Extesion;
 using BlibiotecaApi.Filters;
+using BlibiotecaApi.Model;
+using BlibiotecaApi.Repository;
+using BlibiotecaApi.Repository.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -25,8 +28,9 @@ builder.Services.AddDbContext<BlibiotecaContextApi>(options =>
         ServerVersion.AutoDetect(conection)));
 
 //identity config
+builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+builder.Services.AddIdentity<User, IdentityRole>()
 .AddEntityFrameworkStores<BlibiotecaContextApi>()
 .AddDefaultTokenProviders();
 
@@ -48,6 +52,7 @@ builder.Services.AddAuthentication(x =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes((builder.Configuration["Jwt:SecretKey"])))
     };
 });
+
 
 
 var app = builder.Build();

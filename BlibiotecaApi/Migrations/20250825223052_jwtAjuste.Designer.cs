@@ -4,6 +4,7 @@ using BlibiotecaApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlibiotecaApi.Migrations
 {
     [DbContext(typeof(BlibiotecaContextApi))]
-    partial class BlibiotecaContextApiModelSnapshot : ModelSnapshot
+    [Migration("20250825223052_jwtAjuste")]
+    partial class jwtAjuste
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -87,7 +90,7 @@ namespace BlibiotecaApi.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<DateTime?>("ExpiredRefreshToken")
+                    b.Property<DateTime>("ExpiredRefreshToken")
                         .HasColumnType("datetime(6)");
 
                     b.Property<bool>("LockoutEnabled")
@@ -114,6 +117,7 @@ namespace BlibiotecaApi.Migrations
                         .HasColumnType("tinyint(1)");
 
                     b.Property<string>("RefreshToken")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("SecurityStamp")

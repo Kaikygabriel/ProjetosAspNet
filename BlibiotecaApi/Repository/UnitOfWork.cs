@@ -11,19 +11,17 @@ public class UnitOfWork : IUnitOfWork
         await Context.SaveChangesAsync();
     }
     public BlibiotecaContextApi Context;
-    private readonly IBlibiotecaRepository _blibiotecaRepository;
+    private IBlibiotecaRepository _blibiotecaRepository;
 
-    public UnitOfWork(IBlibiotecaRepository blibiotecaRepository, BlibiotecaContextApi context)
-    {
-        _blibiotecaRepository = blibiotecaRepository;
-        Context = context;
+    public UnitOfWork(BlibiotecaContextApi context)
+    { Context = context;
     }
 
     public IBlibiotecaRepository blibiotecaRepository
     {
         get
         {
-            return _blibiotecaRepository;
+            return _blibiotecaRepository = _blibiotecaRepository ?? new BlibiotecaRepository(Context);
         }
     }
     

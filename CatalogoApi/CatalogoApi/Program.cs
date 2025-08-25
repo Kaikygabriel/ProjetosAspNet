@@ -76,7 +76,7 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
-builder.Services.AddScoped<SeedingService>();
+builder.Services.AddScoped<SeedingService>(); 
 builder.Services.AddScoped<ITokenService,TokenService>();
 builder.Services.AddDbContext<CatalogoContext>(Options =>
     Options.UseMySql(
