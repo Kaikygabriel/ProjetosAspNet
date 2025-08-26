@@ -12,7 +12,7 @@ using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegiste
 
 namespace CatalogoApi.Controllers;
 
-[Route("Api/[controller]")]
+[Route("[controller]")]
 [ApiController]
 public class AuthController : ControllerBase
 {
@@ -113,4 +113,36 @@ public class AuthController : ControllerBase
         await _userManager.UpdateAsync(user);
         return NoContent();
     }
+
+    [HttpPost("CreateRole/{roleName}")]
+    public async Task<ActionResult> CreateRole([FromRoute] string roleName)
+    {
+        if (string.IsNullOrWhiteSpace(roleName))
+            return BadRequest("O nome da role não pode ser vazio.");
+
+        var roleExists = await _roleManager.RoleExistsAsync(roleName);
+        if (roleExists)
+            return BadRequest($"A role '{roleName}' já existe.");
+
+        var roleResult = await _roleManager.CreateAsync(new IdentityRole(roleName));
+        if (roleResult.Succeeded)
+            return Ok($"Role '{roleName}' criada com sucesso.");
+
+        return BadRequest("não de certo");
+    }
+
+    [HttpPost("AddUserToRole")]
+    public async Task<ActionResult> addUserToRole(string name, string roleName)
+    {
+        var user = await _userManager.FindByNameAsync(name);
+        if (user is null)
+            return BadRequest();
+        var roleExist = await _roleManager.RoleExistsAsync(roleName);
+        if (!roleExist)
+            return BadRequest();
+        var result = await _userManager.AddToRoleAsync(user, roleName);
+        if (result.Succeeded)
+            return Ok("Success");
+        return NotFound();
+    } 
 }
