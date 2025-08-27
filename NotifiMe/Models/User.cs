@@ -13,6 +13,11 @@ public class User
     [Required]
     [EmailAddress]
     public string Email { get; set; }
+    [Required] 
+    public string PasswordHash { get; set; }
 
-    public ICollection<Appointment>Appointments { get; set; }
+    public string? RefreshToken { get; set; }
+    public DateTime? ExpiredRefreshToken { get; set; }
+    
+    public ICollection<Appointment>?Appointments { get; set; }
 }
