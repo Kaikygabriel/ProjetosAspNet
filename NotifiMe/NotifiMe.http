@@ -1,0 +1,6 @@
+@NotifiMe_HostAddress = http://localhost:5107
+
+GET {{NotifiMe_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
