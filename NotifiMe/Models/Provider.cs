@@ -15,6 +15,8 @@ public class Provider
     public string Email { get; set; }
     [Required] 
     public string PasswordHash { get; set; }
+    [Required]
+    public string Work { get; set; }
     
     public ICollection<Appointment>Appointments { get; set; }
 }

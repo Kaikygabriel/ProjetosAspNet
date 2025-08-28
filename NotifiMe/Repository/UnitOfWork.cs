@@ -22,7 +22,7 @@ public class UnitOfWork : IUnitOfWork
     {
         get
         {
-            return _repositoryUser = UserRepository ?? new RepositoryUser(context);
+            return _repositoryUser = _repositoryUser ?? new RepositoryUser(context);
         }
     }
 

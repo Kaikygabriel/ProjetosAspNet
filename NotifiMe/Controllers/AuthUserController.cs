@@ -1,8 +1,10 @@
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.JsonWebTokens;
 using NotifiMe.Models;
+using NotifiMe.Models.LoginModel;
 using NotifiMe.Repository.Interface;
 using NotifiMe.Service.Interface;
 
@@ -69,5 +71,46 @@ public class AuthUserController : ControllerBase
             RefreshToken = refreshToken,
             ExpiredRefreshToken = DateTime.Now.AddHours(10)
         });
+    }
+
+    [HttpPost("Refresh")]
+    public async Task<ActionResult> RefreshToken([FromBody]LoginTokenModel model)
+    {
+        var acessToken = model.Token ?? throw new Exception();
+        var acessRefreshToken = model.RefreshToken ?? throw new Exception();
+
+        var principal = tokenService.GetPrincipalClaimsExpiredToken(acessToken,configuration);
+        var user = await _uwf.UserRepository.GetByIdAsync(x => x.Name == principal.Identity!.Name);
+        if (user is null || user.RefreshToken != acessRefreshToken || user.ExpiredRefreshToken <= DateTime.Now)
+            return NotFound();
+        var newToken = tokenService.GerenateToken(principal.Claims.ToList(),configuration);
+        var newRefreshToken = tokenService.GerenateRefreshToken();
+
+        user.RefreshToken = newRefreshToken;
+        user.ExpiredRefreshToken = DateTime.Now.AddHours(10);
+        
+        _uwf.UserRepository.Update(user);
+        await _uwf.CommitAsync();
+
+        return Ok(new
+        {
+            Token = newToken,
+            RefreshToken = newRefreshToken
+        });
+    }
+
+    [Authorize(Policy = "UserOnly")]
+    [HttpPost("Revoke/{UserName:alpha}")]
+    public async Task<ActionResult> RevokeRefreshToken(string UserName)
+    {
+        var user = await _uwf.UserRepository.GetByIdAsync(x => x.Name == UserName);
+        if (user is null)
+            return NotFound();
+        user.RefreshToken = null;
+        
+        _uwf.UserRepository.Update(user);
+        await _uwf.CommitAsync();
+
+        return NoContent();
     }
 }

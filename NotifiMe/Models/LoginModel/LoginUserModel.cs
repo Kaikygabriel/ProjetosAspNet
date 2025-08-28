@@ -1,4 +1,4 @@
-namespace NotifiMe.Models;
+namespace NotifiMe.Models.LoginModel;
 
 public class LoginUserModel
 {
