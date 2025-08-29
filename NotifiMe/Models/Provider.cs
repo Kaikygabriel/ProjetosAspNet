@@ -17,6 +17,9 @@ public class Provider
     public string PasswordHash { get; set; }
     [Required]
     public string Work { get; set; }
+
+    public string? RefreshToken { get; set; }
+    public DateTime? ExpiredRefreshToken { get; set; }
     
     public ICollection<Appointment>Appointments { get; set; }
 }

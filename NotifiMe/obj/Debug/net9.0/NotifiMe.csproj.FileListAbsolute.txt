@@ -6,10 +6,14 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\NotifiMe.
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\NotifiMe.runtimeconfig.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\NotifiMe.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\NotifiMe.pdb
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\BCrypt.Net-Next.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Humanizer.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Mapster.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Mapster.Core.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.Build.Locator.dll
@@ -29,6 +33,8 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
@@ -138,8 +144,3 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\obj\Debug\net9.0\refint\No
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\obj\Debug\net9.0\NotifiMe.pdb
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\obj\Debug\net9.0\NotifiMe.genruntimeconfig.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\obj\Debug\net9.0\ref\NotifiMe.dll
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll

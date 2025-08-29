@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.JsonWebTokens;
+using NotifiMe.Extesion;
 using NotifiMe.Models;
 using NotifiMe.Models.LoginModel;
 using NotifiMe.Repository.Interface;
@@ -15,38 +16,40 @@ namespace NotifiMe.Controllers;
 public class AuthUserController : ControllerBase
 {
     private readonly ITokenService tokenService;
-    private readonly IUnitOfWork _uwf;
+    private readonly IUnitOfWork _unitOfWork;
     private readonly IConfiguration configuration;
 
     public AuthUserController(ITokenService tokenService, IUnitOfWork uwf, IConfiguration configuration)
     {
         this.tokenService = tokenService;
-        _uwf = uwf;
+        _unitOfWork = uwf;
         this.configuration = configuration;
     }
 
     [HttpPost("Register")]
     public async Task<ActionResult> Register([FromBody] LoginUserModel model )
     {
-        var userExist = await _uwf.UserRepository.GetByIdAsync(x => x.Name == model.Name);
+        var userExist = await _unitOfWork.UserRepository.GetByIdAsync(x => x.Name == model.Name);
         if (userExist is not null)
             return NotFound();
+        if(model.Password.Length < 6)
+            return BadRequest("The password length is small, it must be greater than 6");
         User user = new User()
         {
             Name = model.Name,
             Email = model.Email,
             PasswordHash = model.Password
         };
-        _uwf.UserRepository.Create(user);
-        await _uwf.CommitAsync();
+        _unitOfWork.UserRepository.Create(user);
+        await _unitOfWork.CommitAsync();
         return NoContent();
     }
 
     [HttpPost("login")]
     public async Task<ActionResult> Login([FromBody] LoginUserModel model)
     {
-        var user = await _uwf.UserRepository.GetByIdAsync(x => x.Name == model.Name);
-        if (user is null)
+        var user = await _unitOfWork.UserRepository.GetByIdAsync(x => x.Name == model.Name);
+        if (user is  null|| !user.CheckPassword(model.Password))
             return Unauthorized();
         var claims = new List<Claim>()
         {
@@ -62,8 +65,8 @@ public class AuthUserController : ControllerBase
         user.RefreshToken = refreshToken;
         user.ExpiredRefreshToken = DateTime.Now.AddHours(10);
         
-        _uwf.UserRepository.Update(user);
-        await _uwf.CommitAsync();
+        _unitOfWork.UserRepository.Update(user);
+        await _unitOfWork.CommitAsync();
 
         return Ok(new
         {
@@ -80,7 +83,7 @@ public class AuthUserController : ControllerBase
         var acessRefreshToken = model.RefreshToken ?? throw new Exception();
 
         var principal = tokenService.GetPrincipalClaimsExpiredToken(acessToken,configuration);
-        var user = await _uwf.UserRepository.GetByIdAsync(x => x.Name == principal.Identity!.Name);
+        var user = await _unitOfWork.UserRepository.GetByIdAsync(x => x.Name == principal.Identity!.Name);
         if (user is null || user.RefreshToken != acessRefreshToken || user.ExpiredRefreshToken <= DateTime.Now)
             return NotFound();
         var newToken = tokenService.GerenateToken(principal.Claims.ToList(),configuration);
@@ -89,8 +92,8 @@ public class AuthUserController : ControllerBase
         user.RefreshToken = newRefreshToken;
         user.ExpiredRefreshToken = DateTime.Now.AddHours(10);
         
-        _uwf.UserRepository.Update(user);
-        await _uwf.CommitAsync();
+        _unitOfWork.UserRepository.Update(user);
+        await _unitOfWork.CommitAsync();
 
         return Ok(new
         {
@@ -103,13 +106,13 @@ public class AuthUserController : ControllerBase
     [HttpPost("Revoke/{UserName:alpha}")]
     public async Task<ActionResult> RevokeRefreshToken(string UserName)
     {
-        var user = await _uwf.UserRepository.GetByIdAsync(x => x.Name == UserName);
+        var user = await _unitOfWork.UserRepository.GetByIdAsync(x => x.Name == UserName);
         if (user is null)
             return NotFound();
         user.RefreshToken = null;
         
-        _uwf.UserRepository.Update(user);
-        await _uwf.CommitAsync();
+        _unitOfWork.UserRepository.Update(user);
+        await _unitOfWork.CommitAsync();
 
         return NoContent();
     }

@@ -47,7 +47,10 @@ builder.Services.AddAuthentication(x =>
 });
 
 builder.Services.AddAuthorization(x =>
-    x.AddPolicy("UserOnly", Policy => Policy.RequireRole("User")));
+{
+    x.AddPolicy("UserOnly", Policy => Policy.RequireRole("User"));
+    x.AddPolicy("ProviderOnly",Policy =>Policy.RequireRole("Provider"));
+});
 
 var app = builder.Build();
 
@@ -57,7 +60,7 @@ if (app.Environment.IsDevelopment())
     app.UseGlobalExceptionHandler();
 }
 
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 app.UseAuthentication();
 
