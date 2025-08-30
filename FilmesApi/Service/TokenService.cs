@@ -1,5 +1,6 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using FilmesApi.Service.Interface;
 using Microsoft.IdentityModel.Tokens;
@@ -10,20 +11,42 @@ public class TokenService : ITokenService
 {
     public string GerenateToken(IEnumerable<Claim> claims, IConfiguration configuration)
     {
-        var key = configuration.GetSection("Jwt").GetValue<string>("SecretKey");
-        var byteKey = Encoding.UTF8.GetBytes(key);
-        var signingCredencials =
-            new SigningCredentials(new SymmetricSecurityKey(byteKey), SecurityAlgorithms.HmacSha256);
+        var Byteskey = Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"]!);
+        var signingCredentials = new SigningCredentials(
+            new SymmetricSecurityKey(Byteskey), SecurityAlgorithms.HmacSha256);
         var tokenDescriptor = new SecurityTokenDescriptor()
         {
-            Subject = new ClaimsIdentity(claims),
-            Expires = DateTime.Now.AddHours(8),
             Issuer = configuration["Jwt:Issuer"],
             Audience = configuration["Jwt:Audience"],
-            SigningCredentials = signingCredencials
+            Subject = new ClaimsIdentity(claims),
+            Expires = DateTime.Now.AddHours(10),
+            SigningCredentials = signingCredentials
         };
         var tokenHandler = new JwtSecurityTokenHandler();
-        var token = tokenHandler.CreateToken(tokenDescriptor);
+        var token = tokenHandler.CreateJwtSecurityToken(tokenDescriptor);
         return tokenHandler.WriteToken(token);
+    }
+
+    public ClaimsPrincipal GetClaimsPrincipalExpiredToken(string token, IConfiguration configuration)
+    {
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var principal = tokenHandler.ValidateToken(token, new TokenValidationParameters()
+        {
+            ValidateAudience = false,
+            ValidateIssuer = false,
+            ValidateLifetime = false,
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"]!))
+        }, out var securityToken);
+        if (principal is null)
+            throw new Exception("Token is invalid");
+        return principal;
+    }
+
+    public string GerenateRefreshToken()
+    {
+        var bytes = new byte[128];
+        RandomNumberGenerator.Fill(bytes);
+        return Convert.ToBase64String(bytes);
     }
 }

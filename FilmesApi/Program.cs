@@ -1,6 +1,7 @@
 using System.Text;
 using FilmesApi.Data;
 using FilmesApi.Extesion;
+using FilmesApi.Models;
 using FilmesApi.Repository;
 using FilmesApi.Repository.Interfaces;
 using FilmesApi.Service;
@@ -25,7 +26,7 @@ builder.Services.AddScoped<IFilmeRepository, FilmeRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
 
-builder.Services.AddIdentity<IdentityUser,IdentityRole>()
+builder.Services.AddIdentity<User,IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 builder.Services.AddAuthentication(x =>
@@ -41,7 +42,8 @@ builder.Services.AddAuthentication(x =>
         ClockSkew = TimeSpan.Zero,
         ValidateAudience = true,
         ValidateIssuer = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"])),
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]!)),
         ValidIssuer = builder.Configuration["Jwt:Issuer"],
         ValidAudience = builder.Configuration["Jwt:Audience"]
     };
