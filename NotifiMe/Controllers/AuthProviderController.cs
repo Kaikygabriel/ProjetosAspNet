@@ -31,7 +31,7 @@ public class AuthProviderController : ControllerBase
     {
         if (model is null)
             return NotFound();
-        var userExist = await _unitOfWork.ProviderRepository.GetByIdAsync(x => x.Name == model.Name!);
+        var userExist = await _unitOfWork.ProviderRepository.GetByPredicateAsync(x => x.Name == model.Name!);
         if (userExist is not null)
             return NotFound();
         if (model.Password.Length < 6)
@@ -52,7 +52,7 @@ public class AuthProviderController : ControllerBase
     [HttpPost("Login")] 
     public async Task<ActionResult> LoginAsync([FromBody]LoginProviderModel model)
     {
-        var user= await _unitOfWork.ProviderRepository.GetByIdAsync(x => x.Name == model.Name!);
+        var user= await _unitOfWork.ProviderRepository.GetByPredicateAsync(x => x.Name == model.Name!);
         if (user is null || !user.CheckPassword(model.Password))
             return Unauthorized();
         var claims = new List<Claim>
@@ -87,7 +87,7 @@ public class AuthProviderController : ControllerBase
 
         var principal = tokenService.GetPrincipalClaimsExpiredToken(acessToken, configuration);
         var user = await _unitOfWork.ProviderRepository.
-            GetByIdAsync(x => x.Name == principal.Identity!.Name!);
+            GetByPredicateAsync(x => x.Name == principal.Identity!.Name!);
         if (user is null || user.RefreshToken != acessRefreshToken || user.ExpiredRefreshToken <= DateTime.Now)
             return BadRequest();
 
@@ -111,7 +111,7 @@ public class AuthProviderController : ControllerBase
     [HttpPost("Revoke/{userName:alpha}")]
     public async Task<ActionResult> Revoke(string userName)
     {
-        var user =await _unitOfWork.ProviderRepository.GetByIdAsync(x => x.Name == userName);
+        var user =await _unitOfWork.ProviderRepository.GetByPredicateAsync(x => x.Name == userName);
         if (user is null)
             return NotFound();
         user.RefreshToken = null;

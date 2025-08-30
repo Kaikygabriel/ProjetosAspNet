@@ -29,11 +29,11 @@ public class AuthUserController : ControllerBase
     [HttpPost("Register")]
     public async Task<ActionResult> Register([FromBody] LoginUserModel model )
     {
-        var userExist = await _unitOfWork.UserRepository.GetByIdAsync(x => x.Name == model.Name);
+        var userExist = await _unitOfWork.UserRepository.GetByPredicateAsync(x => x.Name == model.Name);
         if (userExist is not null)
             return NotFound();
         if(model.Password.Length < 6)
-            return BadRequest("The password length is small, it must be greater than 6");
+               return BadRequest("The password length is small, it must be greater than 6");
         User user = new User()
         {
             Name = model.Name,
@@ -48,7 +48,7 @@ public class AuthUserController : ControllerBase
     [HttpPost("login")]
     public async Task<ActionResult> Login([FromBody] LoginUserModel model)
     {
-        var user = await _unitOfWork.UserRepository.GetByIdAsync(x => x.Name == model.Name);
+        var user = await _unitOfWork.UserRepository.GetByPredicateAsync(x => x.Name == model.Name);
         if (user is  null|| !user.CheckPassword(model.Password))
             return Unauthorized();
         var claims = new List<Claim>()
@@ -83,7 +83,7 @@ public class AuthUserController : ControllerBase
         var acessRefreshToken = model.RefreshToken ?? throw new Exception();
 
         var principal = tokenService.GetPrincipalClaimsExpiredToken(acessToken,configuration);
-        var user = await _unitOfWork.UserRepository.GetByIdAsync(x => x.Name == principal.Identity!.Name);
+        var user = await _unitOfWork.UserRepository.GetByPredicateAsync(x => x.Name == principal.Identity!.Name);
         if (user is null || user.RefreshToken != acessRefreshToken || user.ExpiredRefreshToken <= DateTime.Now)
             return NotFound();
         var newToken = tokenService.GerenateToken(principal.Claims.ToList(),configuration);
@@ -106,7 +106,7 @@ public class AuthUserController : ControllerBase
     [HttpPost("Revoke/{UserName:alpha}")]
     public async Task<ActionResult> RevokeRefreshToken(string UserName)
     {
-        var user = await _unitOfWork.UserRepository.GetByIdAsync(x => x.Name == UserName);
+        var user = await _unitOfWork.UserRepository.GetByPredicateAsync(x => x.Name == UserName);
         if (user is null)
             return NotFound();
         user.RefreshToken = null;

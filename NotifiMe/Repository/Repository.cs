@@ -20,9 +20,9 @@ public class Repository<T> : IRepository<T> where T : class
         return await context.Set<T>().AsNoTracking().ToListAsync();
     }
 
-    public async Task<T?> GetByIdAsync(Expression<Func<T, bool>> predicate)
+    public async Task<T?> GetByPredicateAsync(Expression<Func<T, bool>> predicate)
     {
-        return await context.Set<T>().AsNoTracking().SingleOrDefaultAsync(predicate);
+        return await context.Set<T>().AsNoTracking().FirstOrDefaultAsync(predicate);
     }
 
     public virtual void Create(T entity)
