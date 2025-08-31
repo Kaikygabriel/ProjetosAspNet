@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotifiMe", "NotifiMe.csproj", "{45559F04-50EB-43F4-C16A-3333A64BEC5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45559F04-50EB-43F4-C16A-3333A64BEC5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45559F04-50EB-43F4-C16A-3333A64BEC5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45559F04-50EB-43F4-C16A-3333A64BEC5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45559F04-50EB-43F4-C16A-3333A64BEC5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5EED4C0-674B-4321-ACF8-3072E2ED1489}
+	EndGlobalSection
+EndGlobal

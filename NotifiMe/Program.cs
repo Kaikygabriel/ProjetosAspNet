@@ -19,11 +19,12 @@ builder.Services.AddScoped<ITokenService,TokenService>();
 builder.Services.AddScoped<IUserRepository,RepositoryUser>();
 builder.Services.AddScoped<IProviderRepository,RepositoryProvider>();
 builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
+builder.Services.AddScoped<IAppointmentRepository,RepositoryAppointment>();
 //connection MySql
 var connection = builder.Configuration["ConnectionStrings:connection"];
 builder.Services.AddDbContext<AppDbContext>(x =>
     x.UseMySql(connection, ServerVersion.AutoDetect(connection)));
-//Authentication jwt
+//Authentication/Authorization jwt
 var key = builder.Configuration["Jwt:SecretKey"];
 builder.Services.AddAuthentication(x =>
 {

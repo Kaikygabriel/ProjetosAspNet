@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NotifiMe.Data;
 
@@ -11,9 +12,11 @@ using NotifiMe.Data;
 namespace NotifiMe.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250831124202_AjusteModelV3")]
+    partial class AjusteModelV3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,26 +39,20 @@ namespace NotifiMe.Migrations
                     b.Property<DateTime>("DateFromCreated")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int>("IdProvider")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdUser")
-                        .HasColumnType("int");
-
                     b.Property<bool>("IsCanceled")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<int?>("ProviderId")
+                    b.Property<int>("ProviderId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UserId")
+                    b.Property<int>("userId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ProviderId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("userId");
 
                     b.ToTable("Appointments");
                 });
@@ -130,13 +127,21 @@ namespace NotifiMe.Migrations
 
             modelBuilder.Entity("NotifiMe.Models.Appointment", b =>
                 {
-                    b.HasOne("NotifiMe.Models.Provider", null)
+                    b.HasOne("NotifiMe.Models.Provider", "Provider")
                         .WithMany("Appointments")
-                        .HasForeignKey("ProviderId");
+                        .HasForeignKey("ProviderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("NotifiMe.Models.User", null)
+                    b.HasOne("NotifiMe.Models.User", "user")
                         .WithMany("Appointments")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("userId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Provider");
+
+                    b.Navigation("user");
                 });
 
             modelBuilder.Entity("NotifiMe.Models.Provider", b =>

@@ -8,18 +8,32 @@ public class Provider
     [Required]
     public int Id { get; set; }
     [Required]
-    [StringLength(160,MinimumLength = 3)]
+    [StringLength(160, MinimumLength = 3)]
     public string Name { get; set; }
     [Required]
     [EmailAddress]
     public string Email { get; set; }
-    [Required] 
+    [Required]
     public string PasswordHash { get; set; }
     [Required]
     public string Work { get; set; }
 
     public string? RefreshToken { get; set; }
     public DateTime? ExpiredRefreshToken { get; set; }
-    
-    public ICollection<Appointment>Appointments { get; set; }
+
+    public ICollection<Appointment> Appointments { get; set; }
+
+
+    public bool DateValidate(DateTime dateAndHours)
+    {
+        if (Appointments is null)
+            return true; 
+        foreach (var ap in Appointments)
+            {
+
+                if (ap.DateAppointment.Hour == dateAndHours.Hour)
+                    return false;
+            }
+        return true;
+    }
 }

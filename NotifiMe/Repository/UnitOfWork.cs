@@ -8,6 +8,7 @@ public class UnitOfWork : IUnitOfWork
     private AppDbContext context;
     private IUserRepository _repositoryUser;
     private IProviderRepository _repositoryProvider;
+    private IAppointmentRepository _appointmentRepository;
     public UnitOfWork(AppDbContext context)
     {
         this.context = context;
@@ -16,6 +17,14 @@ public class UnitOfWork : IUnitOfWork
     public async Task CommitAsync()
     {
         await context.SaveChangesAsync();
+    }
+
+    public IAppointmentRepository AppointmentRepository
+    {
+        get
+        {
+            return _appointmentRepository = _appointmentRepository ?? new RepositoryAppointment(context);
+        }
     }
 
     public IUserRepository UserRepository

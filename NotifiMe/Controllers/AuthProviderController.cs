@@ -30,12 +30,12 @@ public class AuthProviderController : ControllerBase
     public async Task<ActionResult> RegisterAsync([FromBody]LoginProviderModel model)
     {
         if (model is null)
-            return NotFound();
+            return BadRequest();
         var userExist = await _unitOfWork.ProviderRepository.GetByPredicateAsync(x => x.Name == model.Name!);
         if (userExist is not null)
             return NotFound();
         if (model.Password.Length < 6)
-            return BadRequest("The password length is small, it must be greater than 6");
+            return NotFound("The password length is small, it must be greater than 6");
         Provider user = new()
         {   
             Name = model.Name,
