@@ -45,7 +45,7 @@ namespace CatalogoApi.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        [Authorize(Policy = "UserOnly")]
         public async Task<ActionResult<IEnumerable<ProdutoDTO>>> GetAsync() 
         {
             var produtos = await _unitOfWork.ProdutoRepository.GetAllAsync();

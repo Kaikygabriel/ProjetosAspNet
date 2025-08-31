@@ -119,6 +119,7 @@ namespace CatalogoApi.Controllers
         }
 
         [HttpDelete("{id:int:min(1)}")]
+        [Authorize(Policy = "AdminOnly")]
         public async Task<ActionResult<CategoriaDTO>> DeleteAsync(int id)
         {
             var categoria = await _unitOfWork.CategoriaRepository.GetByIdAsync(c=>c.Id==id);

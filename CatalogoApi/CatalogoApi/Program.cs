@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using System.Text;
 using System.Text.Json.Serialization;
 using CatalogoApi.AutoMapper;
@@ -104,7 +105,20 @@ builder.Services.AddAuthentication (options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
     };
 });
-builder.Services.AddAuthorization();
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Adimin"));
+    options.AddPolicy("UserOnly", policy => policy.RequireRole("User"));
+
+    options.AddPolicy("SuperAdminOnly", policy => policy.RequireRole("Adimin")
+        .RequireClaim("id", "kaiky"));
+
+    options.AddPolicy("ExclusiveOnly", policy => policy.RequireAssertion(context =>
+        context.User.HasClaim(claim =>
+            claim.Type == "id" &&
+            claim.Value == "kaiky" ||
+            context.User.IsInRole("SuperAdmin"))));
+});
 builder.Services.AddAutoMapper(typeof(DomationToProfileMapper));
 var app = builder.Build();
 
@@ -122,6 +136,7 @@ using (var scoped = app.Services.CreateScope())
 }
 
 app.UseHttpsRedirection();
+app.UseAuthentication(); 
 app.UseAuthorization();
 app.MapControllers();
 

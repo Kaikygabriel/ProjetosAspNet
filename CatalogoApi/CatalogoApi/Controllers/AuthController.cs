@@ -39,6 +39,7 @@ public class AuthController : ControllerBase
             {
                 new Claim(ClaimTypes.Name, user.UserName!),
                 new Claim(ClaimTypes.Email, user.Email!),
+                new Claim("id",user.UserName!),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString("N"))
             };
             foreach (var UserRole in await _userManager.GetRolesAsync(user))
@@ -104,6 +105,7 @@ public class AuthController : ControllerBase
     }
     [Authorize]
     [HttpPost("Revoke/{userName:alpha}")]
+    [Authorize(Policy = "AdminOnly")]
     public async Task<ActionResult> Revoke(string userName)
     {
         var user = await _userManager.FindByNameAsync(userName);
@@ -115,6 +117,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("CreateRole/{roleName}")]
+    [Authorize(Policy = "AdminOnly")]
     public async Task<ActionResult> CreateRole([FromRoute] string roleName)
     {
         if (string.IsNullOrWhiteSpace(roleName))
@@ -132,6 +135,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("AddUserToRole")]
+    [Authorize(Policy = "AdminOnly")]
     public async Task<ActionResult> addUserToRole(string name, string roleName)
     {
         var user = await _userManager.FindByNameAsync(name);
