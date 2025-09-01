@@ -21,19 +21,14 @@ public class Provider
     public string? RefreshToken { get; set; }
     public DateTime? ExpiredRefreshToken { get; set; }
 
-    public ICollection<Appointment> Appointments { get; set; }
+    public List<Appointment> Appointments { get; set; } = new();
 
 
-    public bool DateValidate(DateTime dateAndHours)
+    public bool CheckValidateDate(DateTime dateAndHours)
     {
-        if (Appointments is null)
-            return true; 
         foreach (var ap in Appointments)
-            {
-
-                if (ap.DateAppointment.Hour == dateAndHours.Hour)
-                    return false;
-            }
+            if (ap.DateAppointment.Hour == dateAndHours.Hour) 
+                return false;
         return true;
     }
 }

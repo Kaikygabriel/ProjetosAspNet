@@ -53,6 +53,7 @@ builder.Services.AddAuthorization(x =>
     x.AddPolicy("ProviderOnly",Policy =>Policy.RequireRole("Provider"));
 });
 
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

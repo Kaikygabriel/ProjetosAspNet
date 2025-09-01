@@ -25,7 +25,7 @@ public class AppointmentsController : ControllerBase
     {
         var providers = await _unitOfWork.ProviderRepository.GetAllAsync();
         IEnumerable<Provider>? providerFromQuery = providers.Where(x => x.Work == work);
-        return Ok(providerFromQuery.Adapt<IEnumerable<ProviderDTO>>());
+        return Ok(providerFromQuery!.Adapt<IEnumerable<ProviderDTO>>());
     }
 
     [Authorize("UserOnly")]
@@ -38,7 +38,8 @@ public class AppointmentsController : ControllerBase
         var user = await _unitOfWork.UserRepository.GetByPredicateAsync(x => x.Name == acessUserName);
         var provider = await _unitOfWork.ProviderRepository.GetByPredicateAsync(x => x.Name == acessProviderName);
 
-        if (user is null || provider is null || !user.CheckPassword(model.UserPassword)|| !provider.DateValidate(model.DateAppointment))
+        if (user is null || provider is null || !user.CheckPassword(model.UserPassword)|| 
+            !provider.CheckValidateDate(model.DateAppointment) || !user.CheckValidateDate(model.DateAppointment))
             return NotFound("the components is invalid");
 
         var newAppointment = new Appointment
@@ -50,10 +51,12 @@ public class AppointmentsController : ControllerBase
             DateFromCreated = DateTime.Now
         };
         
-        user.Appointments!.Add(newAppointment);
-        provider.Appointments!.Add(newAppointment);
+        user.Appointments.Add(newAppointment);
+        provider.Appointments.Add(newAppointment);
 
         _unitOfWork.AppointmentRepository.Create(newAppointment);
+        _unitOfWork.UserRepository.Update(user);
+        _unitOfWork.ProviderRepository.Update(provider);
         await _unitOfWork.CommitAsync();
 
         return Ok(new

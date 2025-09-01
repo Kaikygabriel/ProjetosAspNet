@@ -8,16 +8,24 @@ public class User
     [Key]
     public int Id { get; set; }
     [Required]
-    [StringLength(160,MinimumLength = 3)]
+    [StringLength(160, MinimumLength = 3)]
     public string Name { get; set; }
     [Required]
     [EmailAddress]
     public string Email { get; set; }
-    [Required] 
-    public string PasswordHash { get; set; }
+    [Required]
+    public string? PasswordHash { get; set; }
 
     public string? RefreshToken { get; set; }
     public DateTime? ExpiredRefreshToken { get; set; }
-    
-    public ICollection<Appointment>?Appointments { get; set; }
+
+    public List<Appointment> Appointments { get; set; } = new();
+
+    public bool CheckValidateDate(DateTime dateHoursAppointmentsPast)
+    {
+        foreach (var ap in Appointments)
+            if (ap.DateAppointment.Hour == dateHoursAppointmentsPast.Hour)
+                return false;
+        return true;
+    }
 }
