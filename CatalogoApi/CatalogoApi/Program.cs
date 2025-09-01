@@ -119,6 +119,13 @@ builder.Services.AddAuthorization(options =>
             claim.Value == "kaiky" ||
             context.User.IsInRole("SuperAdmin"))));
 });
+
+builder.Services.AddCors(options =>
+    options.AddDefaultPolicy( policy =>
+    {
+        policy.WithOrigins("http://www.apirequest.io");
+    }));
+
 builder.Services.AddAutoMapper(typeof(DomationToProfileMapper));
 var app = builder.Build();
 
@@ -136,6 +143,9 @@ using (var scoped = app.Services.CreateScope())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors();
+
 app.UseAuthentication(); 
 app.UseAuthorization();
 app.MapControllers();
