@@ -6,6 +6,7 @@ using BlibiotecaApi.Filters;
 using BlibiotecaApi.Model;
 using BlibiotecaApi.Repository;
 using BlibiotecaApi.Repository.Interfaces;
+using Mapster;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -34,26 +35,29 @@ builder.Services.AddIdentity<User, IdentityRole>()
 .AddEntityFrameworkStores<BlibiotecaContextApi>()
 .AddDefaultTokenProviders();
 
-builder.Services.AddAuthentication(x =>
-{
-    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(x =>
-{
-    x.SaveToken = true;
-    x.RequireHttpsMetadata = false;
-    x.TokenValidationParameters = new TokenValidationParameters()
-    {
-        ClockSkew = TimeSpan.Zero,
-        ValidAudience = builder.Configuration["Jwt:Audience"],
-        ValidIssuer = builder.Configuration["Jwt:Issuer"],
-        ValidateAudience = true,
-        ValidateIssuer = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes((builder.Configuration["Jwt:SecretKey"])))
-    };
-});
+// builder.Services.AddAuthentication(x =>
+// {
+//     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//     x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+// }).AddJwtBearer(x =>
+// {
+//     x.SaveToken = true;
+//     x.RequireHttpsMetadata = false;
+//     x.TokenValidationParameters = new TokenValidationParameters()
+//     {
+//         ClockSkew = TimeSpan.Zero,
+//         ValidAudience = builder.Configuration["Jwt:Audience"],
+//         ValidIssuer = builder.Configuration["Jwt:Issuer"],
+//         ValidateAudience = true,
+//         ValidateIssuer = true,
+//         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes((builder.Configuration["Jwt:SecretKey"])))
+//     };
+// });
 
 
+builder.Services.AddAuthentication()
+                .AddBearerToken();
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
@@ -63,8 +67,9 @@ if (app.Environment.IsDevelopment())
     app.UseConfigureExceptionsGlobal();  
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
