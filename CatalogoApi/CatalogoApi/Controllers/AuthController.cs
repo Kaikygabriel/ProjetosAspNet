@@ -7,11 +7,13 @@ using CatalogoApi.Services.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.AspNetCore.WebUtilities;
 using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames;
 
 namespace CatalogoApi.Controllers;
 
+[EnableRateLimiting("Fixed")]
 [Route("[controller]")]
 [ApiController]
 public class AuthController : ControllerBase

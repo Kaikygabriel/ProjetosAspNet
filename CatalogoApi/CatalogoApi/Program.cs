@@ -1,6 +1,7 @@
 using System.Security.Claims;
 using System.Text;
 using System.Text.Json.Serialization;
+using System.Threading.RateLimiting;
 using CatalogoApi.AutoMapper;
 using CatalogoApi.Data;
 using CatalogoApi.Extesions;
@@ -13,6 +14,7 @@ using CatalogoApi.Services;
 using CatalogoApi.Services.Interface;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -123,8 +125,23 @@ builder.Services.AddAuthorization(options =>
 builder.Services.AddCors(options =>
     options.AddDefaultPolicy( policy =>
     {
-        policy.WithOrigins("http://www.apirequest.io");
+        policy.WithOrigins("http://www.apirequest.io")
+            .AllowCredentials()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
     }));
+
+builder.Services.AddRateLimiter(rateLimiterOptions =>
+{
+    rateLimiterOptions.AddFixedWindowLimiter("Fixed", options =>
+    {
+        options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+        options.QueueLimit = 2;
+        options.Window = TimeSpan.FromSeconds(10);
+        options.PermitLimit = 3;
+    });
+    rateLimiterOptions.RejectionStatusCode = 423;
+});
 
 builder.Services.AddAutoMapper(typeof(DomationToProfileMapper));
 var app = builder.Build();
@@ -143,7 +160,9 @@ using (var scoped = app.Services.CreateScope())
 }
 
 app.UseHttpsRedirection();
+app.UseRouting();
 
+app.UseRateLimiter();
 app.UseCors();
 
 app.UseAuthentication(); 
