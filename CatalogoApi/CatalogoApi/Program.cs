@@ -140,7 +140,25 @@ builder.Services.AddRateLimiter(rateLimiterOptions =>
         options.Window = TimeSpan.FromSeconds(10);
         options.PermitLimit = 3;
     });
-    rateLimiterOptions.RejectionStatusCode = 423;
+    rateLimiterOptions.RejectionStatusCode = 429;
+});
+
+builder.Services.AddRateLimiter(options =>
+{
+    options.RejectionStatusCode = 429;
+    options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(context =>
+    {
+        return RateLimitPartition.GetFixedWindowLimiter(partitionKey: context.User.Identity?.Name ??
+                                                               context.Request.Host.ToString(),
+            factory: partion => new FixedWindowRateLimiterOptions()
+            {
+                AutoReplenishment = true, 
+                PermitLimit = 3,
+                QueueLimit = 2,
+                Window = TimeSpan.FromSeconds(10),
+                QueueProcessingOrder = QueueProcessingOrder.OldestFirst
+            });
+    });
 });
 
 builder.Services.AddAutoMapper(typeof(DomationToProfileMapper));

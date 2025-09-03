@@ -13,7 +13,6 @@ using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegiste
 
 namespace CatalogoApi.Controllers;
 
-[EnableRateLimiting("Fixed")]
 [Route("[controller]")]
 [ApiController]
 public class AuthController : ControllerBase
