@@ -1,5 +1,7 @@
 using System.Text;
+using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using NotifiMe.Data;
@@ -20,10 +22,12 @@ builder.Services.AddScoped<IUserRepository,RepositoryUser>();
 builder.Services.AddScoped<IProviderRepository,RepositoryProvider>();
 builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
 builder.Services.AddScoped<IAppointmentRepository,RepositoryAppointment>();
+
 //connection MySql
 var connection = builder.Configuration["ConnectionStrings:connection"];
 builder.Services.AddDbContext<AppDbContext>(x =>
     x.UseMySql(connection, ServerVersion.AutoDetect(connection)));
+
 //Authentication/Authorization jwt
 var key = builder.Configuration["Jwt:SecretKey"];
 builder.Services.AddAuthentication(x =>
@@ -53,6 +57,25 @@ builder.Services.AddAuthorization(x =>
     x.AddPolicy("ProviderOnly",Policy =>Policy.RequireRole("Provider"));
 });
 
+//Rate Limiter Config
+builder.Services.AddRateLimiter(rateLimiterOptions =>
+{
+    rateLimiterOptions.RejectionStatusCode = 429; 
+    rateLimiterOptions.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>
+    (context =>
+    {
+        return RateLimitPartition.GetFixedWindowLimiter(partitionKey: context.User.Identity!.Name ??
+                                                                      context.Request.Host.ToString(),
+            factory: partion => new FixedWindowRateLimiterOptions()
+            {
+                AutoReplenishment = true,
+                PermitLimit = 3,
+                Window = TimeSpan.FromSeconds(10),
+                QueueLimit = 2,
+                QueueProcessingOrder = QueueProcessingOrder.OldestFirst
+            });
+    });
+});
 
 var app = builder.Build();
 
@@ -63,6 +86,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseRouting();
+
+app.UseRateLimiter();
 
 app.UseAuthentication();
 

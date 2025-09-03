@@ -1,6 +1,7 @@
 using Mapster;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using NotifiMe.Extesion;
 using NotifiMe.Models;
 using NotifiMe.Models.DTO;

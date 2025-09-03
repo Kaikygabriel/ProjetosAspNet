@@ -12,35 +12,37 @@ public class TokenService: ITokenService
     public ClaimsPrincipal GetPrincipalClaimsExpiredToken(string token, IConfiguration configuration)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
-        var princpal = tokenHandler.ValidateToken(token, new TokenValidationParameters()
+        var claimsPrincipal = tokenHandler.ValidateToken(token, new TokenValidationParameters()
         {
-            ValidateIssuer = false,
             ValidateAudience = false,
+            ValidateIssuer = false,
             ValidateLifetime = false,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"]))
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"]!))
         }, out var secretToken);
-        if(princpal is null)
-            throw new Exception("Princpal is null");
-        return princpal;
+        if (claimsPrincipal is null)
+            throw new NullReferenceException("The token are invalid");
+        return claimsPrincipal;
     }
 
     public string GerenateToken(IEnumerable<Claim> claims, IConfiguration configuration)
     {
         var bytesKey = Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"]!);
-        var signingCredentials = new SigningCredentials(
+        var credentials = new SigningCredentials(
             new SymmetricSecurityKey(bytesKey), SecurityAlgorithms.HmacSha256);
         var tokenDescriptor = new SecurityTokenDescriptor()
         {
-            Issuer = configuration["Jwt:Issuer"],
+            Subject = new ClaimsIdentity(claims),
+            Expires = DateTime.Now.AddHours(10),
             Audience = configuration["Jwt:Audience"],
-            SigningCredentials = signingCredentials,
-            Expires = DateTime.Now.AddHours(5),
-            Subject = new ClaimsIdentity(claims)
+            Issuer = configuration["Jwt:Issuer"],
+            SigningCredentials = credentials
         };
         var tokenHandler = new JwtSecurityTokenHandler();
-        var token = tokenHandler.CreateToken(tokenDescriptor);
+        var token = tokenHandler.CreateJwtSecurityToken(tokenDescriptor);
         return tokenHandler.WriteToken(token);
     }
+    
 
     public string GerenateRefreshToken()
     {
