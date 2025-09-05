@@ -1,4 +1,5 @@
 using AcademyPro.Data;
+using AcademyPro.Extesion;
 using AcademyPro.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +26,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseExceptionGlobal();
 }
 
 app.UseHttpsRedirection();
