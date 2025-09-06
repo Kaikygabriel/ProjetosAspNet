@@ -2,6 +2,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.RateLimiting;
+using Asp.Versioning;
 using CatalogoApi.AutoMapper;
 using CatalogoApi.Data;
 using CatalogoApi.Extesions;
@@ -160,6 +161,18 @@ builder.Services.AddRateLimiter(options =>
             });
     });
 });
+
+builder.Services.AddApiVersioning(options =>
+{
+    options.DefaultApiVersion = new ApiVersion(1.0);
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.ReportApiVersions = true;
+}).AddApiExplorer(options =>
+{
+    options.GroupNameFormat = "'v'VVV";
+    options.SubstituteApiVersionInUrl = true;
+}); 
+
 
 builder.Services.AddAutoMapper(typeof(DomationToProfileMapper));
 var app = builder.Build();
