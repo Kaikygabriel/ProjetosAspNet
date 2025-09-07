@@ -52,7 +52,17 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo()
     {
         Title = "Apicatalogo",
-        Version = "v1"
+        Version = "v1",
+        Description = "Catalogo de produtos e categorias",
+        Contact = new OpenApiContact()
+        {
+            Name = "Kaiky",
+            Email = "kaikygabrielalves708@gmail.com",
+        },
+        License = new OpenApiLicense()
+        {
+            Name = "Usar sobre LICX"
+        }
     });
 
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
@@ -161,18 +171,6 @@ builder.Services.AddRateLimiter(options =>
             });
     });
 });
-
-builder.Services.AddApiVersioning(options =>
-{
-    options.DefaultApiVersion = new ApiVersion(1.0);
-    options.AssumeDefaultVersionWhenUnspecified = true;
-    options.ReportApiVersions = true;
-}).AddApiExplorer(options =>
-{
-    options.GroupNameFormat = "'v'VVV";
-    options.SubstituteApiVersionInUrl = true;
-}); 
-
 
 builder.Services.AddAutoMapper(typeof(DomationToProfileMapper));
 var app = builder.Build();

@@ -6,6 +6,9 @@ namespace CatalogoApi.Controllers;
 [ApiController]
 [Route("api/teste")]
 [ApiVersion("2.0")]
+
+//Indica que o Controller vai ser ignorado na documentação
+[ApiExplorerSettings(IgnoreApi =true)]
 public class Testev2Controller  : ControllerBase
 {
     [HttpGet]
