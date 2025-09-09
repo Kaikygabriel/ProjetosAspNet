@@ -49,6 +49,9 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\Microso
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\Mono.TextTemplating.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\MySqlConnector.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\System.CodeDom.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\System.Composition.AttributedModel.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\System.Composition.Convention.dll
@@ -141,3 +144,6 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\obj\Debug\net9.0\refint\
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\obj\Debug\net9.0\AcademyPro.pdb
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\obj\Debug\net9.0\AcademyPro.genruntimeconfig.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\obj\Debug\net9.0\ref\AcademyPro.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\JwtCraft.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll

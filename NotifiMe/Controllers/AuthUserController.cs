@@ -102,7 +102,7 @@ public class AuthUserController : ControllerBase
         });
     }
 
-    [Authorize(Policy = "UserOnly")]
+    [Authorize("UserOnly")]
     [HttpPost("Revoke/{UserName:alpha}")]
     public async Task<ActionResult> RevokeRefreshToken(string UserName)
     {

@@ -107,7 +107,7 @@ public class AuthProviderController : ControllerBase
         });
     }
 
-    [Authorize(Policy ="ProviderOnly")]
+    [Authorize("ProviderOnly")]
     [HttpPost("Revoke/{userName:alpha}")]
     public async Task<ActionResult> Revoke(string userName)
     {

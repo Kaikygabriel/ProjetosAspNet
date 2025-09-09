@@ -4,7 +4,7 @@ namespace AcademyPro.Repository.Interfaces;
 
 public interface IUnitOfWOrk
 {
-    Task Commit();
+    Task CommitAsync();
     public IEnrollmentRepository EnrollmentRepository { get;}
     public ICurseRepository CurseRepository { get;}
 }

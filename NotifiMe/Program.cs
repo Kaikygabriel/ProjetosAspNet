@@ -22,6 +22,7 @@ builder.Services.AddScoped<IUserRepository,RepositoryUser>();
 builder.Services.AddScoped<IProviderRepository,RepositoryProvider>();
 builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
 builder.Services.AddScoped<IAppointmentRepository,RepositoryAppointment>();
+builder.Services.AddSwaggerGen();
 
 //connection MySql
 var connection = builder.Configuration["ConnectionStrings:connection"];
@@ -77,10 +78,13 @@ builder.Services.AddRateLimiter(rateLimiterOptions =>
     });
 });
 
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
+    app.UseSwagger();
+    app.UseSwaggerUI();
     app.MapOpenApi();
     app.UseGlobalExceptionHandler();
 }
