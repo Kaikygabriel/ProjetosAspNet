@@ -7638,11 +7638,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kaiky\\downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApiTests\\CatalogoApiTests.csproj",
+      "projectUniqueName": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApiTests\\CatalogoApiTests.csproj",
       "projectName": "CatalogoApiTests",
-      "projectPath": "C:\\Users\\kaiky\\downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApiTests\\CatalogoApiTests.csproj",
+      "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApiTests\\CatalogoApiTests.csproj",
       "packagesPath": "C:\\Users\\kaiky\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kaiky\\downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApiTests\\obj\\",
+      "outputPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApiTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7663,8 +7663,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\kaiky\\downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\CatalogoApi.csproj": {
-              "projectPath": "C:\\Users\\kaiky\\downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\CatalogoApi.csproj"
+            "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\CatalogoApi.csproj": {
+              "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApi\\CatalogoApi.csproj"
             }
           }
         }

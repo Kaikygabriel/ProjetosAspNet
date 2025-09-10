@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cF63WFqtslI=",
+  "dgSpecHash": "kL0x9yB6OYQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kaiky\\downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApiTests\\CatalogoApiTests.csproj",
+  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\CatalogoApi\\CatalogoApiTests\\CatalogoApiTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kaiky\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",

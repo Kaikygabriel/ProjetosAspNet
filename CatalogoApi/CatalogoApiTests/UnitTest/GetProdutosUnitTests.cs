@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CatalogoApi.Controllers;
 using CatalogoApi.Model.Dto;
+using CatalogoApi.Pagination;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -47,24 +48,26 @@ namespace CatalogoApiTests.UnitTest
         public async Task GetProdutoById_Return_BadRequest()
         {
             //Arrange 
-            var produtoId = 0;
+            int? produtoId = null;
 
             //act
             var data = await _controller.GetAsync(produtoId);
 
             //Assert
-            var result = Assert.IsType<NotFoundObjectResult>(data.Result);
+            var result = Assert.IsType<BadRequestResult>(data.Result);
             Assert.Equal(400, result.StatusCode);
         }
         [Fact]
-        public async Task GetProdutoById_Return_ListOfProdutoDTO()
-        {
-            
-        }
-        [Fact]
-        public async Task GetProdutoById_Return_BadRequestResult()
+        public async Task GetProdutos_Return_ListOfProdutoDTO()
         {
 
+            //Act
+            var data = await _controller.GetAsync();
+            
+            //assert
+            var okResult = Assert.IsType<OkObjectResult>(data.Result); // Verifica se é OkObjectResult
+            var produtos = Assert.IsAssignableFrom<IEnumerable<ProdutoDTO>>(okResult.Value); // Verifica o conteúdo
+            Assert.NotNull(produtos);
         }
     }
 }
