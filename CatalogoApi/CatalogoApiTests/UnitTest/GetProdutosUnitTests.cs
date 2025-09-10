@@ -34,7 +34,7 @@ namespace CatalogoApiTests.UnitTest
         public async Task GetProdutoById_Return_NotFound()
         {
             //Arrange 
-            var produtoId = 0;
+            var produtoId = 999;
 
              //act
             var data = await _controller.GetAsync(produtoId);
@@ -43,7 +43,19 @@ namespace CatalogoApiTests.UnitTest
             var notFoundResult = Assert.IsType<NotFoundObjectResult>(data.Result);
             Assert.Equal(404, notFoundResult.StatusCode);
         }
+        [Fact]
+        public async Task GetProdutoById_Return_BadRequest()
+        {
+            //Arrange 
+            var produtoId = 0;
 
+            //act
+            var data = await _controller.GetAsync(produtoId);
+
+            //Assert
+            var result = Assert.IsType<NotFoundObjectResult>(data.Result);
+            Assert.Equal(400, result.StatusCode);
+        }
         [Fact]
         public async Task GetProdutoById_Return_ListOfProdutoDTO()
         {

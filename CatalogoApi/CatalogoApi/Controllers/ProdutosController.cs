@@ -57,6 +57,8 @@ namespace CatalogoApi.Controllers
         [HttpGet("{id:int:min(1)}",Name = "ObterProduto")]
         public async Task<ActionResult<ProdutoDTO>> GetAsync(int id)
         {
+            if (id <= 0 || id is null)
+                return BadRequest();
             var produto = await _unitOfWork.ProdutoRepository.GetByIdAsync(p=>p.Id==id);
             if (produto is null)
                 return NotFound("Produto não Encontrado...");
