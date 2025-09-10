@@ -15,15 +15,25 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
+<<<<<<< HEAD:ApiCursos/APiCursos/obj/Debug/net9.0/ApiCursos.GeneratedMSBuildEditorConfig.editorconfig
 build_property.RootNamespace = APiCursos
 build_property.RootNamespace = APiCursos
 build_property.ProjectDir = C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\APiCursos\APiCursos\
+=======
+build_property.RootNamespace = ApiCursos
+build_property.RootNamespace = ApiCursos
+build_property.ProjectDir = C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\APiCursos\
+>>>>>>> 6cc5d2ef98b88a2da6aa21a2ed54e16b8375f29f:ApiCursos/obj/Debug/net9.0/ApiCursos.GeneratedMSBuildEditorConfig.editorconfig
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+<<<<<<< HEAD:ApiCursos/APiCursos/obj/Debug/net9.0/ApiCursos.GeneratedMSBuildEditorConfig.editorconfig
 build_property.MSBuildProjectDirectory = C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\APiCursos\APiCursos
+=======
+build_property.MSBuildProjectDirectory = C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\APiCursos
+>>>>>>> 6cc5d2ef98b88a2da6aa21a2ed54e16b8375f29f:ApiCursos/obj/Debug/net9.0/ApiCursos.GeneratedMSBuildEditorConfig.editorconfig
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 

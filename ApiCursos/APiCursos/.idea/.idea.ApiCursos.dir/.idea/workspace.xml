@@ -9,9 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b34531a5-abc4-455e-873f-b827a1a0299b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ApiCursos.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ApiCursos.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APiCursos.sln" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +93,7 @@
       <updated>1753186288724</updated>
       <workItem from="1753186288724" duration="3950000" />
       <workItem from="1754237369010" duration="289000" />
+      <workItem from="1757532283925" duration="80000" />
     </task>
     <servers />
   </component>
