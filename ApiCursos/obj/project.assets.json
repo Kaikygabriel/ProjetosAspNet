@@ -3663,9 +3663,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\APiCursos\\APiCursos.csproj",
-      "projectName": "APiCursos",
-      "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\APiCursos\\APiCursos.csproj",
+      "projectUniqueName": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\APiCursos\\ApiCursos.csproj",
+      "projectName": "ApiCursos",
+      "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\APiCursos\\ApiCursos.csproj",
       "packagesPath": "C:\\Users\\kaiky\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\APiCursos\\obj\\",
       "projectStyle": "PackageReference",
