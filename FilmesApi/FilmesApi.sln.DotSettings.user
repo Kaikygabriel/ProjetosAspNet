@@ -1,0 +1,9 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=85a6b066_002Db9f4_002D4b9e_002Daf55_002D304f1e4fba5f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetFilmes_Return_OkObjectResult" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::1AAF4A32-23CF-471A-9245-189DFE69DA41::net9.0::FilmesApiTestXUnit.FilmesControllerTest.GetTests.GetFilmes_Return_OkObjectResult&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1AAF4A32-23CF-471A-9245-189DFE69DA41::net9.0::FilmesApiTestXUnit.FilmesControllerTest.GetTests.GetFilmes_Return_NotFoundObjectResult&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1AAF4A32-23CF-471A-9245-189DFE69DA41::net9.0::FilmesApiTestXUnit.FilmesControllerTest.PostTests.PostTest_Return_CreatedAtRoute&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1AAF4A32-23CF-471A-9245-189DFE69DA41::net9.0::FilmesApiTestXUnit.FilmesControllerTest.PostTests.PostTest_Return_BadRequest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
