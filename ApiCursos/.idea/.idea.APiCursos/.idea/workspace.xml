@@ -9,213 +9,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80c17743-acce-4855-a531-17673c12d383" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ApiCursosTestXUnit/CursoControllerTest/CursoUnitTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiCursosTestXUnit/CursoControllerTest/GetTestMethods.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiCursosTestXUnit/CursoControllerTest/PostTestMethods.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiCursosTestXUnit/Mocks/FakeRepositoryCurso.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiCursosTestXUnit/Mocks/FakeUnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.APiCursos/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.APiCursos/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.APiCursos/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ApiCursos.dir/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ApiCursos.dir/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ApiCursos.dir/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ApiCursos.dir/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/APiCursos.sln" beforeDir="false" afterPath="$PROJECT_DIR$/APiCursos.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiCursos.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiCursos.http" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/AuthController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/CursosController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ApiCursoContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtesionMethods/ConfigurationDTOCurso.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtesionMethods/ConfigurationExceptionExtesion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Filter/ExceptionGlobalFilter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20250722122238_Initial.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20250722122238_Initial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20250723141443_SecondMigrationsEntity.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20250723141443_SecondMigrationsEntity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20250810133704_AddIdentity.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20250810133704_AddIdentity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/ApiCursoContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Curso.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/DTO/CursoDTO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/LoginMode..cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pagination/CursoFilterName.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pagination/CursoPagination.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pagination/PagedList.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pagination/QueryStringPagination.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Properties/launchSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/Interfaces/IRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/Interfaces/IRepositoryCurso.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/Interfaces/IUnitOfWork.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/Repository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/RepositoryCurso.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/RepositoryUsers.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/UnitOfWork.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/TokenService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ApiCursos.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ApiCursos.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ApiCursos.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ApiCursos.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ApiCursos.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ApiCursos.staticwebassets.endpoints.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Humanizer.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Mapster.Core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Mapster.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.AspNetCore.Cryptography.Internal.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.AspNetCore.JsonPatch.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.Build.Locator.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.CodeAnalysis.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Design.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.Extensions.Identity.Core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.Extensions.Identity.Stores.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.Extensions.Options.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Microsoft.OpenApi.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Mono.TextTemplating.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/MySqlConnector.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Newtonsoft.Json.Bson.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Newtonsoft.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/Pomelo.EntityFrameworkCore.MySql.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/System.CodeDom.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/System.Composition.AttributedModel.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/System.Composition.Convention.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/System.Composition.Hosting.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/System.Composition.Runtime.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/System.Composition.TypedParts.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/ApiCursos.csproj.EntityFrameworkCore.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/ApiCursos.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/ApiCursos.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/ApiCursos.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.MvcApplicationPartsAssemblyInfo.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.csproj.Up2Date" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ApiCursos.sourcelink.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/apphost.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/rbcswa.dswa.cache.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ref/ApiCursos.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/refint/ApiCursos.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/rpswa.dswa.cache.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/staticwebassets.build.endpoints.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/staticwebassets.build.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/staticwebassets.build.json.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/APiCursos/obj/APiCursos.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/APiCursos/obj/APiCursos.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APiCursos/obj/Debug/net9.0/ApiCursos.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APiCursos/obj/Debug/net9.0/ApiCursos.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APiCursos/obj/Debug/net9.0/ApiCursos.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APiCursos/obj/Debug/net9.0/ApiCursos.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APiCursos/obj/Debug/net9.0/ApiCursos.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/APiCursos/obj/Debug/net9.0/ApiCursos.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APiCursos/obj/Debug/net9.0/ApiCursos.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APiCursos/obj/Debug/net9.0/ApiCursos.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APiCursos/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/APiCursos/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APiCursos/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/APiCursos/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiCursosTestXUnit/CursoControllerTest/GetTestMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiCursosTestXUnit/CursoControllerTest/GetTestMethods.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiCursosTestXUnit/obj/Debug/net9.0/ApiCursosTestXUnit.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiCursosTestXUnit/obj/Debug/net9.0/ApiCursosTestXUnit.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiCursosTestXUnit/obj/Debug/net9.0/ApiCursosTestXUnit.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ApiCursosTestXUnit/obj/Debug/net9.0/ApiCursosTestXUnit.AssemblyInfoInputs.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,10 +28,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="32WOLyzl0KruzdulRvEGazzopLX" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -241,7 +44,8 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "d642554b",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -291,6 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1757532817767</updated>
       <workItem from="1757532827589" duration="2756000" />
+      <workItem from="1757617291189" duration="1628000" />
     </task>
     <servers />
   </component>

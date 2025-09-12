@@ -3663,15 +3663,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD:ApiCursos/APiCursos/obj/project.assets.json
       "projectUniqueName": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\APiCursos\\APiCursos\\APiCursos.csproj",
       "projectName": "APiCursos",
       "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\APiCursos\\APiCursos\\APiCursos.csproj",
-=======
-      "projectUniqueName": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\APiCursos\\ApiCursos.csproj",
-      "projectName": "ApiCursos",
-      "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\APiCursos\\ApiCursos.csproj",
->>>>>>> 6cc5d2ef98b88a2da6aa21a2ed54e16b8375f29f:ApiCursos/obj/project.assets.json
       "packagesPath": "C:\\Users\\kaiky\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\APiCursos\\APiCursos\\obj\\",
       "projectStyle": "PackageReference",
@@ -3779,5 +3773,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\APiCursos\\APiCursos\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+    }
+  ]
 }

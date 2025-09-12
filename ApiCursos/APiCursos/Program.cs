@@ -1,5 +1,6 @@
 using System.Text;
 using System.Text.Json.Serialization;
+using System.Threading.RateLimiting;
 using APiCursos.Data;
 using ApiCursos.ExtesionMethods;
 using APiCursos.Filter;
@@ -11,6 +12,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using ApiCursos.Service;
+using Microsoft.AspNetCore.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
@@ -54,6 +56,17 @@ builder.Services.AddAuthentication(x =>
     });
 builder.Services.AddAuthorization();
 
+builder.Services.AddRateLimiter(x =>
+{
+    x.AddFixedWindowLimiter("Fixed", x =>
+    {
+        x.PermitLimit = 3;
+        x.QueueLimit = 1;
+        x.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+        x.Window = TimeSpan.FromSeconds(10);
+    });
+});
+
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
@@ -62,6 +75,12 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseRateLimiter();
+
+app.UseAuthentication();
+
+app.UseAuthorization();
 
 app.MapControllers();
 

@@ -34,7 +34,7 @@ public class PostTestMethods : IClassFixture<CursoUnitTest>
     public async Task PostCurso_Return_BadRequestResult()
     {
         //Arrange 
-        CursoDTO curso = null;
+        CursoDTO? curso = null;
         
         //Act
         var data = await controller.PostAsync(curso);

@@ -4540,11 +4540,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\BlibiotecaApi\\BlibiotecaApi.csproj",
+      "projectUniqueName": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\BibliotecaApi\\BlibiotecaApi\\BlibiotecaApi.csproj",
       "projectName": "BlibiotecaApi",
-      "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\BlibiotecaApi\\BlibiotecaApi.csproj",
+      "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\BibliotecaApi\\BlibiotecaApi\\BlibiotecaApi.csproj",
       "packagesPath": "C:\\Users\\kaiky\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\BlibiotecaApi\\obj\\",
+      "outputPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\BibliotecaApi\\BlibiotecaApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
