@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CatalogoApi.Controllers;
+﻿using CatalogoApi.Controllers;
 using CatalogoApi.Model.Dto;
-using CatalogoApi.Pagination;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CatalogoApiTests.UnitTest
-{
+namespace CatalogoApiTests.ProdutoTests.UnitTest;
+
     public class GetProdutosUnitTests : IClassFixture<ProdutosUnitTestController>
     {
         private readonly ProdutosController _controller;
@@ -22,7 +15,7 @@ namespace CatalogoApiTests.UnitTest
         public async Task GetProdutoById_Return_OkResult()
         {
             //Arrange
-            var produtoId = 1;
+            var produtoId = 2;
 
             //act
             var data = await _controller.GetAsync(produtoId);
@@ -70,4 +63,4 @@ namespace CatalogoApiTests.UnitTest
             Assert.NotNull(produtos);
         }
     }
-}
+

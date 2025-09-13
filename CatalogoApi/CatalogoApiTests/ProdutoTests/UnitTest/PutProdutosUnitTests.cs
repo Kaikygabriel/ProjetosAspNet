@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CatalogoApi.Controllers;
+﻿using CatalogoApi.Controllers;
 using CatalogoApi.Model.Dto;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CatalogoApiTests.UnitTest
-{
+namespace CatalogoApiTests.ProdutoTests.UnitTest;
+
+
     public class PutProdutosUnitTests : IClassFixture<ProdutosUnitTestController>
     {
         private readonly ProdutosController _controller;
@@ -19,10 +15,10 @@ namespace CatalogoApiTests.UnitTest
         [Fact]
         public async Task PutProduto_Update_Return_OkResult()
         {
-            int idProduto = 1;
+            int idProduto = 2;
             ProdutoDTO produtoDto = new()
             {
-                Id = 1,
+                Id = 2,
                 Nome = "teste",
                 CategoriaId = 1,
                 Descricao = "Teste ",
@@ -55,4 +51,4 @@ namespace CatalogoApiTests.UnitTest
             Assert.Equal(400,result.StatusCode);
         }
     }
-}
+

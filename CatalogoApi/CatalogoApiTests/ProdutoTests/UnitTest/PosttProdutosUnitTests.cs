@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using CatalogoApi.Controllers;
-using CatalogoApi.Model;
+﻿using CatalogoApi.Controllers;
 using CatalogoApi.Model.Dto;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CatalogoApiTests.UnitTest
-{
+namespace CatalogoApiTests.ProdutoTests.UnitTest;
+
     public class PostProdutosUnitTests  :IClassFixture<ProdutosUnitTestController>
     {
         private readonly ProdutosController _controller;
@@ -52,4 +45,4 @@ namespace CatalogoApiTests.UnitTest
             Assert.Equal(400,result.StatusCode);
         }
     }
-}
+

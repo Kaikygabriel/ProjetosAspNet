@@ -59,7 +59,7 @@ namespace CatalogoApi.Controllers
         {
             if (id <= 0 || id is null)
                 return BadRequest();
-            var produto = await _unitOfWork.ProdutoRepository.GetByIdAsync(p=>p.Id==id);
+            Produto? produto = await _unitOfWork.ProdutoRepository.GetByIdAsync(p=>p.Id==id);
             if (produto is null)
                 return NotFound("Produto não Encontrado...");
             var produtoDTO = produto.ToProdutoDTO();
