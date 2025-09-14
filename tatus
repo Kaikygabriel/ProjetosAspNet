@@ -1,0 +1,104 @@
+[33mb122bb8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Incrementando testes no controllador produtos para deleção e mocks para unitOfWork
+[33m306e9c9[m Incrementando testes ao blibioteca api
+[33ma012139[m incrementando testes no filmesApi
+[33m8d37531[m Incremtando testes para endpoints put e post de ProdutosController
+[33m9c5b7d2[m Resolvendo merge conflicts
+[33m94250b8[m[33m ([m[1;31morigin/minha-nova-branch[m[33m)[m Incrementando novos Testes em CategoriasDto
+[33mfe1ae6d[m Atulizando
+[33m6cc5d2e[m Fazendo Cagada kkk
+[33md642554[m Incrementando testes
+[33mbbdcc3a[m Incrementando documentação personlizada do swagger
+[33m62fa540[m Colocando Versionamento no CatalogoAPi
+[33medf7877[m Implementando padrão unitOfWork e tokenService no AcademyPro
+[33mbe3353c[m Iniciando o projeto academyPro
+[33mc2a7eb2[m Formatando a classe tokenService e acresentando o rateLimiter de forma global no NotFiMe
+[33mc5cb9c5[m Incrementando RateLimiter de forma global no CatalogoApi
+[33md0f1096[m Incrementando ajustes finais em blibiotecaApi
+[33m7636b53[m Incrementando Rate Limmiter no catalogoAPI
+[33m9c8979d[m incrementando cors personalizados
+[33m60c3f33[m Atualizaçoes finais no NotifiMe
+[33m6e75082[m removendo projeto application2
+[33mc95508f[m Atualizando regras no catalogoapi
+[33md78ce4e[m Incrementando endPoints ao AppointmentController e regras de negocio no NotFiMe
+[33m56d1b26[m Incrementando ajustes ao tokenService
+[33m4c45e11[m Incrementando paginação de dados ao notifiMe
+[33m0c3945d[m Incrementando authprovidercontroller e sistema de password em hash
+[33m7951781[m Incrementando authusercontroller e authprovidercontroller
+[33m4762aa7[m Incrementando padrão unit of work e controller do usuario
+[33mc8aad11[m Iniciando um novo projeto(NotifiMe)
+[33mc302be2[m Incrementando authorização e endpoint para criação de role
+[33m1a51dda[m Restante das att
+[33ma68c19c[m atualizando projeto e adicionando jwt ao BlibiotecaApi
+[33med01ee6[m Incrementando Vizualização de authenticação no swagger
+[33m45f61af[m Implementando authController para authenticação no ApiConsultaMedica
+[33m4b292e6[m Implementando no CatalogoApi,  no authcontroller endpoint revoke
+[33m16cdea6[m Criando padrão Unit Of Work no ApiConsultas e iniciando Jwt
+[33m385beb6[m Atualização geral para jwt
+[33me747d62[m Incrementando ao AuthController o endPoint de refreshtoken
+[33m82fffd5[m Atualização geral
+[33mb1d048f[m Implementando jwt bearer para o filmes api
+[33m4cd6940[m Implementando sistema de login ao apicursos com jwt bearer
+[33mcc18289[m Implementando ao AuthController o endPoint register
+[33mc0f51e4[m Implementando authController e metodo de login
+[33m6625642[m Implementando jwt e ajustes
+[33m77e4215[m Implementando e ajustando o jwt no projeto CatalogoApi e CompraAPi
+[33md644ece[m Criando gerador de refresh token no CatalogoApi
+[33m0949322[m Incrementando paginação e ajuste de jwt no ApiCliente
+[33me5a828f[m Implementando sistema gerador de token jwt em CatalogoApi
+[33mc3a253d[m Implementando identity ao projetos CatalogoApi e CursoApi
+[33mc76ace6[m Implementando o Identity e JWT ao CatalogoApi
+[33m49402fb[m Implementando chave jwt
+[33mf7b92df[m Atualizando projetos
+[33m069a04f[m Alterando os repositorios do projeto para assincronos no CatalogoApi
+[33m5b1683a[m Atualizações no catalogoApi
+[33me780a89[m Atualização para metodos assyncronos no apicursos
+[33m3f4b13a[m Atualizando ApiCursos
+[33mb71249f[m Implementando Filtros de pesquisa no CategoriaController do  CatalogoApi
+[33mb220e77[m atualizando o filmesapi
+[33m8dc4c8c[m Implementando metodos de paginação no ProdutosController do  CatalogoApi
+[33m9285903[m Implementando paginação no CategoriaController
+[33m1e5e303[m Implementando informações sobre a paginação de dados ao header da resposta no ProdutoController do CatalogoApi
+[33m30bb9ec[m Fazendo algumas melhorias no blibiotecaAPi
+[33m6c9d17d[m Implementando á paginação no filmesApi
+[33m95d673b[m Implementando atualização á paginação de dados do ProdutosController no  CatalogoApi
+[33md89707e[m Implementando paginação de dados ao CatalogoAPi
+[33me921b6a[m Fazendo alterações finais ao cursoapi
+[33m700eb1a[m Fazendo um crud no filmesapi e implementando blibioteca mapster para mapeamento de entidades
+[33m6e3bfb3[m aplicando o metodo patch ao CatalogoAPI
+[33m1668428[m Implementando o autoMapper para cursoDTO e curso
+[33m9cddd2f[m Implementando o extesion methods para produto e produtoDTO
+[33m0ab17a8[m Implementando dto de categoria no CatalogoApi
+[33m9a9d1d2[m termiando o apicursos
+[33mc240b3f[m criando projeto apicursos
+[33m2c092f6[m adicionando padrão unit of work ao apicliente
+[33mcf0ebaf[m Adicionando o padrão Unit Of Work no CatalogoApi
+[33m147ddd0[m Implementando repositorio generico ao ApiCliente
+[33m40e709f[m Add CatalogoApi repositorio generico
+[33mc414326[m adicionando repositorio especifico ao apicliente
+[33m7d96072[m atualizando o catalogoapi para o repositorio especifico de produtos.
+[33m5a0383e[m Adicionando repositorio especifico ao ApiCursos
+[33mb8040d3[m Adicionando repositorio especifico para categoria no catalogoApi
+[33m0e322f0[m Criando filtros de exceção global no cursoapi e catalogoapi
+[33m10269ce[m adicionando loggers ao catalogoapi eo apicompras para monitorameto da aplicação
+[33m111d744[m adicionando um crudo ao apicompras
+[33m3714ff9[m iniciando projeto de apicompras
+[33mf9b17a7[m Adicionando blibioteca model e blibiotecasController ao projeto blibiotecaApi e fazendo relação com os livros
+[33m748b70d[m Criando api de blibioteca
+[33mee20d3f[m addicoando filters ao projeto CatalogoApi
+[33m220be80[m Adicionando tratamento de erro global ao catalogoapi
+[33mac28f38[m Atualizando o arquivo de configurações
+[33m43c9950[m Aprimorando as validações atraves de data annotations personalizadas
+[33mbd61677[m atualização do blibiotecaApi
+[33m36f3f73[m Atualizando o catalogoapi eos model bindings
+[33me460c8d[m atualizando as restrinçoes de rota do CatalogoApi e adicionando metodos assincronos nos get
+[33m0f2da3d[m Terminando o ApiCursos e melhorando as rotas no CatalogoAPi
+[33mbeb06cf[m Adicionando praticas de performace para o ClientesApi
+[33m9f1a5f9[m Melhorando a performace e otimizando o CatalogoApi
+[33mb3f96de[m att do catalogo api adicionando crud em CategoriasController
+[33m6d77ca2[m Criando um crud basico em cliente api
+[33m1edd45d[m Adicionando crud ao catalogoapi put,post e delte
+[33m8962e82[m Add CatalogoApi criando controllers com gets
+[33m9132409[m att catalogoApi, adicionando conexão ao banco de dados
+[33m0ff1cf0[m Add CatalogoApi inicio
+[33me8e3faf[m Initial commit
+[33mababbf0[m Initial commit
