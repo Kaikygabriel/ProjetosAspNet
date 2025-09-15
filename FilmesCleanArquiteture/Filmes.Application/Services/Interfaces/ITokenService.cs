@@ -1,6 +1,11 @@
+using System.Security.Claims;
+using Microsoft.Extensions.Configuration;
+
 namespace Filmes.Application.Services.Interfaces;
 
-public class ITokenService
+public interface ITokenService
 {
-    
+    ClaimsPrincipal GetClaimsPrincipalFromExpiredToken(string token, IConfiguration configuration);
+    string GerenateAcessToken(IEnumerable<Claim> claims, IConfiguration configuration);
+    string GerenateAcessRefreshToken();
 }

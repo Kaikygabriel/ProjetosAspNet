@@ -1,0 +1,12 @@
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Domain\bin\Debug\net9.0\Filmes.Domain.deps.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Domain\bin\Debug\net9.0\Filmes.Domain.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Domain\bin\Debug\net9.0\Filmes.Domain.pdb
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Domain\obj\Debug\net9.0\Filmes.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Domain\obj\Debug\net9.0\Filmes.Domain.AssemblyInfoInputs.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Domain\obj\Debug\net9.0\Filmes.Domain.AssemblyInfo.cs
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Domain\obj\Debug\net9.0\Filmes.Domain.csproj.CoreCompileInputs.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Domain\obj\Debug\net9.0\Filmes.Domain.sourcelink.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Domain\obj\Debug\net9.0\Filmes.Domain.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Domain\obj\Debug\net9.0\refint\Filmes.Domain.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Domain\obj\Debug\net9.0\Filmes.Domain.pdb
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Domain\obj\Debug\net9.0\ref\Filmes.Domain.dll

@@ -2,5 +2,6 @@ namespace Filmes.Application.DTOS;
 
 public class LoginModel
 {
-    prop
+    public string? Name { get; set; }
+    public string? Password { get; set; } 
 }

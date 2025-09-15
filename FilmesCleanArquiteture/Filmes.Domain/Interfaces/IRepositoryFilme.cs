@@ -1,6 +1,5 @@
+using Filmes.Domain.Entities;
+
 namespace Filmes.Domain.Interfaces;
 
-public class IRepositoryFilme
-{
-    
-}
+public interface IRepositoryFilme : IRepository<Filme>;
