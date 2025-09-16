@@ -1,3 +1,4 @@
+using System.Collections.Immutable;
 using CatalogoApi.Controllers;
 using Microsoft.AspNetCore.Mvc;
 

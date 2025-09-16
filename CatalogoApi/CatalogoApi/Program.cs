@@ -25,7 +25,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<CatalogoContext>()
     .AddDefaultTokenProviders();
-
+builder.Services.AddMemoryCache();
 builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderConfiguration
 {
     LogLevel= LogLevel.Information
@@ -147,7 +147,7 @@ builder.Services.AddRateLimiter(rateLimiterOptions =>
     rateLimiterOptions.AddFixedWindowLimiter("Fixed", options =>
     {
         options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
-        options.QueueLimit = 2;
+        options.QueueLimit = 1;
         options.Window = TimeSpan.FromSeconds(10);
         options.PermitLimit = 3;
     });

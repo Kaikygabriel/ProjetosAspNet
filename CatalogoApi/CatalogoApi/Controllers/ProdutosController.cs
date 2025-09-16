@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace CatalogoApi.Controllers
 {
@@ -20,6 +21,7 @@ namespace CatalogoApi.Controllers
     [Route("api/[controller]")]
     public class ProdutosController : ControllerBase
     {
+        private readonly IMemoryCache _cache;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
@@ -27,6 +29,7 @@ namespace CatalogoApi.Controllers
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+           // _cache = cache;
         }
         private ActionResult ObterProduto(PagedList<Produto> produtos)
         {
@@ -45,13 +48,24 @@ namespace CatalogoApi.Controllers
         }
 
         [HttpGet]
-        [Authorize(Policy = "UserOnly")]
+        //[Authorize(Policy = "UserOnly")]
         public async Task<ActionResult<IEnumerable<ProdutoDTO>>> GetAsync() 
         {
             var produtos = await _unitOfWork.ProdutoRepository.GetAllAsync();
             if (produtos is null)
                 return NotFound("Produtos não encontrado...");
-            return Ok(produtos.ToProdutosDTOList());
+            if (!_cache.TryGetValue("Produtos", out List<Produto> products))
+            {
+                products = (List<Produto>)produtos;
+                MemoryCacheEntryOptions options = new MemoryCacheEntryOptions()
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(30),
+                    SlidingExpiration = TimeSpan.FromMinutes(5),
+                    Priority = CacheItemPriority.High
+                };
+                _cache.Set("Produtos", products, options);
+            }
+            return Ok(products!.ToProdutosDTOList());
         }
          
         [HttpGet("{id:int:min(1)}",Name = "ObterProduto")]

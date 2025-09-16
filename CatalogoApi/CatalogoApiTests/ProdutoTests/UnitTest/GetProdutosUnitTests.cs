@@ -22,7 +22,7 @@ namespace CatalogoApiTests.ProdutoTests.UnitTest;
 
             //Assert
             var okResult = Assert.IsType<OkObjectResult>(data.Result);
-            Assert.Equal(200, okResult.StatusCode);
+            Assert.Equal(200, okResult);
         }
         [Fact]
         public async Task GetProdutoById_Return_NotFound()
@@ -53,7 +53,6 @@ namespace CatalogoApiTests.ProdutoTests.UnitTest;
         [Fact]
         public async Task GetProdutos_Return_ListOfProdutoDTO()
         {
-
             //Act
             var data = await _controller.GetAsync();
             

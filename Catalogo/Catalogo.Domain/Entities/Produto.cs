@@ -10,7 +10,7 @@ public class Produto : Entity
         
     }
     public Produto(string name, string descricao, string imagemUrl, int estoque, decimal preco)
-    {
+    { 
         Nome = name;
         Descricao = descricao;
         ImagemUrl = imagemUrl;

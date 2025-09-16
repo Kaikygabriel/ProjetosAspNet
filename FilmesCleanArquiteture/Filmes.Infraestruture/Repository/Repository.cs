@@ -2,13 +2,13 @@ using System.Linq.Expressions;
 using Filmes.Domain.Interfaces;
 using Filmes.Infraestruture.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace Filmes.Infraestruture.Repository;
 
 public class Repository<T> : IRepository<T> where T: class
 {
     protected readonly AppDbContext context;
-
     public Repository(AppDbContext context)
     {
         this.context = context;
