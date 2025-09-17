@@ -21,7 +21,7 @@ namespace CatalogoApi.Controllers
     [Route("api/[controller]")]
     public class ProdutosController : ControllerBase
     {
-        private readonly IMemoryCache _cache;
+
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
@@ -29,7 +29,6 @@ namespace CatalogoApi.Controllers
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
-           // _cache = cache;
         }
         private ActionResult ObterProduto(PagedList<Produto> produtos)
         {
@@ -54,18 +53,7 @@ namespace CatalogoApi.Controllers
             var produtos = await _unitOfWork.ProdutoRepository.GetAllAsync();
             if (produtos is null)
                 return NotFound("Produtos não encontrado...");
-            if (!_cache.TryGetValue("Produtos", out List<Produto> products))
-            {
-                products = (List<Produto>)produtos;
-                MemoryCacheEntryOptions options = new MemoryCacheEntryOptions()
-                {
-                    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(30),
-                    SlidingExpiration = TimeSpan.FromMinutes(5),
-                    Priority = CacheItemPriority.High
-                };
-                _cache.Set("Produtos", products, options);
-            }
-            return Ok(products!.ToProdutosDTOList());
+            return Ok(produtos!.ToProdutosDTOList());
         }
          
         [HttpGet("{id:int:min(1)}",Name = "ObterProduto")]

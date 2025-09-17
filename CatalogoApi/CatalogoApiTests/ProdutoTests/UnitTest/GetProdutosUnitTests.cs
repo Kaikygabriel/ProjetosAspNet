@@ -22,7 +22,7 @@ namespace CatalogoApiTests.ProdutoTests.UnitTest;
 
             //Assert
             var okResult = Assert.IsType<OkObjectResult>(data.Result);
-            Assert.Equal(200, okResult);
+            Assert.Equal(200, okResult.StatusCode);
         }
         [Fact]
         public async Task GetProdutoById_Return_NotFound()

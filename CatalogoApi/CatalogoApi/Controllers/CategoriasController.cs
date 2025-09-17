@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Security.Principal;
 using System.Text.Json;
 using System.Threading.Tasks;
 using CatalogoApi.Data;
@@ -16,6 +17,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace CatalogoApi.Controllers
 {
@@ -23,12 +25,14 @@ namespace CatalogoApi.Controllers
     [ApiController]
     public class CategoriasController : ControllerBase
     {
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMemoryCache _cache;
 
-        public CategoriasController(IUnitOfWork unitOfWork)
+        public CategoriasController(IUnitOfWork unitOfWork, IMemoryCache cache)
         {
             _unitOfWork = unitOfWork;
+            _cache = cache;
         }
-        private readonly IUnitOfWork _unitOfWork;
        
         private ActionResult ObterCategoria(PagedList<Categoria> listCategoriaP)
         {
@@ -47,13 +51,24 @@ namespace CatalogoApi.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+       // [Authorize]
         public async Task<ActionResult<IEnumerable<CategoriaDTO>>> Get()
         {
-            IEnumerable<Categoria>? categorias = await _unitOfWork.CategoriaRepository.GetAllAsync();
-            if (categorias is null)
+            if (!_cache.TryGetValue("categorias", out IEnumerable<Categoria>? categoriasCache))
+            {
+                categoriasCache =await _unitOfWork.CategoriaRepository.GetAllAsync();
+                var options = new MemoryCacheEntryOptions()
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10),
+                    Size = 1,
+                    SlidingExpiration = TimeSpan.FromMinutes(3),
+                    Priority = CacheItemPriority.Normal
+                };
+                _cache.Set("categorias", categoriasCache, options);
+            }
+            if (categoriasCache is null)
                 return NotFound("A lista de categorias esta vazia");
-            IEnumerable<CategoriaDTO>? categoriasDto = categorias.ToCategoriaDTOList();
+            IEnumerable<CategoriaDTO>? categoriasDto = categoriasCache.ToCategoriaDTOList();
             return Ok(categoriasDto);
         }
 
@@ -61,16 +76,40 @@ namespace CatalogoApi.Controllers
         [HttpGet("pagination")]
         public async Task<ActionResult<IEnumerable<CategoriaDTO>>> GetAsync([FromQuery]CategoriaPagination pagination)
         {
-            var listCategoriaP = await _unitOfWork.CategoriaRepository.GetAllCategoria(pagination);
-            return ObterCategoria(listCategoriaP);
+            if (!_cache.TryGetValue("categoriasPagination", out PagedList<Categoria>? categoriasCache))
+            {
+                categoriasCache = await _unitOfWork.CategoriaRepository.GetAllCategoria(pagination);
+                var options = new MemoryCacheEntryOptions()
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10),
+                    Size = 1,
+                    SlidingExpiration = TimeSpan.FromMinutes(3),
+                    Priority = CacheItemPriority.Normal
+                };
+                _cache.Set("categoriasPagination", categoriasCache, options);
+            }
+            //var listCategoriaP = await _unitOfWork.CategoriaRepository.GetAllCategoria(pagination);
+            return ObterCategoria(categoriasCache);
         }
 
 
         [HttpGet("filters")]
         public async  Task<ActionResult<CategoriaDTO>> GetAsync([FromQuery] CategoriaFiltroName pagination)
         {
-            var categoria = await _unitOfWork.CategoriaRepository.GetCategoriaFiltroName(pagination);
-            return ObterCategoria(categoria);
+            if (!_cache.TryGetValue($"categoriasPaginationFilterName", out PagedList<Categoria>? categoriasCache))
+            {
+                categoriasCache = await _unitOfWork.CategoriaRepository.GetCategoriaFiltroName(pagination);
+                var options = new MemoryCacheEntryOptions()
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10),
+                    Size = 1,
+                    SlidingExpiration = TimeSpan.FromMinutes(3),
+                    Priority = CacheItemPriority.Normal
+                };
+                _cache.Set("categoriasPaginationFilterName", categoriasCache, options);
+            }
+           // var categoria = await _unitOfWork.CategoriaRepository.GetCategoriaFiltroName(pagination);
+            return ObterCategoria(categoriasCache);
         }
 
 

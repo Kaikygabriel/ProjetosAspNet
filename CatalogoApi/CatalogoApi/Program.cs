@@ -25,7 +25,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<CatalogoContext>()
     .AddDefaultTokenProviders();
-builder.Services.AddMemoryCache();
+builder.Services.AddMemoryCache(x=>
+    x.SizeLimit = 1000);
 builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderConfiguration
 {
     LogLevel= LogLevel.Information
