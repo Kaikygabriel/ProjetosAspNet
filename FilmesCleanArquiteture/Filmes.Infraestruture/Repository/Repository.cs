@@ -1,4 +1,5 @@
 using System.Linq.Expressions;
+using Filmes.Domain.Entities;
 using Filmes.Domain.Interfaces;
 using Filmes.Infraestruture.Data;
 using Microsoft.EntityFrameworkCore;
@@ -6,7 +7,7 @@ using Microsoft.Extensions.Caching.Memory;
 
 namespace Filmes.Infraestruture.Repository;
 
-public class Repository<T> : IRepository<T> where T: class
+public class Repository<T> : IRepository<T> where T: Entity
 {
     protected readonly AppDbContext context;
     public Repository(AppDbContext context)
@@ -14,7 +15,7 @@ public class Repository<T> : IRepository<T> where T: class
         this.context = context;
     }
 
-    public async Task<List<T>> GetAll(CancellationToken cancellationToken)
+    public async Task<IEnumerable<T>> GetAll(CancellationToken cancellationToken)
     {
         return await context.Set<T>().AsNoTracking().ToListAsync(cancellationToken);
     }

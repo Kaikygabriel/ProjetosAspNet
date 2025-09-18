@@ -12,7 +12,7 @@ public class GetTestUnit
 
     public GetTestUnit()
     {
-        _controller = new FilmesController(new FakeUnitOfWork());
+        _controller = new FilmesController(new FakeFilmeServiceRepository());
     }
 
     [Fact]
@@ -22,7 +22,18 @@ public class GetTestUnit
         var data = await _controller.GetAsync();
         //assert
         var result = Assert.IsType<OkObjectResult>(data);
-        Assert.IsAssignableFrom<List<Filme>>(result.Value);
+        Assert.Equal(200, result.StatusCode);
+    }
+    
+    [Fact]
+    public async Task GetFilmeById_Return_OkObjectResult()
+    {
+        //arrange
+        var id = 1 ;
+        //act
+        var data = await _controller.GetAsync(id);
+        //assert
+        var result = Assert.IsType<OkObjectResult>(data);
         Assert.Equal(200, result.StatusCode);
     }
 }

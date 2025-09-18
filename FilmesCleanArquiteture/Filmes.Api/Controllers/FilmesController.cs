@@ -1,3 +1,4 @@
+using Filmes.Application.Services.Interfaces;
 using Filmes.Domain.Entities;
 using Filmes.Domain.Interfaces;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -9,9 +10,9 @@ namespace Filmes.Api.Controllers;
 [ApiController]
 public class FilmesController : ControllerBase
 {
-    private readonly IUnitOfWork _uow;
+    private readonly IFilmeServiceRepository _uow;
 
-    public FilmesController(IUnitOfWork uow)
+    public FilmesController(IFilmeServiceRepository uow)
     {
         _uow = uow;
     }
@@ -19,7 +20,15 @@ public class FilmesController : ControllerBase
     [HttpGet]
     public async Task<ActionResult> GetAsync()
     {
-        var filmes = await _uow.RepositoryFilme.GetAll(new CancellationToken());
+        var filmes = await _uow.GetAll(new CancellationToken());
+        if (filmes is null)
+            return BadRequest();
+        return Ok(filmes);
+    } 
+    [HttpGet("{id:int:min(1)}")]
+    public async Task<ActionResult> GetAsync(int id)
+    {
+        var filmes = await _uow.GetByPredicate(x=>x.Id ==id,new CancellationToken());
         if (filmes is null)
             return BadRequest();
         return Ok(filmes);

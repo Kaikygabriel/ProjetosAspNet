@@ -14,7 +14,7 @@ public class FakeRepositoryFilmes : IRepositoryFilme
         new Filme { Id = 4, Titulo = "Parasita", Autor = "Bong Joon-ho", Categoria = "Suspense" },
         new Filme { Id = 5, Titulo = "Vingadores: Ultimato", Autor = "Anthony e Joe Russo", Categoria = "Ação" }
     };
-    public async Task<List<Filme>> GetAll(CancellationToken cancellationToken)
+    public async Task<IEnumerable<Filme>> GetAll(CancellationToken cancellationToken)
     {
         await Task.Delay(0);
         return filmes;

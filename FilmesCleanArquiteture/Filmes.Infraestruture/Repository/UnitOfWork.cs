@@ -8,6 +8,11 @@ public class UnitOfWork : IUnitOfWork
     private RepositoryFilme _repositoryFilme;
     private readonly AppDbContext context;
 
+    public UnitOfWork(AppDbContext context)
+    {
+        this.context = context;
+    }
+
     public IRepositoryFilme RepositoryFilme
     {
         get

@@ -813,6 +813,7 @@
       "System.Threading.Channels/7.0.0": {},
       "Filmes.Application/1.0.0": {
         "dependencies": {
+          "Filmes.Domain": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9"
         },
         "runtime": {

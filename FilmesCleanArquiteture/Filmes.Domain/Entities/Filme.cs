@@ -2,11 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Filmes.Domain.Entities;
 
-public class Filme
+public class Filme : Entity
 {
-    [Key]
-    [Required]
-    public  int Id { get; set; }
     [Required]
     [StringLength(140,MinimumLength = 3)] 
     public string Titulo { get; set; }

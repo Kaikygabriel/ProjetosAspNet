@@ -1,12 +1,15 @@
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Application\bin\Debug\net9.0\Filmes.Application.deps.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Application\bin\Debug\net9.0\Filmes.Application.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Application\bin\Debug\net9.0\Filmes.Application.pdb
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Application\bin\Debug\net9.0\Filmes.Domain.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Application\bin\Debug\net9.0\Filmes.Domain.pdb
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Application\obj\Debug\net9.0\Filmes.Application.csproj.AssemblyReference.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Application\obj\Debug\net9.0\Filmes.Application.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Application\obj\Debug\net9.0\Filmes.Application.AssemblyInfoInputs.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Application\obj\Debug\net9.0\Filmes.Application.AssemblyInfo.cs
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Application\obj\Debug\net9.0\Filmes.Application.csproj.CoreCompileInputs.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Application\obj\Debug\net9.0\Filmes.Application.sourcelink.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Application\obj\Debug\net9.0\Filmes.A.0ED76CB2.Up2Date
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Application\obj\Debug\net9.0\Filmes.Application.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Application\obj\Debug\net9.0\refint\Filmes.Application.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Application\obj\Debug\net9.0\Filmes.Application.pdb

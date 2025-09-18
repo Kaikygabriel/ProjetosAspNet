@@ -131,6 +131,16 @@
             "related": ".xml"
           }
         }
+      },
+      "Filmes.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Filmes.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Filmes.Domain.dll": {}
+        }
       }
     }
   },
@@ -311,10 +321,16 @@
         "system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
       ]
+    },
+    "Filmes.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Filmes.Domain/Filmes.Domain.csproj",
+      "msbuildProject": "../Filmes.Domain/Filmes.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "Filmes.Domain >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 9.0.9"
     ]
   },
@@ -349,7 +365,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\FilmesCleanArquiteture\\Filmes.Domain\\Filmes.Domain.csproj": {
+              "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\FilmesCleanArquiteture\\Filmes.Domain\\Filmes.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

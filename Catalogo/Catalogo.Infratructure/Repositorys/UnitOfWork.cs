@@ -14,6 +14,11 @@ public class UnitOfWork : IUnitOfWork
         this.context = context;
     }
 
+    public UnitOfWork()
+    {
+        
+    }
+
     public IRepositoryProduto RepositoryProduto
     {
         get

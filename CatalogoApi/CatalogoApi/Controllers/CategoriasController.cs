@@ -116,10 +116,22 @@ namespace CatalogoApi.Controllers
         [HttpGet("{id:int:min(1)}", Name = "obter")]
         public async Task<ActionResult<CategoriaDTO>> GetAsync(int id)
         {
-            var categoria = await _unitOfWork.CategoriaRepository.GetByIdAsync(c=>c.Id==id);
+            var keyCacheCategoria = $"categoriaId{id}";
+            if (!_cache.TryGetValue(keyCacheCategoria, out Categoria categoria))
+            {
+                categoria = await _unitOfWork.CategoriaRepository.GetByIdAsync(c=>c.Id==id);
+                var options = new MemoryCacheEntryOptions()
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(30),
+                    SlidingExpiration = TimeSpan.FromSeconds(3),
+                    Priority = CacheItemPriority.Normal
+                };
+                _cache.Set(keyCacheCategoria,categoria,options);
+            }
+            
             if (categoria is null)
                 return NotFound("Essa categoria não foi encontrada");
-            CategoriaDTO categoriaDTO = categoria.ToCategoriaDTO();
+            CategoriaDTO categoriaDTO = categoria.ToCategoriaDTO()!;
             return Ok(categoriaDTO);
         }
 
@@ -138,6 +150,7 @@ namespace CatalogoApi.Controllers
             Categoria categoria = categoriaDto.ToCategoria();
            
             _unitOfWork.CategoriaRepository.Create(categoria);
+            _cache.Remove("categorias");
             await _unitOfWork.CommitAsync();
             return CreatedAtRoute("obter", new { categoriaDto.Id }, categoriaDto);
         }
@@ -154,6 +167,13 @@ namespace CatalogoApi.Controllers
             Categoria categoria = categoriaDto.ToCategoria();
 
             _unitOfWork.CategoriaRepository.Update(categoria);
+            var options = new MemoryCacheEntryOptions()
+            {
+                SlidingExpiration = TimeSpan.FromSeconds(10),
+                Priority = CacheItemPriority.Normal,
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(30)
+            };
+            _cache.Set($"categoriaId{categoria.Id}", categoria);
             await _unitOfWork.CommitAsync();
             return Ok(categoriaDto);
         }

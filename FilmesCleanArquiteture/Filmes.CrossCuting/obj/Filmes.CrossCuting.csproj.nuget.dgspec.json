@@ -31,7 +31,11 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\FilmesCleanArquiteture\\Filmes.Domain\\Filmes.Domain.csproj": {
+                "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\FilmesCleanArquiteture\\Filmes.Domain\\Filmes.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
