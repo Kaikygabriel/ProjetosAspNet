@@ -149,3 +149,5 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Api\o
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Api\obj\Debug\net9.0\Filmes.Api.pdb
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Api\obj\Debug\net9.0\Filmes.Api.genruntimeconfig.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Api\obj\Debug\net9.0\ref\Filmes.Api.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Api\bin\Debug\net9.0\Mapster.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\Filmes.Api\bin\Debug\net9.0\Mapster.Core.dll

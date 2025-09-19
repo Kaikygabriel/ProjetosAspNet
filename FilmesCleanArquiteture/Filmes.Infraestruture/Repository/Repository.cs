@@ -25,7 +25,7 @@ public class Repository<T> : IRepository<T> where T: Entity
         return await context.Set<T>().AsNoTracking().FirstOrDefaultAsync(predicate, cancellationToken);
     }
 
-    public void Create(T entity)
+    public virtual void Create(T entity)
     {
         if (entity is null)
             throw new ArgumentNullException(nameof(entity));

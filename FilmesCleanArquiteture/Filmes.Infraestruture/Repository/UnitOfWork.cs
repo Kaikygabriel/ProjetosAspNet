@@ -5,12 +5,22 @@ namespace Filmes.Infraestruture.Repository;
 
 public class UnitOfWork : IUnitOfWork
 {
+    private RepositoryUser _repositoryUser;
+
     private RepositoryFilme _repositoryFilme;
     private readonly AppDbContext context;
 
     public UnitOfWork(AppDbContext context)
     {
         this.context = context;
+    }
+
+    public IRepositoryUser RepositoryUser
+    {
+        get
+        {
+            return _repositoryUser = _repositoryUser ?? new RepositoryUser(context);
+        }
     }
 
     public IRepositoryFilme RepositoryFilme

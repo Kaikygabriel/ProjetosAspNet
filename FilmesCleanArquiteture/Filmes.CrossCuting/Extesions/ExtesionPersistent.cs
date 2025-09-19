@@ -1,6 +1,5 @@
 using Filmes.Domain.Interfaces;
 using Filmes.Infraestruture.Data;
-using Filmes.Infraestruture.Identity;
 using Filmes.Infraestruture.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -19,8 +18,7 @@ public static class ExtesionPersistent
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
         services.AddScoped<IRepositoryFilme, RepositoryFilme>();
-        services.AddIdentity<User, IdentityRole>()
-            .AddEntityFrameworkStores<AppDbContext>()
-            .AddDefaultTokenProviders();
+        services.AddScoped<IRepositoryUser,RepositoryUser>();
+
     }
 }

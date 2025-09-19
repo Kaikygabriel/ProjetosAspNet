@@ -36,4 +36,15 @@ public class GetTestUnit
         var result = Assert.IsType<OkObjectResult>(data);
         Assert.Equal(200, result.StatusCode);
     }
+    [Fact] 
+    public async Task GetFilmeById_Return_BadRequestResult()
+    {
+        //arrange
+        var id = 999;
+        //Act
+        var data = await   _controller.GetAsync(id);
+        //assert
+        var result = Assert.IsType<BadRequestResult>(data);
+        Assert.Equal(400,result.StatusCode);
+    }
 }

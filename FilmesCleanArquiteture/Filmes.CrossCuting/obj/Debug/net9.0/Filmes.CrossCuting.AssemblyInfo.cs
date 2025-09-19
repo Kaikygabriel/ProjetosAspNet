@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Filmes.CrossCuting")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0dd774de1fd2b05a5ef6dfeaef7990a20b052fc1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb0dfc0d335eef40b62e6596c62932c027c9729e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Filmes.CrossCuting")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Filmes.CrossCuting")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
