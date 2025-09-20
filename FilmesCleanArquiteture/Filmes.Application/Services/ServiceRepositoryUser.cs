@@ -16,44 +16,60 @@ public class ServiceRepositoryUser : IServiceRepositoryUser
         _unitOf = unitOf;
         _cache = cache;
     }
-
-    public async Task<IEnumerable<User>> GetAll(CancellationToken cancellationToken)
+    
+    public async Task<User?> GetByName(string name)
     {
-        if (!_cache.TryGetValue("Users", out IEnumerable<User>? users))
+        if (_cache.TryGetValue($"user-{name}", out User? user))
         {
-            users = await _unitOf.RepositoryUser.GetAll(cancellationToken);
-            _cache.Set("Users", users, new MemoryCacheEntryOptions()
+            user = await _unitOf.RepositoryUser.GetByPredicate(x => x.Name == name,new CancellationToken());
+            _cache.Set($"user{name}", user, new MemoryCacheEntryOptions()
             {
-                AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(40),
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(30),
                 SlidingExpiration = TimeSpan.FromSeconds(10),
-                Size = 1,
-                Priority = CacheItemPriority.Normal
+                Priority = CacheItemPriority.Normal,
+                Size = 1
             });
         }
 
+        return user;
+    }
+
+    public async Task<IEnumerable<User>> GetAll()
+    {
+        if (_cache.TryGetValue($"users", out IEnumerable<User>? users))
+        {
+            users = await _unitOf.RepositoryUser.GetAll(new CancellationToken());
+            _cache.Set($"users",users, new MemoryCacheEntryOptions()
+            {
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(30),
+                SlidingExpiration = TimeSpan.FromSeconds(10),
+                Priority = CacheItemPriority.Normal,
+                Size = 1
+            });
+        }
         return users;
     }
 
-    public async Task<User> GetByPredicate(Expression<Func<User, bool>> predicate, CancellationToken cancellationToken)
+    public async Task Create(User entity)
     {
-        return await _unitOf.RepositoryUser.GetByPredicate(predicate, cancellationToken);
-    }
-
-    public void Create(User entity)
-    {
-        _cache.Remove("Users");
         _unitOf.RepositoryUser.Create(entity);
+        _cache.Remove($"user-{entity.Name}");
+        await _unitOf.CommitAsync(new CancellationToken());
     }
 
-    public void Update(User entity)
+    public async Task Update(User entity)
     {
-        _cache.Remove("Users");
+        
         _unitOf.RepositoryUser.Update(entity);
+        _cache.Remove($"user-{entity.Name}");
+        await _unitOf.CommitAsync(new CancellationToken());
     }
 
-    public void Delete(User entity)
+    public async Task Delete(User entity)
     {
-        _cache.Remove("Users");
+       
         _unitOf.RepositoryUser.Delete(entity);
+        _cache.Remove($"user-{entity.Name}");
+        await _unitOf.CommitAsync(new CancellationToken());
     }
 }

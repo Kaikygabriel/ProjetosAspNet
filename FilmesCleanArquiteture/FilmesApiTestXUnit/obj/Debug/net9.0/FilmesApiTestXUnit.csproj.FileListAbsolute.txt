@@ -15,6 +15,9 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\FilmesApiTes
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\FilmesApiTestXUnit\bin\Debug\net9.0\FilmesApiTestXUnit.runtimeconfig.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\FilmesApiTestXUnit\bin\Debug\net9.0\FilmesApiTestXUnit.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\FilmesApiTestXUnit\bin\Debug\net9.0\FilmesApiTestXUnit.pdb
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\FilmesApiTestXUnit\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\FilmesApiTestXUnit\bin\Debug\net9.0\Mapster.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\FilmesApiTestXUnit\bin\Debug\net9.0\Mapster.Core.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\FilmesApiTestXUnit\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\FilmesApiTestXUnit\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\FilmesApiTestXUnit\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll

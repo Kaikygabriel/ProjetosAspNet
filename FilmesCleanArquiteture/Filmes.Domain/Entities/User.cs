@@ -14,4 +14,6 @@ public class User : Entity
     [StringLength(100,MinimumLength = 6)]
     [Required]
     public string PasswordHash { get; set; }
+
+    public List<string> Roles { get; set; } = new();
 }
