@@ -22,6 +22,7 @@ public class Repository<T> : IRepository<T> where T: Entity
 
     public async Task<T?> GetByPredicate(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken)
     {
+        await Task.Delay(4000);
         return await context.Set<T>().AsNoTracking().FirstOrDefaultAsync(predicate, cancellationToken);
     }
 

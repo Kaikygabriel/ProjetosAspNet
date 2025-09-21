@@ -13,7 +13,7 @@ public class FakeUserRepository : IRepositoryUser
             Id = 1,
             Name = "Alice Santos",
             Email = "alice.santos@example.com",
-            PasswordHash = "$PLACEHOLDER_HASH_1",
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword("$PLACEHOLDER_HASH_1"),
             Roles = new List<string> { "User" }
         },
         new User
@@ -21,7 +21,7 @@ public class FakeUserRepository : IRepositoryUser
             Id = 2,
             Name = "Bruno Oliveira",
             Email = "bruno.oliveira@example.com",
-            PasswordHash = "$PLACEHOLDER_HASH_2",
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword("$PLACEHOLDER_HASH_2"),
             Roles = new List<string> { "User", "Editor" }
         },
         new User
@@ -29,15 +29,15 @@ public class FakeUserRepository : IRepositoryUser
             Id = 3,
             Name = "Camila Pereira",
             Email = "camila.pereira@example.com",
-            PasswordHash = "$PLACEHOLDER_HASH_3",
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword("$PLACEHOLDER_HASH_3"),
             Roles = new List<string> { "User" }
         },
         new User
         {
             Id = 4,
-            Name = "Daniel Costa",
+            Name = "Daniel",
             Email = "daniel.costa@example.com",
-            PasswordHash = "$PLACEHOLDER_HASH_4",
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword("$PLACEHOLDER_HASH_4"),
             Roles = new List<string> { "User", "Moderator" }
         }
     };

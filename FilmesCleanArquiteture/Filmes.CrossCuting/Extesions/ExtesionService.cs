@@ -1,4 +1,5 @@
 using System.Text;
+using Filmes.Application.Interfaces;
 using Filmes.Application.Services;
 using Filmes.Application.Services.Interfaces;
 using Filmes.Domain.Interfaces;
@@ -37,6 +38,7 @@ public  static class ExtesionService
             };
         });
         services.AddAuthorization();
+        services.AddScoped<IServiceRepositoryUser,ServiceRepositoryUser>();
         services.AddScoped<ITokenService,TokenService>();
         services.AddScoped<IFilmeServiceRepository,FilmeServiceRepository>();
         services.AddMemoryCache(x =>

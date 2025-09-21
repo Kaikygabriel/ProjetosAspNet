@@ -5,19 +5,25 @@ using Filmes.Domain.Entities;
 using FilmesApiTestXUnit.Mocks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Configuration;
 
 namespace FilmesApiTestXUnit.TestUserController;
 
-public class PostTestunit
+public class PostRegisterTestunit
 {
     private readonly AuthController controller;
-
-    public PostTestunit()
+    
+    private IConfiguration configuration = new ConfigurationBuilder()
+        .AddJsonFile("appsettings.json")
+        .Build();
+    
+    public PostRegisterTestunit()
     {
         controller = new AuthController(new ServiceRepositoryUser(
-            new FakeUnitOfWork(), new MemoryCache(new MemoryCacheOptions())));
+            new FakeUnitOfWork(), new MemoryCache(new MemoryCacheOptions())),new TokenService(),configuration);
     }
-
+    
+    
     [Fact]
     public async Task PostRegister_Return_NoContentResult()
     {
@@ -48,8 +54,8 @@ public class PostTestunit
         //arrange
         var user = new LoginModel()
         {
-            Password = "jjj",
-            Name = "Bruno Oliveira"
+            Password = "jjj",//senha menor que 6 caracters
+            Name = "Bruno Oliveira" // nome ja existente
         };
         //act
         var data = await controller.RegisterUserAsync(user);

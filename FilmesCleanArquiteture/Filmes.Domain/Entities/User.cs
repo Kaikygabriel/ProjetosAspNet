@@ -15,5 +15,7 @@ public class User : Entity
     [Required]
     public string PasswordHash { get; set; }
 
+    public string? RefreshToken { get; set; }
+    public DateTime? ExpiredRefreshToken { get; set; }
     public List<string> Roles { get; set; } = new();
 }

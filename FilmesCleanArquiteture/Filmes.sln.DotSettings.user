@@ -1,17 +1,4 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4d2b572f_002D207c_002D403e_002Db470_002D98a687e6b783/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetFilmes_Return_OkObjectResult" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::51C2AA8F-CBCD-4793-AC90-AC98733FDFA3::net9.0::FilmesApiTestXUnit.TestFilmeController.GetTestUnit&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::51C2AA8F-CBCD-4793-AC90-AC98733FDFA3::net9.0::FilmesApiTestXUnit.TestUserController.PostTestunit.PostRegister_Return_NoContentResult&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=59915c5c_002D59d5_002D424c_002Dacc5_002D5b265472eb01/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="PostRegister_Return_NoContentResult #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::51C2AA8F-CBCD-4793-AC90-AC98733FDFA3::net9.0::FilmesApiTestXUnit.TestUserController.PostTestunit&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9c3a34d1_002D02b1_002D4c1d_002D984e_002Df028bebf8031/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="PostRegister_Return_NoContentResult" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::51C2AA8F-CBCD-4793-AC90-AC98733FDFA3::net9.0::FilmesApiTestXUnit.TestUserController.PostTestunit.PostRegister_Return_NoContentResult&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=dc468e89_002D3204_002D4e30_002D89fd_002D82beab1f0c27/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;FilmesApiTestXUnit&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\FilmesCleanArquiteture\FilmesApiTestXUnit" Presentation="&amp;lt;FilmesApiTestXUnit&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

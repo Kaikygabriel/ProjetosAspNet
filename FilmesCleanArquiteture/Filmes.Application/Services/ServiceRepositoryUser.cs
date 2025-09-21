@@ -19,9 +19,10 @@ public class ServiceRepositoryUser : IServiceRepositoryUser
     
     public async Task<User?> GetByName(string name)
     {
-        if (_cache.TryGetValue($"user-{name}", out User? user))
+        if (!_cache.TryGetValue($"user-{name}", out User? user))
         {
-            user = await _unitOf.RepositoryUser.GetByPredicate(x => x.Name == name,new CancellationToken());
+            user = await _unitOf.RepositoryUser.GetByPredicate(x => x.Name.ToUpper().Trim() == name.ToUpper().Trim(),
+                new CancellationToken());
             _cache.Set($"user{name}", user, new MemoryCacheEntryOptions()
             {
                 AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(30),
@@ -36,7 +37,7 @@ public class ServiceRepositoryUser : IServiceRepositoryUser
 
     public async Task<IEnumerable<User>> GetAll()
     {
-        if (_cache.TryGetValue($"users", out IEnumerable<User>? users))
+        if (!_cache.TryGetValue($"users", out IEnumerable<User>? users))
         {
             users = await _unitOf.RepositoryUser.GetAll(new CancellationToken());
             _cache.Set($"users",users, new MemoryCacheEntryOptions()
