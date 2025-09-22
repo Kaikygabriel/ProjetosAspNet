@@ -37,9 +37,9 @@ builder.Services.AddScoped<IRepositoryProduto, RepositoryProduto>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IRepositoryCategoria, RepositoryCategoria>();
 
-//builder.Services.AddControllers(options =>
-//options.Filters.Add(typeof(ApiExceptionFilter))
-//);
+builder.Services.AddControllers(options =>
+options.Filters.Add(typeof(ApiExceptionFilter))
+);
 
 builder.Services.AddScoped<ApiLoggingFilter>();
 builder.Services.AddControllers();

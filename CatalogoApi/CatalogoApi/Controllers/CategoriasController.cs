@@ -9,6 +9,7 @@ using CatalogoApi.Model;
 using CatalogoApi.Model.Dto;
 using CatalogoApi.Pagination;
 using CatalogoApi.Repository.Interface;
+using CatalogoApi.Services.Interface;
 using Mapster;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -25,10 +26,11 @@ namespace CatalogoApi.Controllers
     [ApiController]
     public class CategoriasController : ControllerBase
     {
+        
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMemoryCache _cache;
 
-        public CategoriasController(IUnitOfWork unitOfWork, IMemoryCache cache)
+        public CategoriasController(IUnitOfWork unitOfWork,IMemoryCache cache)
         {
             _unitOfWork = unitOfWork;
             _cache = cache;
@@ -51,7 +53,7 @@ namespace CatalogoApi.Controllers
         }
 
         [HttpGet]
-       // [Authorize]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<CategoriaDTO>>> Get()
         {
             if (!_cache.TryGetValue("categorias", out IEnumerable<Categoria>? categoriasCache))
@@ -72,7 +74,7 @@ namespace CatalogoApi.Controllers
             return Ok(categoriasDto);
         }
 
-
+        [Authorize]
         [HttpGet("pagination")]
         public async Task<ActionResult<IEnumerable<CategoriaDTO>>> GetAsync([FromQuery]CategoriaPagination pagination)
         {
@@ -92,7 +94,7 @@ namespace CatalogoApi.Controllers
             return ObterCategoria(categoriasCache);
         }
 
-
+        [Authorize]
         [HttpGet("filters")]
         public async  Task<ActionResult<CategoriaDTO>> GetAsync([FromQuery] CategoriaFiltroName pagination)
         {
@@ -112,7 +114,7 @@ namespace CatalogoApi.Controllers
             return ObterCategoria(categoriasCache);
         }
 
-
+        [Authorize]
         [HttpGet("{id:int:min(1)}", Name = "obter")]
         public async Task<ActionResult<CategoriaDTO>> GetAsync(int id)
         {
@@ -134,13 +136,13 @@ namespace CatalogoApi.Controllers
             CategoriaDTO categoriaDTO = categoria.ToCategoriaDTO()!;
             return Ok(categoriaDTO);
         }
-
+        [Authorize]
         [HttpGet("produtos")]
         public async Task<ActionResult<IEnumerable<Categoria>>> GetCategoriasProdutosAsync()
         {
             return Ok(await _unitOfWork.CategoriaRepository.GetCategoriasProdutosAsync());
         }
-
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<CategoriaDTO>> PostAsync(CategoriaDTO categoriaDto)
         {
@@ -154,7 +156,7 @@ namespace CatalogoApi.Controllers
             await _unitOfWork.CommitAsync();
             return CreatedAtRoute("obter", new { categoriaDto.Id }, categoriaDto);
         }
-
+        [Authorize]
         [HttpPut("{id:int:min(1)}")]
         public async Task<ActionResult<CategoriaDTO>> PutAsync(int id, CategoriaDTO categoriaDto)
         {
@@ -176,7 +178,7 @@ namespace CatalogoApi.Controllers
             _cache.Set($"categoriaId{categoria.Id}", categoria);
             await _unitOfWork.CommitAsync();
             return Ok(categoriaDto);
-        }
+        } 
 
         [HttpDelete("{id:int:min(1)}")]
         [Authorize(Policy = "AdminOnly")]

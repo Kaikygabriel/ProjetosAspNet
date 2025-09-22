@@ -26,7 +26,7 @@ public class AuthController : ControllerBase
     
 
     [HttpPost("register")]
-    public async Task<ActionResult> RegisterUserAsync(LoginModel model)
+    public async Task<ActionResult> RegisterUserAsync(RegisterModel model)
     {
         if (model is null)
             return NotFound();
@@ -53,6 +53,7 @@ public class AuthController : ControllerBase
         var claims = new List<Claim>()
         {
             new Claim(ClaimTypes.Name, user.Name),
+            new Claim(ClaimTypes.Email, user.Email),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
         };
         

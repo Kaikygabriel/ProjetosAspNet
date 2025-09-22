@@ -28,7 +28,7 @@ public class PostRegisterTestunit
     public async Task PostRegister_Return_NoContentResult()
     {
         //arrange
-        var user = new LoginModel()
+        var user = new RegisterModel()
         {
             Password = "kalsdfjlaksjdf",
             Name = "kaiky"
@@ -42,7 +42,7 @@ public class PostRegisterTestunit
     public async Task PostRegister_Return_NotFoundResult()
     {
         //arrange
-        LoginModel user = null;
+        RegisterModel user = null;
         //act
         var data = await controller.RegisterUserAsync(user);
         //assert
@@ -52,7 +52,7 @@ public class PostRegisterTestunit
     public async Task PostRegister_Return_BadRequest()
     {
         //arrange
-        var user = new LoginModel()
+        var user = new RegisterModel()
         {
             Password = "jjj",//senha menor que 6 caracters
             Name = "Bruno Oliveira" // nome ja existente

@@ -126,6 +126,7 @@ namespace CatalogoApi.Controllers
             await _unitOfWork.CommitAsync();
             return Ok(produtoDto);
         }
+        [Authorize]
         [HttpDelete("{id:int:min(1)}")] 
         public async Task<ActionResult> DeleteAsync(int id)
         {
