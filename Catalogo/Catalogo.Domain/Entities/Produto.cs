@@ -9,8 +9,9 @@ public class Produto : Entity
     {
         
     }
-    public Produto(string name, string descricao, string imagemUrl, int estoque, decimal preco)
-    { 
+    public Produto(int id,string name, string descricao, string imagemUrl, int estoque, decimal preco)
+    {
+        Id = id;
         Nome = name;
         Descricao = descricao;
         ImagemUrl = imagemUrl;

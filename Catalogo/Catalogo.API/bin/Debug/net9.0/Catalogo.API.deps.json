@@ -669,7 +669,8 @@
       "System.Threading.Channels/7.0.0": {},
       "Catalogo.Application/1.0.0": {
         "dependencies": {
-          "Catalogo.Domain": "1.0.0"
+          "Catalogo.Domain": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.8"
         },
         "runtime": {
           "Catalogo.Application.dll": {

@@ -5,6 +5,7 @@ namespace Catalogo.Infratructure.Repositorys;
 
 public class UnitOfWork : IUnitOfWork
 {
+    private RepositoryUser _repositoryUserImplement;
     private RepositoryCategoria _repositoryCategoriaImplement;
     private RepositoryProduto _repositoryProdutoImplement;
     private readonly AppDbContext context;
@@ -32,6 +33,14 @@ public class UnitOfWork : IUnitOfWork
         get
         {
             return _repositoryCategoriaImplement =  _repositoryCategoriaImplement?? new RepositoryCategoria(context);
+        }
+    }
+
+    public IRepositoryUser RepositoryUser
+    {
+        get
+        {
+            return _repositoryUserImplement = _repositoryUserImplement ?? new RepositoryUser(context);
         }
     }
 
