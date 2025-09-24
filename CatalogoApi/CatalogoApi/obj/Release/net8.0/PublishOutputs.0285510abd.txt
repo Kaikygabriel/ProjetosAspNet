@@ -1,4 +1,5 @@
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release\net8.0\PubTmp\Out\CatalogoApi.exe
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release\net8.0\PubTmp\Out\web.config
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release\net8.0\PubTmp\Out\appsettings.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release\net8.0\PubTmp\Out\appsettings.Production.json

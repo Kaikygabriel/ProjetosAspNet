@@ -41,7 +41,6 @@ public  static class ExtesionService
         services.AddScoped<IServiceRepositoryUser,ServiceRepositoryUser>();
         services.AddScoped<ITokenService,TokenService>();
         services.AddScoped<IFilmeServiceRepository,FilmeServiceRepository>();
-        services.AddMemoryCache(x =>
-            x.SizeLimit = 1024);
+       
     }
 }

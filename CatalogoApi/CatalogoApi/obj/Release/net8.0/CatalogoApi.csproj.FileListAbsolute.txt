@@ -123,10 +123,11 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release\net8.0\staticwebassets.build.json.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release\net8.0\staticwebassets.development.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release\net8.0\staticwebassets.build.endpoints.json
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release\net8.0\Catalogo.97038FA0.Up2Date
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release\net8.0\CatalogoApi.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release\net8.0\refint\CatalogoApi.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release\net8.0\CatalogoApi.pdb
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release\net8.0\CatalogoApi.genruntimeconfig.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release\net8.0\ref\CatalogoApi.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\bin\Release\net8.0\web.config
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Release\net8.0\staticwebassets.upToDateCheck.txt

@@ -6,6 +6,8 @@ builder.Services.AddMemoryCache();
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 builder.Services.AddOpenApi();
+builder.Services.AddMemoryCache(x =>
+    x.SizeLimit = 1024);
 
 builder.Services.ExtesionsServicesInfraestructure(builder.Configuration);
 builder.Services.ServiceExtesionsDbContext(builder.Configuration);
@@ -19,7 +21,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
     app.MapOpenApi();
 }
-
 
 app.UseAuthorization();
 

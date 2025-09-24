@@ -144,3 +144,4 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApiTests\obj\Re
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApiTests\obj\Release\net8.0\CatalogoApiTests.pdb
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApiTests\obj\Release\net8.0\CatalogoApiTests.genruntimeconfig.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApiTests\obj\Release\net8.0\ref\CatalogoApiTests.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApiTests\bin\Release\net8.0\web.config

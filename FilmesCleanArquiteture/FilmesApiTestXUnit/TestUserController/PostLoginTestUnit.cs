@@ -53,4 +53,15 @@ public class PostLoginTestUnit
         var result = Assert.IsType<NotFoundResult>(data);
         Assert.Equal(404,result.StatusCode);
     }
+    [Fact]
+    public async Task PostLogin_Return_BadRequestResult()
+    {
+        //arrange
+        LoginModel login = null;
+        //act
+        var data = await controller.LoginUserAsync(login);
+        //assert
+        var result = Assert.IsType<BadRequestResult>(data);
+        Assert.Equal(400,result.StatusCode);
+    }
 }

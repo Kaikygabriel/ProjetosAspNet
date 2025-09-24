@@ -129,3 +129,4 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\n
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\CatalogoApi.genruntimeconfig.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\obj\Debug\net8.0\ref\CatalogoApi.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\bin\Debug\net8.0\appsettings.Production.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\CatalogoApi\CatalogoApi\bin\Debug\net8.0\web.config

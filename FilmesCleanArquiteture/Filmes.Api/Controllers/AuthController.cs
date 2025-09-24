@@ -46,7 +46,7 @@ public class AuthController : ControllerBase
     public async Task<ActionResult> LoginUserAsync(LoginModel model)
     {
         if (model is null)
-            return NotFound();
+            return BadRequest();
         var user = await _serviceRepositoryUser.GetByName(model.Name!);
         if (user is null || !user.CheckPassword(model.Password!))
             return NotFound();

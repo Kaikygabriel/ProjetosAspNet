@@ -44,6 +44,7 @@ public class FilmeServiceRepository : IFilmeServiceRepository
         if (entity is null)
             throw new ArgumentNullException(nameof(entity));
         _unitOfWork.RepositoryFilme.Create(entity);
+        
         _cache.Remove("filmes");
     }
 

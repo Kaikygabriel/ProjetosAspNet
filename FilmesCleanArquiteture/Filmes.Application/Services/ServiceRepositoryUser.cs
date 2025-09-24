@@ -31,7 +31,6 @@ public class ServiceRepositoryUser : IServiceRepositoryUser
                 Size = 1
             });
         }
-
         return user;
     }
 
