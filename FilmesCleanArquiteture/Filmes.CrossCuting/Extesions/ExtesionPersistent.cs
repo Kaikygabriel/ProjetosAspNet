@@ -19,6 +19,7 @@ public static class ExtesionPersistent
         services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
         services.AddScoped<IRepositoryFilme, RepositoryFilme>();
         services.AddScoped<IRepositoryUser,RepositoryUser>();
-
+        services.AddMemoryCache(x =>
+            x.SizeLimit = 1024);
     }
 }

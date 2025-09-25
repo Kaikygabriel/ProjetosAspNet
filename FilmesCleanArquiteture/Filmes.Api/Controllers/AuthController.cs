@@ -56,7 +56,7 @@ public class AuthController : ControllerBase
             new Claim(ClaimTypes.Email, user.Email),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
         };
-        
+
         var token = _tokenService.GerenateAcessToken(claims, config);
         var refreshToken = _tokenService.GerenateAcessRefreshToken();
 
@@ -69,6 +69,33 @@ public class AuthController : ControllerBase
         {
             token = token,
             refreshToken = refreshToken
+        });
+    }
+    [HttpPost("refresh-token")]
+    public async Task<ActionResult> RefreshToken(TokenLoginDTO model)
+    {
+        if (model is null)
+            return BadRequest();
+
+        var principal = _tokenService.GetClaimsPrincipalFromExpiredToken(model.AccessToken!, config);
+
+        var userName = principal.Identity?.Name ?? throw new Exception("Invalid access token");
+
+        var user = await _serviceRepositoryUser.GetByName(userName!);
+        if (user is null || user.RefreshToken != model.RefreshToken || user.ExpiredRefreshToken <= DateTime.Now)
+            return BadRequest(new { message = "Invalid client request" });
+
+        var newAccessToken = _tokenService.GerenateAcessToken(principal.Claims.ToList(), config);
+        var newRefreshToken = _tokenService.GerenateAcessRefreshToken();
+
+        user.RefreshToken = newRefreshToken;
+        user.ExpiredRefreshToken = DateTime.Now.AddHours(30);
+        
+        await _serviceRepositoryUser.Update(user);
+        return Ok(new
+        {
+            token = newAccessToken,
+            refreshToken = newRefreshToken
         });
     }
 }
