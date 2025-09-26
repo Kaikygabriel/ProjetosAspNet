@@ -41,13 +41,13 @@ public class FakeUserRepository : IRepositoryUser
             Roles = new List<string> { "User", "Moderator" }
         }
     };
-    public async Task<IEnumerable<User>> GetAll(CancellationToken cancellationToken)
+    public async Task<IEnumerable<User>> GetAll()
     {
         await Task.Delay(0);
         return Users;
     }
 
-    public async Task<User> GetByPredicate(Expression<Func<User, bool>> predicate, CancellationToken cancellationToken)
+    public async Task<User> GetByPredicate(Expression<Func<User, bool>> predicate)
     {
         await Task.Delay(0);
         return Users.AsQueryable().FirstOrDefault(predicate);

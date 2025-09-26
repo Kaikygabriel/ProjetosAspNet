@@ -21,8 +21,7 @@ public class ServiceRepositoryUser : IServiceRepositoryUser
     {
         if (!_cache.TryGetValue($"user-{name}", out User? user))
         {
-            user = await _unitOf.RepositoryUser.GetByPredicate(x => x.Name.ToUpper().Trim() == name.ToUpper().Trim(),
-                new CancellationToken());
+            user = await _unitOf.RepositoryUser.GetByPredicate(x => x.Name == name);
             _cache.Set($"user{name}", user, new MemoryCacheEntryOptions()
             {
                 AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(30),
@@ -38,7 +37,7 @@ public class ServiceRepositoryUser : IServiceRepositoryUser
     {
         if (!_cache.TryGetValue($"users", out IEnumerable<User>? users))
         {
-            users = await _unitOf.RepositoryUser.GetAll(new CancellationToken());
+            users = await _unitOf.RepositoryUser.GetAll();
             _cache.Set($"users",users, new MemoryCacheEntryOptions()
             {
                 AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(30),
@@ -53,8 +52,7 @@ public class ServiceRepositoryUser : IServiceRepositoryUser
     public async Task Create(User entity)
     {
         _unitOf.RepositoryUser.Create(entity);
-        _cache.Remove($"user-{entity.Name}");
-        await _unitOf.CommitAsync(new CancellationToken());
+        await _unitOf.CommitAsync();
     }
 
     public async Task Update(User entity)
@@ -62,7 +60,7 @@ public class ServiceRepositoryUser : IServiceRepositoryUser
         
         _unitOf.RepositoryUser.Update(entity);
         _cache.Remove($"user-{entity.Name}");
-        await _unitOf.CommitAsync(new CancellationToken());
+        await _unitOf.CommitAsync();
     }
 
     public async Task Delete(User entity)
@@ -70,6 +68,6 @@ public class ServiceRepositoryUser : IServiceRepositoryUser
        
         _unitOf.RepositoryUser.Delete(entity);
         _cache.Remove($"user-{entity.Name}");
-        await _unitOf.CommitAsync(new CancellationToken());
+        await _unitOf.CommitAsync();
     }
 }

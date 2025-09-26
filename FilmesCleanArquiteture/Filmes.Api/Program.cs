@@ -1,3 +1,4 @@
+using Filmes.CrossCuting.Extesions;
 using Filmes.Infraestruture.Extesions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
     app.MapOpenApi();
+    app.UseExceptionGlobalHandler();
 }
 
 app.UseAuthorization();

@@ -22,7 +22,7 @@ public class FilmesController : ControllerBase
     [HttpGet]
     public async Task<ActionResult> GetAsync()
     {
-        var filmes = await _uow.GetAll(new CancellationToken());
+        var filmes = await _uow.GetAll();
         if (filmes is null)
             return BadRequest();
         return Ok(filmes.Adapt<IEnumerable<FilmeDTO>>());
@@ -30,7 +30,7 @@ public class FilmesController : ControllerBase
     [HttpGet("{id:int:min(1)}")]
     public async Task<ActionResult> GetAsync(int id)
     {
-        var filmes = await _uow.GetByPredicate(x=>x.Id ==id,new CancellationToken());
+        var filmes = await _uow.GetByPredicate(x=>x.Id ==id);
         if (filmes is null)
             return BadRequest();
         return Ok(filmes.Adapt<FilmeDTO>());

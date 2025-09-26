@@ -14,13 +14,13 @@ public class FakeRepositoryFilmes : IRepositoryFilme
         new Filme { Id = 4, Titulo = "Parasita", Autor = "Bong Joon-ho", Categoria = "Suspense" },
         new Filme { Id = 5, Titulo = "Vingadores: Ultimato", Autor = "Anthony e Joe Russo", Categoria = "Ação" }
     };
-    public async Task<IEnumerable<Filme>> GetAll(CancellationToken cancellationToken)
+    public async Task<IEnumerable<Filme>> GetAll()
     {
         await Task.Delay(0);
         return filmes;
     }
 
-    public async Task<Filme?> GetByPredicate(Expression<Func<Filme, bool>> predicate, CancellationToken cancellationToken)
+    public async Task<Filme?> GetByPredicate(Expression<Func<Filme, bool>> predicate)
     {
         await Task.Delay(0);
         return filmes.AsQueryable().FirstOrDefault(predicate);

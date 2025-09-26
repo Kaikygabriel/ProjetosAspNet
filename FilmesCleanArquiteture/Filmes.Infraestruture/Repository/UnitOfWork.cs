@@ -31,8 +31,8 @@ public class UnitOfWork : IUnitOfWork
         }
     }
 
-    public async Task CommitAsync(CancellationToken cancellationToken)
+    public async Task CommitAsync()
     {
-        await context.SaveChangesAsync(cancellationToken);
+        await context.SaveChangesAsync();
     }
 }

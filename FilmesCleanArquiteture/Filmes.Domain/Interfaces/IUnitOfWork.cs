@@ -5,5 +5,5 @@ public interface IUnitOfWork
     public IRepositoryUser RepositoryUser { get; }
 
     public IRepositoryFilme RepositoryFilme { get; }
-    Task CommitAsync(CancellationToken cancellationToken);
+    Task CommitAsync();
 }

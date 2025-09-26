@@ -15,15 +15,14 @@ public class Repository<T> : IRepository<T> where T: Entity
         this.context = context;
     }
 
-    public async Task<IEnumerable<T>> GetAll(CancellationToken cancellationToken)
+    public async Task<IEnumerable<T>> GetAll()
     {
-        return await context.Set<T>().AsNoTracking().ToListAsync(cancellationToken);
+        return await context.Set<T>().AsNoTracking().ToListAsync();
     }
 
-    public async Task<T?> GetByPredicate(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken)
+    public async Task<T?> GetByPredicate(Expression<Func<T, bool>> predicate)
     {
-        await Task.Delay(4000);
-        return await context.Set<T>().AsNoTracking().FirstOrDefaultAsync(predicate, cancellationToken);
+        return await context.Set<T>().AsNoTracking().FirstOrDefaultAsync(predicate);
     }
 
     public virtual void Create(T entity)

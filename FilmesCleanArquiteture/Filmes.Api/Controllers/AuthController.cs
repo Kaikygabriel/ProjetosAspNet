@@ -5,6 +5,7 @@ using Filmes.Application.Interfaces;
 using Filmes.Application.Services;
 using Filmes.Application.Services.Interfaces;
 using Filmes.Domain.Entities;
+using Filmes.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Filmes.Api.Controllers;
@@ -36,9 +37,10 @@ public class AuthController : ControllerBase
         User userCreate = new()
         {
             Name = model.Name!,
+            Email = model.Email,
             PasswordHash = model.Password!
         };
-        await _serviceRepositoryUser.Create(userCreate);
+         _serviceRepositoryUser.Create(userCreate);
         return NoContent();
     }
 

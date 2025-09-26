@@ -17,11 +17,11 @@ public class FilmeServiceRepository : IFilmeServiceRepository
         _cache = cache;
     }
 
-    public async Task<IEnumerable<Filme>> GetAll(CancellationToken cancellationToken)
+    public async Task<IEnumerable<Filme>> GetAll()
     {
         if (!_cache.TryGetValue("filmes", out IEnumerable<Filme> filmes))
         {
-            filmes = await _unitOfWork.RepositoryFilme.GetAll(cancellationToken);
+            filmes = await _unitOfWork.RepositoryFilme.GetAll();
             _cache.Set("filmes",filmes, new MemoryCacheEntryOptions()
             {
                 AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5),
@@ -34,9 +34,9 @@ public class FilmeServiceRepository : IFilmeServiceRepository
         return filmes;
     }
 
-    public async Task<Filme> GetByPredicate(Expression<Func<Filme, bool>> predicate, CancellationToken cancellationToken)
+    public async Task<Filme> GetByPredicate(Expression<Func<Filme, bool>> predicate)
     {
-        return await _unitOfWork.RepositoryFilme.GetByPredicate(predicate, cancellationToken);
+        return await _unitOfWork.RepositoryFilme.GetByPredicate(predicate);
     }
 
     public void Create(Filme entity)

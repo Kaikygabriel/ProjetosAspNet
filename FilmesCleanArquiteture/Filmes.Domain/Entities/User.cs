@@ -17,5 +17,5 @@ public class User : Entity
 
     public string? RefreshToken { get; set; }
     public DateTime? ExpiredRefreshToken { get; set; }
-    public List<string> Roles { get; set; } = new();
+    public List<string>? Roles { get; set; } = new();
 }
