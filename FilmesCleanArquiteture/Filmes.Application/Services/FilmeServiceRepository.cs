@@ -1,4 +1,5 @@
 using System.Linq.Expressions;
+using Filmes.Application.Interfaces;
 using Filmes.Application.Services.Interfaces;
 using Filmes.Domain.Entities;
 using Filmes.Domain.Interfaces;
@@ -34,33 +35,36 @@ public class FilmeServiceRepository : IFilmeServiceRepository
         return filmes;
     }
 
-    public async Task<Filme> GetByPredicate(Expression<Func<Filme, bool>> predicate)
+    public async Task<Filme?> GetByPredicate(Expression<Func<Filme,bool>>predicate)
     {
         return await _unitOfWork.RepositoryFilme.GetByPredicate(predicate);
     }
 
-    public void Create(Filme entity)
+    public async Task Create(Filme entity)
     {
         if (entity is null)
             throw new ArgumentNullException(nameof(entity));
         _unitOfWork.RepositoryFilme.Create(entity);
-        
-        _cache.Remove("filmes");
+
+        await _unitOfWork.CommitAsync();
     }
 
-    public void Update(Filme entity)
+    public async Task Update(Filme entity)
     {
         if (entity is null)
             throw new ArgumentNullException(nameof(entity));
         _unitOfWork.RepositoryFilme.Update(entity);
         _cache.Remove("filmes");
+        await _unitOfWork.CommitAsync();
     }
 
-    public void Delete(Filme entity)
+    public async Task Delete(Filme entity)
     {
         if (entity is null)
             throw new ArgumentNullException(nameof(entity));
         _unitOfWork.RepositoryFilme.Delete(entity);
         _cache.Remove("filmes");
+        await _unitOfWork.CommitAsync();
+
     }
 }

@@ -1,5 +1,13 @@
-using Filmes.Domain.Interfaces;
+using System.Linq.Expressions;
+using Filmes.Domain.Entities;
 
-namespace Filmes.Application.Services.Interfaces;
+namespace Filmes.Application.Interfaces;
 
-public interface IFilmeServiceRepository : IRepositoryFilme;
+public interface IFilmeServiceRepository
+{
+    Task<Filme?> GetByPredicate(Expression<Func<Filme,bool>>predicate);
+    Task<IEnumerable<Filme>> GetAll();
+    Task Create(Filme entity);
+    Task Update(Filme entity);
+    Task Delete(Filme entity);
+}

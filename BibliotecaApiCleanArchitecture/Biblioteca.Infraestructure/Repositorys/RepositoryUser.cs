@@ -1,15 +1,15 @@
 using Biblioteca.Domain.Entities;
 using Biblioteca.Domain.Interfaces;
 using Biblioteca.Infraestructure.Context;
-using Microsoft.EntityFrameworkCore.Internal;
 
-namespace Biblioteca.Infraestructure.Repositoroys;
+namespace Biblioteca.Infraestructure.Repositorys;
 
 public class RepositoryUser(AppDbContext context): Repository<User>(context),IRepositoryUser
 {
     public override void Create(User entity)
     {
-        entity.Password = Net.BCrypt.HashPassword();
+        var hashPassword = BCrypt.Net.BCrypt.HashPassword(entity.Password);
+        entity.Password = hashPassword;
         base.Create(entity);
     }
 }

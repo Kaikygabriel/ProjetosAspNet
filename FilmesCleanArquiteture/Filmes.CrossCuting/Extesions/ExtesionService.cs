@@ -37,10 +37,10 @@ public  static class ExtesionService
                 ClockSkew = TimeSpan.Zero
             };
         });
-        services.AddAuthorization();
+        services.AddAuthorization(options =>
+            options.AddPolicy("AdminOnly",x=>x.RequireRole("Admin")));
         services.AddScoped<IServiceRepositoryUser,ServiceRepositoryUser>();
         services.AddScoped<ITokenService,TokenService>();
         services.AddScoped<IFilmeServiceRepository,FilmeServiceRepository>();
-       
     }
 }

@@ -1,0 +1,12 @@
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Domain\bin\Debug\net9.0\Biblioteca.Domain.deps.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Domain\bin\Debug\net9.0\Biblioteca.Domain.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Domain\bin\Debug\net9.0\Biblioteca.Domain.pdb
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Domain\obj\Debug\net9.0\Biblioteca.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Domain\obj\Debug\net9.0\Biblioteca.Domain.AssemblyInfoInputs.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Domain\obj\Debug\net9.0\Biblioteca.Domain.AssemblyInfo.cs
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Domain\obj\Debug\net9.0\Biblioteca.Domain.csproj.CoreCompileInputs.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Domain\obj\Debug\net9.0\Biblioteca.Domain.sourcelink.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Domain\obj\Debug\net9.0\Biblioteca.Domain.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Domain\obj\Debug\net9.0\refint\Biblioteca.Domain.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Domain\obj\Debug\net9.0\Biblioteca.Domain.pdb
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Domain\obj\Debug\net9.0\ref\Biblioteca.Domain.dll

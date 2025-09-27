@@ -1,6 +1,5 @@
+using Biblioteca.Domain.Entities;
+
 namespace Biblioteca.Domain.Interfaces;
 
-public class IRepositoryBook
-{
-    
-}
+public interface IRepositoryBook: IRepository<Book>;

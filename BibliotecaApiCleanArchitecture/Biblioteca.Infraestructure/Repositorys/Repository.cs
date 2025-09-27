@@ -4,7 +4,7 @@ using Biblioteca.Domain.Interfaces;
 using Biblioteca.Infraestructure.Context;
 using Microsoft.EntityFrameworkCore;
 
-namespace Biblioteca.Infraestructure.Repositoroys;
+namespace Biblioteca.Infraestructure.Repositorys;
 
 public class Repository<T> : IRepository<T> where T : Entity
 {

@@ -1,0 +1,12 @@
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.CrosCuting\bin\Debug\net9.0\Biblioteca.CrosCuting.deps.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.CrosCuting\bin\Debug\net9.0\Biblioteca.CrosCuting.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.CrosCuting\bin\Debug\net9.0\Biblioteca.CrosCuting.pdb
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.CrosCuting\obj\Debug\net9.0\Biblioteca.CrosCuting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.CrosCuting\obj\Debug\net9.0\Biblioteca.CrosCuting.AssemblyInfoInputs.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.CrosCuting\obj\Debug\net9.0\Biblioteca.CrosCuting.AssemblyInfo.cs
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.CrosCuting\obj\Debug\net9.0\Biblioteca.CrosCuting.csproj.CoreCompileInputs.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.CrosCuting\obj\Debug\net9.0\Biblioteca.CrosCuting.sourcelink.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.CrosCuting\obj\Debug\net9.0\Biblioteca.CrosCuting.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.CrosCuting\obj\Debug\net9.0\refint\Biblioteca.CrosCuting.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.CrosCuting\obj\Debug\net9.0\Biblioteca.CrosCuting.pdb
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.CrosCuting\obj\Debug\net9.0\ref\Biblioteca.CrosCuting.dll

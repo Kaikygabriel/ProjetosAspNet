@@ -1,8 +1,10 @@
 using Filmes.Api.Controllers;
+using Filmes.Application.Services;
 using Filmes.Domain.Entities;
 using Filmes.Infraestruture.Repository;
 using FilmesApiTestXUnit.Mocks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace FilmesApiTestXUnit.TestFilmeController;
 
@@ -12,7 +14,8 @@ public class GetTestUnit
 
     public GetTestUnit()
     {
-        _controller = new FilmesController(new FakeFilmeServiceRepository());
+        _controller = new FilmesController(new FilmeServiceRepository(new FakeUnitOfWork(),
+            new MemoryCache(new MemoryCacheOptions())));
     }
 
     [Fact]

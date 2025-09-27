@@ -1,6 +1,5 @@
+using Biblioteca.Domain.Entities;
+
 namespace Biblioteca.Domain.Interfaces;
 
-public class IRepositoryUser
-{
-    
-}
+public interface IRepositoryUser  : IRepository<User>;
