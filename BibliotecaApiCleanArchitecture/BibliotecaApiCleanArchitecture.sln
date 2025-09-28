@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Domain", "Biblio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Infraestructure", "Biblioteca.Infraestructure\Biblioteca.Infraestructure.csproj", "{EDF4E718-CCC9-4FF5-B1B7-05D75E104E8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.TestUnit", "Biblioteca.TestUnit\Biblioteca.TestUnit.csproj", "{84047742-A79C-476F-8D97-111B60442678}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{EDF4E718-CCC9-4FF5-B1B7-05D75E104E8D}.Release|x64.Build.0 = Release|Any CPU
 		{EDF4E718-CCC9-4FF5-B1B7-05D75E104E8D}.Release|x86.ActiveCfg = Release|Any CPU
 		{EDF4E718-CCC9-4FF5-B1B7-05D75E104E8D}.Release|x86.Build.0 = Release|Any CPU
+		{84047742-A79C-476F-8D97-111B60442678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84047742-A79C-476F-8D97-111B60442678}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84047742-A79C-476F-8D97-111B60442678}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{84047742-A79C-476F-8D97-111B60442678}.Debug|x64.Build.0 = Debug|Any CPU
+		{84047742-A79C-476F-8D97-111B60442678}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{84047742-A79C-476F-8D97-111B60442678}.Debug|x86.Build.0 = Debug|Any CPU
+		{84047742-A79C-476F-8D97-111B60442678}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84047742-A79C-476F-8D97-111B60442678}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84047742-A79C-476F-8D97-111B60442678}.Release|x64.ActiveCfg = Release|Any CPU
+		{84047742-A79C-476F-8D97-111B60442678}.Release|x64.Build.0 = Release|Any CPU
+		{84047742-A79C-476F-8D97-111B60442678}.Release|x86.ActiveCfg = Release|Any CPU
+		{84047742-A79C-476F-8D97-111B60442678}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

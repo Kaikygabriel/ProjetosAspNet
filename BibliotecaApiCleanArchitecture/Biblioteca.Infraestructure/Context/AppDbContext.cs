@@ -1,4 +1,4 @@
-using Biblioteca.Domain.Entities;
+using Biblioteca.Domain.BackOffice.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 

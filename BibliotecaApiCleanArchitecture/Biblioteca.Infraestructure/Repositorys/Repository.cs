@@ -1,6 +1,7 @@
 using System.Linq.Expressions;
-using Biblioteca.Domain.Entities;
-using Biblioteca.Domain.Interfaces;
+using Biblioteca.Domain.BackOffice.Entities;
+using Biblioteca.Domain.BackOffice.Interfaces;
+using Biblioteca.Domain.BackOffice.Interfaces;
 using Biblioteca.Infraestructure.Context;
 using Microsoft.EntityFrameworkCore;
 

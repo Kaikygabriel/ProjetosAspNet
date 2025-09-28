@@ -1,5 +1,5 @@
-using Biblioteca.Domain.Entities;
-using Biblioteca.Domain.Interfaces;
+using Biblioteca.Domain.BackOffice.Entities;
+using Biblioteca.Domain.BackOffice.Interfaces;
 using Biblioteca.Infraestructure.Context;
 
 namespace Biblioteca.Infraestructure.Repositorys;
