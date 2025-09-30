@@ -1,6 +1,3 @@
 namespace Filmes.Domain.Exceptions;
 
-public class EmailException
-{
-    
-}
+public class EmailException(string menssage) : ApplicationException(menssage);

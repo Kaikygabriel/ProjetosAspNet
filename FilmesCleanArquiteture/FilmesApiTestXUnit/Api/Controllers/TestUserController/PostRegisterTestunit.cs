@@ -1,13 +1,13 @@
 using Filmes.Api.Controllers;
 using Filmes.Application.DTOS;
 using Filmes.Application.Services;
-using Filmes.Domain.Entities;
+using Filmes.Domain.ObjectValue;
 using FilmesApiTestXUnit.Mocks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 
-namespace FilmesApiTestXUnit.TestUserController;
+namespace FilmesApiTestXUnit.Api.Controllers.TestUserController;
 
 public class PostRegisterTestunit
 {
@@ -31,7 +31,8 @@ public class PostRegisterTestunit
         var user = new RegisterModel()
         {
             Password = "kalsdfjlaksjdf",
-            Name = "kaiky"
+            Name = "kaiky",
+            Email = "kaiky@gmail.com"
         };
         //act
         var data = await controller.RegisterUserAsync(user);

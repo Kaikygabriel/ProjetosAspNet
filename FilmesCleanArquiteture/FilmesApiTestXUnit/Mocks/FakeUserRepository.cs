@@ -1,6 +1,7 @@
 using System.Linq.Expressions;
 using Filmes.Domain.Entities;
 using Filmes.Domain.Interfaces;
+using Filmes.Domain.ObjectValue;
 
 namespace FilmesApiTestXUnit.Mocks;
 
@@ -12,7 +13,7 @@ public class FakeUserRepository : IRepositoryUser
         {
             Id = 1,
             Name = "Alice Santos",
-            Email = "alice.santos@example.com",
+            Email = new Email("alice.santos@example.com"),
             PasswordHash = BCrypt.Net.BCrypt.HashPassword("$PLACEHOLDER_HASH_1"),
             Roles = new List<string> { "User" }
         },
@@ -20,7 +21,7 @@ public class FakeUserRepository : IRepositoryUser
         {
             Id = 2,
             Name = "Bruno Oliveira",
-            Email = "bruno.oliveira@example.com",
+            Email = new Email("bruno.oliveira@example.com"),
             PasswordHash = BCrypt.Net.BCrypt.HashPassword("$PLACEHOLDER_HASH_2"),
             Roles = new List<string> { "User", "Editor" }
         },
@@ -28,7 +29,7 @@ public class FakeUserRepository : IRepositoryUser
         {
             Id = 3,
             Name = "Camila Pereira",
-            Email = "camila.pereira@example.com",
+            Email = new Email("camila.pereira@example.com"),
             PasswordHash = BCrypt.Net.BCrypt.HashPassword("$PLACEHOLDER_HASH_3"),
             Roles = new List<string> { "User" }
         },
@@ -36,7 +37,7 @@ public class FakeUserRepository : IRepositoryUser
         {
             Id = 4,
             Name = "Daniel",
-            Email = "daniel.costa@example.com",
+            Email = new Email("daniel.costa@example.com"),
             PasswordHash = BCrypt.Net.BCrypt.HashPassword("$PLACEHOLDER_HASH_4"),
             Roles = new List<string> { "User", "Moderator" }
         }

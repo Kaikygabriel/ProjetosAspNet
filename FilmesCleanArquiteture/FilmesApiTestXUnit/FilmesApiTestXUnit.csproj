@@ -23,4 +23,8 @@
     <ProjectReference Include="..\Filmes.Api\Filmes.Api.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Api\Controllers\" />
+  </ItemGroup>
+
 </Project>

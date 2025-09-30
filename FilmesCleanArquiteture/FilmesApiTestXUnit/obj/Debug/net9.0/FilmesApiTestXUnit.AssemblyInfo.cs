@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FilmesApiTestXUnit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2b6364673211fe202ae98bb1de2685cd183e042")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+989f71b423e4fc1171bd520aed386f0203d5c3ee")]
 [assembly: System.Reflection.AssemblyProductAttribute("FilmesApiTestXUnit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FilmesApiTestXUnit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,4 @@
-namespace FilmesApiTestXUnit.Dominio;
+namespace FilmesApiTestXUnit.Dominio.ObjectValue;
 
 public class EmailTest
 {

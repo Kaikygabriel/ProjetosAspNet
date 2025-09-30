@@ -6,6 +6,7 @@ using Filmes.Application.Services;
 using Filmes.Application.Services.Interfaces;
 using Filmes.Domain.Entities;
 using Filmes.Domain.Interfaces;
+using Filmes.Domain.ObjectValue;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Filmes.Api.Controllers;
@@ -36,11 +37,11 @@ public class AuthController : ControllerBase
             return BadRequest();
         User userCreate = new()
         {
-            Name = model.Name!,
-            Email = model.Email,
-            PasswordHash = model.Password!
+            Name = model.Name,
+            Email = new Email(model.Email),
+            PasswordHash = model.Password
         };
-         _serviceRepositoryUser.Create(userCreate);
+         await _serviceRepositoryUser.Create(userCreate);
         return NoContent();
     }
 
@@ -55,7 +56,7 @@ public class AuthController : ControllerBase
         var claims = new List<Claim>()
         {
             new Claim(ClaimTypes.Name, user.Name),
-            new Claim(ClaimTypes.Email, user.Email),
+            new Claim(ClaimTypes.Email, user.Email.Adress),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
         };
 

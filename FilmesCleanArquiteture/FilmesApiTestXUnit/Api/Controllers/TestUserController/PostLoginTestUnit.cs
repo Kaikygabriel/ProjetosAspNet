@@ -1,13 +1,12 @@
 using Filmes.Api.Controllers;
 using Filmes.Application.DTOS;
 using Filmes.Application.Services;
-using Filmes.Domain.Entities;
 using FilmesApiTestXUnit.Mocks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 
-namespace FilmesApiTestXUnit.TestUserController;
+namespace FilmesApiTestXUnit.Api.Controllers.TestUserController;
 
 public class PostLoginTestUnit
 {
