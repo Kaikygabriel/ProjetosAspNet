@@ -144,6 +144,7 @@ C:\Users\kaiky\downloads\kaka\ProjetosAspNet\NotifiMe\obj\Debug\net9.0\refint\No
 C:\Users\kaiky\downloads\kaka\ProjetosAspNet\NotifiMe\obj\Debug\net9.0\NotifiMe.pdb
 C:\Users\kaiky\downloads\kaka\ProjetosAspNet\NotifiMe\obj\Debug\net9.0\NotifiMe.genruntimeconfig.cache
 C:\Users\kaiky\downloads\kaka\ProjetosAspNet\NotifiMe\obj\Debug\net9.0\ref\NotifiMe.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\bin\Debug\net9.0\web.config
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\bin\Debug\net9.0\appsettings.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\bin\Debug\net9.0\NotifiMe.staticwebassets.endpoints.json
@@ -205,7 +206,6 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\bin\Debug\net9.0\
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\bin\Debug\net9.0\System.Composition.Runtime.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\bin\Debug\net9.0\System.Composition.TypedParts.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\bin\Debug\net9.0\System.Text.Json.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -272,6 +272,7 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\bin\Debug\net9.0\
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\NotifiMe.csproj.AssemblyReference.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\rpswa.dswa.cache.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\NotifiMe.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\NotifiMe.AssemblyInfoInputs.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\NotifiMe.AssemblyInfo.cs
@@ -279,11 +280,15 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\NotifiMe.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\NotifiMe.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\NotifiMe.sourcelink.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\scopedcss\bundle\NotifiMe.styles.css
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\swae.build.ex.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\NotifiMe.csproj.Up2Date
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\NotifiMe.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotifiMe\obj\Debug\net9.0\refint\NotifiMe.dll

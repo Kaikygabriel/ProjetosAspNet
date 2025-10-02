@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Ye8kc6Cb8Ek=",
+  "dgSpecHash": "Rt1o3Z8w2aQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\BibliotecaApiCleanArchitecture\\Biblioteca.Application\\Biblioteca.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kaiky\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.9\\microsoft.aspnetcore.authentication.jwtbearer.9.0.9.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.0.1\\microsoft.identitymodel.abstractions.8.0.1.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.0.1\\microsoft.identitymodel.jsonwebtokens.8.0.1.nupkg.sha512",

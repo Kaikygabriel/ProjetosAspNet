@@ -15,4 +15,12 @@
     <ProjectReference Include="..\Biblioteca.CrosCuting\Biblioteca.CrosCuting.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Web.config">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

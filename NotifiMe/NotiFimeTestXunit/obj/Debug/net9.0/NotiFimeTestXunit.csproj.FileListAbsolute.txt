@@ -3,6 +3,7 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotiFimeTestXunit\bin\Debu
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotiFimeTestXunit\bin\Debug\net9.0\testhost.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotiFimeTestXunit\bin\Debug\net9.0\NotifiMe.deps.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotiFimeTestXunit\bin\Debug\net9.0\NotifiMe.runtimeconfig.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotiFimeTestXunit\bin\Debug\net9.0\web.config
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotiFimeTestXunit\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotiFimeTestXunit\bin\Debug\net9.0\appsettings.json
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\NotifiMe\NotiFimeTestXunit\bin\Debug\net9.0\NotifiMe.staticwebassets.endpoints.json

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NotiFimeTestXunit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b122bb8afbfc3b846501579b04aa2f7160e1ad0f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f92e0f5d53503fe4ee02d23622ec2290ff34941")]
 [assembly: System.Reflection.AssemblyProductAttribute("NotiFimeTestXunit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NotiFimeTestXunit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

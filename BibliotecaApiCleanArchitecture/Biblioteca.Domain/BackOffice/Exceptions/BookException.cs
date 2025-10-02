@@ -1,6 +1,3 @@
 namespace Biblioteca.Domain.BackOffice.Exceptions;
 
-public class BookException
-{
-    
-}
+public class BookException(string menssage) : ApplicationException(menssage);

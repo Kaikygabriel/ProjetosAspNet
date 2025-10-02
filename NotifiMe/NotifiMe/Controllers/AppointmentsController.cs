@@ -20,7 +20,7 @@ public class AppointmentsController : ControllerBase
         _unitOfWork = unitOfWork;
     } 
 
-    [Authorize("UserOnly")]
+    [Authorize]
     [HttpGet]
     public async Task<ActionResult> GetAllByWork([FromQuery] string work)
     {

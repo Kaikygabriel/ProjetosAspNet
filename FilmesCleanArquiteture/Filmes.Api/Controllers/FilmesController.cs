@@ -49,6 +49,5 @@ public class FilmesController : ControllerBase
 
         await _uow.Create(filme);
         return Created();
-    }
-    
+    }]
 }

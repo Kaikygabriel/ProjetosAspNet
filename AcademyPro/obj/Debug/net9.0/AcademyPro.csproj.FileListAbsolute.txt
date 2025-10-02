@@ -59,7 +59,6 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\System.
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\System.Composition.Runtime.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\System.Composition.TypedParts.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\System.Text.Json.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -147,3 +146,8 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\obj\Debug\net9.0\ref\Aca
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\JwtCraft.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\Microsoft.AspNetCore.Server.Kestrel.Https.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\bin\Debug\net9.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\AcademyPro\obj\Debug\net9.0\swae.build.ex.cache

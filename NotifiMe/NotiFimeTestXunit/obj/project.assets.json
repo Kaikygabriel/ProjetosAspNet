@@ -2679,8 +2679,8 @@
     },
     "NotifiMe/1.0.0": {
       "type": "project",
-      "path": "../NotiFime/NotifiMe.csproj",
-      "msbuildProject": "../NotiFime/NotifiMe.csproj"
+      "path": "../NotifiMe/NotifiMe.csproj",
+      "msbuildProject": "../NotifiMe/NotifiMe.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2724,8 +2724,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\NotifiMe\\NotiFime\\NotifiMe.csproj": {
-              "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\NotifiMe\\NotiFime\\NotifiMe.csproj"
+            "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\NotifiMe\\NotifiMe\\NotifiMe.csproj": {
+              "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\NotifiMe\\NotifiMe\\NotifiMe.csproj"
             }
           }
         }
@@ -2740,7 +2740,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -2779,7 +2779,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100-rc.1.25451.107/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
