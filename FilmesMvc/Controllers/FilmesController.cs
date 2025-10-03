@@ -22,4 +22,22 @@ public class FilmesController : Controller
             return View("Error");
         return View(filmes);
     }
+
+    [HttpGet("Create")]
+    public ActionResult Create()
+    {
+        return View();
+    }
+
+    [HttpPost("Create")]
+    public async Task<ActionResult> Create(FilmesViewModel model)
+    {
+        if(!ModelState.IsValid)
+        {
+            ViewBag.Erro = "Error in create movie.";
+            return View(model);
+        }
+        var request = await _filmeService.PostFilme(model);
+        return RedirectToAction(nameof(Index));
+    }
 }

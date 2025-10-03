@@ -14,4 +14,5 @@ public class FilmesViewModel
         [Required]
         [StringLength(140,MinimumLength = 3)] 
         public string Categoria { get; set; }= string.Empty;
+
 }

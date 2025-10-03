@@ -62,14 +62,8 @@ public class FilmeService : IFilmeService
         StringContent content = new StringContent(filmeJson, Encoding.UTF8, "Application/Json");
         using (var response = await cliente.PostAsync(ApiEndPoint,content))
         {
-            if (response.IsSuccessStatusCode)
-            {
-                
-            }
-            else
-            {
+            if (!response.IsSuccessStatusCode)
                 return null;
-            }
         }
 
         return filmeVw;
