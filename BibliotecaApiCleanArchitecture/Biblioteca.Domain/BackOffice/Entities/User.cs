@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using Biblioteca.Domain.BackOffice.Exceptions;
-using Biblioteca.Domain.ObjectValues;
+using Biblioteca.Domain.BackOffice.ObjectValues;
 
 namespace Biblioteca.Domain.BackOffice.Entities;
 

@@ -30,8 +30,8 @@ public class UnitOfWork : IUnitOfWork
         }
     }
 
-    public Task CommitAsync()
+    public async Task CommitAsync()
     {
-        throw new NotImplementedException();
+        await context.SaveChangesAsync();
     }
 }

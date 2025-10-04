@@ -1,0 +1,16 @@
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\release\net9.0\Biblioteca.Application.deps.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\release\net9.0\Biblioteca.Application.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\release\net9.0\Biblioteca.Application.pdb
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\release\net9.0\Biblioteca.Domain.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\release\net9.0\Biblioteca.Domain.pdb
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\obj\release\net9.0\Biblioteca.Application.csproj.AssemblyReference.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\obj\release\net9.0\Biblioteca.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\obj\release\net9.0\Biblioteca.Application.AssemblyInfoInputs.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\obj\release\net9.0\Biblioteca.Application.AssemblyInfo.cs
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\obj\release\net9.0\Biblioteca.Application.csproj.CoreCompileInputs.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\obj\release\net9.0\Biblioteca.Application.sourcelink.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\obj\release\net9.0\Bibliote.A09E2D7B.Up2Date
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\obj\release\net9.0\Biblioteca.Application.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\obj\release\net9.0\refint\Biblioteca.Application.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\obj\release\net9.0\Biblioteca.Application.pdb
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\obj\release\net9.0\ref\Biblioteca.Application.dll

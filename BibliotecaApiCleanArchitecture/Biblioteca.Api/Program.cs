@@ -1,11 +1,15 @@
 using System.Threading.RateLimiting;
+using Biblioteca.Api.Extensions;
 using Biblioteca.CrosCuting.InjectionDependency;
+using Biblioteca.Domain.BackOffice.Interfaces;
+using Biblioteca.Infraestructure.Repositorys;
 using Microsoft.AspNetCore.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddOpenApi();
+builder.Services.AddOpenApi();   
+
 builder.Services.AddServicesInjectionDependency(builder.Configuration);
 builder.Services.AddSwaggerGen();
 builder.Services.AddMemoryCache(x =>
@@ -26,15 +30,17 @@ builder.Services.AddRateLimiter(x =>
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
-{
+{ 
     app.UseSwagger();
     app.UseSwaggerUI();
     app.MapOpenApi();
+    app.UseGlobalException();
 }
 
 app.UseHttpsRedirection();
 
 app.UseRouting();
+
 
 app.UseRateLimiter();
 

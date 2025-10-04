@@ -170,3 +170,6 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Bibl
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.TestUnit\obj\Debug\net10.0\Biblioteca.TestUnit.pdb
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.TestUnit\obj\Debug\net10.0\Biblioteca.TestUnit.genruntimeconfig.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.TestUnit\obj\Debug\net10.0\ref\Biblioteca.TestUnit.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.TestUnit\bin\Debug\net10.0\Web.config
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.TestUnit\bin\Debug\net10.0\Mapster.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.TestUnit\bin\Debug\net10.0\Mapster.Core.dll

@@ -1,0 +1,14 @@
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\Release\net9.0\publish\Biblioteca.Application.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\Release\net9.0\publish\Biblioteca.Application.deps.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\Release\net9.0\publish\Biblioteca.Application.pdb
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\Release\net9.0\publish\BCrypt.Net-Next.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\Release\net9.0\publish\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\Release\net9.0\publish\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\Release\net9.0\publish\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\Release\net9.0\publish\Microsoft.IdentityModel.Logging.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\Release\net9.0\publish\Microsoft.IdentityModel.Protocols.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\Release\net9.0\publish\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\Release\net9.0\publish\Microsoft.IdentityModel.Tokens.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\Release\net9.0\publish\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\Release\net9.0\publish\Biblioteca.Domain.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaApiCleanArchitecture\Biblioteca.Application\bin\Release\net9.0\publish\Biblioteca.Domain.pdb

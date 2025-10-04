@@ -1,8 +1,9 @@
+using Biblioteca.Domain.BackOffice.Entities;
 using Biblioteca.Domain.BackOffice.Exceptions;
 
-namespace Biblioteca.Domain.ObjectValues;
+namespace Biblioteca.Domain.BackOffice.ObjectValues;
 
-public class Email
+public class Email : Entity
 {
     public Email(string adress)
     {

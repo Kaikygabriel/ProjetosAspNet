@@ -1,8 +1,8 @@
 using Biblioteca.Domain.BackOffice.Exceptions;
 
-namespace Biblioteca.Domain.BackOffice.ObjectValues;
+namespace Biblioteca.Domain.BackOffice.Entities;
 
-public class Author
+public class Author : Entity
 {
     public Author()
     {
