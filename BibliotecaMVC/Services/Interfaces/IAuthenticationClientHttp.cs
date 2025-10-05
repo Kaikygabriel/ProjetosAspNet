@@ -4,5 +4,6 @@ namespace BibliotecaMVC.Services.Interfaces;
 
 public interface IAuthenticationClientHttp
 {
-    Task<bool> AuthenticationAsync(UserLoginViewModel model);
+    Task<bool> AuthenticationRegisterAsync(UserRegisterViewModel model);
+    Task<TokenViewModel> AuthenticationLoginAsync(UserLoginViewModel model);
 }

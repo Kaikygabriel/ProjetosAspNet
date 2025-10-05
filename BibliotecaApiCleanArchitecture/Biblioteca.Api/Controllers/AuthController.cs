@@ -28,14 +28,22 @@ public class AuthController : ControllerBase
 
     private IEnumerable<Claim> GetClaimsFromUser(User user)
     {
+        if (user == null)
+            throw new ArgumentNullException(nameof(user), "O usuário não pode ser nulo.");
+
         var claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Name, user.Name),
-            new Claim(ClaimTypes.Email, user.Email.Adress),
+            new Claim(ClaimTypes.Name, user.Name ?? string.Empty),
+            new Claim(ClaimTypes.Email, user.Email?.Adress ?? string.Empty),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
-        foreach (var role in user.Roles)
-            claims.Add(new Claim(ClaimTypes.Role,role));
+
+        if (user.Roles != null)
+        {
+            foreach (var role in user.Roles)
+                claims.Add(new Claim(ClaimTypes.Role, role));
+        }
+
         return claims;
     }
     
