@@ -16,15 +16,15 @@ public class AccountController : Controller
     [HttpGet("Register")]
     public ActionResult Register()
     {
+        if (Request.Cookies.ContainsKey("X-Acess-Token"))
+            return RedirectToAction("Index", "Home"); 
         return View();
     }
     [HttpPost("Register")]
     public async Task<ActionResult> Register(UserRegisterViewModel model)
     {
         if (!ModelState.IsValid)
-        {
             return View(model);
-        }
         
         var authentication = await _authentication.AuthenticationRegisterAsync(model);
         if(!authentication)
@@ -35,6 +35,8 @@ public class AccountController : Controller
     [HttpGet("Login")]
     public ActionResult Login()
     {
+        if (Request.Cookies.ContainsKey("X-Acess-Token"))
+            return RedirectToAction("Index", "Home"); 
         return View();
     }
     [HttpPost("Login")]
@@ -42,9 +44,6 @@ public class AccountController : Controller
     {
         if (!ModelState.IsValid)
             return View(model);
-        
-        
-        
         
         TokenViewModel? token = await _authentication.AuthenticationLoginAsync(model);
         if(token is null)
@@ -54,7 +53,8 @@ public class AccountController : Controller
         {
             Secure = true,
             HttpOnly = true,
-            SameSite = SameSiteMode.Strict
+            SameSite = SameSiteMode.Strict,
+            Expires = DateTimeOffset.UtcNow.AddDays(3)
         });
         return Redirect("/");
     }

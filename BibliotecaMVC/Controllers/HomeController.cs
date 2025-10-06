@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using BibliotecaMVC.Models;
+using BibliotecaMVC.Services;
 
 namespace BibliotecaMVC.Controllers;
 
@@ -15,6 +16,14 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        bool isLoggedIn = Request.Cookies.ContainsKey("x-acess-token");
+        ViewBag.IsLoggedIn = isLoggedIn;
+        if (isLoggedIn)
+        {
+            var name = TokenService.GetNameFromToken(Request.Cookies["x-acess-token"]!.ToString());
+            ViewBag.UserName = name;
+
+        }
         return View();
     }
 

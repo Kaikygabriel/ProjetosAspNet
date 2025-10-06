@@ -96,3 +96,13 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaMVC\obj\Debug\net9.0\refi
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaMVC\obj\Debug\net9.0\BibliotecaMVC.pdb
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaMVC\obj\Debug\net9.0\BibliotecaMVC.genruntimeconfig.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaMVC\obj\Debug\net9.0\ref\BibliotecaMVC.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaMVC\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaMVC\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaMVC\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaMVC\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaMVC\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaMVC\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaMVC\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaMVC\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaMVC\obj\Debug\net9.0\BibliotecaMVC.csproj.AssemblyReference.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\BibliotecaMVC\obj\Debug\net9.0\Bibliote.C3F116B9.Up2Date
