@@ -10,15 +10,12 @@
         "dependencies": {
           "Catalogo.API": "1.0.0",
           "Microsoft.NET.Test.Sdk": "17.12.0",
-          "coverlet.collector": "6.0.2",
-          "xunit": "2.9.2",
-          "xunit.runner.visualstudio": "2.8.2"
+          "xunit": "2.9.2"
         },
         "runtime": {
           "CatalogoXunitTest.dll": {}
         }
       },
-      "coverlet.collector/6.0.2": {},
       "Microsoft.AspNetCore.OpenApi/9.0.9": {
         "dependencies": {
           "Microsoft.OpenApi": "1.6.25"
@@ -41,7 +38,6 @@
       "Microsoft.EntityFrameworkCore/9.0.8": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Abstractions": "9.0.8",
-          "Microsoft.EntityFrameworkCore.Analyzers": "9.0.8",
           "Microsoft.Extensions.Caching.Memory": "9.0.8",
           "Microsoft.Extensions.Logging": "9.0.8"
         },
@@ -60,12 +56,10 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/9.0.8": {},
       "Microsoft.EntityFrameworkCore.Relational/9.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.8",
           "Microsoft.Extensions.Caching.Memory": "9.0.8",
-          "Microsoft.Extensions.Configuration.Abstractions": "9.0.0",
           "Microsoft.Extensions.Logging": "9.0.8"
         },
         "runtime": {
@@ -75,7 +69,6 @@
           }
         }
       },
-      "Microsoft.Extensions.ApiDescription.Server/9.0.0": {},
       "Microsoft.Extensions.Caching.Abstractions/9.0.8": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "9.0.8"
@@ -100,11 +93,6 @@
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.825.36511"
           }
-        }
-      },
-      "Microsoft.Extensions.Configuration.Abstractions/9.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.Primitives": "9.0.8"
         }
       },
       "Microsoft.Extensions.DependencyInjection/9.0.8": {
@@ -185,9 +173,6 @@
         }
       },
       "Microsoft.TestPlatform.ObjectModel/17.12.0": {
-        "dependencies": {
-          "System.Reflection.Metadata": "1.6.0"
-        },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.TestPlatform.CoreUtilities.dll": {
             "assemblyVersion": "15.0.0.0",
@@ -464,7 +449,6 @@
       },
       "Swashbuckle.AspNetCore/9.0.4": {
         "dependencies": {
-          "Microsoft.Extensions.ApiDescription.Server": "9.0.0",
           "Swashbuckle.AspNetCore.Swagger": "9.0.4",
           "Swashbuckle.AspNetCore.SwaggerGen": "9.0.4",
           "Swashbuckle.AspNetCore.SwaggerUI": "9.0.4"
@@ -500,10 +484,8 @@
           }
         }
       },
-      "System.Reflection.Metadata/1.6.0": {},
       "xunit/2.9.2": {
         "dependencies": {
-          "xunit.analyzers": "1.16.0",
           "xunit.assert": "2.9.2",
           "xunit.core": "2.9.2"
         }
@@ -516,7 +498,6 @@
           }
         }
       },
-      "xunit.analyzers/1.16.0": {},
       "xunit.assert/2.9.2": {
         "runtime": {
           "lib/net6.0/xunit.assert.dll": {
@@ -553,7 +534,6 @@
           }
         }
       },
-      "xunit.runner.visualstudio/2.8.2": {},
       "Catalogo.API/1.0.0": {
         "dependencies": {
           "Catalogo.CrossCuting": "1.0.0",
@@ -569,8 +549,7 @@
       },
       "Catalogo.Application/1.0.0": {
         "dependencies": {
-          "Catalogo.Domain": "1.0.0",
-          "Microsoft.Extensions.Configuration.Abstractions": "9.0.0"
+          "Catalogo.Domain": "1.0.0"
         },
         "runtime": {
           "Catalogo.Application.dll": {
@@ -621,13 +600,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "coverlet.collector/6.0.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-bJShQ6uWRTQ100ZeyiMqcFlhP7WJ+bCuabUs885dJiBEzMsJMSFr7BOyeCw4rgvQokteGi5rKQTlkhfQPUXg2A==",
-      "path": "coverlet.collector/6.0.2",
-      "hashPath": "coverlet.collector.6.0.2.nupkg.sha512"
-    },
     "Microsoft.AspNetCore.OpenApi/9.0.9": {
       "type": "package",
       "serviceable": true,
@@ -656,26 +628,12 @@
       "path": "microsoft.entityframeworkcore.abstractions/9.0.8",
       "hashPath": "microsoft.entityframeworkcore.abstractions.9.0.8.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/9.0.8": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-2EYStCXt4Hi9p3J3EYMQbItJDtASJd064Kcs8C8hj8Jt5srILrR9qlaL0Ryvk8NrWQoCQvIELsmiuqLEZMLvGA==",
-      "path": "microsoft.entityframeworkcore.analyzers/9.0.8",
-      "hashPath": "microsoft.entityframeworkcore.analyzers.9.0.8.nupkg.sha512"
-    },
     "Microsoft.EntityFrameworkCore.Relational/9.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-j+msw6fWgAE9M3Q/5B9Uhv7pdAdAQUvFPJAiBJmoy+OXvehVbfbCE8ftMAa51Uo2ZeiqVnHShhnv4Y4UJJmUzA==",
       "path": "microsoft.entityframeworkcore.relational/9.0.0",
       "hashPath": "microsoft.entityframeworkcore.relational.9.0.0.nupkg.sha512"
-    },
-    "Microsoft.Extensions.ApiDescription.Server/9.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-1Kzzf7pRey40VaUkHN9/uWxrKVkLu2AQjt+GVeeKLLpiEHAJ1xZRsLSh4ZZYEnyS7Kt2OBOPmsXNdU+wbcOl5w==",
-      "path": "microsoft.extensions.apidescription.server/9.0.0",
-      "hashPath": "microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/9.0.8": {
       "type": "package",
@@ -690,13 +648,6 @@
       "sha512": "sha512-grR+oPyj8HVn4DT8CFUUdSw2pZZKS13KjytFe4txpHQliGM1GEDotohmjgvyl3hm7RFB3FRqvbouEX3/1ewp5A==",
       "path": "microsoft.extensions.caching.memory/9.0.8",
       "hashPath": "microsoft.extensions.caching.memory.9.0.8.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Configuration.Abstractions/9.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-lqvd7W3FGKUO1+ZoUEMaZ5XDJeWvjpy2/M/ptCGz3tXLD4HWVaSzjufsAsjemasBEg+2SxXVtYVvGt5r2nKDlg==",
-      "path": "microsoft.extensions.configuration.abstractions/9.0.0",
-      "hashPath": "microsoft.extensions.configuration.abstractions.9.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection/9.0.8": {
       "type": "package",
@@ -817,13 +768,6 @@
       "path": "swashbuckle.aspnetcore.swaggerui/9.0.4",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.9.0.4.nupkg.sha512"
     },
-    "System.Reflection.Metadata/1.6.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-COC1aiAJjCoA5GBF+QKL2uLqEBew4JsCkQmoHKbN3TlOZKa2fKLz5CpiRQKDz0RsAOEGsVKqOD5bomsXq/4STQ==",
-      "path": "system.reflection.metadata/1.6.0",
-      "hashPath": "system.reflection.metadata.1.6.0.nupkg.sha512"
-    },
     "xunit/2.9.2": {
       "type": "package",
       "serviceable": true,
@@ -837,13 +781,6 @@
       "sha512": "sha512-pot1I4YOxlWjIb5jmwvvQNbTrZ3lJQ+jUGkGjWE3hEFM0l5gOnBWS+H3qsex68s5cO52g+44vpGzhAt+42vwKg==",
       "path": "xunit.abstractions/2.0.3",
       "hashPath": "xunit.abstractions.2.0.3.nupkg.sha512"
-    },
-    "xunit.analyzers/1.16.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-hptYM7vGr46GUIgZt21YHO4rfuBAQS2eINbFo16CV/Dqq+24Tp+P5gDCACu1AbFfW4Sp/WRfDPSK8fmUUb8s0Q==",
-      "path": "xunit.analyzers/1.16.0",
-      "hashPath": "xunit.analyzers.1.16.0.nupkg.sha512"
     },
     "xunit.assert/2.9.2": {
       "type": "package",
@@ -872,13 +809,6 @@
       "sha512": "sha512-rKMpq4GsIUIJibXuZoZ8lYp5EpROlnYaRpwu9Zr0sRZXE7JqJfEEbCsUriZqB+ByXCLFBJyjkTRULMdC+U566g==",
       "path": "xunit.extensibility.execution/2.9.2",
       "hashPath": "xunit.extensibility.execution.2.9.2.nupkg.sha512"
-    },
-    "xunit.runner.visualstudio/2.8.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-vm1tbfXhFmjFMUmS4M0J0ASXz3/U5XvXBa6DOQUL3fEz4Vt6YPhv+ESCarx6M6D+9kJkJYZKCNvJMas1+nVfmQ==",
-      "path": "xunit.runner.visualstudio/2.8.2",
-      "hashPath": "xunit.runner.visualstudio.2.8.2.nupkg.sha512"
     },
     "Catalogo.API/1.0.0": {
       "type": "project",

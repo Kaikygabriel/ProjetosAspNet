@@ -83,11 +83,67 @@ namespace Catalogo.Infratructure.Migrations
                     b.ToTable("Produtos");
                 });
 
+            modelBuilder.Entity("Catalogo.Domain.Entities.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("EmailId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(140)
+                        .HasColumnType("varchar(140)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(70)
+                        .HasColumnType("varchar(70)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmailId");
+
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("Catalogo.Domain.ObjectValue.Email", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Adress")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Email");
+                });
+
             modelBuilder.Entity("Catalogo.Domain.Entities.Produto", b =>
                 {
                     b.HasOne("Catalogo.Domain.Entities.Categoria", null)
                         .WithMany("Produtos")
                         .HasForeignKey("CategoriaId");
+                });
+
+            modelBuilder.Entity("Catalogo.Domain.Entities.User", b =>
+                {
+                    b.HasOne("Catalogo.Domain.ObjectValue.Email", "Email")
+                        .WithMany()
+                        .HasForeignKey("EmailId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Email");
                 });
 
             modelBuilder.Entity("Catalogo.Domain.Entities.Categoria", b =>

@@ -1,0 +1,6 @@
+@AlugAI.Api_HostAddress = http://localhost:5049
+
+GET {{AlugAI.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

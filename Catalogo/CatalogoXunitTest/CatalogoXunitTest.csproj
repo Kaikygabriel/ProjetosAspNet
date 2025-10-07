@@ -22,4 +22,8 @@
     <ProjectReference Include="..\Catalogo.API\Catalogo.API.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Api\Controllers\" />
+  </ItemGroup>
+
 </Project>
