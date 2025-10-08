@@ -1,0 +1,72 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "EduCore.CrossCuting/1.0.0": {
+        "dependencies": {
+          "EduCore.Application": "1.0.0",
+          "EduCore.Infraestruct": "1.0.0"
+        },
+        "runtime": {
+          "EduCore.CrossCuting.dll": {}
+        }
+      },
+      "EduCore.Application/1.0.0": {
+        "dependencies": {
+          "EduCore.Domain": "1.0.0"
+        },
+        "runtime": {
+          "EduCore.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "EduCore.Domain/1.0.0": {
+        "runtime": {
+          "EduCore.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "EduCore.Infraestruct/1.0.0": {
+        "dependencies": {
+          "EduCore.Domain": "1.0.0"
+        },
+        "runtime": {
+          "EduCore.Infraestruct.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EduCore.CrossCuting/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EduCore.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EduCore.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EduCore.Infraestruct/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
