@@ -1,0 +1,54 @@
+@model EduCoreMvc.Models.Providers.RegisterProviderDto
+@{
+    ViewData["Title"] = "Registrar Usuário";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body p-5">
+                    <h2 class="text-center mb-4 fw-bold text-primary">
+                        <i class="bi bi-person-plus-fill me-2"></i> Criar Conta
+                    </h2>
+
+                    <form asp-action="Register" asp-controller="Provider" method="post" autocomplete="off">
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Name" class="form-control rounded-3" placeholder="Digite seu nome" />
+                            <label asp-for="Name"></label>
+                            <span asp-validation-for="Name" class="text-danger small"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="AdressEmail" type="email" class="form-control rounded-3" placeholder="Digite seu e-mail" />
+                            <label asp-for="AdressEmail"></label>
+                            <span asp-validation-for="AdressEmail" class="text-danger small"></span>
+                        </div>
+
+                        <div class="form-floating mb-4">
+                            <input asp-for="Password" type="password" class="form-control rounded-3" placeholder="Digite sua senha" />
+                            <label asp-for="Password"></label>
+                            <span asp-validation-for="Password" class="text-danger small"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 py-2 rounded-3 fw-semibold shadow-sm">
+                            <i class="bi bi-check2-circle me-1"></i> Registrar
+                        </button>
+
+                        <div class="text-center mt-4">
+                            <a asp-controller="Home" asp-action="Index" class="text-decoration-none text-secondary">
+                                <i class="bi bi-arrow-left-circle me-1"></i> Voltar para a página inicial
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Fsjdms33gRQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\EduCoreProjeto\\EduCore\\EduCore.Domain\\EduCore.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kaiky\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
