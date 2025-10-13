@@ -22,7 +22,6 @@ public class HomeController : Controller
         {
             var name = TokenService.GetNameFromToken(Request.Cookies["x-acess-token"]!.ToString());
             ViewBag.UserName = name;
-
         }
         return View();
     }

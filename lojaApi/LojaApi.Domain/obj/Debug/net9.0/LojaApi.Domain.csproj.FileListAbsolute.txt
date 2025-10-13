@@ -1,0 +1,12 @@
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\LojaApi.Domain\bin\Debug\net9.0\LojaApi.Domain.deps.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\LojaApi.Domain\bin\Debug\net9.0\LojaApi.Domain.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\LojaApi.Domain\bin\Debug\net9.0\LojaApi.Domain.pdb
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\LojaApi.Domain\obj\Debug\net9.0\LojaApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\LojaApi.Domain\obj\Debug\net9.0\LojaApi.Domain.AssemblyInfoInputs.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\LojaApi.Domain\obj\Debug\net9.0\LojaApi.Domain.AssemblyInfo.cs
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\LojaApi.Domain\obj\Debug\net9.0\LojaApi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\LojaApi.Domain\obj\Debug\net9.0\LojaApi.Domain.sourcelink.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\LojaApi.Domain\obj\Debug\net9.0\LojaApi.Domain.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\LojaApi.Domain\obj\Debug\net9.0\refint\LojaApi.Domain.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\LojaApi.Domain\obj\Debug\net9.0\LojaApi.Domain.pdb
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\LojaApi.Domain\obj\Debug\net9.0\ref\LojaApi.Domain.dll

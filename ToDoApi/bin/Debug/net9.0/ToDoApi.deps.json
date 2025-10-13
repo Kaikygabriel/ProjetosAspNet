@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "ToDoApi/1.0.0": {
         "dependencies": {
+          "MediatorX.Core": "1.0.1",
           "Microsoft.AspNetCore.OpenApi": "9.0.9",
           "Microsoft.EntityFrameworkCore": "9.0.9",
           "Microsoft.EntityFrameworkCore.Design": "9.0.9",
@@ -23,6 +24,27 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "MediatorX.Core/1.0.1": {
+        "dependencies": {
+          "MediatorX.Core.Abstraction": "1.0.1",
+          "Microsoft.Extensions.DependencyInjection": "9.0.9",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.9"
+        },
+        "runtime": {
+          "lib/net9.0/MediatorX.Core.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
+        }
+      },
+      "MediatorX.Core.Abstraction/1.0.1": {
+        "runtime": {
+          "lib/net9.0/MediatorX.Core.Abstraction.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
           }
         }
       },
@@ -647,6 +669,20 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "MediatorX.Core/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pLJYDq5bEosr6+qBphZuh0QRzeVamPuVWMIXiEP7kievbDHydWnKmdTg3wGFASSC0QbSlLn6ydkqrQFWKxfoUQ==",
+      "path": "mediatorx.core/1.0.1",
+      "hashPath": "mediatorx.core.1.0.1.nupkg.sha512"
+    },
+    "MediatorX.Core.Abstraction/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RUMgCMUDrDwBl1xv9w1RTnc4cEm/r+/gHImNNYEmhiSyu8VNBDCVZ0cvs3xjzqt7O+nidmEJkJcpIIEK95d5nA==",
+      "path": "mediatorx.core.abstraction/1.0.1",
+      "hashPath": "mediatorx.core.abstraction.1.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.OpenApi/9.0.9": {
       "type": "package",

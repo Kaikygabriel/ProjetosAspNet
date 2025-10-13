@@ -13,9 +13,9 @@ public class UnitOfWork : IUnitOfWork
         this.context = context;
     }
 
-    public Task CommitAsync()
+    public async Task CommitAsync()
     {
-        throw new NotImplementedException();
+        await context.SaveChangesAsync();
     }
 
     public IRepositoryToDo RepositoryToDo

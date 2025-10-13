@@ -1,0 +1,9 @@
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\lojaApi.Api\obj\Debug\net9.0\lojaApi.Api.csproj.AssemblyReference.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\lojaApi.Api\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\lojaApi.Api\obj\Debug\net9.0\lojaApi.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\lojaApi.Api\obj\Debug\net9.0\lojaApi.Api.AssemblyInfoInputs.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\lojaApi.Api\obj\Debug\net9.0\lojaApi.Api.AssemblyInfo.cs
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\lojaApi.Api\obj\Debug\net9.0\lojaApi.Api.csproj.CoreCompileInputs.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\lojaApi.Api\obj\Debug\net9.0\lojaApi.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\lojaApi.Api\obj\Debug\net9.0\lojaApi.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\lojaApi\lojaApi.Api\obj\Debug\net9.0\lojaApi.Api.sourcelink.json

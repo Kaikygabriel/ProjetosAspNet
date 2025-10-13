@@ -15,6 +15,29 @@
           }
         }
       },
+      "MediatorX.Core/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "MediatorX.Core.Abstraction": "1.0.1",
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "lib/net9.0/MediatorX.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net9.0/MediatorX.Core.dll": {}
+        }
+      },
+      "MediatorX.Core.Abstraction/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/MediatorX.Core.Abstraction.dll": {}
+        },
+        "runtime": {
+          "lib/net9.0/MediatorX.Core.Abstraction.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/9.0.9": {
         "type": "package",
         "dependencies": {
@@ -1046,6 +1069,32 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "MediatorX.Core/1.0.1": {
+      "sha512": "pLJYDq5bEosr6+qBphZuh0QRzeVamPuVWMIXiEP7kievbDHydWnKmdTg3wGFASSC0QbSlLn6ydkqrQFWKxfoUQ==",
+      "type": "package",
+      "path": "mediatorx.core/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "MediatorX.Core.png",
+        "lib/net9.0/MediatorX.Core.dll",
+        "mediatorx.core.1.0.1.nupkg.sha512",
+        "mediatorx.core.nuspec"
+      ]
+    },
+    "MediatorX.Core.Abstraction/1.0.1": {
+      "sha512": "RUMgCMUDrDwBl1xv9w1RTnc4cEm/r+/gHImNNYEmhiSyu8VNBDCVZ0cvs3xjzqt7O+nidmEJkJcpIIEK95d5nA==",
+      "type": "package",
+      "path": "mediatorx.core.abstraction/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "MediatorX.Core.png",
+        "lib/net9.0/MediatorX.Core.Abstraction.dll",
+        "mediatorx.core.abstraction.1.0.1.nupkg.sha512",
+        "mediatorx.core.abstraction.nuspec"
       ]
     },
     "Microsoft.AspNetCore.OpenApi/9.0.9": {
@@ -3285,6 +3334,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "MediatorX.Core >= 1.0.1",
       "Microsoft.AspNetCore.OpenApi >= 9.0.9",
       "Microsoft.EntityFrameworkCore >= 9.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.9",
@@ -3343,6 +3393,10 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "MediatorX.Core": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[9.0.9, )"

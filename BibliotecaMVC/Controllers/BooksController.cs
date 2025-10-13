@@ -1,3 +1,4 @@
+using BibliotecaMVC.Services;
 using BibliotecaMVC.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,6 +16,13 @@ public class BooksController : Controller
     [HttpGet]
     public async Task<ActionResult> Index()
     {
+        bool isLoggedIn = Request.Cookies.ContainsKey("x-acess-token");
+        ViewBag.IsLoggedIn = isLoggedIn;
+        if (isLoggedIn)
+        {
+            var name = TokenService.GetNameFromToken(Request.Cookies["x-acess-token"]!.ToString());
+            ViewBag.UserName = name;
+        }
         return View(await service.GetAllAsync());
     }
      

@@ -30,7 +30,18 @@ public class AccountController : Controller
         if(!authentication)
             return RedirectToAction("Error", "Home");
         
-        return RedirectToAction("Index", "Home"); 
+        TokenViewModel token = await _authentication.AuthenticationLoginAsync(
+            new UserLoginViewModel(model.Name,model.Password));
+        
+        Response.Cookies.Append("x-acess-token",token.Token!,new CookieOptions()
+        {
+            Secure = true,
+            HttpOnly = true,
+            SameSite = SameSiteMode.Strict,
+            Expires = DateTimeOffset.UtcNow.AddDays(3)
+        });
+        
+        return Redirect("/");
     }
     [HttpGet("Login")]
     public ActionResult Login()
@@ -56,6 +67,13 @@ public class AccountController : Controller
             SameSite = SameSiteMode.Strict,
             Expires = DateTimeOffset.UtcNow.AddDays(3)
         });
+        return Redirect("/");
+    }
+
+    [HttpGet("Logout")]
+    public IActionResult Logout()
+    {
+        Response.Cookies.Delete("x-acess-token");
         return Redirect("/");
     }
 }

@@ -132,3 +132,5 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ToDoApi\obj\Debug\net9.0\refint\ToD
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ToDoApi\obj\Debug\net9.0\ToDoApi.pdb
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ToDoApi\obj\Debug\net9.0\ToDoApi.genruntimeconfig.cache
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ToDoApi\obj\Debug\net9.0\ref\ToDoApi.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ToDoApi\bin\Debug\net9.0\MediatorX.Core.dll
+C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\ToDoApi\bin\Debug\net9.0\MediatorX.Core.Abstraction.dll

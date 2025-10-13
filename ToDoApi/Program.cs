@@ -1,13 +1,18 @@
+using System.Reflection;
+using MediatorX.Core.Abstraction.Interfaces;
+using MediatorX.Core.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using ToDoApi.Data;
 using ToDoApi.Entities;
 using ToDoApi.Repository;
 using ToDoApi.Repository.Interface;
+using ToDoApi.Services.ToDos.Commands.Create;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var connection = builder.Configuration.GetConnectionString("DefaulsConnection");
 
+builder.Services.AddMediator(typeof(Program).Assembly);
 builder.Services.AddScoped<IRepositoryToDo, RepositoryTodo>();
 builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -17,14 +22,14 @@ var app = builder.Build();
 
 app.MapGet("/", () => "Ola Mundo!");
 
-app.MapGet("/Todos", async (IUnitOfWork unit) 
+app.MapGet("/ToDo", async (IUnitOfWork unit) 
     => await unit.RepositoryToDo.GetAll());
 
-app.MapPost("/ToDo", async (ToDo todo, IUnitOfWork unit) =>
+app.MapPost("/ToDo", async (ToDo todo, IMediator Mediator) =>
 {
-    unit.RepositoryToDo.Create(todo);
-    await unit.CommitAsync();
-    return Results.Created();
+    CreateToDoRequest todoCreate = new() { ToDo = todo };
+    var response = await Mediator.SendAsync(todoCreate);
+    return (response) ? Results.Created() : Results.NotFound();
 });
 
 app.Run(); 

@@ -1,5 +1,6 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 
 namespace BibliotecaMVC.Services;
@@ -24,4 +25,5 @@ public static class TokenService
             throw new Exception(" token is invalid");
         return claims.Identity?.Name!;
     }
+
 }
