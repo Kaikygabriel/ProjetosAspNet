@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LojaApi.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38346e7e034e00e4a2b3c084793e2b69b21f4cb8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd15ea01f390348b3ab524305eaa3ea67aebf1ed")]
 [assembly: System.Reflection.AssemblyProductAttribute("LojaApi.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LojaApi.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

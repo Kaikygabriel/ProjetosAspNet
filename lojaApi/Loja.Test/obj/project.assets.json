@@ -2209,11 +2209,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\lojaApi\\Loja.Test\\Loja.Test.csproj",
+      "projectUniqueName": "C:\\Users\\kaiky\\Downloads\\kaka\\C#\\ProjetosAspNet\\lojaApi\\Loja.Test\\Loja.Test.csproj",
       "projectName": "Loja.Test",
-      "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\lojaApi\\Loja.Test\\Loja.Test.csproj",
+      "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\C#\\ProjetosAspNet\\lojaApi\\Loja.Test\\Loja.Test.csproj",
       "packagesPath": "C:\\Users\\kaiky\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\lojaApi\\Loja.Test\\obj\\",
+      "outputPath": "C:\\Users\\kaiky\\Downloads\\kaka\\C#\\ProjetosAspNet\\lojaApi\\Loja.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2234,8 +2234,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\lojaApi\\lojaApi.Api\\lojaApi.Api.csproj": {
-              "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\lojaApi\\lojaApi.Api\\lojaApi.Api.csproj"
+            "C:\\Users\\kaiky\\Downloads\\kaka\\C#\\ProjetosAspNet\\lojaApi\\lojaApi.Api\\lojaApi.Api.csproj": {
+              "projectPath": "C:\\Users\\kaiky\\Downloads\\kaka\\C#\\ProjetosAspNet\\lojaApi\\lojaApi.Api\\lojaApi.Api.csproj"
             }
           }
         }

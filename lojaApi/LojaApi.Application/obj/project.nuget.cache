@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ujc/QFtSwnE=",
+  "dgSpecHash": "dLsY0b5iXqM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\lojaApi\\LojaApi.Application\\LojaApi.Application.csproj",
+  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\C#\\ProjetosAspNet\\lojaApi\\LojaApi.Application\\LojaApi.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kaiky\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\mediatorx.core\\1.0.1\\mediatorx.core.1.0.1.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fqfUG4k58No=",
+  "dgSpecHash": "Dgazjih/4rI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\lojaApi\\lojaApi.Api\\lojaApi.Api.csproj",
+  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\C#\\ProjetosAspNet\\lojaApi\\lojaApi.Api\\lojaApi.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kaiky\\.nuget\\packages\\mediatorx.core\\1.0.1\\mediatorx.core.1.0.1.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\mediatorx.core.abstraction\\1.0.1\\mediatorx.core.abstraction.1.0.1.nupkg.sha512",
