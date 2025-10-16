@@ -42,3 +42,7 @@ C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\TodoApi2\TodoApi2.Api\obj\Debug\
 C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\TodoApi2\TodoApi2.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\TodoApi2\TodoApi2.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\TodoApi2\TodoApi2.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\TodoApi2\TodoApi2.Api\bin\Debug\net9.0\MediatorX.Core.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\TodoApi2\TodoApi2.Api\bin\Debug\net9.0\MediatorX.Core.Abstraction.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\TodoApi2\TodoApi2.Api\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\TodoApi2\TodoApi2.Api\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

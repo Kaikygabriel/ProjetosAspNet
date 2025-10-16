@@ -1,10 +1,17 @@
 using System.Data.SqlClient;
 using Dapper;
+using MediatorX.Core.Abstraction.Interfaces;
+using MediatorX.Core.DependencyInjection;
+using TodoApi2.Api.Data;
 using TodoApi2.Api.Entity;
 using TodoApi2.Api.Extesions;
+using TodoApi2.Api.Features.ToDo;
+using TodoApi2.Api.Features.ToDo.Command;
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.AddPersistence();
+builder.Services.AddMediator(typeof(Program).Assembly);
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
 builder.Services.AddEndpointsApiExplorer();
@@ -17,12 +24,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.MapGet("/teste", async () =>
-{
-    using var connection = new SqlConnection(connectionString);
-    var query = await connection.QueryAsync<Tarefa>("select * from [Tarefas]");
-    return query is IEnumerable<Tarefa> ? Results.Ok(query) : Results.NotFound();
-});
+app.MapTarefasEndPoint();
 
 app.UseHttpsRedirection();
 

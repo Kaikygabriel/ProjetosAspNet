@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "XR32RT6oNQ8=",
+  "dgSpecHash": "9rWo2hsnyww=",
   "success": true,
   "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\C#\\ProjetosAspNet\\TodoApi2\\TodoApi2.Api\\TodoApi2.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kaiky\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\mediatorx.core\\1.0.1\\mediatorx.core.1.0.1.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\mediatorx.core.abstraction\\1.0.1\\mediatorx.core.abstraction.1.0.1.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.9\\microsoft.aspnetcore.openapi.9.0.9.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.extensions.apidescription.server\\9.0.0\\microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.8\\microsoft.extensions.dependencyinjection.9.0.8.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.8\\microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.openapi\\1.6.25\\microsoft.openapi.1.6.25.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -16,7 +20,11 @@
     "C:\\Users\\kaiky\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\9.0.6\\swashbuckle.aspnetcore.swagger.9.0.6.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\9.0.6\\swashbuckle.aspnetcore.swaggergen.9.0.6.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\9.0.6\\swashbuckle.aspnetcore.swaggerui.9.0.6.nupkg.sha512",
-    "C:\\Users\\kaiky\\.nuget\\packages\\system.data.sqlclient\\4.9.0\\system.data.sqlclient.4.9.0.nupkg.sha512"
+    "C:\\Users\\kaiky\\.nuget\\packages\\system.data.sqlclient\\4.9.0\\system.data.sqlclient.4.9.0.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.9\\microsoft.netcore.app.ref.9.0.9.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.9\\microsoft.windowsdesktop.app.ref.9.0.9.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.9\\microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.9\\microsoft.netcore.app.host.win-x64.9.0.9.nupkg.sha512"
   ],
   "logs": []
 }
