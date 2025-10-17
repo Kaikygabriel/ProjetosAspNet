@@ -9,8 +9,7 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         if (!Request.Cookies.ContainsKey("Token-Auth"))
-            ViewBag.Login = false;
-        ViewBag.Login = true;
+            return RedirectToAction("Register", "Provider");
         return View();
     }
 

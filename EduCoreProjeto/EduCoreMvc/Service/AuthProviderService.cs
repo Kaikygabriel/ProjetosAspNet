@@ -35,7 +35,7 @@ public class AuthProviderService
     {
         var client = _client.CreateClient("ApiEduCore");
 
-        var userJson = JsonSerializer.Serialize(loginProviderDTo, _options);
+        var userJson = JsonSerializer.Serialize(loginProviderDTo);
         var content = new StringContent(userJson, Encoding.UTF8, "application/json");
 
         using var result = await client.PostAsync($"{ApiEndPoint}/Login", content);
@@ -48,4 +48,6 @@ public class AuthProviderService
 
         return token;
     }
+    
+    
 }

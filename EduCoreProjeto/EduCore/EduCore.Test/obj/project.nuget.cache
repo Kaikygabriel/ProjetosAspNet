@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "winaAMqqso0=",
+  "dgSpecHash": "ZpjtdyX29B4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\EduCoreProjeto\\EduCore\\EduCore.Test\\EduCore.Test.csproj",
+  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\C#\\ProjetosAspNet\\EduCoreProjeto\\EduCore\\EduCore.Test\\EduCore.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kaiky\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",

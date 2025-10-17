@@ -8,12 +8,13 @@ namespace EduCoreMvc.Controllers;
 
 public class ProviderController : Controller
 {
-
+    private readonly IConfiguration _configuration;
     private readonly AuthProviderService _serviceProvider;
 
-    public ProviderController(AuthProviderService serviceProvider)
+    public ProviderController(AuthProviderService serviceProvider, IConfiguration configuration)
     {
         _serviceProvider = serviceProvider;
+        _configuration = configuration;
     }
 
     [HttpGet]
@@ -36,7 +37,12 @@ public class ProviderController : Controller
         if (!result)
             return RedirectToAction("Error", "Home");
 
-        Login(new LoginProviderDto() { Name = loginProviderDTo.Name, Password = loginProviderDTo.Password });
+        Login(new LoginProviderDto()
+        {
+            Name = loginProviderDTo.Name,
+            Password = loginProviderDTo.Password
+        });
+        
         return RedirectToAction("Index", "Home");
     }
     
@@ -58,8 +64,50 @@ public class ProviderController : Controller
             return View(loginProviderDTo);
         
         var token = await _serviceProvider.LoginUser(loginProviderDTo);
-        Response.Cookies.Append("Token-Auth",token.Token);
+        
+        if(token is null)
+            return View(loginProviderDTo);
+
+        Response.Cookies.Append("Token-Auth",token.token,new CookieOptions()
+        {
+            Secure = true,
+            SameSite = SameSiteMode.Strict,
+            HttpOnly = true,
+            Expires = DateTime.UtcNow.AddDays(3)
+        });
+        var claims = TokenService.GetClaimsFromToken(token.token,_configuration);
+        Response.Cookies.Append("UserName",claims.Identity!.Name!,new CookieOptions()
+        {
+            Secure = true,
+            SameSite = SameSiteMode.Strict,
+            HttpOnly = true,
+            Expires = DateTime.UtcNow.AddDays(3)
+        });
         
         return RedirectToAction("Index", "Home");
+    }
+    
+    public IActionResult Logout()
+    {
+        if(!Request.Cookies.ContainsKey("Token-Auth"))
+            Response.Cookies.Delete("UserName");    
+        if(!Request.Cookies.ContainsKey("UserName"))
+            Response.Cookies.Delete("Token-Auth");
+        // Remove os cookies
+        Response.Cookies.Delete("Token-Auth");
+        Response.Cookies.Delete("UserName");
+        
+        return RedirectToAction("Index", "Home");
+    }
+
+    public IActionResult Index()
+    {
+        if(!Request.Cookies.ContainsKey("Token-Auth") || !Request.Cookies.ContainsKey("UserName"))
+            return RedirectToAction("Index", "Home");
+        var token = Request.Cookies["Token-Auth"];
+        var claims = TokenService.GetClaimsFromToken(token!,_configuration);
+        var provider = new ProviderView() { Name = claims.Identity!.Name! };
+
+        return View(provider);
     }
 }

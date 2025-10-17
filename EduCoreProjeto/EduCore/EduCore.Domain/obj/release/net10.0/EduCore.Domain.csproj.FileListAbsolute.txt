@@ -11,3 +11,16 @@ C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Doma
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Domain\obj\release\net10.0\refint\EduCore.Domain.dll
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Domain\obj\release\net10.0\EduCore.Domain.pdb
 C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Domain\obj\release\net10.0\ref\EduCore.Domain.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Domain\bin\release\net10.0\EduCore.Domain.deps.json
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Domain\bin\release\net10.0\EduCore.Domain.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Domain\bin\release\net10.0\EduCore.Domain.pdb
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Domain\obj\release\net10.0\EduCore.Domain.csproj.AssemblyReference.cache
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Domain\obj\release\net10.0\EduCore.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Domain\obj\release\net10.0\EduCore.Domain.AssemblyInfoInputs.cache
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Domain\obj\release\net10.0\EduCore.Domain.AssemblyInfo.cs
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Domain\obj\release\net10.0\EduCore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Domain\obj\release\net10.0\EduCore.Domain.sourcelink.json
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Domain\obj\release\net10.0\EduCore.Domain.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Domain\obj\release\net10.0\refint\EduCore.Domain.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Domain\obj\release\net10.0\EduCore.Domain.pdb
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Domain\obj\release\net10.0\ref\EduCore.Domain.dll

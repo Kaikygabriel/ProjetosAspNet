@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pqOTwxt5szg=",
+  "dgSpecHash": "jH7hcfyAS2s=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\EduCoreProjeto\\EduCore\\EduCore.Application\\EduCore.Application.csproj",
+  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\C#\\ProjetosAspNet\\EduCoreProjeto\\EduCore\\EduCore.Application\\EduCore.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kaiky\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\mediatorx.core\\1.0.1\\mediatorx.core.1.0.1.nupkg.sha512",

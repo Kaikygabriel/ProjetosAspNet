@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VVOCET9CQuE=",
+  "dgSpecHash": "d2u/2aQWZrI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\ProjetosAspNet\\EduCoreProjeto\\EduCore\\EduCore.Api\\EduCore.Api.csproj",
+  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\C#\\ProjetosAspNet\\EduCoreProjeto\\EduCore\\EduCore.Api\\EduCore.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kaiky\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

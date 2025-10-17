@@ -1,4 +1,5 @@
 using System.Reflection;
+using EduCore.Api.Extesion;
 using EduCore.CrossCuting.ID;
 using MediatorX.Core.DependencyInjection;
 
@@ -17,6 +18,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseExceptionGlobal();
 }
 
 app.UseHttpsRedirection();

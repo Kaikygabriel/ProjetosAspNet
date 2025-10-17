@@ -1,16 +1,7 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=19ce28ff_002D41b0_002D4075_002D896b_002D4893773468a1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;EduCore.Test&amp;gt; #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Test" Presentation="&amp;lt;EduCore.Test&amp;gt;" /&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=36416009_002Da80b_002D4e7d_002Da708_002D9be09940dc17/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;EduCore.Test&amp;gt; #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Test" Presentation="&amp;lt;EduCore.Test&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=27f6aa1b_002D5d38_002D4ea6_002Db08b_002Da04731364028/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;EduCore.Test&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Test" Presentation="&amp;lt;EduCore.Test&amp;gt;" /&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9fa7a4e6_002Da19e_002D4b52_002Da073_002Df3f1dfdc3b18/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Solution /&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a7ff3a2f_002D9cd3_002D42b2_002D9268_002Ddad717f2982b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;EduCore.Test&amp;gt; #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Test" Presentation="&amp;lt;EduCore.Test&amp;gt;" /&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bde377d9_002Deae5_002D44d5_002Dac5c_002D812ca93e8ae6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;EduCore.Test&amp;gt; #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="C:\Users\kaiky\Downloads\kaka\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Test" Presentation="&amp;lt;EduCore.Test&amp;gt;" /&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cd6f1654_002De230_002D4e7c_002D861a_002Da2a7066a6071/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;EduCore.Test&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Test" Presentation="&amp;lt;EduCore.Test&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

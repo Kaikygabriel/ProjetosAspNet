@@ -1,0 +1,352 @@
+warn: Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository[50]
+      Using an in-memory repository. Keys will not be persisted to storage.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[59]
+      Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {1fbd82f6-8117-46f5-a1ac-8728fe92921b} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Api\bin\release\net10.0\publish
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (104ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 120), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET AUTOCOMMIT = 1;
+      UPDATE `Users` SET `ExpiredRefreshToken` = @p0, `Name` = @p1, `PasswordHash` = @p2, `RefreshToken` = @p3, `_roles` = @p4
+      WHERE `Id` = @p5;
+      SELECT ROW_COUNT();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 120), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET AUTOCOMMIT = 1;
+      UPDATE `Users` SET `ExpiredRefreshToken` = @p0, `Name` = @p1, `PasswordHash` = @p2, `RefreshToken` = @p3, `_roles` = @p4
+      WHERE `Id` = @p5;
+      SELECT ROW_COUNT();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 120), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET AUTOCOMMIT = 1;
+      UPDATE `Users` SET `ExpiredRefreshToken` = @p0, `Name` = @p1, `PasswordHash` = @p2, `RefreshToken` = @p3, `_roles` = @p4
+      WHERE `Id` = @p5;
+      SELECT ROW_COUNT();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 120), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET AUTOCOMMIT = 1;
+      UPDATE `Users` SET `ExpiredRefreshToken` = @p0, `Name` = @p1, `PasswordHash` = @p2, `RefreshToken` = @p3, `_roles` = @p4
+      WHERE `Id` = @p5;
+      SELECT ROW_COUNT();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 120), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET AUTOCOMMIT = 1;
+      UPDATE `Users` SET `ExpiredRefreshToken` = @p0, `Name` = @p1, `PasswordHash` = @p2, `RefreshToken` = @p3, `_roles` = @p4
+      WHERE `Id` = @p5;
+      SELECT ROW_COUNT();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 120), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET AUTOCOMMIT = 1;
+      UPDATE `Users` SET `ExpiredRefreshToken` = @p0, `Name` = @p1, `PasswordHash` = @p2, `RefreshToken` = @p3, `_roles` = @p4
+      WHERE `Id` = @p5;
+      SELECT ROW_COUNT();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+fail: Microsoft.EntityFrameworkCore.Query[10100]
+      An exception occurred while iterating over the results of a query for context type 'EduCore.Infraestruct.Context.AppDbContext'.
+      System.InvalidOperationException: The empty string is not valid JSON.
+         at lambda_method21(Closure, String)
+         at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+      System.InvalidOperationException: The empty string is not valid JSON.
+         at lambda_method21(Closure, String)
+         at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+fail: Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer[2]
+      Connection ID "18014398515387564049", Request ID "80000012-0001-fa00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+      System.InvalidOperationException: The empty string is not valid JSON.
+         at lambda_method21(Closure, String)
+         at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+         at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+         at EduCore.Infraestruct.Repositorys.Repository`1.GetByPredicateAsync(Expression`1 predicate) in C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Infraestruct\Repositorys\Repository.cs:line 24
+         at EduCore.Api.Controllers.ProvidersController.Login(LoginProviderDto model) in C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Api\Controllers\ProvidersController.cs:line 66
+         at lambda_method4(Closure, Object)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+fail: Microsoft.EntityFrameworkCore.Query[10100]
+      An exception occurred while iterating over the results of a query for context type 'EduCore.Infraestruct.Context.AppDbContext'.
+      System.InvalidOperationException: The empty string is not valid JSON.
+         at lambda_method21(Closure, String)
+         at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+      System.InvalidOperationException: The empty string is not valid JSON.
+         at lambda_method21(Closure, String)
+         at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+fail: Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer[2]
+      Connection ID "18014398515387564049", Request ID "80000013-0001-fa00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+      System.InvalidOperationException: The empty string is not valid JSON.
+         at lambda_method21(Closure, String)
+         at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+         at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+         at EduCore.Infraestruct.Repositorys.Repository`1.GetByPredicateAsync(Expression`1 predicate) in C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Infraestruct\Repositorys\Repository.cs:line 24
+         at EduCore.Api.Controllers.ProvidersController.Login(LoginProviderDto model) in C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Api\Controllers\ProvidersController.cs:line 66
+         at lambda_method4(Closure, Object)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+fail: Microsoft.EntityFrameworkCore.Query[10100]
+      An exception occurred while iterating over the results of a query for context type 'EduCore.Infraestruct.Context.AppDbContext'.
+      System.InvalidOperationException: The empty string is not valid JSON.
+         at lambda_method21(Closure, String)
+         at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+      System.InvalidOperationException: The empty string is not valid JSON.
+         at lambda_method21(Closure, String)
+         at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+fail: Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer[2]
+      Connection ID "18014398515387564049", Request ID "80000014-0001-fa00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+      System.InvalidOperationException: The empty string is not valid JSON.
+         at lambda_method21(Closure, String)
+         at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+         at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+         at EduCore.Infraestruct.Repositorys.Repository`1.GetByPredicateAsync(Expression`1 predicate) in C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Infraestruct\Repositorys\Repository.cs:line 24
+         at EduCore.Api.Controllers.ProvidersController.Login(LoginProviderDto model) in C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Api\Controllers\ProvidersController.cs:line 66
+         at lambda_method4(Closure, Object)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+fail: Microsoft.EntityFrameworkCore.Query[10100]
+      An exception occurred while iterating over the results of a query for context type 'EduCore.Infraestruct.Context.AppDbContext'.
+      System.InvalidOperationException: The empty string is not valid JSON.
+         at lambda_method21(Closure, String)
+         at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+      System.InvalidOperationException: The empty string is not valid JSON.
+         at lambda_method21(Closure, String)
+         at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+fail: Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer[2]
+      Connection ID "18014398515387564049", Request ID "80000015-0001-fa00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+      System.InvalidOperationException: The empty string is not valid JSON.
+         at lambda_method21(Closure, String)
+         at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+         at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+         at EduCore.Infraestruct.Repositorys.Repository`1.GetByPredicateAsync(Expression`1 predicate) in C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Infraestruct\Repositorys\Repository.cs:line 24
+         at EduCore.Api.Controllers.ProvidersController.Login(LoginProviderDto model) in C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Api\Controllers\ProvidersController.cs:line 66
+         at lambda_method4(Closure, Object)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+fail: Microsoft.EntityFrameworkCore.Query[10100]
+      An exception occurred while iterating over the results of a query for context type 'EduCore.Infraestruct.Context.AppDbContext'.
+      System.InvalidOperationException: The empty string is not valid JSON.
+         at lambda_method21(Closure, String)
+         at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+      System.InvalidOperationException: The empty string is not valid JSON.
+         at lambda_method21(Closure, String)
+         at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+fail: Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer[2]
+      Connection ID "18014398515387564049", Request ID "80000016-0001-fa00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+      System.InvalidOperationException: The empty string is not valid JSON.
+         at lambda_method21(Closure, String)
+         at lambda_method20(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+         at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+         at EduCore.Infraestruct.Repositorys.Repository`1.GetByPredicateAsync(Expression`1 predicate) in C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Infraestruct\Repositorys\Repository.cs:line 24
+         at EduCore.Api.Controllers.ProvidersController.Login(LoginProviderDto model) in C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Api\Controllers\ProvidersController.cs:line 66
+         at lambda_method4(Closure, Object)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime), @p2='?' (Size = 120), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO `Email` (`Adress`)
+      VALUES (@p0);
+      SELECT `Id`
+      FROM `Email`
+      WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+      
+      INSERT INTO `Users` (`ExpiredRefreshToken`, `Name`, `PasswordHash`, `RefreshToken`, `_roles`)
+      VALUES (@p1, @p2, @p3, @p4, @p5);
+      SELECT `Id`
+      FROM `Users`
+      WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO `Providers` (`EmailId`, `UserId`)
+      VALUES (@p6, @p7);
+      SELECT `Id`
+      FROM `Providers`
+      WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 120), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET AUTOCOMMIT = 1;
+      UPDATE `Users` SET `ExpiredRefreshToken` = @p0, `Name` = @p1, `PasswordHash` = @p2, `RefreshToken` = @p3, `_roles` = @p4
+      WHERE `Id` = @p5;
+      SELECT ROW_COUNT();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 120), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET AUTOCOMMIT = 1;
+      UPDATE `Users` SET `ExpiredRefreshToken` = @p0, `Name` = @p1, `PasswordHash` = @p2, `RefreshToken` = @p3, `_roles` = @p4
+      WHERE `Id` = @p5;
+      SELECT ROW_COUNT();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 120), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET AUTOCOMMIT = 1;
+      UPDATE `Users` SET `ExpiredRefreshToken` = @p0, `Name` = @p1, `PasswordHash` = @p2, `RefreshToken` = @p3, `_roles` = @p4
+      WHERE `Id` = @p5;
+      SELECT ROW_COUNT();
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
