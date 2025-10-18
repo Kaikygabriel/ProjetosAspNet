@@ -1,6 +1,8 @@
+using ProductsApi.Domain.BackOffice.Interfaces;
+
 namespace ProductsApi.Domain.BackOffice.Entitys;
 
-public class Entity
+public abstract class Entity 
 {
-    
+    public int Id { get;protected set; }
 }

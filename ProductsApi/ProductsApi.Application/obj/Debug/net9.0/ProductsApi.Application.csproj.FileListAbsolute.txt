@@ -1,0 +1,16 @@
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Application\bin\Debug\net9.0\ProductsApi.Application.deps.json
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Application\bin\Debug\net9.0\ProductsApi.Application.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Application\bin\Debug\net9.0\ProductsApi.Application.pdb
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Application\bin\Debug\net9.0\ProductsApi.Domain.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Application\bin\Debug\net9.0\ProductsApi.Domain.pdb
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Application\obj\Debug\net9.0\ProductsApi.Application.csproj.AssemblyReference.cache
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Application\obj\Debug\net9.0\ProductsApi.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Application\obj\Debug\net9.0\ProductsApi.Application.AssemblyInfoInputs.cache
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Application\obj\Debug\net9.0\ProductsApi.Application.AssemblyInfo.cs
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Application\obj\Debug\net9.0\ProductsApi.Application.csproj.CoreCompileInputs.cache
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Application\obj\Debug\net9.0\ProductsApi.Application.sourcelink.json
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Application\obj\Debug\net9.0\Products.5150C8AD.Up2Date
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Application\obj\Debug\net9.0\ProductsApi.Application.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Application\obj\Debug\net9.0\refint\ProductsApi.Application.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Application\obj\Debug\net9.0\ProductsApi.Application.pdb
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Application\obj\Debug\net9.0\ref\ProductsApi.Application.dll

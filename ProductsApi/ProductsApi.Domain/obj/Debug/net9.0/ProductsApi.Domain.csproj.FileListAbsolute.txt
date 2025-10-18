@@ -1,0 +1,12 @@
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\bin\Debug\net9.0\ProductsApi.Domain.deps.json
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\bin\Debug\net9.0\ProductsApi.Domain.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\bin\Debug\net9.0\ProductsApi.Domain.pdb
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\obj\Debug\net9.0\ProductsApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\obj\Debug\net9.0\ProductsApi.Domain.AssemblyInfoInputs.cache
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\obj\Debug\net9.0\ProductsApi.Domain.AssemblyInfo.cs
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\obj\Debug\net9.0\ProductsApi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\obj\Debug\net9.0\ProductsApi.Domain.sourcelink.json
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\obj\Debug\net9.0\ProductsApi.Domain.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\obj\Debug\net9.0\refint\ProductsApi.Domain.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\obj\Debug\net9.0\ProductsApi.Domain.pdb
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\obj\Debug\net9.0\ref\ProductsApi.Domain.dll
