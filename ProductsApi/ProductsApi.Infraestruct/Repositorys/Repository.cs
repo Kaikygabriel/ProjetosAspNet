@@ -2,6 +2,7 @@ using System.Data;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using ProductsApi.Domain.BackOffice.Interfaces;
+using ProductsApi.Domain.BackOffice.ObjectValue;
 using ProductsApi.Infraestruct.Data.Context;
 
 namespace ProductsApi.Infraestruct.Repositorys;
@@ -16,9 +17,12 @@ public class Repository<T> : IRepository<T>
         _context = context;
     }
 
-    public async Task<IEnumerable<T>> GetAll()
+    public async Task<IEnumerable<T>> GetAll(QueryStringParameters parameters)
     {
-        return await _context.Set<T>().AsNoTracking().ToListAsync();
+        return await _context.Set<T>().AsNoTracking()
+            .Skip((parameters.PageNumber -1)*parameters.PageSize)
+            .Take(parameters.PageSize)
+            .ToListAsync();
     }
 
     public async Task<T?> GetByPredicate(Expression<Func<T, bool>> predicate)
@@ -26,7 +30,7 @@ public class Repository<T> : IRepository<T>
         return await _context.Set<T>().AsNoTracking().FirstOrDefaultAsync(predicate);
     }
 
-    public void Create(T entity)
+    public virtual  void Create(T entity)
     {
         if (entity is null)
             throw new NoNullAllowedException();

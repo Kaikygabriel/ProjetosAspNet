@@ -10,3 +10,4 @@ C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\o
 C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\obj\Debug\net9.0\refint\ProductsApi.Domain.dll
 C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\obj\Debug\net9.0\ProductsApi.Domain.pdb
 C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\obj\Debug\net9.0\ref\ProductsApi.Domain.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Domain\obj\Debug\net9.0\ProductsApi.Domain.csproj.AssemblyReference.cache

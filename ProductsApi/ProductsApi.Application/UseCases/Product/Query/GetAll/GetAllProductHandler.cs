@@ -12,6 +12,6 @@ public class GetAllProductHandler :
     
     public async Task<IEnumerable<Domain.BackOffice.Entitys.Product>?> HandleAsync
         (GetAllProductsQuery request, CancellationToken cancellationToken = default)
-        => await UnitOfWork.RepositoryProduct.GetAll();
+        => await UnitOfWork.RepositoryProduct.GetAll(request.Parameters);
     
 }

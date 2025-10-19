@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2ndeg+e7Ibo=",
+  "dgSpecHash": "ynV5H6ozorY=",
   "success": true,
   "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\C#\\ProjetosAspNet\\ProductsApi\\ProductsApi.Infraestruct\\ProductsApi.Infraestruct.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kaiky\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\mediatorx.core\\1.0.1\\mediatorx.core.1.0.1.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\mediatorx.core.abstraction\\1.0.1\\mediatorx.core.abstraction.1.0.1.nupkg.sha512",

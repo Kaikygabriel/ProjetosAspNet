@@ -8,4 +8,11 @@ public class RepositoryUser : Repository<Domain.BackOffice.Entitys.User>,IReposi
     public RepositoryUser(AppDbContext context) : base(context)
     {
     }
+
+    public override void Create(Domain.BackOffice.Entitys.User entity)
+    {
+        var passwordHash = BCrypt.Net.BCrypt.HashPassword(entity.Password);
+        entity.Password = passwordHash;
+        base.Create(entity);
+    }
 }

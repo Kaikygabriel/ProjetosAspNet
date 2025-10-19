@@ -5,12 +5,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 using ProductsApi.Application.Services.Interfaces;
+using ProductsApi.Domain.BackOffice.Entitys;
+using JwtRegisteredClaimNames = System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames;
 
 namespace ProductsApi.Application.Services;
 
 public class TokenService : IServiceToken
 {
-    public string GerenateAcessToken(IEnumerable<Claim> claims, IConfiguration configuration)
+    public string GenerateAccessToken(IEnumerable<Claim> claims, IConfiguration configuration)
     {
         var key = Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"]!);
         var creadentials = new SigningCredentials(
@@ -26,5 +28,18 @@ public class TokenService : IServiceToken
         var tokenHandler = new JwtSecurityTokenHandler();
         var token = tokenHandler.CreateToken(tokenDescriptor);
         return tokenHandler.WriteToken(token);
+    }
+
+    public IEnumerable<Claim> GetClaimsFromUser(User user)
+    {
+        var claims = new List<Claim>()
+        {
+            new Claim(ClaimTypes.Name, user.Name),
+            new Claim(ClaimTypes.Email, user.Email.Address),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+        };
+        foreach (var role in user.GetRoles())
+            claims.Add(new Claim(ClaimTypes.Role,role));
+        return claims;
     }
 }

@@ -152,3 +152,4 @@ C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Test\obj
 C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Test\obj\Debug\net10.0\ProductsApi.Test.pdb
 C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Test\obj\Debug\net10.0\ProductsApi.Test.genruntimeconfig.cache
 C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Test\obj\Debug\net10.0\ref\ProductsApi.Test.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Test\bin\Debug\net10.0\BCrypt.Net-Next.dll

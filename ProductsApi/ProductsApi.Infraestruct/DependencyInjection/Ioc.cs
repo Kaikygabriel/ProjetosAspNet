@@ -1,4 +1,5 @@
 using System.Text;
+using MediatorX.Core.DependencyInjection;
 using ProductsApi.Infraestruct.Repositorys;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
@@ -6,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using ProductsApi.Application.Services;
 using ProductsApi.Application.Services.Interfaces;
+using ProductsApi.Application.UseCases.User.Command.Create;
 using ProductsApi.Domain.BackOffice.Interfaces;
 using ProductsApi.Domain.BackOffice.Interfaces.Products;
 using ProductsApi.Domain.BackOffice.Interfaces.Users;
@@ -18,6 +20,7 @@ public static class Ioc
 {
     public static IServiceCollection AddDependencyInjection(this IServiceCollection services,IConfiguration config)
     {
+        services.AddMediator(typeof(CreateUserCommand).Assembly);
         services.AddAuthentication(x =>
         {
             x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

@@ -34,7 +34,7 @@ public class FakeRepositoryProduct : IRepositoryProduct
             Id = 5
         },
     };
-    public Task<IEnumerable<Product>> GetAll()
+    public Task<IEnumerable<Product>> GetAll(QueryStringParameters parameters)
     {
         return Task.FromResult<IEnumerable<Product>>(_products);
     }

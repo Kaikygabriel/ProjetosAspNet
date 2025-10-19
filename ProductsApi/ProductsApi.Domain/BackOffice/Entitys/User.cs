@@ -31,4 +31,7 @@ public class User : Entity , IAggregateRoot
 
     public List<string> GetRoles()
         => Roles;
+
+    public bool CheckPassword(string passwordVerific)
+        => BCrypt.Net.BCrypt.Verify(passwordVerific, this.Password);
 }

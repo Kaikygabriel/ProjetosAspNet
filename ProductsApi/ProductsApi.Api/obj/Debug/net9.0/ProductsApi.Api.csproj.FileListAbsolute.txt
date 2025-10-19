@@ -173,3 +173,4 @@ C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Api\bin\
 C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Api\bin\Debug\net9.0\ProductsApi.Infraestruct.pdb
 C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Api\bin\Debug\net9.0\ProductsApi.Application.pdb
 C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Api\bin\Debug\net9.0\ProductsApi.Domain.pdb
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\ProductsApi\ProductsApi.Api\bin\Debug\net9.0\BCrypt.Net-Next.dll
