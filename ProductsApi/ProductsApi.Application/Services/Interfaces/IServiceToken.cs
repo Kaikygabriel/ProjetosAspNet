@@ -6,6 +6,4 @@ namespace ProductsApi.Application.Services.Interfaces;
 public interface IServiceToken
 {
     string GerenateAcessToken(IEnumerable<Claim> claims, IConfiguration configuration);
-    string GerenateRefreshToken();
-    ClaimsPrincipal GetClaimsFromExpiredToken(string token, IConfiguration configuration);
 }

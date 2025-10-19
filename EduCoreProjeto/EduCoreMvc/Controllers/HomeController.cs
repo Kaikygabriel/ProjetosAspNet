@@ -8,9 +8,9 @@ public class HomeController : Controller
 {
     public IActionResult Index()
     {
-        if (!Request.Cookies.ContainsKey("Token-Auth"))
+        if (Request.Cookies["Token-Auth"] is null)
             return RedirectToAction("Register", "Provider");
-        return View();
+        return RedirectToAction("Index", "Courses");
     }
 
     public IActionResult Privacy()

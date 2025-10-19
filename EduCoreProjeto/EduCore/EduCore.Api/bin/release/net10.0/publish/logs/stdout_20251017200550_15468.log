@@ -1,0 +1,157 @@
+warn: Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository[50]
+      Using an in-memory repository. Keys will not be persisted to storage.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[59]
+      Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {acfa4009-0b9e-47e9-bf21-1637d835c08b} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\EduCoreProjeto\EduCore\EduCore.Api\bin\release\net10.0\publish
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT `c`.`Id`, `c`.`Description`, `c`.`Price`, `c`.`ProviderId`, `c`.`Title`
+      FROM `Courses` AS `c`
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT `c`.`Id`, `c`.`Description`, `c`.`Price`, `c`.`ProviderId`, `c`.`Title`
+      FROM `Courses` AS `c`
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (40ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (68ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 120), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET AUTOCOMMIT = 1;
+      UPDATE `Users` SET `ExpiredRefreshToken` = @p0, `Name` = @p1, `PasswordHash` = @p2, `RefreshToken` = @p3, `_roles` = @p4
+      WHERE `Id` = @p5;
+      SELECT ROW_COUNT();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT `c`.`Id`, `c`.`Description`, `c`.`Price`, `c`.`ProviderId`, `c`.`Title`
+      FROM `Courses` AS `c`
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT `c`.`Id`, `c`.`Description`, `c`.`Price`, `c`.`ProviderId`, `c`.`Title`
+      FROM `Courses` AS `c`
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT `c`.`Id`, `c`.`Description`, `c`.`Price`, `c`.`ProviderId`, `c`.`Title`
+      FROM `Courses` AS `c`
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (19ms) [Parameters=[@__courseDto_ProviderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT `p`.`Id`, `p`.`EmailId`, `p`.`UserId`
+      FROM `Providers` AS `p`
+      WHERE `p`.`Id` = @__courseDto_ProviderId_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__courseDto_ProviderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT `p`.`Id`, `p`.`EmailId`, `p`.`UserId`
+      FROM `Providers` AS `p`
+      WHERE `p`.`Id` = @__courseDto_ProviderId_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__courseDto_ProviderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT `p`.`Id`, `p`.`EmailId`, `p`.`UserId`
+      FROM `Providers` AS `p`
+      WHERE `p`.`Id` = @__courseDto_ProviderId_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__courseDto_ProviderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT `p`.`Id`, `p`.`EmailId`, `p`.`UserId`
+      FROM `Providers` AS `p`
+      WHERE `p`.`Id` = @__courseDto_ProviderId_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__courseDto_ProviderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT `p`.`Id`, `p`.`EmailId`, `p`.`UserId`
+      FROM `Providers` AS `p`
+      WHERE `p`.`Id` = @__courseDto_ProviderId_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__courseDto_ProviderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT `p`.`Id`, `p`.`EmailId`, `p`.`UserId`
+      FROM `Providers` AS `p`
+      WHERE `p`.`Id` = @__courseDto_ProviderId_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT `c`.`Id`, `c`.`Description`, `c`.`Price`, `c`.`ProviderId`, `c`.`Title`
+      FROM `Courses` AS `c`
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__courseDto_ProviderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT `p`.`Id`, `p`.`EmailId`, `p`.`UserId`
+      FROM `Providers` AS `p`
+      WHERE `p`.`Id` = @__courseDto_ProviderId_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__courseDto_ProviderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT `p`.`Id`, `p`.`EmailId`, `p`.`UserId`
+      FROM `Providers` AS `p`
+      WHERE `p`.`Id` = @__courseDto_ProviderId_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__courseDto_ProviderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT `p`.`Id`, `p`.`EmailId`, `p`.`UserId`
+      FROM `Providers` AS `p`
+      WHERE `p`.`Id` = @__courseDto_ProviderId_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Decimal), @p2='?' (DbType = Int32), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO `Courses` (`Description`, `Price`, `ProviderId`, `Title`)
+      VALUES (@p0, @p1, @p2, @p3);
+      SELECT `Id`
+      FROM `Courses`
+      WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT `c`.`Id`, `c`.`Description`, `c`.`Price`, `c`.`ProviderId`, `c`.`Title`
+      FROM `Courses` AS `c`
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__model_Name_0='?' (Size = 120)], CommandType='Text', CommandTimeout='30']
+      SELECT `u`.`Id`, `u`.`ExpiredRefreshToken`, `u`.`Name`, `u`.`PasswordHash`, `u`.`RefreshToken`, `u`.`_roles`
+      FROM `Users` AS `u`
+      WHERE `u`.`Name` = @__model_Name_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = 120), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET AUTOCOMMIT = 1;
+      UPDATE `Users` SET `ExpiredRefreshToken` = @p0, `Name` = @p1, `PasswordHash` = @p2, `RefreshToken` = @p3, `_roles` = @p4
+      WHERE `Id` = @p5;
+      SELECT ROW_COUNT();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT `c`.`Id`, `c`.`Description`, `c`.`Price`, `c`.`ProviderId`, `c`.`Title`
+      FROM `Courses` AS `c`
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__courseDto_ProviderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT `p`.`Id`, `p`.`EmailId`, `p`.`UserId`
+      FROM `Providers` AS `p`
+      WHERE `p`.`Id` = @__courseDto_ProviderId_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__courseDto_ProviderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT `p`.`Id`, `p`.`EmailId`, `p`.`UserId`
+      FROM `Providers` AS `p`
+      WHERE `p`.`Id` = @__courseDto_ProviderId_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__courseDto_ProviderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT `p`.`Id`, `p`.`EmailId`, `p`.`UserId`
+      FROM `Providers` AS `p`
+      WHERE `p`.`Id` = @__courseDto_ProviderId_0
+      LIMIT 1
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...

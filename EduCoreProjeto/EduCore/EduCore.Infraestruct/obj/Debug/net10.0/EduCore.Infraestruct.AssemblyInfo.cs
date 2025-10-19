@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EduCore.Infraestruct")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dff2e6963b2d3857a7ee3c1212c31d5e13690b38")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd9de8c903a3836b6740d2fe729a33f9faacee37")]
 [assembly: System.Reflection.AssemblyProductAttribute("EduCore.Infraestruct")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EduCore.Infraestruct")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

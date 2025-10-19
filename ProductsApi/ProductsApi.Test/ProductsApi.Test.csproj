@@ -36,8 +36,6 @@
     <Folder Include="Domain\BackOffice\Entity\User\" />
     <Folder Include="Domain\BackOffice\ObjectValues\Category\" />
     <Folder Include="Domain\BackOffice\ObjectValues\Email\" />
-    <Folder Include="Service\UseCases\Product\Query\GetAll\" />
-    <Folder Include="Service\UseCases\Product\Query\GetById\" />
   </ItemGroup>
 
   <ItemGroup>

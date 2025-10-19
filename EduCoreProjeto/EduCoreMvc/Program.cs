@@ -3,6 +3,9 @@ using EduCoreMvc.Service;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<AuthProviderService>();
+builder.Services.AddScoped<CourseService>();
+
+
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient("ApiEduCore", x =>

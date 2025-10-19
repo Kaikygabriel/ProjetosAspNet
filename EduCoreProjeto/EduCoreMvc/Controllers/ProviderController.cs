@@ -20,6 +20,8 @@ public class ProviderController : Controller
     [HttpGet]
     public async Task<IActionResult> Register()
     {
+        if (Request.Cookies["Token-Auth"] != null)
+            return RedirectToAction("Index", "Home");
         return View();
     }
 
@@ -27,8 +29,6 @@ public class ProviderController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Register(RegisterProviderDto loginProviderDTo)
     {
-        if (Request.Cookies.ContainsKey("Token-Auth"))
-            return RedirectToAction("Index", "Home");
         
         if (!ModelState.IsValid || loginProviderDTo is null)
             return View(loginProviderDTo);
@@ -50,6 +50,8 @@ public class ProviderController : Controller
     [HttpGet]
     public async Task<IActionResult> Login()
     {
+        if (Request.Cookies["Token-Auth"] != null)
+            return RedirectToAction("Index", "Home");
         return View();
     }
     
@@ -57,8 +59,7 @@ public class ProviderController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Login(LoginProviderDto loginProviderDTo)
     {
-        if (Request.Cookies.ContainsKey("Token-Auth"))
-            return RedirectToAction("Index", "Home");
+      
         
         if (!ModelState.IsValid || loginProviderDTo is null)
             return View(loginProviderDTo);
@@ -89,11 +90,6 @@ public class ProviderController : Controller
     
     public IActionResult Logout()
     {
-        if(!Request.Cookies.ContainsKey("Token-Auth"))
-            Response.Cookies.Delete("UserName");    
-        if(!Request.Cookies.ContainsKey("UserName"))
-            Response.Cookies.Delete("Token-Auth");
-        // Remove os cookies
         Response.Cookies.Delete("Token-Auth");
         Response.Cookies.Delete("UserName");
         
@@ -102,7 +98,7 @@ public class ProviderController : Controller
 
     public IActionResult Index()
     {
-        if(!Request.Cookies.ContainsKey("Token-Auth") || !Request.Cookies.ContainsKey("UserName"))
+        if (Request.Cookies["Token-Auth"] == null || Request.Cookies["UserName"] == null )
             return RedirectToAction("Index", "Home");
         var token = Request.Cookies["Token-Auth"];
         var claims = TokenService.GetClaimsFromToken(token!,_configuration);

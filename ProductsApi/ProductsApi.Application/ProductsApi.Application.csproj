@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Dtos\" />
+    <Folder Include="Pagination\" />
     <Folder Include="UseCases\Product\Command\Update\" />
     <Folder Include="UseCases\User\" />
   </ItemGroup>

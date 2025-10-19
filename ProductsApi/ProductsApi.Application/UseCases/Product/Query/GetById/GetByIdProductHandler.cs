@@ -8,6 +8,15 @@ public class GetByIdProductHandler :HandlerBase,  IHandler<GetByIdQuery,Domain.B
     public GetByIdProductHandler(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
     public async Task<Domain.BackOffice.Entitys.Product?> HandleAsync
-    (GetByIdQuery request, CancellationToken cancellationToken = default)
-        =>  await UnitOfWork.RepositoryProduct.GetByPredicate(x => x.Id == request.Id);
+        (GetByIdQuery request, CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await UnitOfWork.RepositoryProduct.GetByPredicate(x => x.Id == request.Id);
+        }
+        catch (Exception e)
+        {
+            return null;
+        }
+    }
 }

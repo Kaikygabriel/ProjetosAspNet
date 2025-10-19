@@ -10,12 +10,29 @@ public class FakeRepositoryProduct : IRepositoryProduct
 {
     private List<Product> _products = new()
     {
-        new Product(2999.99m, new Category("Eletrônicos"), "Notebook Dell Inspiron"),
-        new Product(199.90m, new Category("Eletrônicos"), "Fone Bluetooth JBL"),
-        new Product(89.90m, new Category("Roupa"), "Camiseta Nike"),
-        new Product(159.90m, new Category("Roupa"), "Jaqueta de Couro"),
-        new Product(49.90m, new Category("Livros"), "Clean Code"),
-        new Product(39.90m, new Category("Livros"), "O Programador Pragmático"),
+        new Product(2999.99m, new Category("Eletrônicos"), "Notebook Dell Inspiron")
+        {
+            Id = 1
+        },
+        new Product(199.90m, new Category("Eletrônicos"), "Fone Bluetooth JBL")
+        {
+            Id = 1
+        },
+        new Product(89.90m, new Category("Roupa"), "Camiseta Nike")
+        {
+            Id = 2
+        },
+        new Product(159.90m, new Category("Roupa"), "Jaqueta de Couro")
+        {
+            Id = 3
+        },
+        new Product(49.90m, new Category("Livros"), "Clean Code")
+        {
+            Id = 4
+        },
+        new Product(39.90m, new Category("Livros"), "O Programador Pragmático"){
+            Id = 5
+        },
     };
     public Task<IEnumerable<Product>> GetAll()
     {
