@@ -19,7 +19,8 @@ public class Repository<T> : IRepository<T>
 
     public async Task<IEnumerable<T>> GetAll(QueryStringParameters parameters)
     {
-        return await _context.Set<T>().AsNoTracking()
+        return await _context.Set<T>()
+            .AsNoTracking()
             .Skip((parameters.PageNumber -1)*parameters.PageSize)
             .Take(parameters.PageSize)
             .ToListAsync();

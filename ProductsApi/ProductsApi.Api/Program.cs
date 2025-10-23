@@ -1,3 +1,5 @@
+using System.Threading.RateLimiting;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using ProductsApi.Infraestruct.Data.Context;
 using ProductsApi.Infraestruct.DependencyInjection;
@@ -10,7 +12,15 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddDbContext<AppDbContext>(x =>
     x.UseSqlServer(connectionSql,b => b.MigrationsAssembly("ProductsApi.Api")));
-
+builder.Services.AddRateLimiter(x =>
+    x.AddFixedWindowLimiter("Fixed", x =>
+    {
+        x.AutoReplenishment = true;
+        x.PermitLimit = 3;
+        x.QueueLimit = 1;
+        x.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+        x.Window = TimeSpan.FromSeconds(12);
+    }));
 
 var app = builder.Build();
 
@@ -20,6 +30,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseRateLimiter();
 
 app.UseAuthentication();
 

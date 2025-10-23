@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using ProductsApi.Domain.BackOffice.Exceptions;
 using ProductsApi.Domain.BackOffice.Interfaces;
 using ProductsApi.Domain.BackOffice.ObjectValue;
 
@@ -10,6 +11,8 @@ public class User : Entity , IAggregateRoot
 
     public User(string name, string password, Email email)
     {
+        if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(password))
+            throw new UserException( );
         Name = name;
         Password = password;
         Email = email;

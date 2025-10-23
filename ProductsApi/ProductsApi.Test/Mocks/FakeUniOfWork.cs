@@ -7,7 +7,7 @@ namespace ProductsApi.Test.Mocks;
 public class FakeUniOfWork : IUnitOfWork
 {
     public IRepositoryProduct RepositoryProduct { get; } = new FakeRepositoryProduct();
-    public IRepositoryUser RepositoryUser { get; }
+    public IRepositoryUser RepositoryUser { get; } = new FakeRepositoryUser();
     public async Task CommitAsync()
     {
         await Task.Delay(0);

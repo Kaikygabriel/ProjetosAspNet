@@ -32,11 +32,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Domain\BackOffice\Entity\Product\" />
     <Folder Include="Domain\BackOffice\Entity\User\" />
     <Folder Include="Domain\BackOffice\ObjectValues\Category\" />
     <Folder Include="Domain\BackOffice\ObjectValues\Email\" />
-    <Folder Include="Service\UseCases\User\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -2,6 +2,8 @@ namespace ProductsApi.Domain.BackOffice.ObjectValue;
 
 public class QueryStringParameters
 {
+    private const int ValueMinPageNumber=1;
+
     private const int ValueMaxPageSize= 50;
     private int _pageNumber;
     private int _pageSize;
@@ -14,7 +16,7 @@ public class QueryStringParameters
         }
         set
         {
-            _pageNumber = (value < 1) ? 1 : value;
+            _pageNumber = (value < ValueMinPageNumber) ? ValueMinPageNumber : value;
         }
     }
 

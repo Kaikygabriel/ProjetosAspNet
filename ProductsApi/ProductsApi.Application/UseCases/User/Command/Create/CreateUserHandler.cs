@@ -3,9 +3,9 @@ using ProductsApi.Domain.BackOffice.Interfaces;
 
 namespace ProductsApi.Application.UseCases.User.Command.Create;
 
-public class CreateClientHandler:HandlerBase,IHandler<CreateUserCommand,bool>
+public class CreateUserHandler:HandlerBase,IHandler<CreateUserCommand,bool>
 {
-    public CreateClientHandler(IUnitOfWork unitOfWork) : base(unitOfWork)
+    public CreateUserHandler(IUnitOfWork unitOfWork) : base(unitOfWork)
     {
     }
 

@@ -1,5 +1,6 @@
 using MediatorX.Core.Abstraction.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using ProductsApi.Application.Dtos.User;
 using ProductsApi.Application.Services.Interfaces;
 using ProductsApi.Application.UseCases.User.Command.Create;
@@ -7,6 +8,7 @@ using ProductsApi.Application.UseCases.User.Query.GetByName;
 
 namespace ProductsApi.Api.Controllers;
 
+[EnableRateLimiting("Fixed")]
 [ApiController]
 [Route("[controller]")]
 public class AuthController : ControllerBase
@@ -32,7 +34,7 @@ public class AuthController : ControllerBase
             return NotFound("Name in user existing.");
         var userCreate = model.ToUser();
         var resultCreateUser = await _mediator.SendAsync(new CreateUserCommand(userCreate));
-        return resultCreateUser ? Created() : BadRequest();
+        return resultCreateUser ? Created() : BadRequest("Error in create user!");
     }
 
     [HttpPost("Login")]
