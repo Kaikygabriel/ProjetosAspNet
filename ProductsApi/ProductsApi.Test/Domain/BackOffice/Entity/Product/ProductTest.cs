@@ -8,8 +8,8 @@ public class ProductTest
     [Fact]
     public void CreateProductWithParamtersNull_Return_ProductException()
     {
-        Assert.Throws<ProductException>(
-            new ProductsApi.Domain.BackOffice.Entitys.Product
-                (1,new Category(""),null));
+        Assert.Throws<ProductException>(() => 
+            new ProductsApi.Domain.BackOffice.Entities.Product(default, null, null)
+        );   
     }
 }

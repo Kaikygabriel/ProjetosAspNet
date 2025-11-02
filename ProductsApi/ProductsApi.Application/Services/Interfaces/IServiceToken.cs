@@ -1,6 +1,5 @@
 using System.Security.Claims;
 using Microsoft.Extensions.Configuration;
-using ProductsApi.Domain.BackOffice.Entitys;
 
 namespace ProductsApi.Application.Services.Interfaces;
 

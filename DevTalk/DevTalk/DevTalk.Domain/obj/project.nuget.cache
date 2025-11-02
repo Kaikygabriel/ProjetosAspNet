@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "24vRwA5MvQY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\C#\\ProjetosAspNet\\DevTalk\\DevTalk\\DevTalk.Domain\\DevTalk.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.9\\microsoft.netcore.app.ref.9.0.9.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.9\\microsoft.windowsdesktop.app.ref.9.0.9.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.9\\microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -15,6 +15,6 @@ public class UserCreate
     [EmailAddress]
     public string Email { get; set; }= string.Empty;
 
-    public Domain.BackOffice.Entitys.User ToUser()
-        => new Domain.BackOffice.Entitys.User(Name,Password,new Email(Email));
+    public Domain.BackOffice.Entities.User ToUser()
+        => new Domain.BackOffice.Entities.User(Name,Password,new Email(Email));
 }

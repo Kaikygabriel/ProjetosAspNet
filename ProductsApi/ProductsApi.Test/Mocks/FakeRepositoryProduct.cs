@@ -1,6 +1,5 @@
 using System.Data;
 using System.Linq.Expressions;
-using ProductsApi.Domain.BackOffice.Entitys;
 using ProductsApi.Domain.BackOffice.Interfaces.Products;
 using ProductsApi.Domain.BackOffice.ObjectValue;
 

@@ -5,7 +5,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 using ProductsApi.Application.Services.Interfaces;
-using ProductsApi.Domain.BackOffice.Entitys;
 using JwtRegisteredClaimNames = System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames;
 
 namespace ProductsApi.Application.Services;

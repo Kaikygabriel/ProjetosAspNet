@@ -17,7 +17,7 @@ public class HandlerCreateUserTest
     {
         await Assert.ThrowsAsync<UserException>(async () =>
             await _handler.HandleAsync( new CreateUserCommand
-                (new Domain.BackOffice.Entitys.User("","",null))
+                (new ProductsApi.Domain.BackOffice.Entities.User("","",null))
                 , TestContext.Current.CancellationToken));
     }
     [Fact]
@@ -25,7 +25,7 @@ public class HandlerCreateUserTest
     {
         await Assert.ThrowsAsync<UserException>(async () =>
             await _handler.HandleAsync( new CreateUserCommand
-                (new Domain.BackOffice.Entitys.User
+                (new ProductsApi.Domain.BackOffice.Entities.User
                     ("","teste",new Email("Teste@gmail.com")))
                 , TestContext.Current.CancellationToken));
     }
@@ -34,7 +34,7 @@ public class HandlerCreateUserTest
     {
         await Assert.ThrowsAsync<UserException>(async () =>
             await _handler.HandleAsync( new CreateUserCommand
-                (new Domain.BackOffice.Entitys.User
+                (new ProductsApi.Domain.BackOffice.Entities.User
                     ("teste","",new Email("Teste@gmail.com")))
                 , TestContext.Current.CancellationToken));
     }

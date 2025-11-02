@@ -25,6 +25,6 @@ public class GetByIdProductHandlerTest
     {
         var result = await _handlerTest.HandleAsync(new GetByIdQuery(1),
             TestContext.Current.CancellationToken);
-        Assert.IsType<Domain.BackOffice.Entitys.Product>(result);
+        Assert.IsType<ProductsApi.Domain.BackOffice.Entities.Product>(result);
     }
 }

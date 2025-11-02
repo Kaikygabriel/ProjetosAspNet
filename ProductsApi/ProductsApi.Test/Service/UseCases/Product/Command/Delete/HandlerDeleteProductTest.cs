@@ -26,7 +26,7 @@ public class HandlerDeleteProductTest
     {
         //arrange
         var command = new DeleteProductCommand
-            (new Domain.BackOffice.Entitys.Product(50.0m, new Category("Eletronico"),"mouse"));
+            (new ProductsApi.Domain.BackOffice.Entities.Product(50.0m, new Category("Eletronico"),"mouse"));
         //act
         var result = await _handler.HandleAsync(command, TestContext.Current.CancellationToken);
         //assert

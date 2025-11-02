@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LojaApi.Infraestruct")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd15ea01f390348b3ab524305eaa3ea67aebf1ed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e56c9dcb58693d1439c38c887969d3378be86359")]
 [assembly: System.Reflection.AssemblyProductAttribute("LojaApi.Infraestruct")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LojaApi.Infraestruct")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

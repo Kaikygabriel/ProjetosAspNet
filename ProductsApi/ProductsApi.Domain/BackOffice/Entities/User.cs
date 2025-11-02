@@ -3,7 +3,7 @@ using ProductsApi.Domain.BackOffice.Exceptions;
 using ProductsApi.Domain.BackOffice.Interfaces;
 using ProductsApi.Domain.BackOffice.ObjectValue;
 
-namespace ProductsApi.Domain.BackOffice.Entitys;
+namespace ProductsApi.Domain.BackOffice.Entities;
 
 public class User : Entity , IAggregateRoot
 {

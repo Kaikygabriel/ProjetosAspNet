@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ProductsApi.Domain.BackOffice.Entitys;
+using ProductsApi.Domain.BackOffice.Entities;
 using ProductsApi.Domain.BackOffice.ObjectValue;
 
 namespace ProductsApi.Infraestruct.Data.Mapping;

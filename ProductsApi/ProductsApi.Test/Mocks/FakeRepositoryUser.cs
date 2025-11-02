@@ -1,5 +1,4 @@
 using System.Linq.Expressions;
-using ProductsApi.Domain.BackOffice.Entitys;
 using ProductsApi.Domain.BackOffice.Interfaces.Users;
 using ProductsApi.Domain.BackOffice.ObjectValue;
 

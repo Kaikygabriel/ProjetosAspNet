@@ -4,6 +4,10 @@
     <ProjectReference Include="..\LojaApi.Application\LojaApi.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="LittleIdentity" Version="1.0.0" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>

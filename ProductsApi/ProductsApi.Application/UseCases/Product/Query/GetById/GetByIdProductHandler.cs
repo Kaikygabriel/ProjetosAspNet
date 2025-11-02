@@ -3,11 +3,11 @@ using ProductsApi.Domain.BackOffice.Interfaces;
 
 namespace ProductsApi.Application.UseCases.Product.Query.GetById;
 
-public class GetByIdProductHandler :HandlerBase,  IHandler<GetByIdQuery,Domain.BackOffice.Entitys.Product>
+public class GetByIdProductHandler :HandlerBase,  IHandler<GetByIdQuery,Domain.BackOffice.Entities.Product>
 {
     public GetByIdProductHandler(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
-    public async Task<Domain.BackOffice.Entitys.Product?> HandleAsync
+    public async Task<Domain.BackOffice.Entities.Product?> HandleAsync
         (GetByIdQuery request, CancellationToken cancellationToken = default)
     {
         try

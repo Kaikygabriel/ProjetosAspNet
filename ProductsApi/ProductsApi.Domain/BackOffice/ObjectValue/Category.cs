@@ -1,4 +1,3 @@
-using ProductsApi.Domain.BackOffice.Entitys;
 using ProductsApi.Domain.BackOffice.Exceptions;
 
 namespace ProductsApi.Domain.BackOffice.ObjectValue;

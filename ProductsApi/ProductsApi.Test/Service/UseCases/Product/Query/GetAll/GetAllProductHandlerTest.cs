@@ -14,6 +14,6 @@ public class GetAllProductHandlerTest
         var data = new GetAllProductsQuery(new QueryStringParameters(10,1));
         var result = await _handler.HandleAsync(data,
             TestContext.Current.CancellationToken);
-        Assert.IsType<IEnumerable<Domain.BackOffice.Entitys.Product>>(result, exactMatch: false);
+        Assert.IsType<IEnumerable<ProductsApi.Domain.BackOffice.Entities.Product>>(result, exactMatch: false);
     }
 }

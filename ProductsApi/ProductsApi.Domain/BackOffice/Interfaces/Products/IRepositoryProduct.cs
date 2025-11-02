@@ -1,4 +1,4 @@
-using ProductsApi.Domain.BackOffice.Entitys;
+using ProductsApi.Domain.BackOffice.Entities;
 
 namespace ProductsApi.Domain.BackOffice.Interfaces.Products;
 

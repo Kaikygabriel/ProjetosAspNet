@@ -15,7 +15,7 @@ public class CreateProductHandler:HandlerBase,IHandler<CreateProductCommand,bool
     {
         try
         {
-            var product = new Domain.BackOffice.Entitys.Product
+            var product = new Domain.BackOffice.Entities.Product
                 (request.Price, new Category(request.Category), request.Name);
             UnitOfWork.RepositoryProduct.Create(product);
             await UnitOfWork.CommitAsync();

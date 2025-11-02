@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ProductsApi.Domain.BackOffice.Entitys;
+using ProductsApi.Domain.BackOffice.Entities;
 using ProductsApi.Infraestruct.Data.Mapping;
 
 namespace ProductsApi.Infraestruct.Data.Context;
