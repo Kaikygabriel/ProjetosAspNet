@@ -5,7 +5,7 @@ namespace DevTalk.Domain.BackOffice.Entities;
 
 public class User  :  Entity
 {
-    protected User(){}
+    public User(){}
     public User(string name, string password,Email email)
     {
         if (string.IsNullOrWhiteSpace(name) ||
