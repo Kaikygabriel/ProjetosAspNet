@@ -1,0 +1,12 @@
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\DevTalk\DevTalk\DevTalk.Domain\bin\release\net9.0\DevTalk.Domain.deps.json
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\DevTalk\DevTalk\DevTalk.Domain\bin\release\net9.0\DevTalk.Domain.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\DevTalk\DevTalk\DevTalk.Domain\bin\release\net9.0\DevTalk.Domain.pdb
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\DevTalk\DevTalk\DevTalk.Domain\obj\release\net9.0\DevTalk.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\DevTalk\DevTalk\DevTalk.Domain\obj\release\net9.0\DevTalk.Domain.AssemblyInfoInputs.cache
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\DevTalk\DevTalk\DevTalk.Domain\obj\release\net9.0\DevTalk.Domain.AssemblyInfo.cs
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\DevTalk\DevTalk\DevTalk.Domain\obj\release\net9.0\DevTalk.Domain.csproj.CoreCompileInputs.cache
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\DevTalk\DevTalk\DevTalk.Domain\obj\release\net9.0\DevTalk.Domain.sourcelink.json
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\DevTalk\DevTalk\DevTalk.Domain\obj\release\net9.0\DevTalk.Domain.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\DevTalk\DevTalk\DevTalk.Domain\obj\release\net9.0\refint\DevTalk.Domain.dll
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\DevTalk\DevTalk\DevTalk.Domain\obj\release\net9.0\DevTalk.Domain.pdb
+C:\Users\kaiky\Downloads\kaka\C#\ProjetosAspNet\DevTalk\DevTalk\DevTalk.Domain\obj\release\net9.0\ref\DevTalk.Domain.dll

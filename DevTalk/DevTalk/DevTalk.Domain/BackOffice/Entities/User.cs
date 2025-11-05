@@ -6,12 +6,12 @@ namespace DevTalk.Domain.BackOffice.Entities;
 public class User  :  Entity
 {
     public User(){}
-    public User(string name, string password,Email email)
+    public User(string name, string password,string address)
     {
         if (string.IsNullOrWhiteSpace(name) ||
             password.Length < 6)
             throw new UserException();
-        Email = email;
+        Email = new Email(address);
         Name = name;
         Password = password;
     }
@@ -19,11 +19,14 @@ public class User  :  Entity
     public Email Email { get; set; }
     public string Name { get;   set; }
     public string Password { get; set; }
-    public List<string>Roles { get; private set; }
+    public List<string> Roles { get; private set; } = new();
 
     public void SetRole(string role)
         => Roles.Add(role);
 
     public List<string> GetRoles()
         => Roles;
+
+    public bool CheckPassword(string password)
+        => Password.Equals(password);
 }

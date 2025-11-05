@@ -4,6 +4,10 @@ namespace DevTalk.Domain.BackOffice.ObjectValue;
 
 public class Email
 {
+    protected Email()
+    {
+        
+    }
     public Email(string address)
     {
         if (string.IsNullOrWhiteSpace(address) || !address.Contains('@'))

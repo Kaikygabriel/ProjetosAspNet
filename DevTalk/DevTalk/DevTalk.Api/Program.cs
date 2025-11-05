@@ -1,3 +1,4 @@
+using DevTalk.Api.Extensions;
 using DevTalk.Application.UseCases.User.Command.Create;
 using DevTalk.Application.UseCases.User.Query.GetById;
 using DevTalk.Domain.BackOffice.Entities;
@@ -20,6 +21,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddOpenApi();
 
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -27,19 +29,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
     app.MapOpenApi();
+    app.UseHandlerExceptionGlobal();
 }
 
-app.MapPost("/Register", async (User user,[FromServices]IMediator mediator) =>
-{
-    if (await mediator.Send(new GetByNameUserQuery(user.Name)) is not null)
-        Results.NotFound("User Existing");
-    var result = await mediator.Send(new CreateUserCommand(user));
-    return result ? Results.Created() : Results.BadRequest();
-});
-
+app.UseMapAuth();
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 
+app.UseAuthorization();
 
 app.Run();

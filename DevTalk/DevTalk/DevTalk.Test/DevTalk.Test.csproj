@@ -18,4 +18,8 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DevTalk.Api\DevTalk.Api.csproj" />
+  </ItemGroup>
+
 </Project>
