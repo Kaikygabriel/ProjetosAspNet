@@ -13,6 +13,8 @@ public class CreateUserHandler : HandlerBase,IRequestHandler<CreateUserCommand,b
     {
         try
         {
+            var passawordHash = BCrypt.Net.BCrypt.HashPassword(request.User.Password);
+            request.User.Password = passawordHash;
             UnitOfWork.RepositoryUser.Create(request.User);
             await UnitOfWork.CommitAsync();
             return true;

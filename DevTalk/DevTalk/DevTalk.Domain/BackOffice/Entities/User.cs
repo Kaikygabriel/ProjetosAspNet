@@ -28,5 +28,5 @@ public class User  :  Entity
         => Roles;
 
     public bool CheckPassword(string password)
-        => Password.Equals(password);
+        => BCrypt.Net.BCrypt.Verify(password, Password);
 }
