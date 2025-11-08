@@ -1,4 +1,4 @@
-namespace Barbearia.Domain.BackOffice.Entities;
+namespace Barbearia.Domain.BackOffice.Entities.Abstraction;
 
 public abstract class Entity 
 {

@@ -4,6 +4,7 @@ namespace Barbearia.Domain.BackOffice.ObjectValue;
 
 public class Role
 {
+    protected Role(){}
     public Role(string title)
     {
         if (string.IsNullOrWhiteSpace(title) || title.Length < 2)

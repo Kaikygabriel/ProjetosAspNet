@@ -6,4 +6,17 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\Interface\" />
+    <Folder Include="UseCases\User\Query\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Barbearia.Domain\Barbearia.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatorX.Core" Version="1.0.1" />
+  </ItemGroup>
+
 </Project>

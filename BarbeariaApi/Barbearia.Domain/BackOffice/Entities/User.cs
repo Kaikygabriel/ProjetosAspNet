@@ -1,3 +1,4 @@
+using Barbearia.Domain.BackOffice.Entities.Abstraction;
 using Barbearia.Domain.BackOffice.Exception;
 using Barbearia.Domain.BackOffice.ObjectValue;
 
@@ -5,6 +6,7 @@ namespace Barbearia.Domain.BackOffice.Entities;
 
 public class User : Entity
 {
+    protected User(){}
     public User(string name, string password, Email email)
     {
         if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(name) ||

@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "yH1DZoUqFzA=",
+  "dgSpecHash": "DKj0rEHOOfw=",
   "success": true,
   "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\C#\\ProjetosAspNet\\BarbeariaApi\\Barbearia.Application\\Barbearia.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kaiky\\.nuget\\packages\\mediatorx.core\\1.0.1\\mediatorx.core.1.0.1.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\mediatorx.core.abstraction\\1.0.1\\mediatorx.core.abstraction.1.0.1.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.8\\microsoft.extensions.dependencyinjection.9.0.8.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.8\\microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.9\\microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512",
     "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.9\\microsoft.netcore.app.ref.9.0.9.nupkg.sha512",
-    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.9\\microsoft.windowsdesktop.app.ref.9.0.9.nupkg.sha512",
-    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.9\\microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512"
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.9\\microsoft.windowsdesktop.app.ref.9.0.9.nupkg.sha512"
   ],
   "logs": []
 }
