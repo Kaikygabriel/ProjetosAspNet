@@ -1,5 +1,6 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using DevTalk.Application.Service.Interfaces;
 using DevTalk.Domain.BackOffice.Entities;
@@ -20,7 +21,7 @@ public class TokenService : ITokenService
         };
         foreach (var role in User.GetRoles())
             claims.Add(new Claim(ClaimTypes.Role,role));
-        return claims;
+        return claims;  
     }
 
     public string GenerateAccessToken(IEnumerable<Claim> claims, IConfiguration configuration)
@@ -39,5 +40,31 @@ public class TokenService : ITokenService
         var tokenHandler = new JwtSecurityTokenHandler();
         var token = tokenHandler.CreateToken(tokenDescriptor);
         return tokenHandler.WriteToken(token);
+    }
+
+    public string GerenateRefreshToken()
+    {
+        var bytes = new Byte[128];
+        RandomNumberGenerator.Fill(bytes);
+        return Convert.ToBase64String(bytes);
+    }
+
+    public ClaimsPrincipal GetClaimsPrincipalFromExpiredToken(string token, IConfiguration configuration)
+    {
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var claimsPrincipal = tokenHandler.ValidateToken(token, new TokenValidationParameters
+        {
+            ValidateLifetime = false,
+            ValidateAudience = true,
+            ValidateIssuer = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = configuration["Jwt:Issuer"],
+            ValidAudience = configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"]!))
+        }, out var securityToken);
+        if (securityToken is not JwtSecurityToken)
+            throw new Exception("Token is invalid!");
+        return claimsPrincipal;
     }
 }

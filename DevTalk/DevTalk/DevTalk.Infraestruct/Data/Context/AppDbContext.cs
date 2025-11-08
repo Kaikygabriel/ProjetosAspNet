@@ -7,8 +7,10 @@ namespace DevTalk.Infraestruct.Data.Context;
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options) 
 {
     public DbSet<User>Users { get; set; }
+    public DbSet<Message>Messages{ get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new MappingUser());
+        modelBuilder.ApplyConfiguration(new MappingMessage());
     }
 }

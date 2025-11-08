@@ -1,5 +1,7 @@
+using Dapper;
 using DevTalk.Domain.BackOffice.Interfaces;
 using MediatR;
+using Microsoft.Data.SqlClient;
 
 namespace DevTalk.Application.UseCases.User.Query.GetById;
 

@@ -1,0 +1,6 @@
+@BarbeariaApi.Api_HostAddress = http://localhost:5182
+
+GET {{BarbeariaApi.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

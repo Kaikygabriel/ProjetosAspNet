@@ -19,6 +19,10 @@ public class User  :  Entity
     public Email Email { get; set; }
     public string Name { get;   set; }
     public string Password { get; set; }
+    
+    
+    public List<Message>Messages { get; private set; } = new();
+
     public List<string> Roles { get; private set; } = new();
 
     public void SetRole(string role)
@@ -26,7 +30,12 @@ public class User  :  Entity
 
     public List<string> GetRoles()
         => Roles;
+    public void SetMessage(Message message)
+        => Messages.Add(message);
 
+    public List<Message> GetMessages()
+        => Messages;
+    
     public bool CheckPassword(string password)
         => BCrypt.Net.BCrypt.Verify(password, Password);
 }
