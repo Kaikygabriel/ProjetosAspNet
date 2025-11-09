@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "RFt35NvJE30=",
+  "dgSpecHash": "6fU0aiRFEJQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\kaka\\C#\\ProjetosAspNet\\BarbeariaApi\\Barbearia.Infraestruct\\Barbearia.Infraestruct.csproj",
+  "projectFilePath": "C:\\Users\\kaiky\\Downloads\\C#\\ProjetosAspNet\\BarbeariaApi\\Barbearia.Infraestruct\\Barbearia.Infraestruct.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.9\\microsoft.netcore.app.ref.9.0.9.nupkg.sha512",
-    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.9\\microsoft.windowsdesktop.app.ref.9.0.9.nupkg.sha512",
-    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.9\\microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512"
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.10\\microsoft.netcore.app.ref.9.0.10.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.10\\microsoft.windowsdesktop.app.ref.9.0.10.nupkg.sha512",
+    "C:\\Users\\kaiky\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.10\\microsoft.aspnetcore.app.ref.9.0.10.nupkg.sha512"
   ],
   "logs": []
 }
